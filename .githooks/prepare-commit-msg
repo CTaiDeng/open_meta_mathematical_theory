@@ -53,25 +53,28 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
       fi
     fi
 
-    if command -v python3 >/dev/null 2>&1; then
-      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
-        MSG_TEXT=$(python3 "$GEN" || true)
-      else
-        MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
-      fi
-      RET=$?
+    # Resolve Python (prefer repo venv, then system)
+    PY_CMD=""
+    if [ -x "$ROOT/.venv/Scripts/python.exe" ]; then
+      PY_CMD="$ROOT/.venv/Scripts/python.exe"
+    elif [ -x "$ROOT/.venv/bin/python3" ]; then
+      PY_CMD="$ROOT/.venv/bin/python3"
+    elif [ -x "$ROOT/.venv/bin/python" ]; then
+      PY_CMD="$ROOT/.venv/bin/python"
+    elif command -v python3 >/dev/null 2>&1; then
+      PY_CMD="$(command -v python3)"
     elif command -v python >/dev/null 2>&1; then
-      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
-        MSG_TEXT=$(python "$GEN" || true)
-      else
-        MSG_TEXT=$(python "$GEN" 2>/dev/null || true)
-      fi
-      RET=$?
+      PY_CMD="$(command -v python)"
     elif command -v py >/dev/null 2>&1; then
+      PY_CMD="py -3"
+    fi
+
+    if [ -n "$PY_CMD" ]; then
       if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
-        MSG_TEXT=$(py -3 "$GEN" || true)
+        echo "[hook] python=$PY_CMD" 1>&2
+        MSG_TEXT=$($PY_CMD "$GEN" || true)
       else
-        MSG_TEXT=$(py -3 "$GEN" 2>/dev/null || true)
+        MSG_TEXT=$($PY_CMD "$GEN" 2>/dev/null || true)
       fi
       RET=$?
     else
@@ -103,4 +106,3 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 fi
 
 exit 0
-
