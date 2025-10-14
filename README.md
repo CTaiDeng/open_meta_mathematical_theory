@@ -67,9 +67,9 @@
 - 算法、路径规划与博弈等方法论与实现要点；
 - 计算/观测/系统/度量框架及建模；
 - 结构与动力学视角下的形式化刻画与论证；
-- PGOM、LBOPB、HIV 等模型（含系统/群体/路径等）；
+- [PGOM、LBOPB、HIV 等模型（含系统/群体/路径等）](https://github.com/CTaiDeng/gromacs-2024.1_developer/tree/master/my_docs/project_docs)；
 - AI 理论、原理与统计学相关议题；
-- 时序、认知模型与因果相关主题；
+- [时序、认知模型与因果相关主题](https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2/tree/master/docs)；
 - D 结构与高维/抽象空间表达；
 - 传统 vs O3 vs PFB-GNLA 的论证与对照；
 - 前沿观点与综述性文章等。
