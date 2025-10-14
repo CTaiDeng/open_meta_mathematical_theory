@@ -1,0 +1,8 @@
+res
+out
+.venv
+.pip-cache
+.idea
+src\full_reference
+src\docs
+.vscode
