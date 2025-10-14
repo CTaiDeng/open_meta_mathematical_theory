@@ -22,6 +22,12 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
   export COMMIT_MSG_LANG="${COMMIT_MSG_LANG:-zh}"
 
   if [ -f "$GEN" ]; then
+    # Ensure Python emits UTF-8 regardless of console/codepage
+    export PYTHONIOENCODING=UTF-8
+    export PYTHONUTF8=1
+    # Prefer UTF-8 locale where available
+    export LC_ALL=${LC_ALL:-en_US.UTF-8}
+    export LANG=${LANG:-en_US.UTF-8}
     if command -v python3 >/dev/null 2>&1; then
       MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
       RET=$?
@@ -62,4 +68,3 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 fi
 
 exit 0
-
