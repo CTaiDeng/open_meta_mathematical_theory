@@ -28,6 +28,9 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
     # Prefer UTF-8 locale where available
     export LC_ALL=${LC_ALL:-en_US.UTF-8}
     export LANG=${LANG:-en_US.UTF-8}
+    # Default Gemini model if not provided
+    export GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+
     if command -v python3 >/dev/null 2>&1; then
       MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
       RET=$?
@@ -54,12 +57,10 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 
     MSG_TEXT="chore: 更新"
     if [ "${TOTAL:-0}" -gt 0 ] 2>/dev/null; then
-      MSG_TEXT="$MSG_TEXT
-- 文件: ${TOTAL} (A${ADDED}/M${MODIFIED}/D${DELETED}/R${RENAMED})"
+      MSG_TEXT="$MSG_TEXT\n- 文件: ${TOTAL} (A${ADDED}/M${MODIFIED}/D${DELETED}/R${RENAMED})"
     fi
     if [ -n "${TOP:-}" ]; then
-      MSG_TEXT="$MSG_TEXT
-- 示例: ${TOP}"
+      MSG_TEXT="$MSG_TEXT\n- 示例: ${TOP}"
     fi
   fi
 
@@ -68,3 +69,4 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 fi
 
 exit 0
+
