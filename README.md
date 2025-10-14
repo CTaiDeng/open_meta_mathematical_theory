@@ -1,9 +1,11 @@
-# 基于泛逻辑分析与泛迭代分析的元数学理论（简称O3元数学理论或O3理论）
+# 基于泛逻辑分析与泛迭代分析的元数学理论 （ 简称： ***O3理论*** 或 ***O3元数学理论*** 或 ***开放元数学理论*** ）
 
-- **作者：GaoZheng**
-- **日期：2025-10-13**
+### [若为非Github镜像点击这里为项目官方完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)
+### [作者：GaoZheng](https://mymetamathematics.blogspot.com)
 
-#### ***注：“O3理论/O3元数学理论/主纤维丛版广义非交换李代数(PFB-GNLA)”相关理论参见： [作者（GaoZheng）网盘分享](https://drive.google.com/drive/folders/1lrgVtvhEq8cNal0Aa0AjeCNQaRA8WERu?usp=sharing) 或 [作者（GaoZheng）主页](https://mymetamathematics.blogspot.com)***
+---
+
+#### ***注：“O3理论/O3元数学理论/主纤维丛版广义非交换李代数(PFB-GNLA)”相关理论参见： [作者（GaoZheng）网盘分享](https://drive.google.com/drive/folders/1lrgVtvhEq8cNal0Aa0AjeCNQaRA8WERu?usp=sharing) 或 [作者（GaoZheng）开源项目](https://github.com/CTaiDeng/open_meta_mathematical_theory) 或 [作者（GaoZheng）主页](https://mymetamathematics.blogspot.com)，欢迎访问！***
 
 ---
 
