@@ -1,0 +1,65 @@
+#!/bin/sh
+# Auto-generate commit message when template is 'update' or empty.
+# Calls script/gen_commit_msg_googleai.py to produce a Simplified Chinese message.
+
+set -eu
+
+MSG_FILE="${1:-}"
+[ -n "$MSG_FILE" ] || exit 0
+
+# Remove CR, comments and blank lines to detect meaningful content
+CLEAN_LINES=$(sed -e 's/\r$//' "$MSG_FILE" | grep -v '^[[:space:]]*#' | grep -v '^[[:space:]]*$' || true)
+FIRST_LINE=$(printf "%s\n" "$CLEAN_LINES" | head -n1 | tr -d '\r' || true)
+LINES_COUNT=$(printf "%s\n" "$CLEAN_LINES" | wc -l | tr -d ' ')
+
+# Only intervene when message is empty or exactly 'update'
+if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "update" ]; }; then
+  ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+  GEN="$ROOT/script/gen_commit_msg_googleai.py"
+
+  MSG_TEXT=""
+  RET=1
+  export COMMIT_MSG_LANG="${COMMIT_MSG_LANG:-zh}"
+
+  if [ -f "$GEN" ]; then
+    if command -v python3 >/dev/null 2>&1; then
+      MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
+      RET=$?
+    elif command -v python >/dev/null 2>&1; then
+      MSG_TEXT=$(python "$GEN" 2>/dev/null || true)
+      RET=$?
+    elif command -v py >/dev/null 2>&1; then
+      MSG_TEXT=$(py -3 "$GEN" 2>/dev/null || true)
+      RET=$?
+    else
+      RET=127
+    fi
+  fi
+
+  # Fallback summary if generator failed or produced empty text
+  if [ $RET -ne 0 ] || [ -z "${MSG_TEXT}" ]; then
+    STAT=$(git diff --staged --name-status || true)
+    TOTAL=$(printf "%s\n" "$STAT" | grep -E '^[A-Z]' | wc -l | tr -d ' ')
+    ADDED=$(printf "%s\n" "$STAT" | grep -E '^A\t' | wc -l | tr -d ' ')
+    MODIFIED=$(printf "%s\n" "$STAT" | grep -E '^M\t' | wc -l | tr -d ' ')
+    DELETED=$(printf "%s\n" "$STAT" | grep -E '^D\t' | wc -l | tr -d ' ')
+    RENAMED=$(printf "%s\n" "$STAT" | grep -E '^R' | wc -l | tr -d ' ')
+    TOP=$(printf "%s\n" "$STAT" | head -n 3 | awk -F'\t' '{print $NF}' | paste -sd ', ' - 2>/dev/null || true)
+
+    MSG_TEXT="chore: 更新"
+    if [ "${TOTAL:-0}" -gt 0 ] 2>/dev/null; then
+      MSG_TEXT="$MSG_TEXT
+- 文件: ${TOTAL} (A${ADDED}/M${MODIFIED}/D${DELETED}/R${RENAMED})"
+    fi
+    if [ -n "${TOP:-}" ]; then
+      MSG_TEXT="$MSG_TEXT
+- 示例: ${TOP}"
+    fi
+  fi
+
+  # Write generated message into the commit message file
+  printf "%s\n" "$MSG_TEXT" > "$MSG_FILE"
+fi
+
+exit 0
+
