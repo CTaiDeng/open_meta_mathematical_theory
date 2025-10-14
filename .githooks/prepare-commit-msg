@@ -28,8 +28,16 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
     # Prefer UTF-8 locale where available
     export LC_ALL=${LC_ALL:-en_US.UTF-8}
     export LANG=${LANG:-en_US.UTF-8}
-    # Default Gemini model if not provided
-    export GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+
+    # Gemini model: env > file > git config > default
+    if [ -z "${GEMINI_MODEL:-}" ]; then
+      if [ -f "$ROOT/.githooks/.gemini_model" ]; then
+        GEMINI_MODEL=$(head -n1 "$ROOT/.githooks/.gemini_model" | tr -d '\r')
+      else
+        GEMINI_MODEL=$(git config --get gemini.model || echo gemini-2.5-flash)
+      fi
+      export GEMINI_MODEL
+    fi
 
     # Load API key from file or git config if not provided in env
     if [ -z "${GEMINI_API_KEY:-}" ] && [ -f "$ROOT/.githooks/.gemini_api_key" ]; then
@@ -95,3 +103,4 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 fi
 
 exit 0
+
