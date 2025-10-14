@@ -61,7 +61,7 @@ export LESSCHARSET=utf-8
 export GEMINI_API_KEY="${GEMINI_API_KEY-}"
 export GOOGLE_API_KEY="${GOOGLE_API_KEY-}"
 
-gen_out="$("$PY" scripts/gen_commit_msg_googleai.py 2>/dev/null || true)"
+gen_out="$("$PY" script/gen_commit_msg_googleai.py 2>/dev/null || true)"
 if [ -n "${gen_out//[[:space:]]/}" ]; then
   printf '%s\n' "$gen_out" > "$msg_file"
 fi

@@ -48,7 +48,10 @@ def _normalize_prefix(p: str) -> str:
 
 
 def _load_commit_filters(repo_root: str) -> Tuple[List[str], List[str]]:
-    cfg_path = os.path.join(repo_root, "scripts", "docs_processing_config.json")
+    # Prefer `script/docs_processing_config.json`; fall back to `scripts/` if present.
+    cfg_path = os.path.join(repo_root, "script", "docs_processing_config.json")
+    if not os.path.isfile(cfg_path):
+        cfg_path = os.path.join(repo_root, "scripts", "docs_processing_config.json")
     include: List[str] = []
     exclude: List[str] = []
     try:
@@ -84,7 +87,7 @@ def _build_pathspecs(include: List[str], exclude: List[str]) -> List[str]:
 def collect_diff_filtered(max_patch_chars: int = 8000) -> tuple[str, str]:
     """Return (stat, patch) filtered by config include/exclude prefixes.
 
-    Config file: scripts/docs_processing_config.json
+    Config file: script/docs_processing_config.json
     - commit_msg_include_prefixes: ["src", "scripts", ...]  # optional whitelist
     - commit_msg_exclude_prefixes: ["docs/kernel_reference", ...]  # optional blacklist
       If not provided, falls back to `skip_paths` for exclusion.
@@ -102,4 +105,3 @@ def collect_diff_filtered(max_patch_chars: int = 8000) -> tuple[str, str]:
     if len(patch) > max_patch_chars:
         patch = patch[: max_patch_chars - 1] + "\n��(truncated)"
     return stat, patch
-
