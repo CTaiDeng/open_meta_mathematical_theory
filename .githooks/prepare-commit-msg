@@ -1,108 +1,69 @@
-#!/bin/sh
-# Auto-generate commit message when template is 'update' or empty.
-# Calls script/gen_commit_msg_googleai.py to produce a Simplified Chinese message.
+#!/usr/bin/env bash
+set -euo pipefail
 
-set -eu
+# Git passes: $1 = commit message file, $2 = source (optional), $3 = sha (optional)
+msg_file="$1"
+source_type="${2-}"
 
-MSG_FILE="${1:-}"
-[ -n "$MSG_FILE" ] || exit 0
+# Resolve repo root early for venv detection
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 
-# Remove CR, comments and blank lines to detect meaningful content
-CLEAN_LINES=$(sed -e 's/\r$//' "$MSG_FILE" | grep -v '^[[:space:]]*#' | grep -v '^[[:space:]]*$' || true)
-FIRST_LINE=$(printf "%s\n" "$CLEAN_LINES" | head -n1 | tr -d '\r' || true)
-LINES_COUNT=$(printf "%s\n" "$CLEAN_LINES" | wc -l | tr -d ' ')
+# Skip only for merge/squash (let template/message go through if empty or 'update')
+case "$source_type" in
+  merge|squash) exit 0;;
+esac
 
-# Only intervene when message is empty or exactly 'update'
-if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "update" ]; }; then
-  ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
-  GEN="$ROOT/script/gen_commit_msg_googleai.py"
-
-  MSG_TEXT=""
-  RET=1
-  export COMMIT_MSG_LANG="${COMMIT_MSG_LANG:-zh}"
-
-  if [ -f "$GEN" ]; then
-    # Ensure Python emits UTF-8 regardless of console/codepage
-    export PYTHONIOENCODING=UTF-8
-    export PYTHONUTF8=1
-    # Prefer UTF-8 locale where available
-    export LC_ALL=${LC_ALL:-en_US.UTF-8}
-    export LANG=${LANG:-en_US.UTF-8}
-
-    # Gemini model: env > file > git config > default
-    if [ -z "${GEMINI_MODEL:-}" ]; then
-      if [ -f "$ROOT/.githooks/.gemini_model" ]; then
-        GEMINI_MODEL=$(head -n1 "$ROOT/.githooks/.gemini_model" | tr -d '\r')
-      else
-        GEMINI_MODEL=$(git config --get gemini.model || echo gemini-2.5-flash)
-      fi
-      export GEMINI_MODEL
-    fi
-
-    # Load API key from file or git config if not provided in env
-    if [ -z "${GEMINI_API_KEY:-}" ] && [ -f "$ROOT/.githooks/.gemini_api_key" ]; then
-      GEMINI_API_KEY=$(head -n1 "$ROOT/.githooks/.gemini_api_key" | tr -d '\r')
-      export GEMINI_API_KEY
-      export GOOGLE_API_KEY=${GOOGLE_API_KEY:-$GEMINI_API_KEY}
-    fi
-    if [ -z "${GEMINI_API_KEY:-}" ]; then
-      KEY_FROM_GIT=$(git config --get gemini.apiKey || true)
-      if [ -n "$KEY_FROM_GIT" ]; then
-        export GEMINI_API_KEY="$KEY_FROM_GIT"
-        export GOOGLE_API_KEY=${GOOGLE_API_KEY:-$GEMINI_API_KEY}
-      fi
-    fi
-
-    # Resolve Python (prefer repo venv, then system)
-    PY_CMD=""
-    if [ -x "$ROOT/.venv/Scripts/python.exe" ]; then
-      PY_CMD="$ROOT/.venv/Scripts/python.exe"
-    elif [ -x "$ROOT/.venv/bin/python3" ]; then
-      PY_CMD="$ROOT/.venv/bin/python3"
-    elif [ -x "$ROOT/.venv/bin/python" ]; then
-      PY_CMD="$ROOT/.venv/bin/python"
-    elif command -v python3 >/dev/null 2>&1; then
-      PY_CMD="$(command -v python3)"
-    elif command -v python >/dev/null 2>&1; then
-      PY_CMD="$(command -v python)"
-    elif command -v py >/dev/null 2>&1; then
-      PY_CMD="py -3"
-    fi
-
-    if [ -n "$PY_CMD" ]; then
-      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
-        echo "[hook] python=$PY_CMD" 1>&2
-        MSG_TEXT=$($PY_CMD "$GEN" || true)
-      else
-        MSG_TEXT=$($PY_CMD "$GEN" 2>/dev/null || true)
-      fi
-      RET=$?
-    else
-      RET=127
-    fi
+# If message already non-empty and not just 'update', keep user's content
+if [ -s "$msg_file" ]; then
+  if grep -qiE '^[[:space:]]*update[[:space:]]*$' "$msg_file"; then
+    : # will overwrite
+  else
+    exit 0
   fi
+fi
 
-  # Fallback summary if generator failed or produced empty text
-  if [ $RET -ne 0 ] || [ -z "${MSG_TEXT}" ]; then
-    STAT=$(git diff --staged --name-status || true)
-    TOTAL=$(printf "%s\n" "$STAT" | grep -E '^[A-Z]' | wc -l | tr -d ' ')
-    ADDED=$(printf "%s\n" "$STAT" | grep -E '^A\t' | wc -l | tr -d ' ')
-    MODIFIED=$(printf "%s\n" "$STAT" | grep -E '^M\t' | wc -l | tr -d ' ')
-    DELETED=$(printf "%s\n" "$STAT" | grep -E '^D\t' | wc -l | tr -d ' ')
-    RENAMED=$(printf "%s\n" "$STAT" | grep -E '^R' | wc -l | tr -d ' ')
-    TOP=$(printf "%s\n" "$STAT" | head -n 3 | awk -F'\t' '{print $NF}' | paste -sd ', ' - 2>/dev/null || true)
-
-    MSG_TEXT="chore: 更新"
-    if [ "${TOTAL:-0}" -gt 0 ] 2>/dev/null; then
-      MSG_TEXT="$MSG_TEXT\n- 文件: ${TOTAL} (A${ADDED}/M${MODIFIED}/D${DELETED}/R${RENAMED})"
-    fi
-    if [ -n "${TOP:-}" ]; then
-      MSG_TEXT="$MSG_TEXT\n- 示例: ${TOP}"
-    fi
+# Select python interpreter (prefer project venv)
+if [ -x "$repo_root/.venv/Scripts/python.exe" ]; then
+  PY="$repo_root/.venv/Scripts/python.exe"
+elif [ -x "$repo_root/.venv/bin/python3" ]; then
+  PY="$repo_root/.venv/bin/python3"
+elif [ -x "$repo_root/.venv/bin/python" ]; then
+  PY="$repo_root/.venv/bin/python"
+elif command -v python3 >/dev/null 2>&1; then
+  PY=python3
+elif command -v python >/dev/null 2>&1; then
+  PY=python
+else
+  # Minimal shell fallback when Python is unavailable
+  stat="$(git diff --staged --name-status || true)"
+  if [ -n "${stat//[[:space:]]/}" ]; then
+    top3="$(printf '%s\n' "$stat" | awk '{print $NF}' | head -n 3 | paste -sd ', ' -)"
+    {
+      printf '%s\n' "chore: update"
+      [ -n "$top3" ] && printf -- '- sample: %s\n' "$top3"
+    } > "$msg_file"
+  else
+    printf '%s\n' "chore: update (no staged changes)" > "$msg_file"
   fi
+  exit 0
+fi
 
-  # Write generated message into the commit message file
-  printf "%s\n" "$MSG_TEXT" > "$MSG_FILE"
+cd "$repo_root"
+
+# Enforce UTF-8 locale to avoid mojibake on Windows terminals
+export PYTHONUTF8=1
+export PYTHONIOENCODING=UTF-8
+export LC_ALL=${LC_ALL:-C.UTF-8}
+export LANG=${LANG:-C.UTF-8}
+export LESSCHARSET=utf-8
+
+# Use AI only if API key exists; script has fallback otherwise
+export GEMINI_API_KEY="${GEMINI_API_KEY-}"
+export GOOGLE_API_KEY="${GOOGLE_API_KEY-}"
+
+gen_out="$("$PY" scripts/gen_commit_msg_googleai.py 2>/dev/null || true)"
+if [ -n "${gen_out//[[:space:]]/}" ]; then
+  printf '%s\n' "$gen_out" > "$msg_file"
 fi
 
 exit 0
