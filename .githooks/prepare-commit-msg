@@ -31,14 +31,40 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
     # Default Gemini model if not provided
     export GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
 
+    # Load API key from file or git config if not provided in env
+    if [ -z "${GEMINI_API_KEY:-}" ] && [ -f "$ROOT/.githooks/.gemini_api_key" ]; then
+      GEMINI_API_KEY=$(head -n1 "$ROOT/.githooks/.gemini_api_key" | tr -d '\r')
+      export GEMINI_API_KEY
+      export GOOGLE_API_KEY=${GOOGLE_API_KEY:-$GEMINI_API_KEY}
+    fi
+    if [ -z "${GEMINI_API_KEY:-}" ]; then
+      KEY_FROM_GIT=$(git config --get gemini.apiKey || true)
+      if [ -n "$KEY_FROM_GIT" ]; then
+        export GEMINI_API_KEY="$KEY_FROM_GIT"
+        export GOOGLE_API_KEY=${GOOGLE_API_KEY:-$GEMINI_API_KEY}
+      fi
+    fi
+
     if command -v python3 >/dev/null 2>&1; then
-      MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
+      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
+        MSG_TEXT=$(python3 "$GEN" || true)
+      else
+        MSG_TEXT=$(python3 "$GEN" 2>/dev/null || true)
+      fi
       RET=$?
     elif command -v python >/dev/null 2>&1; then
-      MSG_TEXT=$(python "$GEN" 2>/dev/null || true)
+      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
+        MSG_TEXT=$(python "$GEN" || true)
+      else
+        MSG_TEXT=$(python "$GEN" 2>/dev/null || true)
+      fi
       RET=$?
     elif command -v py >/dev/null 2>&1; then
-      MSG_TEXT=$(py -3 "$GEN" 2>/dev/null || true)
+      if [ "${COMMIT_MSG_DEBUG:-}" = "1" ]; then
+        MSG_TEXT=$(py -3 "$GEN" || true)
+      else
+        MSG_TEXT=$(py -3 "$GEN" 2>/dev/null || true)
+      fi
       RET=$?
     else
       RET=127
@@ -69,4 +95,3 @@ if [ -z "$CLEAN_LINES" ] || { [ "$LINES_COUNT" -eq 1 ] && [ "$FIRST_LINE" = "upd
 fi
 
 exit 0
-

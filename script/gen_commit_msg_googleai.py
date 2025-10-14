@@ -66,17 +66,63 @@ def build_prompt(stat: str, patch: str, lang: str) -> str:
     ).format(stat=stat, patch=patch)
 
 
+def _debug(msg: str) -> None:
+    if os.environ.get("COMMIT_MSG_DEBUG") == "1":
+        try:
+            sys.stderr.write(f"[commit-msg] {msg}\n")
+        except Exception:
+            pass
+
+
+def _run_silent(cmd: list[str]) -> str:
+    try:
+        out = subprocess.check_output(cmd, stderr=subprocess.DEVNULL)
+        return out.decode("utf-8", errors="replace").strip()
+    except Exception:
+        return ""
+
+
+def _repo_root() -> str:
+    root = _run_silent(["git", "rev-parse", "--show-toplevel"]) or os.getcwd()
+    return root
+
+
+def _load_api_key() -> Optional[str]:
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if key:
+        return key.strip()
+    # try file in .githooks/.gemini_api_key
+    root = _repo_root()
+    key_path = os.path.join(root, ".githooks", ".gemini_api_key")
+    try:
+        if os.path.isfile(key_path):
+            with open(key_path, "r", encoding="utf-8") as f:
+                line = f.readline().strip()
+                if line:
+                    return line
+    except Exception:
+        pass
+    # try git config gemini.apiKey
+    cfg = _run_silent(["git", "config", "--get", "gemini.apiKey"]).strip()
+    if cfg:
+        return cfg
+    return None
+
+
 def generate_with_gemini(prompt: str) -> Optional[str]:
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    api_key = _load_api_key()
     if not api_key:
+        _debug("no api key; using fallback")
         return None
     try:
         import google.generativeai as genai  # type: ignore
     except Exception:
+        _debug("google-generativeai not installed; using fallback")
         return None
     try:
         genai.configure(api_key=api_key)
         model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+        _debug(f"model={model_name}")
         model = genai.GenerativeModel(model_name)
         resp = model.generate_content(prompt)
         text = getattr(resp, "text", None)
@@ -90,8 +136,10 @@ def generate_with_gemini(prompt: str) -> Optional[str]:
             text = "\n".join([p for p in parts if p])
         if text:
             return text.strip()
+        _debug("empty response text; using fallback")
         return None
-    except Exception:
+    except Exception as e:
+        _debug(f"gemini error; using fallback: {e.__class__.__name__}")
         return None
 
 
@@ -137,4 +185,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-
