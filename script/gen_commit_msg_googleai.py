@@ -98,7 +98,7 @@ def generate_with_gemini(prompt: str) -> Optional[str]:
     try:
         genai.configure(api_key=api_key)
         # 选用速度较快且上下文足够的模型
-        model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+        model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
         model = genai.GenerativeModel(model_name)
         resp = model.generate_content(prompt)
         text = getattr(resp, "text", None)
@@ -162,5 +162,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-
 
