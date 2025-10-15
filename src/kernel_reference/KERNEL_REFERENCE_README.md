@@ -1,6 +1,9 @@
 # kernel_reference 前言与分类总览（含使用说明）
 
-- 作者：GaoZheng
+### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)
+### [作者：GaoZheng](https://mymetamathematics.blogspot.com)
+
+---
 
 本目录为“内核级参考”文稿集：以元数学理论（泛逻辑分析/泛迭代分析）、O3 理论、GRL（广义增强学习）为主轴，从基础结构联通算法实现与跨学科应用。本文整合“前言/综述”与“使用说明”，提供分类导读与协作规范。
 
