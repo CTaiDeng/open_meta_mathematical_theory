@@ -5,7 +5,6 @@ out
 .idea
 src\full_reference
 src\docs
-.vscode
 # Python bytecode
 *.pyc
 
