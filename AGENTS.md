@@ -37,9 +37,10 @@
   - 再接一空行后进入正文
 
 **kernel_reference 子树特别约定**
-- 快速着陆：先阅读 `src/kernel_reference/kernel_reference_说明.md` 与 `src/kernel_reference/INDEX.md`。
+- 快速着陆：先阅读 `src/kernel_reference/KERNEL_REFERENCE_README.md` 与 `src/kernel_reference/INDEX.md`。
 - 更新/新增文章后，如需重建索引，执行：
   - `pwsh -NoLogo -File script/kernel_reference_build_index.ps1 -MaxChars 500`
+- 索引排除约定：`KERNEL_REFERENCE_README.md` 为前言/说明文档，不纳入 `src/kernel_reference/INDEX.md`。
 - 请勿手动编辑 `src/kernel_reference/INDEX.md` 的条目结构与格式。
 
 **变更边界**
