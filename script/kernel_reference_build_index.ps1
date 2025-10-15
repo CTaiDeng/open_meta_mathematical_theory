@@ -92,6 +92,20 @@ $total = $files.Count
 $out.Add("- 总计：$total 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。")
 $out.Add('')
 
+# 使用手动定义的头样式替换自动生成的简化头部
+$out = New-Object System.Collections.Generic.List[string]
+$out.Add('# **基于分类的索引（含摘要）**')
+$out.Add('')
+$out.Add('### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)')
+$out.Add('### [作者：GaoZheng](https://mymetamathematics.blogspot.com)')
+$out.Add('')
+$out.Add('---')
+$out.Add('')
+$out.Add("### 总计：$total 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。")
+$out.Add('')
+$out.Add('---')
+$out.Add('')
+
 foreach($cat in $categories.Keys){
   if(-not $groups.ContainsKey($cat)){ continue }
   $out.Add("## $cat")

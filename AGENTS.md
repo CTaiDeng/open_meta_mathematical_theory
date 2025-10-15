@@ -2,7 +2,7 @@
 
 **作用范围**
 - 本文件对整个仓库生效；若子目录存在更具体的 `AGENTS.md`，则子目录内文件以就近文件为准（就近优先）。
-- 特别说明：`src/kernel_reference/AGENTS.md` 对该子树内文档的要求优先于本文件。
+- 特别说明：`src/kernel_reference` 子树内禁止添加 `AGENTS.md`；该子树一律以仓库根目录 `AGENTS.md` 为准。
 
 **第一前提：中文沟通**
 - 与用户的自然语言沟通一律使用“简体中文”。
@@ -18,7 +18,7 @@
 - 非必要不使用重格式化；命令、路径、代码标识使用反引号。
 - 若需要对多个步骤开展工作，使用计划（plan）工具同步进度；保持一步在进行中。
 - 修改文件统一通过 `apply_patch`；遵循最小变更原则；避免无关重构。
-- 若目录存在 `AGENTS.md`，严格遵守就近优先原则；`src/kernel_reference` 子树需额外遵循其 `AGENTS.md` 与索引构建脚本规范。
+- 若目录存在 `AGENTS.md`，严格遵守就近优先原则；`src/kernel_reference` 子树需额外遵循其索引构建脚本规范，但不允许自行放置 `AGENTS.md`。
 - 验证时优先运行与改动最相关的最小集测试/构建；如无测试，不盲目新增与本次任务无关的内容。
 - 若遇到权限/沙箱/网络限制，显式说明并给出可替代路径。
 ```
@@ -36,16 +36,42 @@
   - `- 作者：GaoZheng`
   - 再接一空行后进入正文
 
-**kernel_reference 子树特别约定**
+**kernel_reference 子树特别约定（合并版）**
 - 快速着陆：先阅读 `src/kernel_reference/KERNEL_REFERENCE_README.md` 与 `src/kernel_reference/INDEX.md`。
-- 更新/新增文章后，如需重建索引，执行：
+- 重建索引命令：
   - `pwsh -NoLogo -File script/kernel_reference_build_index.ps1 -MaxChars 500`
-- 索引排除约定：`KERNEL_REFERENCE_README.md` 为前言/说明文档，不纳入 `src/kernel_reference/INDEX.md`。
+- 索引范围与排除：`KERNEL_REFERENCE_README.md` 为前言/说明文档，不纳入 `src/kernel_reference/INDEX.md`。
+- 索引生成与统计：脚本重建 `INDEX.md` 时必须保留手动定义的头样式，仅更新“总计：{N} 篇”中的数字，不得更改其他字符与行序。
+- 固定头样式（INDEX 头，必须精确一致）：
+```
+# **基于分类的索引（含摘要）**
+
+### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)
+### [作者：GaoZheng](https://mymetamathematics.blogspot.com)
+
+---
+
+### 总计：{N} 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。
+
+---
+```
+- 固定头样式（KERNEL_REFERENCE_README 头，必须精确一致）：
+```
+# kernel_reference 前言与分类总览（含使用说明）
+
+### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)
+### [作者：GaoZheng](https://mymetamathematics.blogspot.com)
+
+---
+```
 - 请勿手动编辑 `src/kernel_reference/INDEX.md` 的条目结构与格式。
+- 禁止在 `src/kernel_reference` 子树内新增 `AGENTS.md`；该子树全部以仓库根目录 `AGENTS.md` 为准。
+- 自动化脚本输出需避免不必要的格式“抖动”，统一使用 UTF-8 编码并尽量保持原有换行风格。
 
 **变更边界**
 - 仅完成用户明确提出的任务；发现旁支问题可在结果中简述但不主动修改。
 - 需大规模/破坏性变更时，先与用户确认方案与范围。
+
 **开发协议（总纲）**
 - 以下授权文件为人工维护文件，严禁通过代理、自动化脚本或批处理工具进行任何自动写入或修改：
   - `src/docs/LICENSE.md`
@@ -57,3 +83,4 @@
 - 本开发协议为流程与协作约束，不改变各自授权文件的法律条款。
  - 版权头统一规范：统一使用 `Copyright (C) 2025 GaoZheng`（单年，不带连字符）。
    - 所有自动化脚本（如 `script/add_gpl3_headers.*`）需遵循该格式；如检测到旧格式（如 `2025- GaoZheng`），应在不改变其余内容的前提下就地规范化。
+
