@@ -83,4 +83,8 @@
 - 本开发协议为流程与协作约束，不改变各自授权文件的法律条款。
  - 版权头统一规范：统一使用 `Copyright (C) 2025 GaoZheng`（单年，不带连字符）。
    - 所有自动化脚本（如 `script/add_gpl3_headers.*`）需遵循该格式；如检测到旧格式（如 `2025- GaoZheng`），应在不改变其余内容的前提下就地规范化。
-
+  - 新建脚本强制规范：所有新建脚本（如 `.ps1`、`.py`、`.sh`、`.cmd`、`.bat` 等）必须在首部加入 GPL-3 许可头，推荐最小头部为：
+    - `SPDX-License-Identifier: GPL-3.0-only`
+    - `Copyright (C) 2025 GaoZheng`
+    - 若存在 Shebang，则上述头部置于 Shebang 下一行；编码行（如 Python 的 `# -*- coding: utf-8 -*-`）也应位于 Shebang 后、许可证头前。
+    - 可使用 `script/add_gpl3_headers.ps1` 自动补齐与规范化。

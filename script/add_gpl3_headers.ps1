@@ -1,7 +1,6 @@
 #!/usr/bin/env pwsh
 # SPDX-License-Identifier: GPL-3.0-only
 #
-# Copyright (C) 2010- The GROMACS Authors
 # Copyright (C) 2025 GaoZheng
 #
 # This program is free software: you can redistribute it and/or modify
@@ -231,12 +230,14 @@ function Insert-Header($path) {
     if ($arr.Count -gt 0 -and $arr[0].StartsWith('#!')) { $insertAt = 1 }
     if ($arr.Count -gt ($insertAt) -and $arr[$insertAt] -match 'coding\s*[:=]\s*utf-?8') { $insertAt += 1 }
 
-    $before = $arr[0..($insertAt-1)]
-    $after = $arr[$insertAt..($arr.Count-1)]
     $new = @()
-    if ($before) { $new += $before }
+    if ($insertAt -gt 0) {
+      $new += $arr[0..($insertAt-1)]
+    }
     $new += $header
-    if ($after) { $new += $after }
+    if ($insertAt -lt $arr.Count) {
+      $new += $arr[$insertAt..($arr.Count-1)]
+    }
     $content = ($new -join $eol)
     if (-not $content.EndsWith($eol)) { $content += $eol }
     Set-Content -LiteralPath $path -Value $content -Encoding utf8
@@ -272,5 +273,7 @@ function Insert-Header($path) {
 } finally {
   Pop-Location
 }
+
+
 
 

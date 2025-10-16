@@ -1,4 +1,9 @@
-# 直接执行（便于复制粘贴）
+# Copyright (C) 2025 GaoZheng
+# SPDX-License-Identifier: GPL-3.0-only
+# This file is part of this project.
+# Licensed under the GNU General Public License version 3.
+# See https://www.gnu.org/licenses/gpl-3.0.html for details.
+# 
 # pwsh -NoLogo -File script/copy_kernel_reference_from_full.ps1
 
 param(
@@ -96,3 +101,4 @@ Write-Host "已复制 $copied 个文件（覆盖 $overwritten 个）。" -Foregr
 if ($skippedExisting.Count -gt 0 -and -not $Overwrite) {
   Write-Host "另有 $($skippedExisting.Count) 个因已存在而被跳过（使用 -Overwrite 可覆盖）。"
 }
+
