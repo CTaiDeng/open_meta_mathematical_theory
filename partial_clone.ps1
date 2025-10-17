@@ -13,7 +13,7 @@ param(
   [string]$Dest = "",
 
   [Parameter(Mandatory = $false)]
-  [string]$ExcludeJson = "clone_exclude_whitelist.json"
+  [string]$ExcludeJson = "partial_clone_exclude_whitelist.json"
 )
 
 function Fail($msg) {
@@ -21,11 +21,23 @@ function Fail($msg) {
   exit 1
 }
 
+function Normalize-RepoPath([string]$p) {
+  if ($null -eq $p) { return "" }
+  $np = $p.Replace('\\','/').Trim()
+  # 去除路径前导斜杠（保留以点开头的隐藏目录/文件名）
+  $np = ($np -replace '^/+', '')
+  # 去除末尾斜杠，统一用通用排除规则覆盖目录和文件
+  $np = ($np -replace '/+$', '')
+  return $np
+}
+
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
   Fail "未检测到 git，请先安装 Git 再重试。"
 }
 
 $startDir = Get-Location
+$repoRoot = $PSScriptRoot
+if ([string]::IsNullOrWhiteSpace($repoRoot)) { $repoRoot = $startDir }
 
 if ([string]::IsNullOrWhiteSpace($Dest)) {
   $lastSegment = ($RepoUrl -replace '\\','/' -split '/')[ -1 ]
@@ -52,18 +64,21 @@ if ($LASTEXITCODE -ne 0) { Fail "git clone 失败，请检查仓库地址/网络
 
 Push-Location $Dest
 
-# 读取排除白名单 JSON（默认在运行脚本时所在仓库根目录）
+# 读取排除白名单 JSON（默认在脚本所在目录，即项目根目录）
 if ([System.IO.Path]::IsPathRooted($ExcludeJson)) {
   $excludeJsonPath = $ExcludeJson
 } else {
-  $excludeJsonPath = Join-Path -Path $startDir -ChildPath $ExcludeJson
+  $excludeJsonPath = Join-Path -Path $repoRoot -ChildPath $ExcludeJson
 }
 
 $exclude = @()
 if (Test-Path -LiteralPath $excludeJsonPath) {
   try {
     $jsonObj = Get-Content -LiteralPath $excludeJsonPath -Encoding utf8 -Raw | ConvertFrom-Json
-    if ($null -ne $jsonObj.exclude) { $exclude = @($jsonObj.exclude) }
+    if ($null -ne $jsonObj.exclude) { $exclude += @($jsonObj.exclude) }
+    # 兼容可选键：支持专门为“文件”列出的白名单数组（非必需）
+    if ($null -ne $jsonObj.exclude_files) { $exclude += @($jsonObj.exclude_files) }
+    if ($null -ne $jsonObj.excludeFiles) { $exclude += @($jsonObj.excludeFiles) }
   } catch {
     Fail "解析排除白名单失败：$excludeJsonPath"
   }
@@ -78,16 +93,20 @@ if ($exclude -notcontains ".git") { $exclude += ".git" }
 & git config core.sparseCheckout true
 & git sparse-checkout init --no-cone | Out-Null
 
-# 构建稀疏模式：包含全部（/*），再排除列出的顶层目录
+# 构建稀疏模式：包含全部（/*），再排除白名单中的路径（目录或文件）
 $patterns = New-Object 'System.Collections.Generic.List[string]'
 $patterns.Add("/*") | Out-Null
-foreach ($item in $exclude) {
-  if ($item -eq ".git") { continue }
-  $safe = $item.TrimStart('.', '/', '\\').TrimEnd('/', '\\')
-  if ([string]::IsNullOrWhiteSpace($safe)) { continue }
-  $patterns.Add("!/$safe")   | Out-Null
-  $patterns.Add("!/$safe/*") | Out-Null
-}
+$(
+  foreach ($item in $exclude) {
+    if ($item -eq ".git") { continue }
+    $safe = Normalize-RepoPath $item
+    if ([string]::IsNullOrWhiteSpace($safe)) { continue }
+    # 通用排除：既匹配同名文件，也匹配同名目录
+    $patterns.Add("!/$safe")   | Out-Null
+    $patterns.Add("!/$safe/*") | Out-Null
+    $safe
+  }
+) | Out-Null
 
 $scFile = Join-Path -Path ".git" -ChildPath "info/sparse-checkout"
 $patterns | Set-Content -LiteralPath $scFile -Encoding utf8
@@ -121,7 +140,7 @@ if (-not $checkoutOk) { Fail "无法检出分支：$Branch" }
 # 重新应用稀疏规则，确保工作区仅包含所需内容
 & git sparse-checkout reapply | Out-Null
 
-Write-Host "[partial-clone] 完成。已排除目录："
+Write-Host "[partial-clone] 完成。已排除路径："
 $excludedPrinted = $exclude | Where-Object { $_ -ne ".git" }
 if ($excludedPrinted.Count -eq 0) {
   Write-Host "  (无额外排除项，默认仅排除 .git)"
@@ -131,4 +150,3 @@ if ($excludedPrinted.Count -eq 0) {
 
 Pop-Location
 exit 0
-

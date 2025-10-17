@@ -1,7 +1,0 @@
-{
-  "__comment": "此 JSON 为 script/partial_clone.ps1 工具专用",
-  "exclude": [
-    ".git",
-    "src/kernel_reference_pdf"
-  ]
-}
