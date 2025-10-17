@@ -24,15 +24,56 @@ function Fail($msg) {
 function Normalize-RepoPath([string]$p) {
   if ($null -eq $p) { return "" }
   $np = $p.Replace('\\','/').Trim()
-  # 去除路径前导斜杠（保留以点开头的隐藏目录/文件名）
   $np = ($np -replace '^/+', '')
-  # 去除末尾斜杠，统一用通用排除规则覆盖目录和文件
   $np = ($np -replace '/+$', '')
   return $np
 }
 
+function Get-DefaultBranch([string]$remoteUrl) {
+  try {
+    $out = git ls-remote --symref $remoteUrl HEAD 2>$null
+    if ($LASTEXITCODE -eq 0 -and $out) {
+      foreach ($line in $out) {
+        if ($line -match '^ref:\s+refs/heads/([^\s]+)\s+HEAD$') { return $Matches[1] }
+      }
+    }
+  } catch { }
+  return 'main'
+}
+
+function Parse-GitHubRepo([string]$remoteUrl) {
+  $u = $remoteUrl.Trim().TrimEnd('/')
+  if ($u -match '^[^@]+@([^:]+):([^/]+)/([^/]+?)(?:\.git)?$') {
+    return [ordered]@{ host=$Matches[1]; owner=$Matches[2]; repo=$Matches[3] }
+  }
+  if ($u -match '^https?://([^/]+)/([^/]+)/([^/]+?)(?:\.git)?$') {
+    return [ordered]@{ host=$Matches[1]; owner=$Matches[2]; repo=$Matches[3] }
+  }
+  return $null
+}
+
+function Try-Download-Remote-Whitelist([string]$remoteUrl, [string]$defaultBranch) {
+  $parsed = Parse-GitHubRepo $remoteUrl
+  if ($null -eq $parsed) { return $null }
+  $ghHost = $parsed.host.ToLower()
+  if ($ghHost -ne 'github.com' -and $ghHost -ne 'www.github.com') { return $null }
+  $owner = $parsed.owner
+  $repo  = $parsed.repo
+  $branch = if ([string]::IsNullOrWhiteSpace($defaultBranch)) { 'main' } else { $defaultBranch }
+  $raw = "https://raw.githubusercontent.com/$owner/$repo/$branch/partial_clone_exclude_whitelist.json"
+  try {
+    $tmp = New-TemporaryFile
+    $resp = Invoke-WebRequest -Uri $raw -UseBasicParsing -Headers @{ 'User-Agent'='partial_clone.ps1' } -TimeoutSec 20 -ErrorAction Stop
+    if ($resp -and $resp.Content) {
+      [System.IO.File]::WriteAllText($tmp.FullName, $resp.Content, [System.Text.Encoding]::UTF8)
+      return $tmp.FullName
+    }
+  } catch { }
+  return $null
+}
+
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-  Fail "未检测到 git，请先安装 Git 再重试。"
+  Fail "git not found. Please install Git."
 }
 
 $startDir = Get-Location
@@ -42,111 +83,115 @@ if ([string]::IsNullOrWhiteSpace($repoRoot)) { $repoRoot = $startDir }
 if ([string]::IsNullOrWhiteSpace($Dest)) {
   $lastSegment = ($RepoUrl -replace '\\','/' -split '/')[ -1 ]
   $repoName = ($lastSegment -replace '^.+:', '') -replace '\.git$',''
-  if ([string]::IsNullOrWhiteSpace($repoName)) { Fail "无法从地址解析仓库名，请指定 -Dest。" }
+  if ([string]::IsNullOrWhiteSpace($repoName)) { Fail "cannot derive repo name from url; please specify -Dest" }
   $Dest = $repoName
 }
 
 if (Test-Path -LiteralPath $Dest -PathType Container) {
   if ((Get-ChildItem -LiteralPath $Dest -Force | Measure-Object).Count -gt 0) {
-    Fail "目标目录已存在且非空：$Dest"
+    Fail ("target directory exists and not empty: " + $Dest)
   }
 }
 
-Write-Host "[partial-clone] 开始：$RepoUrl -> $Dest"
+Write-Host "[partial-clone] start: $RepoUrl -> $Dest"
 
-# 组装 clone 参数（部分克隆 + 不检出）
+# decide branch early for remote whitelist
+$targetBranch = if ($Branch -and $Branch.Trim() -ne "") { $Branch } else { Get-DefaultBranch $RepoUrl }
+
+# choose whitelist json: prefer remote; then user-specified; then script dir default
+$excludeJsonPath = $null
+$remoteJson = Try-Download-Remote-Whitelist -remoteUrl $RepoUrl -defaultBranch $targetBranch
+if ($remoteJson) {
+  Write-Host "[partial-clone] remote whitelist detected: $remoteJson"
+  $excludeJsonPath = $remoteJson
+} else {
+  if ($PSBoundParameters.ContainsKey('ExcludeJson') -and -not [string]::IsNullOrWhiteSpace($ExcludeJson)) {
+    if ([System.IO.Path]::IsPathRooted($ExcludeJson)) {
+      $excludeJsonPath = $ExcludeJson
+    } else {
+      $excludeJsonPath = Join-Path -Path $repoRoot -ChildPath $ExcludeJson
+    }
+  } else {
+    $candidate = Join-Path -Path $repoRoot -ChildPath 'partial_clone_exclude_whitelist.json'
+    if (Test-Path -LiteralPath $candidate) { $excludeJsonPath = $candidate }
+  }
+}
+
+# clone (partial, no-checkout)
 $cloneArgs = @("clone", "--filter=blob:none", "--depth=1", "--no-checkout")
-if ($Branch -and $Branch.Trim() -ne "") { $cloneArgs += @("--branch", $Branch) }
+if ($targetBranch -and $targetBranch.Trim() -ne "") { $cloneArgs += @("--branch", $targetBranch) }
 $cloneArgs += @($RepoUrl, $Dest)
 
 & git @cloneArgs
-if ($LASTEXITCODE -ne 0) { Fail "git clone 失败，请检查仓库地址/网络/权限。" }
+if ($LASTEXITCODE -ne 0) { Fail "git clone failed. check repo/network/permissions." }
 
 Push-Location $Dest
 
-# 读取排除白名单 JSON（默认在脚本所在目录，即项目根目录）
-if ([System.IO.Path]::IsPathRooted($ExcludeJson)) {
-  $excludeJsonPath = $ExcludeJson
-} else {
-  $excludeJsonPath = Join-Path -Path $repoRoot -ChildPath $ExcludeJson
-}
-
 $exclude = @()
-if (Test-Path -LiteralPath $excludeJsonPath) {
+if ($excludeJsonPath -and (Test-Path -LiteralPath $excludeJsonPath)) {
   try {
     $jsonObj = Get-Content -LiteralPath $excludeJsonPath -Encoding utf8 -Raw | ConvertFrom-Json
     if ($null -ne $jsonObj.exclude) { $exclude += @($jsonObj.exclude) }
-    # 兼容可选键：支持专门为“文件”列出的白名单数组（非必需）
     if ($null -ne $jsonObj.exclude_files) { $exclude += @($jsonObj.exclude_files) }
     if ($null -ne $jsonObj.excludeFiles) { $exclude += @($jsonObj.excludeFiles) }
   } catch {
-    Fail "解析排除白名单失败：$excludeJsonPath"
+    Fail ("failed to parse whitelist: " + $excludeJsonPath)
   }
 } else {
-  Write-Host "[partial-clone] 未找到白名单文件：$excludeJsonPath，将仅默认排除 .git。"
+  Write-Host "[partial-clone] no whitelist found. default exclude .git only."
 }
 
 $exclude = $exclude | ForEach-Object { $_.ToString().Trim() } | Where-Object { $_ -ne "" } | Select-Object -Unique
 if ($exclude -notcontains ".git") { $exclude += ".git" }
 
-# 配置 sparse-checkout（先写规则，再检出分支，避免无谓拉取）
+# enable sparse-checkout, write rules before checkout
 & git config core.sparseCheckout true
 & git sparse-checkout init --no-cone | Out-Null
 
-# 构建稀疏模式：包含全部（/*），再排除白名单中的路径（目录或文件）
 $patterns = New-Object 'System.Collections.Generic.List[string]'
 $patterns.Add("/*") | Out-Null
-$(
-  foreach ($item in $exclude) {
-    if ($item -eq ".git") { continue }
-    $safe = Normalize-RepoPath $item
-    if ([string]::IsNullOrWhiteSpace($safe)) { continue }
-    # 通用排除：既匹配同名文件，也匹配同名目录
-    $patterns.Add("!/$safe")   | Out-Null
-    $patterns.Add("!/$safe/*") | Out-Null
-    $safe
-  }
-) | Out-Null
+foreach ($item in $exclude) {
+  if ($item -eq ".git") { continue }
+  $safe = Normalize-RepoPath $item
+  if ([string]::IsNullOrWhiteSpace($safe)) { continue }
+  $patterns.Add("!/$safe")   | Out-Null
+  $patterns.Add("!/$safe/*") | Out-Null
+}
 
 $scFile = Join-Path -Path ".git" -ChildPath "info/sparse-checkout"
 $patterns | Set-Content -LiteralPath $scFile -Encoding utf8
 
-# 解析默认分支（若未指定）
-if (-not ($Branch -and $Branch.Trim() -ne "")) {
-  $head = ""
-  $sym = (& git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>$null)
-  if ($LASTEXITCODE -eq 0 -and $sym) {
-    $head = ($sym.Trim() -replace '^origin/','')
-  }
-  if (-not $head) {
-    $info = (& git remote show origin)
-    $m = ($info | Select-String -Pattern 'HEAD branch:\s+(.+)$' | Select-Object -First 1)
-    if ($m) { $head = $m.Matches[0].Groups[1].Value.Trim() }
-  }
-  if (-not $head) { $head = "main" }
-  $Branch = $head
-}
-
-# 检出目标分支（优先创建本地跟踪分支）
+# checkout target branch
 $checkoutOk = $false
-& git checkout -q -b $Branch --track ("origin/" + $Branch)
+& git checkout -q -b $targetBranch --track ("origin/" + $targetBranch)
 if ($LASTEXITCODE -eq 0) { $checkoutOk = $true }
 if (-not $checkoutOk) {
-  & git checkout -q ("origin/" + $Branch)
+  & git checkout -q ("origin/" + $targetBranch)
   if ($LASTEXITCODE -eq 0) { $checkoutOk = $true }
 }
-if (-not $checkoutOk) { Fail "无法检出分支：$Branch" }
+if (-not $checkoutOk) { Fail ("failed to checkout branch: " + $targetBranch) }
 
-# 重新应用稀疏规则，确保工作区仅包含所需内容
 & git sparse-checkout reapply | Out-Null
 
-Write-Host "[partial-clone] 完成。已排除路径："
+Write-Host "[partial-clone] done. excluded paths:"
 $excludedPrinted = $exclude | Where-Object { $_ -ne ".git" }
 if ($excludedPrinted.Count -eq 0) {
-  Write-Host "  (无额外排除项，默认仅排除 .git)"
+  Write-Host "  (none, default exclude .git)"
 } else {
   foreach ($i in $excludedPrinted) { Write-Host ("  - " + $i) }
 }
 
+# remove .git to leave a clean tree
+try {
+  $gitDir = Join-Path -Path (Get-Location) -ChildPath ".git"
+  if (Test-Path -LiteralPath $gitDir -PathType Container) {
+    Remove-Item -LiteralPath $gitDir -Recurse -Force -ErrorAction Stop
+    Write-Host "[partial-clone] removed .git directory"
+  }
+} catch {
+  Write-Warning ("[partial-clone] failed to remove .git directory: " + $_.Exception.Message)
+}
+
 Pop-Location
 exit 0
+
