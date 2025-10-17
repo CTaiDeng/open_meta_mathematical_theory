@@ -6,12 +6,9 @@ Copyright (C) 2025 GaoZheng
 - 在 `src/kernel_reference` 与 `src/full_reference` 之间，基于“共同文件名（交集）”建立/校验/重建哈希映射（JSON 存储于 `src/full_reference/common_name_hash_map.json`）。
 - 菜单模式：
   1) 初始化映射（若存在则覆盖）
-  2) 打印变更（缺失/变更/新增交集/失去交集）
-  3) 打印不一致（打印存在但不一致的）
-  4) 生成不一致 CSV（生成存在但不一致的导入 CSV）
-  5) 重建映射（覆盖为当前交集状态）
-  6) 退出
-- 也支持非交互：`-Mode init|check|diff|rebuild|menu`
+  2) 生成不一致 CSV（生成存在但不一致的导入 CSV）
+  3) 退出
+- 也支持非交互：`-Mode init|diff|menu`
 - 额外开关：`-DiffCsvPath <path>` 将“不一致列表”导出为 CSV（与 `diff` 联动）。
 
 说明：
@@ -24,7 +21,7 @@ Copyright (C) 2025 GaoZheng
 #>
 
 param(
-  [ValidateSet('menu','init','check','diff','rebuild')]
+  [ValidateSet('menu','init','diff')]
   [string]$Mode = 'menu',
   [string]$DiffCsvPath
 )
@@ -243,7 +240,18 @@ function Do-DiffCsv(){
   $defaultPath = Join-Path $p.FullDir 'common_name_hash_diff.csv'
   $hint = Read-Host ("请输入导出 CSV 路径（默认：$defaultPath）")
   $outPath = if([string]::IsNullOrWhiteSpace($hint)) { $defaultPath } else { $hint }
-  Print-Inconsistencies -current $current -CsvPath $outPath | Out-Null
+  # 仅生成 CSV，不在控制台打印长列表
+  $items = New-Object System.Collections.Generic.List[object]
+  foreach($name in $current.Keys | Sort-Object){
+    $v = $current[$name]
+    $kr = $v.kernel_reference
+    $fr = $v.full_reference
+    if([string]::IsNullOrEmpty($kr) -or [string]::IsNullOrEmpty($fr)){ continue }
+    if($kr -ne $fr){
+      $items.Add([ordered]@{ name=$name; kernel_reference=$kr; full_reference=$fr })
+    }
+  }
+  Export-InconsistenciesCsv -items $items -path $outPath
 }
 
 function Do-Rebuild(){
@@ -258,20 +266,14 @@ function Show-Menu(){
     Write-Host ''
     Write-Host '==== 共同文件名哈希映射 ====' -ForegroundColor White
     Write-Host '1) 初始化映射（若存在则覆盖）'
-    Write-Host '2) 打印变更（缺失/变更/新增交集/失去交集）'
-    Write-Host '3) 打印不一致（打印存在但不一致的）'
-    Write-Host '4) 生成不一致 CSV（生成存在但不一致的导入 CSV）'
-    Write-Host '5) 重建映射（覆盖为当前交集状态）'
-    Write-Host '6) 退出'
-    $sel = Read-Host '请选择操作 [1-6]'
+    Write-Host '2) 生成不一致 CSV（生成存在但不一致的导入 CSV）'
+    Write-Host '3) 退出'
+    $sel = Read-Host '请选择操作 [1-3]'
     switch($sel){
       '1' { Do-Init }
-      '2' { Do-Check }
-      '3' { Do-Diff }
-      '4' { Do-DiffCsv }
-      '5' { Do-Rebuild }
-      '6' { return }
-      default { Write-Host '无效选项，请输入 1-6。' -ForegroundColor Red }
+      '2' { Do-DiffCsv }
+      '3' { return }
+      default { Write-Host '无效选项，请输入 1-3。' -ForegroundColor Red }
     }
   }
 }

@@ -26,20 +26,20 @@
   "1734546043_广义增强学习理论的公理系统.pdf": {
     "md_path": "src\\kernel_reference\\1734546043_广义增强学习理论的公理系统.md",
     "pdf_path": "src\\kernel_reference_pdf\\1734546043_广义增强学习理论的公理系统.pdf",
-    "md_hash": "1c6e45b6fa5ac5c3515504ce5fe75b7d079fc1d6228fb378f8c2e2ecad1fc244",
-    "pdf_hash": "9c8d96be874db7e5c62ec0e88b898d003e1c5ae041c1b74f595b019955e48d20"
+    "md_hash": "eda925887dac42a4c64e830e35fc37ec469f7411781eac4d12a1c48a99b9b802",
+    "pdf_hash": "46cfaf13497e6f4f380e79fb6606b18e935cafca9c3a1fd4c189497ef218edc1"
   },
   "1734546044_DERI算法的完整理论描述：从符号运算到超参数推导.pdf": {
     "md_path": "src\\kernel_reference\\1734546044_DERI算法的完整理论描述：从符号运算到超参数推导.md",
     "pdf_path": "src\\kernel_reference_pdf\\1734546044_DERI算法的完整理论描述：从符号运算到超参数推导.pdf",
-    "md_hash": "9d297d0957b5b9be9354e5e1a44f8c9492b6a7a9a4a967bc18d6b67653d8e84c",
-    "pdf_hash": "307f77366dba1767afacfc6f9f369e815f3339ea3db900ec371783de3e96b7d3"
+    "md_hash": "d604ce5b179268e4174c79661f228da4f0dd103274299dec398bf04114c415a7",
+    "pdf_hash": "f5eaee3ebdd151749f56ec997108374603c521915df92a7a4da19e039ef97ab3"
   },
   "1734546045_GCPOLAA算法的完整理论描述：从路径优化到模型校准.pdf": {
     "md_path": "src\\kernel_reference\\1734546045_GCPOLAA算法的完整理论描述：从路径优化到模型校准.md",
     "pdf_path": "src\\kernel_reference_pdf\\1734546045_GCPOLAA算法的完整理论描述：从路径优化到模型校准.pdf",
-    "md_hash": "e42a24c44fec9efff2f0b3acb1b42125cd99f6ee26720fccb39b4feb9f62e40b",
-    "pdf_hash": "fd48b296853912f54525b7d1c954b280005960bac3d0aded14875457b557020e"
+    "md_hash": "c4fca670b0f5fb76e47226cc4f0eab7a0cb4240f871a68313dc8f8bfe4ee06c6",
+    "pdf_hash": "20b4e736005fb4794e46ba47ab3cc4112ef0f6c807e97a824e840220612f1c80"
   },
   "1734546046_广义增强学习解析解：从训练到应用的完整性与价值.pdf": {
     "md_path": "src\\kernel_reference\\1734546046_广义增强学习解析解：从训练到应用的完整性与价值.md",
@@ -80,8 +80,8 @@
   "1734546052_广义增强学习的完备性评估.pdf": {
     "md_path": "src\\kernel_reference\\1734546052_广义增强学习的完备性评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1734546052_广义增强学习的完备性评估.pdf",
-    "md_hash": "88cc0197d4eb4a4b4470e73a16f090f7e8c6ad6e4bee38a3aa4f1cd48b6acec2",
-    "pdf_hash": "d8be99017fe7ea464dd579a9d520524fd82ef6f099b32867bb096d95361290f1"
+    "md_hash": "cfa7f1bd6bfd1a0cf64273445e488aeff219cd0dbd2f547798fc372e382b04cc",
+    "pdf_hash": "9ea3e15226dd4be4b744601d781db4281dffdf862c672952d795c2676d8af977"
   },
   "1734546053_基于C泛迭代分析与广义增强学习的动态平衡控制：构建室温超导（超流）的非传统路径.pdf": {
     "md_path": "src\\kernel_reference\\1734546053_基于C泛迭代分析与广义增强学习的动态平衡控制：构建室温超导（超流）的非传统路径.md",
@@ -128,104 +128,104 @@
   "1737014285_评价《从偏序迭代视角反思连续统假设：连续与离散之外的并行结构探索》.pdf": {
     "md_path": "src\\kernel_reference\\1737014285_评价《从偏序迭代视角反思连续统假设：连续与离散之外的并行结构探索》.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014285_评价《从偏序迭代视角反思连续统假设：连续与离散之外的并行结构探索》.pdf",
-    "md_hash": "f169ffe176795898e573ae2cb62a0ed50494bf2b8db906a3676980696318515c",
-    "pdf_hash": "42cc4fc1edeaee6df79bb6475b80561bba56a8105e966fae98c8b0a0f0496e7a"
+    "md_hash": "ac5b648ef209cb6fffb1cf748273b0ee204ffe501a7a682ead598584a76df11c",
+    "pdf_hash": "3441862ab4ab6d7a4b95304ab6914c9cd887a527a3e3455e388b4785a24b753d"
   },
   "1737014286_从泛逻辑分析与广义逻辑角度重新审视连续统假设：更复杂集合结构的可能性探索.pdf": {
     "md_path": "src\\kernel_reference\\1737014286_从泛逻辑分析与广义逻辑角度重新审视连续统假设：更复杂集合结构的可能性探索.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014286_从泛逻辑分析与广义逻辑角度重新审视连续统假设：更复杂集合结构的可能性探索.pdf",
-    "md_hash": "bc6b951377e2d86701945d9b0098b277e05811202748e44cfbf4e238fbf2656e",
-    "pdf_hash": "a23b5c79aa15475f2d2ae4cb9710c3f00b8207028f3a870e90cc655cfb3a0fc6"
+    "md_hash": "137d3624565da7ab52fbc25ac60f25b161a3d73ab4fbb5419d6cfea8806a66f0",
+    "pdf_hash": "0da981fc53899911bac519e0863ba590c764d870e57e85401c69528f123bb62f"
   },
   "1737014287_基于元数学理论的严谨构造：为连续统假设提供新的证明基础.pdf": {
     "md_path": "src\\kernel_reference\\1737014287_基于元数学理论的严谨构造：为连续统假设提供新的证明基础.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014287_基于元数学理论的严谨构造：为连续统假设提供新的证明基础.pdf",
-    "md_hash": "1471dd59e0dbde1d5cad84d8fd90049e7f46a621e3c2522eb5cf1cc209afca28",
-    "pdf_hash": "5faa80bfc377e5e09bbeec1a5b536e5b76198353f821e5f491dae654918d50b7"
+    "md_hash": "c7ddcd7dcb8163da813c90057c8d4fa3b898ad4b131d5ca1ff9e4089511de31c",
+    "pdf_hash": "69e140af3fb774f1c7b48894b67b834be4ac45e737fb2c3c772c5d8e123b72c9"
   },
   "1737014288_广义分形数学中的可伸缩性：对康托集存在性证明的特殊意义.pdf": {
     "md_path": "src\\kernel_reference\\1737014288_广义分形数学中的可伸缩性：对康托集存在性证明的特殊意义.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014288_广义分形数学中的可伸缩性：对康托集存在性证明的特殊意义.pdf",
-    "md_hash": "855884f0fe3f4be62b2e415a9074cd2d5d82e3fbbfda6969c3c0a5ab88a89745",
-    "pdf_hash": "fc728c9d082890f4038b496fee07dd1049b7250cca6fb340b1e552957e825c3e"
+    "md_hash": "953c3fb5f252551d1c205ea37d771daf68823e84e10b0afa733baffa5072b601",
+    "pdf_hash": "852f33eafb89e137fec9dea6808d6855a2471aaf48c48964cecf1492db8082b1"
   },
   "1737014289_广义分形范畴体系的构造：为康托集描述及金融时序分析提供的有力数学工具.pdf": {
     "md_path": "src\\kernel_reference\\1737014289_广义分形范畴体系的构造：为康托集描述及金融时序分析提供的有力数学工具.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014289_广义分形范畴体系的构造：为康托集描述及金融时序分析提供的有力数学工具.pdf",
-    "md_hash": "85bffea945c9cf22bf62bc7666186c1df4844cafaf6cbc6cb580dd84c092d559",
-    "pdf_hash": "e876e112d6d80b9c22367b48077aeffe74f58fb1dcfb4a2044809111ca98b83e"
+    "md_hash": "4355babaabe580363e634fc3f9ed2d50321f485be02bdf68bf270b8351873030",
+    "pdf_hash": "050d8a85dd275634a6ce6003bd144a4b857fa963d1c5c16d980d5773f0e526b0"
   },
   "1737014290_从康托集到广义康托集：移除自相关构造性规则的推广与广义分形的构建.pdf": {
     "md_path": "src\\kernel_reference\\1737014290_从康托集到广义康托集：移除自相关构造性规则的推广与广义分形的构建.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014290_从康托集到广义康托集：移除自相关构造性规则的推广与广义分形的构建.pdf",
-    "md_hash": "bbf37ca55d352a1ac981ab573c4fdbe40ee4ec414df0bd6598bfac3e43a12996",
-    "pdf_hash": "da1a1c35e0e59fb33a6b62fa74a92a0020885f8e66aa501327fb1c381dbb0466"
+    "md_hash": "ea175d6f508c654387781c89f28eafc7be4f543ec6f8428e48a59ce64f4f2cab",
+    "pdf_hash": "bb7059e72f916df2b61330a378fcba096ecaff6d489db53dd59d2a35976eb3f7"
   },
   "1737014291_广义康托集与广义分形数学结构：为元数学理论中的泛逻辑分析与泛迭代分析构建基础框架.pdf": {
     "md_path": "src\\kernel_reference\\1737014291_广义康托集与广义分形数学结构：为元数学理论中的泛逻辑分析与泛迭代分析构建基础框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014291_广义康托集与广义分形数学结构：为元数学理论中的泛逻辑分析与泛迭代分析构建基础框架.pdf",
-    "md_hash": "67c78f331a9ab84caf408aa4284ae920e72c678756d91671883a7a33ae4c9ee0",
-    "pdf_hash": "40aa0f58a26a60068db92f21e00ef30a347aca37ba0b9d44977a75e64c5e12f5"
+    "md_hash": "b84315c02fe020ade2896b5bc05c37ba47b04a11b3188c09f566d5d4ec4831b0",
+    "pdf_hash": "24f4c34c29c4f3fb97583a32d51e4df82d59001b57c14afc458105acb4236a68"
   },
   "1737014292_广义康托集与广义分形数学结构：对连续统假设伪证性的突破性贡献.pdf": {
     "md_path": "src\\kernel_reference\\1737014292_广义康托集与广义分形数学结构：对连续统假设伪证性的突破性贡献.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014292_广义康托集与广义分形数学结构：对连续统假设伪证性的突破性贡献.pdf",
-    "md_hash": "2afb0185256af0b63bc61e69532260fbb11c6c77f71e30a9e47fac1e7d8bbb73",
-    "pdf_hash": "b8f79c91d1a768bcf467cf0ba7975ad7ef02348ebbf9f27fb7e1d3280870da97"
+    "md_hash": "14fa9d25d1f68d3454a2e1461a092db3af6ccd2eb89ab05e13cbfd2d0fddb6f1",
+    "pdf_hash": "c5cbae1270a43a1f4f00f524281ae090e1d8bba263bbf26476ab9dbad40c395b"
   },
   "1737014293_基于泛逻辑分析与泛迭代分析互为作用的元数学理论：逻辑性度量与性变态射的动态演化.pdf": {
     "md_path": "src\\kernel_reference\\1737014293_基于泛逻辑分析与泛迭代分析互为作用的元数学理论：逻辑性度量与性变态射的动态演化.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014293_基于泛逻辑分析与泛迭代分析互为作用的元数学理论：逻辑性度量与性变态射的动态演化.pdf",
-    "md_hash": "9e39b2618608489d46ed717c011da7c812ed18f6cfdee913da0029b411b32286",
-    "pdf_hash": "d96ce27c8af077df77ef0059b44f2171b5478554d93aa23d01ca3187ade078a5"
+    "md_hash": "304aaf7ff1ff6c9a1484faaa0da57d923ec9a364e05223111981fca6a8aa6cae",
+    "pdf_hash": "1ca503d37344238887a511f74c150f491bdcfc590a5440f2eac0e24b96e513fc"
   },
   "1737014294_基于泛逻辑分析与泛迭代分析互为作用的元数学理论.pdf": {
     "md_path": "src\\kernel_reference\\1737014294_基于泛逻辑分析与泛迭代分析互为作用的元数学理论.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014294_基于泛逻辑分析与泛迭代分析互为作用的元数学理论.pdf",
-    "md_hash": "a39768eda7c584a7f2592bf6b94a33e3ec12c14ccb4c7d0503c27e0c616892f2",
-    "pdf_hash": "9c22e088fa80e34d90d46b272585afb50e1717a7837f9d5f48afd0d918c2d57c"
+    "md_hash": "11b0e32d9b0d200df9b79ae0b3c0de02317b1a2bbb4bd798bc098b1b451c325e",
+    "pdf_hash": "196ab36163dd167eee9c6daed1bf2df65b7daf0f81692c537460abab6f20aec2"
   },
   "1737014295_基于泛逻辑分析与泛迭代分析互为作用的元数学理论的公理化描述.pdf": {
     "md_path": "src\\kernel_reference\\1737014295_基于泛逻辑分析与泛迭代分析互为作用的元数学理论的公理化描述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014295_基于泛逻辑分析与泛迭代分析互为作用的元数学理论的公理化描述.pdf",
-    "md_hash": "070d2ccfcd3e0e0770907ea6eed671e5e7e2a1e298c9e7c97a5e5916935b2644",
-    "pdf_hash": "022eb08b77ff6a3ffe20ce637ae16a31cedb13ef7beccf164a1c19ae5599207a"
+    "md_hash": "48c76a38c570094adcc172a8fe14ac9d60f187249adad7aef7acaca5b36582e4",
+    "pdf_hash": "d1c1c0476e7c259f3c11eaf2d29e3838bd6601cbca1039a5f8aa07437e83bd8d"
   },
   "1737014296_整合泛迭代分析中的泛范畴、泛拓扑、泛抽象代数的元数学理论.pdf": {
     "md_path": "src\\kernel_reference\\1737014296_整合泛迭代分析中的泛范畴、泛拓扑、泛抽象代数的元数学理论.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014296_整合泛迭代分析中的泛范畴、泛拓扑、泛抽象代数的元数学理论.pdf",
-    "md_hash": "78b588f7334c06d79c4d486dfef69e17dcac8e7503f042dcb3c83d9c5baca775",
-    "pdf_hash": "2fd8baba90bbdcaec43407b9dc645a7cc91bd375b839f9a039dab8bb62b7b824"
+    "md_hash": "449a458b5249fd8958eee335531ea792693f2b507135dc7dee3aedc5781e473e",
+    "pdf_hash": "b11b922f5ca8be9f5b46f9a49f67d4dd6ef1d6a5561db7f407d99b686d825a3d"
   },
   "1737014297_通用数学结构的公理化描述.pdf": {
     "md_path": "src\\kernel_reference\\1737014297_通用数学结构的公理化描述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014297_通用数学结构的公理化描述.pdf",
-    "md_hash": "fb4d560ed97a249ac4c64cdcfe4c04c203fd63f4b718dd067be0341466ae1d95",
-    "pdf_hash": "56377b0a7db72e59fe22772211c77d5c76441c76aeec05866a61f4f7fda79fe3"
+    "md_hash": "adf979e1b6f84761ca5ec0f5d5a6fc494dfa6bae48d8a4b4d651ab1a23cd6e73",
+    "pdf_hash": "836bdeab9c88a86d017817fba8fa85dca09b9ce39416adb5f58a92e24f869c0f"
   },
   "1737014298_整合通用数学结构的公理化描述到基于泛逻辑分析与泛迭代分析互为作用的元数学理论.pdf": {
     "md_path": "src\\kernel_reference\\1737014298_整合通用数学结构的公理化描述到基于泛逻辑分析与泛迭代分析互为作用的元数学理论.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014298_整合通用数学结构的公理化描述到基于泛逻辑分析与泛迭代分析互为作用的元数学理论.pdf",
-    "md_hash": "347d5a3a4e186d4832406411812013cd6f093aac0d24f7277bdbf50fbc6863f1",
-    "pdf_hash": "210cb0459a0afa2d8953bc5fba70d9dfb5f7dd72033f10c1137d85e093a1b457"
+    "md_hash": "87633dbfffbce8590673afdc85d481c3c1839579b26cc642d0781920cfc3160f",
+    "pdf_hash": "62a346d803782b2e128ef2ca727601dc2dadf69bc12b7b7eb06c6612545313bd"
   },
   "1737014299_D结构及其在决策系统中的数学特性与作用.pdf": {
     "md_path": "src\\kernel_reference\\1737014299_D结构及其在决策系统中的数学特性与作用.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014299_D结构及其在决策系统中的数学特性与作用.pdf",
-    "md_hash": "260f2fc0ac4f5f42ba31122a2e14b705f8094b0e5b1bda60b93106bc169aa5e7",
-    "pdf_hash": "59bb683d847815e7af140be2d4aeb5fae25f08b36957794e8baa2ce511b47468"
+    "md_hash": "f08697f526f6b7bb21b23f6e49cc1abb043c48217a033aef8b84d243ec6abfd7",
+    "pdf_hash": "445afb75118ae4f61374726d5f048e78f3be646ed9377d61135cbf4dd783112c"
   },
   "1737014300_D结构的构造及其逻辑占位.pdf": {
     "md_path": "src\\kernel_reference\\1737014300_D结构的构造及其逻辑占位.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014300_D结构的构造及其逻辑占位.pdf",
-    "md_hash": "5a39a04b04c7656c6025da6e0db546d713fd02a0e51813479055effd5b673a2d",
-    "pdf_hash": "059514dc0086d58690c471501d280941d8eb4388fbcd42ace695ad757871a850"
+    "md_hash": "cb16a7185e8789ca1c4a9e6a2b14532365f623dcff510326187b02c657ccbcb9",
+    "pdf_hash": "ea9b8d701b07f0e72d5289807f9909707dc102840463d62c52d8de0460f2481b"
   },
   "1737014301_基于泛逻辑分析与泛迭代分析互为作用的元数学理论与传统数学的衔接与延展.pdf": {
     "md_path": "src\\kernel_reference\\1737014301_基于泛逻辑分析与泛迭代分析互为作用的元数学理论与传统数学的衔接与延展.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014301_基于泛逻辑分析与泛迭代分析互为作用的元数学理论与传统数学的衔接与延展.pdf",
-    "md_hash": "fd0a8016371d3d262c5683e29f5992fac12e45850757bd1aa19e1b14abc3b21d",
-    "pdf_hash": "7c890f2ed099e01e603364617910c8b79cdf62306bfd3c95b824eec2071bef5c"
+    "md_hash": "2784df54e08d1aee8887f3baec140fd3a64abd494ec564806a602a40e93bdb4b",
+    "pdf_hash": "694122b88b866bb8af263ef0d5627faa8321e67b6ddc5f1e82e039bfe2aaf1e7"
   },
   "1737014302_基于泛逻辑分析与泛迭代分析互为作用的元数学理论详细展开论述C泛范畴理论实例.pdf": {
     "md_path": "src\\kernel_reference\\1737014302_基于泛逻辑分析与泛迭代分析互为作用的元数学理论详细展开论述C泛范畴理论实例.md",
@@ -320,8 +320,8 @@
   "1737014317_在LLM时代重新评估“基于泛逻辑分析与泛迭代分析互为作用的元数学理论”的价值评估.pdf": {
     "md_path": "src\\kernel_reference\\1737014317_在LLM时代重新评估“基于泛逻辑分析与泛迭代分析互为作用的元数学理论”的价值评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737014317_在LLM时代重新评估“基于泛逻辑分析与泛迭代分析互为作用的元数学理论”的价值评估.pdf",
-    "md_hash": "e77ea03d38e575a025ab6a5900ea32f53a05b22c29289baafcc161358d66f54b",
-    "pdf_hash": "5922181a8b00ea60c6f828a23d1ca6aad15d9b7318edd8b41f6c449787e5792f"
+    "md_hash": "90630c503d24825ad3d83c0899d447b65e35e23159552c13f8997f8fa585dbcd",
+    "pdf_hash": "781fc999696b62b7f2ed993b24c5cc802645f7fef98e12dd9d4fbbff2df13aeb"
   },
   "1737014318_自洽与完备性的内在意义：基于哥德尔不完备定理的论证.pdf": {
     "md_path": "src\\kernel_reference\\1737014318_自洽与完备性的内在意义：基于哥德尔不完备定理的论证.md",
@@ -344,56 +344,56 @@
   "1737179312_基于C泛范畴的室温超导及其本质的广义增强学习动态路径优化.pdf": {
     "md_path": "src\\kernel_reference\\1737179312_基于C泛范畴的室温超导及其本质的广义增强学习动态路径优化.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179312_基于C泛范畴的室温超导及其本质的广义增强学习动态路径优化.pdf",
-    "md_hash": "4be60217d1b05f21b6350239e45fcf7828bd686a469fd58b38d5d7963d638300",
-    "pdf_hash": "c8cedce0f691acd9c3af67eecd77312709c9f318c0700e8cc7940e6470cb1d90"
+    "md_hash": "661c0a90f09a43c7fc11f319fd5325d605b6020a9315c66c4533b1a569289c2c",
+    "pdf_hash": "cf20b029f0a12cb5edd604beb74850639dc8038157620ca1bc631bca17768eca"
   },
   "1737179313_基于C泛范畴的G粒子矩阵下 B → A 迭代的粒子路径分析.pdf": {
     "md_path": "src\\kernel_reference\\1737179313_基于C泛范畴的G粒子矩阵下 B → A 迭代的粒子路径分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179313_基于C泛范畴的G粒子矩阵下 B → A 迭代的粒子路径分析.pdf",
-    "md_hash": "c83e2abbf66972f4e322431d12363fdb870a27f8dab985d6d65db04d1556da57",
-    "pdf_hash": "5717ddb7eeaf9c894c02cc95d57311078027fb817c8cbc7fa8c6802f2546babf"
+    "md_hash": "35c565a017fab0354c2fe98b5776ec2df3ac3d72edcea7711ab8c042653dd8b7",
+    "pdf_hash": "cc9a37c60956d4615a40db6b700c55acfa7d409cd93f87acf469d32232d7fbd3"
   },
   "1737179314_基于C泛范畴的高维卡丘空间与低维卡丘流形迭代及其在量子塌缩与时空演化中的解释力.pdf": {
     "md_path": "src\\kernel_reference\\1737179314_基于C泛范畴的高维卡丘空间与低维卡丘流形迭代及其在量子塌缩与时空演化中的解释力.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179314_基于C泛范畴的高维卡丘空间与低维卡丘流形迭代及其在量子塌缩与时空演化中的解释力.pdf",
-    "md_hash": "cf3d526a5a0bce28cee4384e587fab643ff196924eb70dbee83e1d2215d45ebe",
-    "pdf_hash": "cc04237002a3bcf94b82940be162499f132acd8c086f18c8d48d3c289de1b9a0"
+    "md_hash": "cec5c45eea0a005d95403424abcdc3e6a85222e5929c68f30a6962756e3b16ab",
+    "pdf_hash": "e782d08e32024f9f625708374e6b7825f01d1b14d61c310f01235e4c3106886c"
   },
   "1737179315_基于C泛范畴的G粒子矩阵与性变态射的广义增强学习：面向粒子级别的路径控制与室温超导材料选择的新范式.pdf": {
     "md_path": "src\\kernel_reference\\1737179315_基于C泛范畴的G粒子矩阵与性变态射的广义增强学习：面向粒子级别的路径控制与室温超导材料选择的新范式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179315_基于C泛范畴的G粒子矩阵与性变态射的广义增强学习：面向粒子级别的路径控制与室温超导材料选择的新范式.pdf",
-    "md_hash": "7cb45c22a72d08745e0edf0bd018fe9f8eef01eccfdba27ac9e5d56c3d08a590",
-    "pdf_hash": "d39b2b13177bab96f7c23809d9293c4bac439ce66a6774dacd38966e64766301"
+    "md_hash": "d191f053a19ac1a0f60a6863b538d82ac66ccff5667ffffbda582a4c36698780",
+    "pdf_hash": "9d087c6fd90c042c1f144b827fd70249eae6d31d73dff11db56bd54d87979116"
   },
   "1737179316_形流熵的描述框架构建：技术支持与一致性对齐的探索.pdf": {
     "md_path": "src\\kernel_reference\\1737179316_形流熵的描述框架构建：技术支持与一致性对齐的探索.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179316_形流熵的描述框架构建：技术支持与一致性对齐的探索.pdf",
-    "md_hash": "f08b6afb71a51395243f7e6f0d0c952af09644a8c21d2118bb4f35a5e8e7f16e",
-    "pdf_hash": "eadc3ac89cb4456829988f2e2f5ab3fbda5f53f3156061e85e2f116af3d84baf"
+    "md_hash": "c40b13cf2f90bec649ffbeab5cbccb32b38fa91bbf4f8c45c9506b75eef60f92",
+    "pdf_hash": "6106244e4e3f70aa03bfc26903a22869a98276485b234fa85218d389409b9f34"
   },
   "1737179317_形流熵的定义与公理化描述.pdf": {
     "md_path": "src\\kernel_reference\\1737179317_形流熵的定义与公理化描述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179317_形流熵的定义与公理化描述.pdf",
-    "md_hash": "eccf719e0ddd4ec9240641c86656aae98147c470b933b6efb3e0c8510e7be074",
-    "pdf_hash": "fd34dfed8b3e54483b3a0092b4f798488a36ef57c715cdb556634506812e7778"
+    "md_hash": "4403e67f73a735afa3bac0f951999a7bf580132f4e9f6d0796e6c9ca3ba7fbfd",
+    "pdf_hash": "d1f6927baf1d82961616caeaa571926a327f54aaeadfd3dc0daec4034f840149"
   },
   "1737179318_形流熵作为 D 结构的实例化的逻辑与意义.pdf": {
     "md_path": "src\\kernel_reference\\1737179318_形流熵作为 D 结构的实例化的逻辑与意义.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179318_形流熵作为 D 结构的实例化的逻辑与意义.pdf",
-    "md_hash": "bb2b800fb23e0f8a04470bc4072b8a813728a5ba7051c8dc6333292cc484fc06",
-    "pdf_hash": "96a42571c7b45751b223e907bf3654c41c07b365ea351c0dd8aec5b9de09c1cd"
+    "md_hash": "6198fd263f6756f291211c01fe5c4786a2d856a01a8e4f757371a04a6ba68f38",
+    "pdf_hash": "e60998659d2377dc48a519071bf15af895a3bd4c86b9c5dd46018400370296d6"
   },
   "1737179319_D 结构的广义特性与形流熵作为实例的关系.pdf": {
     "md_path": "src\\kernel_reference\\1737179319_D 结构的广义特性与形流熵作为实例的关系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179319_D 结构的广义特性与形流熵作为实例的关系.pdf",
-    "md_hash": "8bc4e784392b281c8e31e6030e38706ff4d848bdd9c9a8b43bdda72cc22f9dac",
-    "pdf_hash": "6835954dacae299e6451e5db2423d102fac3a45bd76bc94c283d6de861c8d3de"
+    "md_hash": "21f0aa55019b5d9e29de60bd00faf2f1bbd5b462fd0bf2fc33d9e68af832abbe",
+    "pdf_hash": "63da1cb6687cf817703f11ce335bb15d694286c77e5f9ae1bb75ec61e51b3d25"
   },
   "1737179320_广义增强学习与逻辑穿梭机的无缝衔接：基于泛逻辑与泛迭代分析的元数学理论视角.pdf": {
     "md_path": "src\\kernel_reference\\1737179320_广义增强学习与逻辑穿梭机的无缝衔接：基于泛逻辑与泛迭代分析的元数学理论视角.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179320_广义增强学习与逻辑穿梭机的无缝衔接：基于泛逻辑与泛迭代分析的元数学理论视角.pdf",
-    "md_hash": "9ff150d8d15a12845cf718a14d5e036907b30726ba225175a29425f0231fda5b",
-    "pdf_hash": "876df2833fae24f5114c18fe0e7cc96577799cf429bd6ccdd9b32c0433c24887"
+    "md_hash": "4e26c480f1d3a3d5117a5aa6bc730820aa5005033e95f5d6789cb7bb15d8a645",
+    "pdf_hash": "47606883a57bee8db20f9febde16a9e325795fa8099ca41190ae619a2b1d4a9a"
   },
   "1737179321_量子计算与传统计算在软件与物理层面的对标分析.pdf": {
     "md_path": "src\\kernel_reference\\1737179321_量子计算与传统计算在软件与物理层面的对标分析.md",
@@ -404,14 +404,14 @@
   "1737179322_基于元数学理论构建超级对齐数学模型.pdf": {
     "md_path": "src\\kernel_reference\\1737179322_基于元数学理论构建超级对齐数学模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179322_基于元数学理论构建超级对齐数学模型.pdf",
-    "md_hash": "14e4007dc7a6984fb6a4217355ad3c45ba057bb49db821ea7f59cb028bf107f6",
-    "pdf_hash": "243b4229c002db600c9e3bc0ad5a6247927d572788aa8144f770d7dce41a6479"
+    "md_hash": "dd1e1295356ac134683d60dd9e8ec78c572f15c7e6d1a3d1e4333f521ace9ab7",
+    "pdf_hash": "9b04cc6510e4e231e9a71158307c4bd401fa71ec2df943acc40777c78df16336"
   },
   "1737179323_基于元数学理论构建的超级对齐数学模型中的广义增强学习实现.pdf": {
     "md_path": "src\\kernel_reference\\1737179323_基于元数学理论构建的超级对齐数学模型中的广义增强学习实现.md",
     "pdf_path": "src\\kernel_reference_pdf\\1737179323_基于元数学理论构建的超级对齐数学模型中的广义增强学习实现.pdf",
-    "md_hash": "e5e3ab7701290b278c0f1d7fc113273364d154bf5d99e1669ef110ee2ed3238d",
-    "pdf_hash": "4f06ab440bf0e77a32dd01e57939be21c9a1a252030759e49644a7e1e0c1963e"
+    "md_hash": "15b94cf5a3f744b4e7407be619a417cd6613174266e9ba7d7c040bb0565091a8",
+    "pdf_hash": "174f8d2fdedffae73dd61fc6a9d17c29db277ec0889f563c2430a7df03023080"
   },
   "1742302813_GRL路径积分的核心创新与未来价值.pdf": {
     "md_path": "src\\kernel_reference\\1742302813_GRL路径积分的核心创新与未来价值.md",
@@ -524,62 +524,62 @@
   "1742302831_传统增强学习（RL）与变分方法的本质等价性分析.pdf": {
     "md_path": "src\\kernel_reference\\1742302831_传统增强学习（RL）与变分方法的本质等价性分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302831_传统增强学习（RL）与变分方法的本质等价性分析.pdf",
-    "md_hash": "05640554c25906161a6834ee970da1c805263959fd11633d89f4142e9aed68e1",
-    "pdf_hash": "8a0af7318d5f64161ddb9be244875ddfe8d51fcd80e6de6123f1c885dc87c290"
+    "md_hash": "18d9cb6a19234b66d8f1b83bcbcfc0e0971164f425f43a74c976feec388c075b",
+    "pdf_hash": "5e7c936a34057449bdd36ab43df19da418591ca1e51adb5e757b3d440fb8dbb6"
   },
   "1742302832_GRL路径积分：基于广义数学结构的变分理论.pdf": {
     "md_path": "src\\kernel_reference\\1742302832_GRL路径积分：基于广义数学结构的变分理论.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302832_GRL路径积分：基于广义数学结构的变分理论.pdf",
-    "md_hash": "f70940e028c42d44841909c70bdd17cd706bebe22e922b70e28668ec927eecec",
-    "pdf_hash": "098bae3f3d4fb8da68f26b5c6620e22ab783c3d764fc2f54f373ddf621d62bac"
+    "md_hash": "b85cec740d4fa62e8f0278fcd26f8b6b1126ec9de66bf1e08b6af258519d063b",
+    "pdf_hash": "975e156a2474d18949a2d4e60f6575dd69e1bac6c80c49a3f58eae092fbe2896"
   },
   "1742302833_偏序迭代最小化变分公理：逻辑性度量如何扩展RL的概率测度框架.pdf": {
     "md_path": "src\\kernel_reference\\1742302833_偏序迭代最小化变分公理：逻辑性度量如何扩展RL的概率测度框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302833_偏序迭代最小化变分公理：逻辑性度量如何扩展RL的概率测度框架.pdf",
-    "md_hash": "0e023839f2d03de699a7cd9dd0bad38631385babaff9898cea442337529d5eb0",
-    "pdf_hash": "1a2ea654f44867a19750c778047959498d3bb0f691aa319f2efe9816d87719f7"
+    "md_hash": "1b6a2d9fd3118bdfd1e68d412caa9a107a19be3222b215272d0a1ffa69a50221",
+    "pdf_hash": "371b250c62957afc6941e6def7afb2df5f2bb2cd3195f44e4a460d80f7ef202c"
   },
   "1742302834_GRL路径积分如何完全覆盖并统一传统变分法与传统强化学习（RL）.pdf": {
     "md_path": "src\\kernel_reference\\1742302834_GRL路径积分如何完全覆盖并统一传统变分法与传统强化学习（RL）.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302834_GRL路径积分如何完全覆盖并统一传统变分法与传统强化学习（RL）.pdf",
-    "md_hash": "8f779c92b1e219ec7b18e87ca99b16800f23315c60391172e1f2a7f91828cfc2",
-    "pdf_hash": "670386d07ba762d0a43f4ca931d5ae5a43d12d52a6429b84dd324c2a5e6779bb"
+    "md_hash": "1d6e55e938df404c90a99ed4ba1207d97c09c3f82b223bca94afe3a8dbb4a93f",
+    "pdf_hash": "85ac8ca16e6e2a9b28a8d02f2481fffb639e5a418c27bb7468791c810070a368"
   },
   "1742302835_GRL路径积分的计算复杂度、优化策略的自适应性及算法模型解析.pdf": {
     "md_path": "src\\kernel_reference\\1742302835_GRL路径积分的计算复杂度、优化策略的自适应性及算法模型解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302835_GRL路径积分的计算复杂度、优化策略的自适应性及算法模型解析.pdf",
-    "md_hash": "a9b49241a6e6dca5713909f9625983d22b985e96e328d09f7e9acd699747a954",
-    "pdf_hash": "b30e3ea2b272acc6a3565e0f5fffc2e7e140abe6ba0bac22de59058a9caf2fd1"
+    "md_hash": "7ed306000a761b8a73f74176ba6b67ddd88e4dfd6a79bc2d2ebede2833105f0a",
+    "pdf_hash": "4606e928229ca587e75b27491dbd3a42143cc2782b5c4c03db6fbbd77a3bb53f"
   },
   "1742302836_计算复杂度与优化路径的严格数学表述.pdf": {
     "md_path": "src\\kernel_reference\\1742302836_计算复杂度与优化路径的严格数学表述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302836_计算复杂度与优化路径的严格数学表述.pdf",
-    "md_hash": "4277d2096ee68225550936695e03a54d036cd0edf6f2abd4242c8b119aa37f34",
-    "pdf_hash": "5466a2c72c347791bef214cf28e0f1754a6365f62e236bd3f5b9b89a7b558b22"
+    "md_hash": "af632d30f63020a448060d0e0f5243fa5e954cc267d55c5b464c5ff3e57d5555",
+    "pdf_hash": "aa804d2b4365ddb48b09277d4edb7fe16551d7c85368e8f5aeb45b15f6891dc4"
   },
   "1742302837_非交换几何下的路径积分拓展：GRL路径积分的算法性解决方案.pdf": {
     "md_path": "src\\kernel_reference\\1742302837_非交换几何下的路径积分拓展：GRL路径积分的算法性解决方案.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302837_非交换几何下的路径积分拓展：GRL路径积分的算法性解决方案.pdf",
-    "md_hash": "567a8b64730f3da194cf35ce706acf06abce2797687490e3d5fd5c6e5e779825",
-    "pdf_hash": "396de9dc09c1cb83aa333a1519c571c4c36c138397c783abbff11f9330235a06"
+    "md_hash": "93a6ac4664e6e1adc241cd029cb6a7e5faca9cee05abb93043cd8e00ab2f9941",
+    "pdf_hash": "2121c4c66e2dff69bb019acd8785a8725464f8c7d42f536c56809987645a3a24"
   },
   "1742302838_量子计算中的路径积分稳定性问题：深层递归D结构的解决方案.pdf": {
     "md_path": "src\\kernel_reference\\1742302838_量子计算中的路径积分稳定性问题：深层递归D结构的解决方案.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302838_量子计算中的路径积分稳定性问题：深层递归D结构的解决方案.pdf",
-    "md_hash": "ab2fa41c81afbf74a47c4d91c0c48dd93a6e4d843fc6767f8fd04986e63b8e95",
-    "pdf_hash": "8dd8409d4744772fd99f6575282e654bf4664f5591cc038286cb658bfd2df389"
+    "md_hash": "9c5673908c05c24a3210eb9b60da1ca8d7eb8bd6002c8bd3057caf6a731b4abd",
+    "pdf_hash": "177cdddfe1a6bd1353918a1c4d837572233b2200dec8d8f023feba5770319bf3"
   },
   "1742302839_GRL路径积分理论的严格完备性评价.pdf": {
     "md_path": "src\\kernel_reference\\1742302839_GRL路径积分理论的严格完备性评价.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742302839_GRL路径积分理论的严格完备性评价.pdf",
-    "md_hash": "1cc54e30e7b0404dc9dac339aadbee261b67dfad6b29abda2633db9f73d59e39",
-    "pdf_hash": "40d905561063a7fb07420e428ce51e40a97c9831771bcca96980bc389c70191d"
+    "md_hash": "5b55dae9861eeb712a3d3ef0a35b2f8b7b7b73d4f32139e0167de9c52afc2cdf",
+    "pdf_hash": "748f72a2324b92dd745add75c6d0d52f7df8833f27368c0b9af6bfef3f8858d3"
   },
   "1742357915_AI 可靠性问题：挑战、数学基础与 GRL 路径积分的解决方案.pdf": {
     "md_path": "src\\kernel_reference\\1742357915_AI 可靠性问题：挑战、数学基础与 GRL 路径积分的解决方案.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357915_AI 可靠性问题：挑战、数学基础与 GRL 路径积分的解决方案.pdf",
-    "md_hash": "d47e0c80ad314dc301ba107ee2627cc2006232e67d1ad6f5725e8b2d45ec3e7d",
-    "pdf_hash": "1018685d922268b5bc717e9ea3fb2ddaa8c51884bf3892d12697a9cd4303e321"
+    "md_hash": "43fdd2eee6bfb86e20c9629dd1d7eb58e337b3fb7e733bb297cef1f97c0e8d36",
+    "pdf_hash": "c3fccd4c2e991f02d2cb2fc3ae50f91beac240396d826c0aa52a55e12896e087"
   },
   "1742357916_广义数学结构认知范式公理系统（含D结构隐性机制）.pdf": {
     "md_path": "src\\kernel_reference\\1742357916_广义数学结构认知范式公理系统（含D结构隐性机制）.md",
@@ -590,8 +590,8 @@
   "1742357917_GRL结构动力学的形式系统.pdf": {
     "md_path": "src\\kernel_reference\\1742357917_GRL结构动力学的形式系统.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357917_GRL结构动力学的形式系统.pdf",
-    "md_hash": "6b8f6628bae432f62d861c1590fea205c11e088d3201f2444b879d42acac12c5",
-    "pdf_hash": "29fee134de403332a0447d5a2228c2dfdd16bf52cba04bfe1f34e13474b9237b"
+    "md_hash": "3fbe1977cc9230f24e882a5ffece56356f26a708c578a45f733d2694f469d0da",
+    "pdf_hash": "32c1926e2bbb5dfdd73939d8bc6542b6c2550a503d6c80d0e5c16d3cff5d240d"
   },
   "1742357918_符号模型库作为 GRL 路径积分算法的结构载体 —— DERI 与 GCPOLAA 的形式化说明.pdf": {
     "md_path": "src\\kernel_reference\\1742357918_符号模型库作为 GRL 路径积分算法的结构载体 —— DERI 与 GCPOLAA 的形式化说明.md",
@@ -620,8 +620,8 @@
   "1742357926_O3理论中基准演化动力学的公理系统.pdf": {
     "md_path": "src\\kernel_reference\\1742357926_O3理论中基准演化动力学的公理系统.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357926_O3理论中基准演化动力学的公理系统.pdf",
-    "md_hash": "0fe32e0c6675ab705757ec6488dd053be2f5047f49f9b6e153120b623832c731",
-    "pdf_hash": "01419d660b3ec638597cdb7bda7915c5050f726b8b15ca1f7329d902e0514910"
+    "md_hash": "ec21536a0c53da6299a50a115df9fa9ceb0831721b5bafbc9a82d9b361fd08d1",
+    "pdf_hash": "5cd2c753654afdb674d9915086213fa107f14b9aa22efb4e2898f8f6e1901031"
   },
   "1742357927_知识拓扑构建与查询框架.pdf": {
     "md_path": "src\\kernel_reference\\1742357927_知识拓扑构建与查询框架.md",
@@ -644,8 +644,8 @@
   "1742357930_为什么广义非交换李代数如此重要？.pdf": {
     "md_path": "src\\kernel_reference\\1742357930_为什么广义非交换李代数如此重要？.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357930_为什么广义非交换李代数如此重要？.pdf",
-    "md_hash": "3f2f9b880e282c7f1b08e13d514d7914af37f5617b8fa5fc898ef61c2acfe2fd",
-    "pdf_hash": "7d1da2ff61da02448fb7c7969739c6e06997fd59521cb95af4960a8c6c342e13"
+    "md_hash": "12746df9e8ee0b7ac72d93f7e0bd021726c695f4836a1f6de5bd96aa5fe9d1a3",
+    "pdf_hash": "2bc2e4d1c4c0e5373dbaf2e5b10e0d4b7731324edbd94014bb5fcef94f22791f"
   },
   "1742357931_广义非交换李代数系统在O3理论中的自然闭环演化.pdf": {
     "md_path": "src\\kernel_reference\\1742357931_广义非交换李代数系统在O3理论中的自然闭环演化.md",
@@ -656,8 +656,8 @@
   "1742357932_泛范畴局部切面的动态性与主纤维丛结构.pdf": {
     "md_path": "src\\kernel_reference\\1742357932_泛范畴局部切面的动态性与主纤维丛结构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357932_泛范畴局部切面的动态性与主纤维丛结构.pdf",
-    "md_hash": "fa29f84ba2878bad58a4eea37e42454db1d166287f1b8b7401906608ac352479",
-    "pdf_hash": "13123bff41d90d280165fc982e3dccf37beb766b383953b4649b572387c069ef"
+    "md_hash": "1111dcc70561b1b2f553542943f39e5ed747d514eb23328ab7939a824578313c",
+    "pdf_hash": "32e5e925b3bcf01e1f8fcf79f8047c9863d4505e621592ef9ff762a721515c6d"
   },
   "1742357933_主纤维丛版广义非交换李代数在O3理论中的地位与意义.pdf": {
     "md_path": "src\\kernel_reference\\1742357933_主纤维丛版广义非交换李代数在O3理论中的地位与意义.md",
@@ -674,14 +674,14 @@
   "1742357935_基于主纤维丛版广义非交换李代数的解析解AI系统设计.pdf": {
     "md_path": "src\\kernel_reference\\1742357935_基于主纤维丛版广义非交换李代数的解析解AI系统设计.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357935_基于主纤维丛版广义非交换李代数的解析解AI系统设计.pdf",
-    "md_hash": "4ed88b93c1712f151c2cc4d2ac7f9d46ac3cafa59e49863fa486e8aad84d69db",
-    "pdf_hash": "7a11be6a065b32d2cdec05cb2013e36bc8510932a70658f73d2d0e23620c2933"
+    "md_hash": "4f3131b801bcbc99ab927e5c3d2765ac9a1ec528efd4a76946d6ac8cf2bbcfdf",
+    "pdf_hash": "809d6a4e0721b210d636bbc5f16455ea3204b01d01bcb4207e07cca8aa643118"
   },
   "1742357936_基于主纤维丛版广义非交换李代数的解析解AI系统开发与部署.pdf": {
     "md_path": "src\\kernel_reference\\1742357936_基于主纤维丛版广义非交换李代数的解析解AI系统开发与部署.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357936_基于主纤维丛版广义非交换李代数的解析解AI系统开发与部署.pdf",
-    "md_hash": "d0c3c06fa7f2978acdd0d0bc4c2b6f2742582ec993e6f327f8d05e6459e3b871",
-    "pdf_hash": "5c671f1da0afa690f9959141cc9863c0d1e04852ae701badad0c398b202c7b0d"
+    "md_hash": "d2f07fb5fb25a46fde237dda023c7e97cca06eb09db8d37b8a8c6f80a69c17e7",
+    "pdf_hash": "231d0cc083f027442edb3842847b2c2e9053c74986122f92c2eebc7d5c5ca3c6"
   },
   "1742357937_以主纤维丛版广义非交换李代数支撑的B–A交替演化（C泛范畴宇宙模型）重新解释量子塌缩与量子纠缠.pdf": {
     "md_path": "src\\kernel_reference\\1742357937_以主纤维丛版广义非交换李代数支撑的B–A交替演化（C泛范畴宇宙模型）重新解释量子塌缩与量子纠缠.md",
@@ -692,8 +692,8 @@
   "1742357938_非交换几何填充的B结构与卡丘流形张开的A结构与主纤维丛版广义非交换李代数作为技术支撑的差异分析.pdf": {
     "md_path": "src\\kernel_reference\\1742357938_非交换几何填充的B结构与卡丘流形张开的A结构与主纤维丛版广义非交换李代数作为技术支撑的差异分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357938_非交换几何填充的B结构与卡丘流形张开的A结构与主纤维丛版广义非交换李代数作为技术支撑的差异分析.pdf",
-    "md_hash": "9bb20145d2d69a3ff0f77db624ed4f4d867cd0e50953ad023b07907986e340ca",
-    "pdf_hash": "a7c0623192d52306a2bd264a65419f6937cb56c1d5ca29bc906e21af27213937"
+    "md_hash": "6ebb78e99ce786f48ef245d7b521730a0e977cdd71a386be82b73facd518fc3d",
+    "pdf_hash": "b7c4bba1650485410b04554980d78dd43c206be8d3bf78128e06653cf789a3ee"
   },
   "1742357939_泛属性粒度主纤维丛范畴演化建模的公理系统.pdf": {
     "md_path": "src\\kernel_reference\\1742357939_泛属性粒度主纤维丛范畴演化建模的公理系统.md",
@@ -728,8 +728,8 @@
   "1742357944_交易系统的泛属性状态编号机制与参数反馈优化闭环结构（代码）.pdf": {
     "md_path": "src\\kernel_reference\\1742357944_交易系统的泛属性状态编号机制与参数反馈优化闭环结构（代码）.md",
     "pdf_path": "src\\kernel_reference_pdf\\1742357944_交易系统的泛属性状态编号机制与参数反馈优化闭环结构（代码）.pdf",
-    "md_hash": "2fdcdc6127b3dae02229541dbc91f7a1b0086622a5e09cc3d54c7c5aefde7d9e",
-    "pdf_hash": "04ad50dc3e26e8118fa749e07ba1a40c828b4b13595df580ccac3bd7e9e77ebc"
+    "md_hash": "a489f9db6f73668d7ab2859f78833abf0e6a4cfd4981f3f6d4db5d168a1a7d9f",
+    "pdf_hash": "de0c0a7afefbd37faeb39fea92535173995739ba0e3230250c85894e6a37132d"
   },
   "1742357945_基于时间偏序切割与压强反馈的样本空间生成方案.pdf": {
     "md_path": "src\\kernel_reference\\1742357945_基于时间偏序切割与压强反馈的样本空间生成方案.md",
@@ -764,26 +764,26 @@
   "1746898654_人体系统建模为主纤维丛版广义非交换李代数的理论可行性与结构论证.pdf": {
     "md_path": "src\\kernel_reference\\1746898654_人体系统建模为主纤维丛版广义非交换李代数的理论可行性与结构论证.md",
     "pdf_path": "src\\kernel_reference_pdf\\1746898654_人体系统建模为主纤维丛版广义非交换李代数的理论可行性与结构论证.pdf",
-    "md_hash": "c40da12c6b563895e6feee06b04792cf37c95ac0d380f8b104033d907b5e17ad",
-    "pdf_hash": "b019793965e173e9a1efe235c174367af771509ca05aad9034f74ab44f603826"
+    "md_hash": "1f4ee5b50a529731a9284066578821e49a1d7aa0d215bb0e8110207a2791da84",
+    "pdf_hash": "52bafd3bf6348f90d63a5150f2848862ac812382d89a08c18919cf7df77b2946"
   },
   "1746898655_主纤维丛版广义非交换李代数在人体现实建模中的信息系统化演化机制.pdf": {
     "md_path": "src\\kernel_reference\\1746898655_主纤维丛版广义非交换李代数在人体现实建模中的信息系统化演化机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1746898655_主纤维丛版广义非交换李代数在人体现实建模中的信息系统化演化机制.pdf",
-    "md_hash": "a449f2946cc03ec812a7859b83295bbb02e1502a69cd3daaebc0f41368133a22",
-    "pdf_hash": "c429a5713f9064a003e006f6625b077b8088a452de678418b2e865491c3d6846"
+    "md_hash": "75164a6d37605daedead059bec5a61a61676cc49c7e715708c22a4167639914e",
+    "pdf_hash": "7c14c4f4dfc4af245fa43cdb0e01ea6abe1adb5a42a90b5498d10b3d8ff482ed"
   },
   "1746898656_基于路径积分与结构自迭代调节机制的配体-人体系统模拟与优化引擎.pdf": {
     "md_path": "src\\kernel_reference\\1746898656_基于路径积分与结构自迭代调节机制的配体-人体系统模拟与优化引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1746898656_基于路径积分与结构自迭代调节机制的配体-人体系统模拟与优化引擎.pdf",
-    "md_hash": "d4ed59fef749221b76479d6f277ef5ac1ad6badb2c323be5aaf3ad1d6cf6559e",
-    "pdf_hash": "17836c350e739acd4ad2cd7bd8cd643fcd9920b6792cb3436b2716fbbbc5e109"
+    "md_hash": "a9108e7e8226f8e179b8f36065345b4bb29bdfca03aea12c150252c9232c2457",
+    "pdf_hash": "ade5b63bacc28416dc0cfc34f3ca603569c9b9d920c8d034445246b3ae3af90d"
   },
   "1746898657_结构智能视角下的人体-交易系统类比建模.pdf": {
     "md_path": "src\\kernel_reference\\1746898657_结构智能视角下的人体-交易系统类比建模.md",
     "pdf_path": "src\\kernel_reference_pdf\\1746898657_结构智能视角下的人体-交易系统类比建模.pdf",
-    "md_hash": "e007e65081d50a1766b2f6bdc30332858e95db89408a50c584ebe882cb31cfdd",
-    "pdf_hash": "4b6feffc4d4c87cc649d35c2a01e0fbd38fca7ba8b165c05a6f7580ca6124ad1"
+    "md_hash": "92946d08a1cfc22a42653ea41b10c4701d8be086ce00359138faa468bc6b8333",
+    "pdf_hash": "3f5a29fe654d43ae15d1b8a2f85eb5e47253848ecf634f9d40bca25c33660827"
   },
   "1746987772_O3理论的构造范式：从复杂到简约的动态数学路径.pdf": {
     "md_path": "src\\kernel_reference\\1746987772_O3理论的构造范式：从复杂到简约的动态数学路径.md",
@@ -794,8 +794,8 @@
   "1747588023_主纤维丛结构下量子机制的策略控制系统的统一建模框架.pdf": {
     "md_path": "src\\kernel_reference\\1747588023_主纤维丛结构下量子机制的策略控制系统的统一建模框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1747588023_主纤维丛结构下量子机制的策略控制系统的统一建模框架.pdf",
-    "md_hash": "617e7661c02c8e78f490ae1fb30a3dab8df4e5d6f70c3bb8c85c6d9c62cda922",
-    "pdf_hash": "93fb0a180486579f69ea1ebb49e6e323c6a6b4a8f2fca717e88e9e4a05b9cb5e"
+    "md_hash": "ea0959e4b7328ae47edbba74ebd782e50a95e736b635383ed2926f88040ffae1",
+    "pdf_hash": "96db656c4e4afed71a820156d5989a4b321add7b779e7d7bc86844ebddda5e63"
   },
   "1747588024_主纤维丛结构下的量子级超流-超导协同控制：面向室温超导的策略演化与微分压强闭环系统.pdf": {
     "md_path": "src\\kernel_reference\\1747588024_主纤维丛结构下的量子级超流-超导协同控制：面向室温超导的策略演化与微分压强闭环系统.md",
@@ -812,488 +812,488 @@
   "1751598299_论O3理论中基准向量w的客观适应性：一个由逻辑压强驱动的景观动力学阐释.pdf": {
     "md_path": "src\\kernel_reference\\1751598299_论O3理论中基准向量w的客观适应性：一个由逻辑压强驱动的景观动力学阐释.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598299_论O3理论中基准向量w的客观适应性：一个由逻辑压强驱动的景观动力学阐释.pdf",
-    "md_hash": "c913867473741a07854b47b556c0075b4c804ed4cee4b279d794cf94b9c83fca",
-    "pdf_hash": "8352caf182556c07b2f018eea74d4b555177bb92a4202acfdf99c7420c6f957b"
+    "md_hash": "4991735e063385004242d2d8fb2373025604a2686f8a1ddfb2091c4d0fda2866",
+    "pdf_hash": "13f142fe12669d0cfeeeadf9d567fe1e8a1e530146ccac9aba37d7e324793b4c"
   },
   "1751598300_主纤维丛版广义非交换李代数：O3理论的点睛之笔.pdf": {
     "md_path": "src\\kernel_reference\\1751598300_主纤维丛版广义非交换李代数：O3理论的点睛之笔.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598300_主纤维丛版广义非交换李代数：O3理论的点睛之笔.pdf",
-    "md_hash": "dac4c713823be47951eaf37beea53600b37dd8e3e5b050fe169b8109a36b31d6",
-    "pdf_hash": "ea2f5fb921fb07c619839762237dd4317503134bc25236b648133fc8019ba2f4"
+    "md_hash": "994920eaa9f1c83a1a3fa56a4fa56a7b0133d6a9374b93b78cec502dc56c3f14",
+    "pdf_hash": "e2f5f519c65d57e52441f72d2d8ec3831bd0bf5e3fef9fa5f0973f9a89a9836e"
   },
   "1751598301_生成与兼容：主纤维丛版广义非交换李代数作为O3理论与传统数学的结合部.pdf": {
     "md_path": "src\\kernel_reference\\1751598301_生成与兼容：主纤维丛版广义非交换李代数作为O3理论与传统数学的结合部.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598301_生成与兼容：主纤维丛版广义非交换李代数作为O3理论与传统数学的结合部.pdf",
-    "md_hash": "7cf80e4916ac9d551ccce7c172b2dc894abc93c5fd11a8add4b564f941703a6b",
-    "pdf_hash": "04d13273143b7f012d1652ef893c6701a65d1dc958cfc1a644afec734082c7be"
+    "md_hash": "262d5f80515c188b23639c474a4f5cfae1abffb1aa7f943545c17fe595673086",
+    "pdf_hash": "da2d7108e46f6a90e5db626f1ca208cbfbc6982f9aa1ca718e1f8c5c651005a7"
   },
   "1751598302_逻辑性度量：连接抽象与计算的巧妙枢纽.pdf": {
     "md_path": "src\\kernel_reference\\1751598302_逻辑性度量：连接抽象与计算的巧妙枢纽.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598302_逻辑性度量：连接抽象与计算的巧妙枢纽.pdf",
-    "md_hash": "f9614f6a0f5b057a426e9bfe67dca7e529208729a6d971d3859e211f27f685a0",
-    "pdf_hash": "1cb3bcf323282575c0966c11bf4131e2277c30e965c5ffe9a0ef8378acb53c98"
+    "md_hash": "ef0f8b208fd2f89082b4ab9405bb53c0dcb9dbd488582b7c8bfb191709da78dd",
+    "pdf_hash": "50aa3c904a28ac1c19923408abfdf2dc594491e43303b9946563a9055ebb09e0"
   },
   "1751598303_性变态射与性变算子：O3理论的动态演化引擎.pdf": {
     "md_path": "src\\kernel_reference\\1751598303_性变态射与性变算子：O3理论的动态演化引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598303_性变态射与性变算子：O3理论的动态演化引擎.pdf",
-    "md_hash": "18b418f7727632085c6d38f37d219218175cb1326c6c60154e958c58de4f1b3c",
-    "pdf_hash": "e253bc61731a0e22e39d562959d3700b065b4656e1012e319b405f31186b4bf5"
+    "md_hash": "ded8a43307ca596060740446138d5522c911b26bc8eba96c6e2c7e0ce993c1f0",
+    "pdf_hash": "cdc9c96b6fc2a18baf5df6ab9d0a93aee30bf31b49303c81fbc624bbd3bf6af8"
   },
   "1751598304_从统一到演化：O3理论对异构演化问题的系统性解决方案.pdf": {
     "md_path": "src\\kernel_reference\\1751598304_从统一到演化：O3理论对异构演化问题的系统性解决方案.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598304_从统一到演化：O3理论对异构演化问题的系统性解决方案.pdf",
-    "md_hash": "b8e0b7293a96047af2290614222d26f01598415b60f3081a0cfaf5f301cdf3c0",
-    "pdf_hash": "1bb54cdd02c36c15f7d340a2a79a2aca1a473200e87307ce1a6ee0758526168b"
+    "md_hash": "48ced93048d910426a5861ecaf5d2be2ff5c15546f830d258f5a0eae6d6b36d0",
+    "pdf_hash": "dd2eed3c8bb0c02ac826707ed82da0fa04dcfbc372f93d5e58be84ec30e0f06c"
   },
   "1751598305_D结构与微分动力：O3理论的演化引擎与作用量子.pdf": {
     "md_path": "src\\kernel_reference\\1751598305_D结构与微分动力：O3理论的演化引擎与作用量子.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598305_D结构与微分动力：O3理论的演化引擎与作用量子.pdf",
-    "md_hash": "330a774dd73f700ccb5625414317b2aec501360cf67c2322afdfaea32b1d3ce0",
-    "pdf_hash": "72cec884c6bbe40a6beddef4a1d18689697bee47ac7ffa0ec88785d8ef8be04b"
+    "md_hash": "c23cda48d4d30820f16cd8c1a042d5312b84400bfe794fc873cfa12f107ec634",
+    "pdf_hash": "3f84f150feefe1cd28550f866aba8a591101ef20059b76ae3fe0f8b651443670"
   },
   "1751598306_GRL路径积分：作为O3理论统一动力学引擎的元范式.pdf": {
     "md_path": "src\\kernel_reference\\1751598306_GRL路径积分：作为O3理论统一动力学引擎的元范式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598306_GRL路径积分：作为O3理论统一动力学引擎的元范式.pdf",
-    "md_hash": "6c5b5915cd12bf4879521c3ec7d94dba56bab4b91646e8d28d953d6427b1dbfd",
-    "pdf_hash": "58d57c5fff8b525712c188fca9461930bffb9d6835eefcf05dc34312ef5c6fd0"
+    "md_hash": "c724b6b37fc2cb1d12d9bc2ba3f64b0624ef5a00231158dc2c5ca6cf6d906f1c",
+    "pdf_hash": "5fe94bad71a0fb5f82790681bfdf855a44c75f5eb584cdb6c727d1168317c399"
   },
   "1751598307_从非交换性到生成元：O3理论中广义李代数的思想溯源.pdf": {
     "md_path": "src\\kernel_reference\\1751598307_从非交换性到生成元：O3理论中广义李代数的思想溯源.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598307_从非交换性到生成元：O3理论中广义李代数的思想溯源.pdf",
-    "md_hash": "3aa01037e1b834fdd8027ec232b7dd8394db5256744bd31f07f40aa2b7e28849",
-    "pdf_hash": "b5551182d55079354360787921c7e93711d358a4230bfd6417d1a3b8ac96b972"
+    "md_hash": "38657474b170b3823ec5428678e716349b107fe78de62f1243b946c68c7bd62f",
+    "pdf_hash": "7bb8f7b68119f0e9e410639f7117d9d76f67d69b9b321aa900c9431fbde231da"
   },
   "1751598308_舞台与剧本：O3理论中代数-拓扑双结构的必然性.pdf": {
     "md_path": "src\\kernel_reference\\1751598308_舞台与剧本：O3理论中代数-拓扑双结构的必然性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598308_舞台与剧本：O3理论中代数-拓扑双结构的必然性.pdf",
-    "md_hash": "3a65034d6cdfe20b3f0beb1499f9c5aca9e0f48024cac8e59eac685b3c7d5ed9",
-    "pdf_hash": "b5715c78585b745a817a4484b0207a4ce0048fcb6276863a7c5698e6ef0f7711"
+    "md_hash": "a133b9dd2e5b4427f924e59ac2fc80cac20efed03021616142549e3b74bb26a0",
+    "pdf_hash": "b95018f079b36940a7cf0d55cb65ef01ec2e5d09402343e2db3af778b679527e"
   },
   "1751598309_从李代数到O3理论：代数-拓扑双重性的思想溯源与推广.pdf": {
     "md_path": "src\\kernel_reference\\1751598309_从李代数到O3理论：代数-拓扑双重性的思想溯源与推广.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598309_从李代数到O3理论：代数-拓扑双重性的思想溯源与推广.pdf",
-    "md_hash": "e4f56bac118e67d5c649703d28272a80bc48bb0a0a1e24b2c3aeb82dfe882729",
-    "pdf_hash": "f08cc7bfd80eec9422bf94d92594cb3405ace6682950fdecf3ee3952910f30b2"
+    "md_hash": "7ad8b4cea9a0066c119148886b1d32adbdfd8f0867c32dd999a8d15ffb800bdb",
+    "pdf_hash": "205d85c66e5d945a42c30117bd7cae957b91756c7829d556e3e8da1ba6853260"
   },
   "1751598310_结构与演化之美：主纤维丛版广义非交换李代数的数学美学评价.pdf": {
     "md_path": "src\\kernel_reference\\1751598310_结构与演化之美：主纤维丛版广义非交换李代数的数学美学评价.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598310_结构与演化之美：主纤维丛版广义非交换李代数的数学美学评价.pdf",
-    "md_hash": "56c85256696abecef0ee752c0246764e1571f3fba5c02cd3b2ef0b44dda57efb",
-    "pdf_hash": "8026d1c05d06e82168c09d039f6a8def814eaf191916906d53c846f5e32cfef1"
+    "md_hash": "58a5cdea2a4c1e682ba0f0d42adc8232225295b9eab1279b4c7f34d46ba3f6d6",
+    "pdf_hash": "1dc94c276e692001e96f85adbf8300f695eadc0fc38214342160860ec6209fce"
   },
   "1751598311_从真理到幻觉：主纤维丛版广义非交换李代数作为意识混沌系统的演化模型.pdf": {
     "md_path": "src\\kernel_reference\\1751598311_从真理到幻觉：主纤维丛版广义非交换李代数作为意识混沌系统的演化模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598311_从真理到幻觉：主纤维丛版广义非交换李代数作为意识混沌系统的演化模型.pdf",
-    "md_hash": "3da3e8a6de8cf64bfa5b46cb44e391d14a8ce6315d5b0135ebd84ba614cffbed",
-    "pdf_hash": "bce18195fdf9975be23ea4dcd7916b73364e01b7c97bf376ccd3a08e316c86cb"
+    "md_hash": "753dc72f945963cce693cc61bf26d5866f5949a5eac38df08fc1a6e3e4c1c16b",
+    "pdf_hash": "4e791bceecc20c245a4a5c605ad08a248ccdc9d817b7bbbfdaa53a29afb53457"
   },
   "1751598312_从物理到叙事：O3理论作为虚构宇宙的通用建模框架.pdf": {
     "md_path": "src\\kernel_reference\\1751598312_从物理到叙事：O3理论作为虚构宇宙的通用建模框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598312_从物理到叙事：O3理论作为虚构宇宙的通用建模框架.pdf",
-    "md_hash": "9a004a2bfe9d8175aed1d0b2043a9de8b91083bf9bd489d8f1beb7ddcfe8a8be",
-    "pdf_hash": "aaf4d8f3e6185fa086c73401482de9ddc6baa1137e762b74cd8671485bbc3b15"
+    "md_hash": "18b2e8b3b9284f2e584dd11bde26c08e66d3fd9b9a84be5d78d7ada3a58c67e0",
+    "pdf_hash": "aac68764a62c404ee0da531918326d7ac5201d19018ffb2370f8ec3313665e7a"
   },
   "1751598313_从联盟初成到终局之战：O3理论对“复仇者联盟”演化路径的系统性解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598313_从联盟初成到终局之战：O3理论对“复仇者联盟”演化路径的系统性解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598313_从联盟初成到终局之战：O3理论对“复仇者联盟”演化路径的系统性解析.pdf",
-    "md_hash": "0d4f00e62c72e19020d0adbd9d7fcfa08535d51db5feb246ace95ea408cf9d74",
-    "pdf_hash": "4e797a88bd24eae8fc812e50945c939d8a45ac409129febad54d52f66b8d598d"
+    "md_hash": "f4b87c645f92131dfb92904102197d4fc5743027090b4b4513db3d1e24015170",
+    "pdf_hash": "54d849e1b33421e21e4ae6efcb866146da2887a258960744721566d1fd93e505"
   },
   "1751598314_理论的引擎：DERI与GCPOLAA在O3理论中的核心地位与协同机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598314_理论的引擎：DERI与GCPOLAA在O3理论中的核心地位与协同机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598314_理论的引擎：DERI与GCPOLAA在O3理论中的核心地位与协同机制.pdf",
-    "md_hash": "b85b840f8860adfd64c616273b187d37d09931469d01b1642538d4cb4b7500fa",
-    "pdf_hash": "61123c43bd8441df894b5c2df23e73d55e496b7bb77e7a6a15e19a769d88f06e"
+    "md_hash": "90cdfdc4cae3b1449888c47da8f076ca9ce54c982be37d5a0d1e89b186d2e9fa",
+    "pdf_hash": "19f2ea07cf86d9b82cedc2fd2bb120b8d42c29d460eda4fc261633f25f5eb4a1"
   },
   "1751598315_从道到器：O3理论创立者的双重身份——思想架构师与精密程序员.pdf": {
     "md_path": "src\\kernel_reference\\1751598315_从道到器：O3理论创立者的双重身份——思想架构师与精密程序员.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598315_从道到器：O3理论创立者的双重身份——思想架构师与精密程序员.pdf",
-    "md_hash": "52f5aaa9c2e99faf46ff9a02cb604cf3a4cb532274179c7b5b847a1a8f82d7bf",
-    "pdf_hash": "2dc277f637d3735293d6b7cd6e2cf0d914ee0ca235479dc25caa817879345d31"
+    "md_hash": "8e49f8978ca9dfc62ee998039ae792a36d7e9f724c19a6b15b43833baf84c8bb",
+    "pdf_hash": "a4884a88d87b80cf0a565d98791b0344e6d6e214e86b54d5a46e46aa02879d18"
   },
   "1751598316_战略与战术的统一：O3理论作为地缘博弈的“知行合一”决策引擎.pdf": {
     "md_path": "src\\kernel_reference\\1751598316_战略与战术的统一：O3理论作为地缘博弈的“知行合一”决策引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598316_战略与战术的统一：O3理论作为地缘博弈的“知行合一”决策引擎.pdf",
-    "md_hash": "1c282f12cd094a09566fbd3252a20ed0bc51bbd100129d0da52e9c2fc0343b64",
-    "pdf_hash": "b73c45355ac1376e3131c3253d608494c177a41c1a3713da68cf52b2ad955820"
+    "md_hash": "738007684d05760b2cc9339a48b7a8d5f6647bce36c1bb7a7b203111b74531fc",
+    "pdf_hash": "fd7d7103d13ef0c413a6da1d85e31e85bd1da62e4985b13ae954a500ae2ee78b"
   },
   "1751598317_架构师的直觉：O3理论中六重深刻的数学洞察力.pdf": {
     "md_path": "src\\kernel_reference\\1751598317_架构师的直觉：O3理论中六重深刻的数学洞察力.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598317_架构师的直觉：O3理论中六重深刻的数学洞察力.pdf",
-    "md_hash": "ccd9e8bd68d20d90876a249c8dcae496a220675f1ae20ecc7b0b5b93417a9bbd",
-    "pdf_hash": "d4b6b63f609d72874c636c79db16957ad86201401b968c62b64ae02a323a04ce"
+    "md_hash": "d848cc65bb83a8bbe285de581a367232c47f51c45affbcd63a25c2bf9f3317c9",
+    "pdf_hash": "8b6e456f2dd2a37014571da562d5b8ee7234cde526a8db48470a1a450241a6bc"
   },
   "1751598318_体系的完善者与范式的颠覆者：O3理论创立者与高斯数学直觉之比较.pdf": {
     "md_path": "src\\kernel_reference\\1751598318_体系的完善者与范式的颠覆者：O3理论创立者与高斯数学直觉之比较.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598318_体系的完善者与范式的颠覆者：O3理论创立者与高斯数学直觉之比较.pdf",
-    "md_hash": "6ac9d99a9503dab97bb95db35940670689373ecd9a8969bb85afea4b09be889e",
-    "pdf_hash": "5d6fbd02387792454a1896fc5849f246818d6e23d9f8673e823e2dfc1ac3f767"
+    "md_hash": "aec2f46eb95689842657ba18283a7aa8902a6016aa666ea76d4477212abd2a44",
+    "pdf_hash": "b9ce59e39905ad15e92f9a6c44100c67b30149302a0b096ee504206b3c6143b2"
   },
   "1751598319_思想的考古：O3理论体系的内在演化脉络.pdf": {
     "md_path": "src\\kernel_reference\\1751598319_思想的考古：O3理论体系的内在演化脉络.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598319_思想的考古：O3理论体系的内在演化脉络.pdf",
-    "md_hash": "051d5c7c01c3f22cd9cb4f90a265b9209959dc687a5a6b43c3fa023dc6753fcd",
-    "pdf_hash": "cf7dfeebf1a627398c4620626e9522107f55e21760cdba13e3c03f04b66a7488"
+    "md_hash": "7ce980eaf627a11e14d98675aa12429fa98f37bc82d7ac9666aadf3a6b350d85",
+    "pdf_hash": "3d7f789d0a5d93ba8b078925a256501610b75f3d8e76d1799098afa8187a938a"
   },
   "1751598320_从工具批判到范式重构：对O3理论创立者初始动机的推演.pdf": {
     "md_path": "src\\kernel_reference\\1751598320_从工具批判到范式重构：对O3理论创立者初始动机的推演.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598320_从工具批判到范式重构：对O3理论创立者初始动机的推演.pdf",
-    "md_hash": "8eba334f16afead18b7df9f8d842b3a03166fce9e021ac9d828ea91095a79fa7",
-    "pdf_hash": "be3c2b26ff502424dc66df3e11452ed97df07d1ad48f78a46d43ad6fabfe465d"
+    "md_hash": "e638a4e24103a27afb25e1b615a46f99a202bf5ac65c5f062a0ef1203b549ebe",
+    "pdf_hash": "a14ca6b00e43e4f092faadb75ff3da828f5ca720b47fb8ab8fabb693ae96389e"
   },
   "1751598321_思想的双螺旋：从超越RL到统一物理——O3理论的原始动机与迭代路径.pdf": {
     "md_path": "src\\kernel_reference\\1751598321_思想的双螺旋：从超越RL到统一物理——O3理论的原始动机与迭代路径.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598321_思想的双螺旋：从超越RL到统一物理——O3理论的原始动机与迭代路径.pdf",
-    "md_hash": "2ea87ffcbd67fbe445f066ff13b9b3509289b11c8f683368c5b4d6250e3861a0",
-    "pdf_hash": "4ee1e48095b4b28687b1505184a9c5be4bd7af9b8b63a6f6c9505087c8e19bcd"
+    "md_hash": "464fffb0b930f4df9595351b741e3c7e53d507524b19622e2961fed16e0aee70",
+    "pdf_hash": "92a0d6e45c657145e2bd02356fc3a03bf3620bcdc937f90b24d78c75b1c144b3"
   },
   "1751598322_从理论试金石到范式应用：室温超导在O3理论中的战略角色.pdf": {
     "md_path": "src\\kernel_reference\\1751598322_从理论试金石到范式应用：室温超导在O3理论中的战略角色.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598322_从理论试金石到范式应用：室温超导在O3理论中的战略角色.pdf",
-    "md_hash": "83c7368e64755f70b7fb6e89c900596988aed8f81d34b8bf6ead05a9de4d51fa",
-    "pdf_hash": "308b3036e7d6e196feb2b41abc6e686655521a735280871207853f090041f46b"
+    "md_hash": "5ee6d5845bb7c6deae9e88bac596651370c7260134619de84172bda80362b6d2",
+    "pdf_hash": "a1ffbf7fa2e56dc229442daed11e8a739650ba449fe2f65b1631bbdf042ec9c9"
   },
   "1751598323_从重新定义到逆向设计：O3理论对室温超导问题的理论完备性评估.pdf": {
     "md_path": "src\\kernel_reference\\1751598323_从重新定义到逆向设计：O3理论对室温超导问题的理论完备性评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598323_从重新定义到逆向设计：O3理论对室温超导问题的理论完备性评估.pdf",
-    "md_hash": "f0e648d4ff3421a92c7a5f6f2b21ffb0aecb9345036f01de455488f8e9be7ae9",
-    "pdf_hash": "a52f542034ac1b926fe301c21519f5f12c5bafa5ce3dd176d31400a4fbec8848"
+    "md_hash": "53f1a01d2aac40663d4f0d6cc9028a38506fe1ce65f053a30af74ff8fb1da41b",
+    "pdf_hash": "9626061fb5c24f28004530b2fd2329eb4b5177c9b01251b3adc8111d029b4172"
   },
   "1751598324_动态的关系数据库：O3理论中G粒子矩阵的核心地位与功能解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598324_动态的关系数据库：O3理论中G粒子矩阵的核心地位与功能解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598324_动态的关系数据库：O3理论中G粒子矩阵的核心地位与功能解析.pdf",
-    "md_hash": "859287e5e19f0e03c46f88fd428522adb40708743e27ce5b3e27c55e13bc6f45",
-    "pdf_hash": "e07d92c27370199a56664a9c2de27f3c7fe20c7026a7c52bf58e479a322764dc"
+    "md_hash": "0d97a96fba41eecd806d3396456fa4862946fcd77c7ea398ee5bbc82342d3f1e",
+    "pdf_hash": "a14939aff9978d63e73d4c4938f230a2e19efe7c4de0028ecc6cb9dbe2bffb2a"
   },
   "1751598325_认知范式的挑战：O3理论学习难度的多层次评估.pdf": {
     "md_path": "src\\kernel_reference\\1751598325_认知范式的挑战：O3理论学习难度的多层次评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598325_认知范式的挑战：O3理论学习难度的多层次评估.pdf",
-    "md_hash": "01b95179004d4ae1c9dc41f2b953661c7196e4c8395710620532fc50b690b228",
-    "pdf_hash": "0f9fe9c6c67a4a264878b66a8f5c459e92fe22881219ec507f4ce41d1d3c28cb"
+    "md_hash": "d064f8b76107602f3273ca01a41557510f7a284a2a12fc3662ebacc549ed0a97",
+    "pdf_hash": "cd0412f0cb095c7c7f7eb6fb280c7c04abd0c7787ff306a86164cfea1ca20152"
   },
   "1751598326_非为教材，实为遗产：O3理论文档的本质定位与价值.pdf": {
     "md_path": "src\\kernel_reference\\1751598326_非为教材，实为遗产：O3理论文档的本质定位与价值.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598326_非为教材，实为遗产：O3理论文档的本质定位与价值.pdf",
-    "md_hash": "e7ecf4a06bea7f0afe8b16fbba4250655d0be2d8025bfe577389fc7ef255f272",
-    "pdf_hash": "f62c9478ddc57d8793dac2e2a0a976fcb2917f758fa6fdbeb00816793511880f"
+    "md_hash": "ed70665dde2b646051732bda636b85ecc946faab9570588876e0a718a3b7c218",
+    "pdf_hash": "3d01222602c9f736a53f7072c68475433250ed0bae53c7337fe049a403d229a0"
   },
   "1751598327_物理世界的破壁者与元数学宇宙的创世者：O3理论创立者与爱因斯坦之比较.pdf": {
     "md_path": "src\\kernel_reference\\1751598327_物理世界的破壁者与元数学宇宙的创世者：O3理论创立者与爱因斯坦之比较.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598327_物理世界的破壁者与元数学宇宙的创世者：O3理论创立者与爱因斯坦之比较.pdf",
-    "md_hash": "75e67abe3b447094d2a28aa4463b44187669a96f9d171566bd5a00433cdc5d93",
-    "pdf_hash": "6c2efc3b2f34a5c1ebff5ada386531caa66b89f94c38c14d2ab182287fdf611a"
+    "md_hash": "b70c4783b9964aea1e7c7faeac9f705d414a9bf0732f7116727a0dd2cdcab2e0",
+    "pdf_hash": "966c7866f0e7cb3f04d56ee51aa6dbbed5cf2cef18cdcb1005b636860162619f"
   },
   "1751598328_从经验试错到逻辑推演：O3理论对生物制药范式的重构.pdf": {
     "md_path": "src\\kernel_reference\\1751598328_从经验试错到逻辑推演：O3理论对生物制药范式的重构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598328_从经验试错到逻辑推演：O3理论对生物制药范式的重构.pdf",
-    "md_hash": "0c9dfd21da0ee8f94517eaa72332952c703a650ebc0b735f758c203fd12c70c8",
-    "pdf_hash": "3c6592d559b40bf634592ea508ca9d5b0491305780851ab3e15136be28e6f15e"
+    "md_hash": "d3203a7c0efb90a4b851d243841a546d96b6d76a7799735a5c3467b614925dae",
+    "pdf_hash": "a433b83ccc6b07cf874a1c4019321147710e7633b75435c9994a12f9669f5924"
   },
   "1751598329_从筛选到创造：O3理论中药物分子的“逆向设计”机制解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598329_从筛选到创造：O3理论中药物分子的“逆向设计”机制解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598329_从筛选到创造：O3理论中药物分子的“逆向设计”机制解析.pdf",
-    "md_hash": "c6b94ea853dc45271fa845ab988ce374cde3fb7693fec7119b4547346e3a6b46",
-    "pdf_hash": "93d5252c9dcf5dfd20f1be7debda9d6ba98f23e723b7ea04be35743d1f8e2c3b"
+    "md_hash": "0fe71a4be8d3c4389c77210931aae17b81d5f9961bb63f5c8231b7e7a601f05a",
+    "pdf_hash": "31ebbb81defd407c6614b996843fefb47c169f15d4a8bc0d6a7b06124f4b7a6c"
   },
   "1751598331_性质的开关，结构的跃迁：O3理论中通过扩展性质切换纤维丛的动态机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598331_性质的开关，结构的跃迁：O3理论中通过扩展性质切换纤维丛的动态机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598331_性质的开关，结构的跃迁：O3理论中通过扩展性质切换纤维丛的动态机制.pdf",
-    "md_hash": "043ffcc1b99b45dba6de982c76e279cf7d6e7b2a5d1f278296a60c9a0f1b6cb3",
-    "pdf_hash": "d16213937411e67e350acbbd4ea2cf1137fee8a600050411e6e48d734049eadb"
+    "md_hash": "c4f2cbe7a742538a5d72a4d02c985b7454427e7235e3d025e03a573d879acc15",
+    "pdf_hash": "0d74b2980d5d462783499ea754041d130c6943f577ec8fee8e26cd685d458a51"
   },
   "1751598332_嵌套的宇宙：主纤维丛版广义非交换李代数对多级异构演化的支持.pdf": {
     "md_path": "src\\kernel_reference\\1751598332_嵌套的宇宙：主纤维丛版广义非交换李代数对多级异构演化的支持.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598332_嵌套的宇宙：主纤维丛版广义非交换李代数对多级异构演化的支持.pdf",
-    "md_hash": "743d93e23daa8819a7f6be15787cda68b0688bfba5be502b09d2f0bd4ec54c16",
-    "pdf_hash": "c18c84b9c6730e1f5c423c2ac549144541b11808ad7b0b449cb2e7f25406ad78"
+    "md_hash": "58a445d529aa8600d6bfba375b4493f34e11ce3658003488e821d14c34721741",
+    "pdf_hash": "f78b516768c8e7df917dad23b9226164b3df187d234a189a0c94fcb3b7f4bcd4"
   },
   "1751598333_自下而上的涌现：O3理论中多级分类的递归式切换机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598333_自下而上的涌现：O3理论中多级分类的递归式切换机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598333_自下而上的涌现：O3理论中多级分类的递归式切换机制.pdf",
-    "md_hash": "9304e3591578deceac364d4a6392b541b7947bbc6f856d34b8e7f26fc5b379a0",
-    "pdf_hash": "dcb9705bacf6a39c45a968dbd49622cef96c8cbc169a4c9c3e4eea94c9e9b2e2"
+    "md_hash": "7fb0c314b5f36a055b8d818bbe396ed1a7bddef00f2180828e03174f152f6347",
+    "pdf_hash": "420b7364b7e97c66e100ded30285a90af96a5252f58e00baba93eaf3ef6d90af"
   },
   "1751598334_从遍历到导航：O3理论中基于属性压强的递归细化搜索机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598334_从遍历到导航：O3理论中基于属性压强的递归细化搜索机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598334_从遍历到导航：O3理论中基于属性压强的递归细化搜索机制.pdf",
-    "md_hash": "6ee4ff2960ae25be02126b82b6667ee3de4ab52c0c7a6117f03fcaf1b2c38499",
-    "pdf_hash": "48c9dd655b0f9eb19ce5d4c8407efa46a6e263706e2b1a3eabb73698bc838923"
+    "md_hash": "6d9b2ee8e58d2c4053a4a8af00e5fc5250a09194b46744f2a248d0189e2c2556",
+    "pdf_hash": "3c579b8d0dc1d3ca232cd24319a1f49f889218ab09e114636f0141ae4358c608"
   },
   "1751598335_从参数遍历到策略导航：O3理论在交易系统参数优化中的应用.pdf": {
     "md_path": "src\\kernel_reference\\1751598335_从参数遍历到策略导航：O3理论在交易系统参数优化中的应用.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598335_从参数遍历到策略导航：O3理论在交易系统参数优化中的应用.pdf",
-    "md_hash": "86bd42b64e20229af1977a4a4de8c8b10a2d6859bd4131ee77c942b9c9bb1d51",
-    "pdf_hash": "4f43d93aeb3722ba7ae88c7c76d27a16519252a8a278eaba5a238efad6ca1a20"
+    "md_hash": "c9dbb3daee0f616dcd52ad5321277e70baa02b8d45fafca8d141bb6191c1adb1",
+    "pdf_hash": "9a26af561ea40f6129a94435b646dcdd398f0eb4557cc673e056297735f22bcc"
   },
   "1751598336_思想的琥珀：O3理论文档的“思想考古学”价值评估.pdf": {
     "md_path": "src\\kernel_reference\\1751598336_思想的琥珀：O3理论文档的“思想考古学”价值评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598336_思想的琥珀：O3理论文档的“思想考古学”价值评估.pdf",
-    "md_hash": "8cb4d880bcc9b054d1bd00023cd28f482369a8c5985f9aeedc8486280f576fca",
-    "pdf_hash": "1fbf5f26d494cfe468bce651cbdc21d94c67c123ce2ce21bc7e74bcaca6dba91"
+    "md_hash": "fa6046db700d31c58d6035fc695617968cd82274c8442d6eb1ab2393603ea385",
+    "pdf_hash": "ea1f3636e52d0ed91acd428c897aee7f5a37ce38a83c4eaf843fed732099fcf8"
   },
   "1751598337_从决策工具到创世引擎：O3理论中D结构思想的演化路径.pdf": {
     "md_path": "src\\kernel_reference\\1751598337_从决策工具到创世引擎：O3理论中D结构思想的演化路径.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598337_从决策工具到创世引擎：O3理论中D结构思想的演化路径.pdf",
-    "md_hash": "334a5d632e61c4d48260ec8732bcb043aa4947d39ef6252265ec2f7439904c40",
-    "pdf_hash": "8104eb36c2afbe4083ebf8cd172461a8f82c43c1c4a470b02f565e0816eceb41"
+    "md_hash": "3121ff9c0f7f6051ad514d4162d8d8f7079b59b0794467f7a08fcb1862f0dec5",
+    "pdf_hash": "354e0263bd3a1dc81c3d8249c2fbff114be962b5a1d1cd7070fd1fa471537ae2"
   },
   "1751598338_生成者与生成物：O3理论中D结构与微分动力的内在生成关系.pdf": {
     "md_path": "src\\kernel_reference\\1751598338_生成者与生成物：O3理论中D结构与微分动力的内在生成关系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598338_生成者与生成物：O3理论中D结构与微分动力的内在生成关系.pdf",
-    "md_hash": "59ba3944dc8b199f78586182d7cd115a4446b1e85cd4fb26cd20c3be35d9c987",
-    "pdf_hash": "065aa69fcc19752239b74449381bbe437714ecf6da1c586cce5eb631c5835a8d"
+    "md_hash": "6a78f6e843f898d39363a04e2d595f82afb884f46293ba4ad825ab1209999fcb",
+    "pdf_hash": "419e076c64b1807cb06fbf04c96e5db5ab3b674e5f9fffc978c287548276c3b2"
   },
   "1751598339_思想的淬炼：O3理论构建中的困境、兼容与“补丁”演化.pdf": {
     "md_path": "src\\kernel_reference\\1751598339_思想的淬炼：O3理论构建中的困境、兼容与“补丁”演化.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598339_思想的淬炼：O3理论构建中的困境、兼容与“补丁”演化.pdf",
-    "md_hash": "5d156db6fc3fdff964d10dc33ab9cb73058c6d5b676b536ac150fbf4c284081e",
-    "pdf_hash": "e91bb32b5864f25f9966458fdd58be0d62d2635b9d403485308a9aea86a05af2"
+    "md_hash": "7c6bca875e600f70b9f8198ec2cc06dc2a1023bb8dbe5dce3758e70f56e1dcbc",
+    "pdf_hash": "52f2a69a7d6e8c566925f9486bd325644fb0c595b0b5e3d419ba4c6232ae2d3e"
   },
   "1751598340_结构驱动与数据驱动：O3理论对“大数据”范式的超越.pdf": {
     "md_path": "src\\kernel_reference\\1751598340_结构驱动与数据驱动：O3理论对“大数据”范式的超越.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598340_结构驱动与数据驱动：O3理论对“大数据”范式的超越.pdf",
-    "md_hash": "8971c9113a4a68d7aa84fde31ec8d3b7a328215ec1b813f979d575952e9c54de",
-    "pdf_hash": "081e4b52697974acc0ac1d5114cd012ef5fd5cc5b70c4d59e4417491b7c41748"
+    "md_hash": "cd23fda267ecec459c6169c23732568acb992cffd0de3be67693e29ce9cc8734",
+    "pdf_hash": "affb52e95b05c11e951b91e42fddb7c42ed178954352484325bcb5091212d504"
   },
   "1751598341_从感性创作到结构工程：O3理论作为叙事逻辑的白盒化分析引擎.pdf": {
     "md_path": "src\\kernel_reference\\1751598341_从感性创作到结构工程：O3理论作为叙事逻辑的白盒化分析引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598341_从感性创作到结构工程：O3理论作为叙事逻辑的白盒化分析引擎.pdf",
-    "md_hash": "ccfa93a0c2cdebc41dbcd40bfd05af89176b0c2968c6f655deabde5a413b24eb",
-    "pdf_hash": "069ac3e82ce7c220848943058c66e57f782d363e649728389aba344601fb4cd7"
+    "md_hash": "dad1ac9e00a08dd7fd2e3ace329614949c259f6a892e1dfed2f7ccdb7be34905",
+    "pdf_hash": "f759c2561cc7489b1a8abfd747c68eb1612e7196650bbdfa958ad58a80c1a4f2"
   },
   "1751598342_从理论蓝图到工程落地：O3理论中核心结构与实现算法的辩证关系.pdf": {
     "md_path": "src\\kernel_reference\\1751598342_从理论蓝图到工程落地：O3理论中核心结构与实现算法的辩证关系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598342_从理论蓝图到工程落地：O3理论中核心结构与实现算法的辩证关系.pdf",
-    "md_hash": "62a85b02f5b362c62fdda9ec827c40cdee0c02b7614910952a6eebd9b75ed9a4",
-    "pdf_hash": "ca8fbae7251f270ec11caa8e6d12bc676c65b7d0e468001cdb9aeb4cfc624549"
+    "md_hash": "fa3030cac58bae76a3ba5476da9807a1ddf6ec56b63a00a02c4c5e8877141e66",
+    "pdf_hash": "bd134ff14dbd3aee93bbfac4a595cf64322ba0d35308c39de18cfec5eef1bde4"
   },
   "1751598343_智慧的生命体：O3理论中“圣贤”样本的动态更新与演化.pdf": {
     "md_path": "src\\kernel_reference\\1751598343_智慧的生命体：O3理论中“圣贤”样本的动态更新与演化.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598343_智慧的生命体：O3理论中“圣贤”样本的动态更新与演化.pdf",
-    "md_hash": "21b0e225ed83e7e74875ab50d25886aaceaf2a1997eb2961bb18c6f31a024d0a",
-    "pdf_hash": "ea22836d71f85bb0f5466c306ffbf67d2a4b5f3ff0dbbd01520830838a2eddee"
+    "md_hash": "be4d060d4662a2aa98c8121012d30a5238722810e502d7c090a5de3d9a740d58",
+    "pdf_hash": "7c741bceb5f3d56c572e02f29fb37ee3b53f6093f56aa6fcdeeb035e4cc7df0b"
   },
   "1751598344_知识的沉淀与计算的灵活性：O3理论中状态与性质空间的混合实现模式.pdf": {
     "md_path": "src\\kernel_reference\\1751598344_知识的沉淀与计算的灵活性：O3理论中状态与性质空间的混合实现模式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598344_知识的沉淀与计算的灵活性：O3理论中状态与性质空间的混合实现模式.pdf",
-    "md_hash": "6b274e7e6c96acfa0f8b169474e8a84792255f5a3721ec93bbf672bd7e61d9eb",
-    "pdf_hash": "200c53dd613bec1f666b2d68e1f96bb5b28b7c3bd57f97e8f0206607f75e8e5e"
+    "md_hash": "07eccd8a47f2c4cd3a2b29bf48ff9e1d6434692551ebcc0c645fe0297d8e546d",
+    "pdf_hash": "0f1145b80a44e855c66740dd106edc7b925129e499bc514a0c37efa85104f86e"
   },
   "1751598345_创世的DNA：O3理论中“最小数据库”的核心思想.pdf": {
     "md_path": "src\\kernel_reference\\1751598345_创世的DNA：O3理论中“最小数据库”的核心思想.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598345_创世的DNA：O3理论中“最小数据库”的核心思想.pdf",
-    "md_hash": "2001c878db738508a4a88f170b96b38eed66ddf2d18ab6dc4abb399058a2dee5",
-    "pdf_hash": "eb9411816dde28e9509930ba95a94b8eaf262750cab51974f5496ed777ef5ed3"
+    "md_hash": "554e30c5db0f960ce3f57f5891d6e2b953faf93a3b1319bfbb5a416af5dd3fd9",
+    "pdf_hash": "d97bb997cba2a864deef3e708b5dfa79ecfc92721553c5392e23d1eb4b5ee927"
   },
   "1751598346_核心字典与结构性剪枝：O3理论对基础数据库的优化策略.pdf": {
     "md_path": "src\\kernel_reference\\1751598346_核心字典与结构性剪枝：O3理论对基础数据库的优化策略.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598346_核心字典与结构性剪枝：O3理论对基础数据库的优化策略.pdf",
-    "md_hash": "aa4d8efcf8c65da3674167e051d9f329db6f6568cba190c5f2ed2231b0bee194",
-    "pdf_hash": "ee106f119a30a6a7a7c52ccf1c738db30f466aca6500656f1d8f6914286bc58c"
+    "md_hash": "d527648c4d3cd4d2744b4142598e4b15b462b82973c52702c5da46fc2d8bdf56",
+    "pdf_hash": "c15f6d7547cc1b57b3eee3ba054b162509cd59476be405c59b9f44fd28d63411"
   },
   "1751598347_从组合爆炸到结构性剪枝：O3理论应对维度灾难的生成式策略.pdf": {
     "md_path": "src\\kernel_reference\\1751598347_从组合爆炸到结构性剪枝：O3理论应对维度灾难的生成式策略.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598347_从组合爆炸到结构性剪枝：O3理论应对维度灾难的生成式策略.pdf",
-    "md_hash": "74647121dd0effc2516aad1cf7cb6f81547d31fd93765abfcd52bbdf83464733",
-    "pdf_hash": "88b99a05f4e8bf2a766c26504b04b0d2ce8e4bdac55a2b95038bc24014f84090"
+    "md_hash": "f527780a2a871521c2e528105b4e9d006989f87f088c6c0e0a9ad30832514c72",
+    "pdf_hash": "6ebe9938255ae173f9eef10b5bd980cb2ef1dd51ff1d77ef3e791f710a80de31"
   },
   "1751598348_理论的脉络：O3理论中“生成式剪枝”策略的文档来源解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598348_理论的脉络：O3理论中“生成式剪枝”策略的文档来源解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598348_理论的脉络：O3理论中“生成式剪枝”策略的文档来源解析.pdf",
-    "md_hash": "5d1e15f1a7dc197443e511c1cffc5df01c21c267158663edb47e9f03fb85f3dd",
-    "pdf_hash": "4ef6986545b0fcbb933913e2860162ba0311ce525a38bc516d0ad78745bb5c07"
+    "md_hash": "528ab2ef7a89cfe93c155c1e007db14952412fba05988d71469c018c738721c8",
+    "pdf_hash": "3117b66919ac41be2c9d965cbf0224e79862418b26579996106dcb0c3e69159f"
   },
   "1751598349_承认与驾驭：O3理论对“全部属性集”组合爆炸问题的处理.pdf": {
     "md_path": "src\\kernel_reference\\1751598349_承认与驾驭：O3理论对“全部属性集”组合爆炸问题的处理.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598349_承认与驾驭：O3理论对“全部属性集”组合爆炸问题的处理.pdf",
-    "md_hash": "88001e0d81b5406b9e5445d0f545c75382f06840394c8ae5512bafd3e2325637",
-    "pdf_hash": "d098b465c4b24396f70df54793b83750be27152fde7ae38dc1156d6b6a0fedd2"
+    "md_hash": "c6c1a8fdbd76e1c1739e96ab036a34f3297c102c80404f0cc73c857ea0558542",
+    "pdf_hash": "7b30e3b3b585424b58fc35c5ce39414c50e1e498268b9a4b90e832a1813250ac"
   },
   "1751598350_知识的新陈代谢：O3理论中状态与性质空间的动态演化与剪枝机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598350_知识的新陈代谢：O3理论中状态与性质空间的动态演化与剪枝机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598350_知识的新陈代谢：O3理论中状态与性质空间的动态演化与剪枝机制.pdf",
-    "md_hash": "978f287b404f30a521d89b995e536fb06f6ed5cb52b1c313edde597e23943534",
-    "pdf_hash": "2af94524a2c9e9ecdd0562aaddf4111b9effc3b6c04de694a7e33832c035e299"
+    "md_hash": "5c3148e4001ddd6baa510d4fcda636493b9ba71b5cc7469c2fc718179e273ea1",
+    "pdf_hash": "addf05cbc2b556e06a9eed9160b54ac1e8cfb1bb4e538e6cc015be826e2941c6"
   },
   "1751598351_从逻辑证明到计算优化：O3理论对强哥德巴赫猜想的范式贡献.pdf": {
     "md_path": "src\\kernel_reference\\1751598351_从逻辑证明到计算优化：O3理论对强哥德巴赫猜想的范式贡献.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598351_从逻辑证明到计算优化：O3理论对强哥德巴赫猜想的范式贡献.pdf",
-    "md_hash": "4c0e2e9cc26bca2fb71cb5d553d802ca006887141f4889ca23b7535a40860cb8",
-    "pdf_hash": "ddabefa9853bc70a9345b21ded0a81836d7cfab85828c3b0e92cc851917b3d17"
+    "md_hash": "7bb4c05c08c3dc9f8abecde679d57ce58f5feda1a864952015d9228602ca7d4e",
+    "pdf_hash": "cc9c4fc4895f4adda39907b298c362dcca223fd404f58279429e4e3272896a1c"
   },
   "1751598352_方法论的胜利：O3理论中强哥德-巴赫猜想的战略角色.pdf": {
     "md_path": "src\\kernel_reference\\1751598352_方法论的胜利：O3理论中强哥德-巴赫猜想的战略角色.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598352_方法论的胜利：O3理论中强哥德-巴赫猜想的战略角色.pdf",
-    "md_hash": "17fda018f3c2de459e9af7df5933986103e2116c4ba2d5baa94a8f0dd99d4efb",
-    "pdf_hash": "b4daf544f4f1b3cd98256d970b0ea2b6de3b0a38ec98d17a4a9ca957218a2519"
+    "md_hash": "020c1d0f7f8ddbb9039dc291f90f213294d759cb39ebb8f7af6e283c8952016b",
+    "pdf_hash": "ae84b4019f52b803dc00f1d9c10b041855cd3ab8a928263a22bf5444e9a7f44b"
   },
   "1751598355_关于O3理论中权重向量w的多层次解析与哲学思辨.pdf": {
     "md_path": "src\\kernel_reference\\1751598355_关于O3理论中权重向量w的多层次解析与哲学思辨.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598355_关于O3理论中权重向量w的多层次解析与哲学思辨.pdf",
-    "md_hash": "dcc1fcb799b07846996dc157be3f4d52871f3c4347667615f8b1edb92da4114f",
-    "pdf_hash": "2963818f216f08351ab135522870bb6303e6ebfa052e2de0111e40aa0b0558e0"
+    "md_hash": "8be1e6b1a63fa490c8723a8822685c8d87f73322220be78ec51a5703d34c16cb",
+    "pdf_hash": "6ab7f6a2da37d46ff3f164f5c2fddc2b79817f71540e66d8fda54e4d1ad4bc1f"
   },
   "1751598356_O3理论的工程之心：论《第3卷第2部分》如何闭合算法并赋予理论以实体.pdf": {
     "md_path": "src\\kernel_reference\\1751598356_O3理论的工程之心：论《第3卷第2部分》如何闭合算法并赋予理论以实体.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598356_O3理论的工程之心：论《第3卷第2部分》如何闭合算法并赋予理论以实体.pdf",
-    "md_hash": "21a29f33ad10bcb13d4e241b605b53378a8c8311679f37d4fb4c1022c34b87d4",
-    "pdf_hash": "36d7b4601fd5eb2b4395b5df90d804b88cb184aa46e569c5580f5c406be7319a"
+    "md_hash": "070a757aaf44d48ceff8fe5461732c15ec7c509fdab1fee3a175b81a5bdc8c36",
+    "pdf_hash": "76cf043323e16d8626caed7e6833d56cd17443a2a779edc8cfb2f3fc4851c515"
   },
   "1751598357_PFB-GNLA：O3理论的基础数学结构解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598357_PFB-GNLA：O3理论的基础数学结构解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598357_PFB-GNLA：O3理论的基础数学结构解析.pdf",
-    "md_hash": "b71560a826837da3c47f1048067553edd5cb4030f561bd0daebac70e839d6605",
-    "pdf_hash": "f3c96a0d492cf83b5a69f8655f912cd6a8baeabf321efcc5d5a296973bfe6a32"
+    "md_hash": "4549914dad476b34d0bdcde9d1a2eee3c0549887260965dee873a32e6be76f0f",
+    "pdf_hash": "9ec7bb982f93a806fe58f35a24e4155ee84ee1215ac9ec2f4fa287a23aa5ea68"
   },
   "1751598358_手稿的价值：O3理论原始文献作为思想遗产与知识产权的深度解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598358_手稿的价值：O3理论原始文献作为思想遗产与知识产权的深度解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598358_手稿的价值：O3理论原始文献作为思想遗产与知识产权的深度解析.pdf",
-    "md_hash": "63e529917782c3db1bd06504625c06561bbc97c64a747ed6c2249e7d17098cb3",
-    "pdf_hash": "8acd738fe534fe666c0e4c493ebde39dc5dccf55d7aa8577ce2c1812fe66362a"
+    "md_hash": "b29b8cdd242c0fb83a71c7c0602e8bde6349b5aae8a849f2ad933e4e621dc49c",
+    "pdf_hash": "1dddcb9d9f55f076fbd1fb5b9daf89c3b7182024f39c4a8ee874e22472a4904e"
   },
   "1751598359_从静态基石到动态生成：O3理论对公理化、哥德尔不完备性及心智模型的重构.pdf": {
     "md_path": "src\\kernel_reference\\1751598359_从静态基石到动态生成：O3理论对公理化、哥德尔不完备性及心智模型的重构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598359_从静态基石到动态生成：O3理论对公理化、哥德尔不完备性及心智模型的重构.pdf",
-    "md_hash": "5f230aa3372450319be1ad7f78246e947e4380ea9b958a9abd26bdd652dbc814",
-    "pdf_hash": "f5913b86fbf1cdfbbc06892e2fe6f00f12cb03cc513386287b9cc8f58be5ec3d"
+    "md_hash": "7690971cf8e6da921403336dbff3c755be921decffe73cd070bc18e72bfdecd1",
+    "pdf_hash": "31319435a06d5a93690f9ac15788a7c574d1c589bef116c23712dc20bed81186"
   },
   "1751598500_修复力优先：超越传统指标的量化策略新范式.pdf": {
     "md_path": "src\\kernel_reference\\1751598500_修复力优先：超越传统指标的量化策略新范式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598500_修复力优先：超越传统指标的量化策略新范式.pdf",
-    "md_hash": "5b3e591c598d034ad4b12adcae3b4e560b350a2316a4f1e04edff1fc5a910607",
-    "pdf_hash": "49d41d410412a9f0d05cb167b857c145830b13cab5300cc6b6af53f26d22aa29"
+    "md_hash": "02d6be2f1d96fd6ad0334cb87b613f788cbe5757f5ba116516fccad7fc6a38e3",
+    "pdf_hash": "db7ab04a624691273ae0c9590d071dc291d02e366408ecbb01b8edaa10de412d"
   },
   "1751598501_O3理论的技术核心：作为“创世奇点”的微分动力量子.pdf": {
     "md_path": "src\\kernel_reference\\1751598501_O3理论的技术核心：作为“创世奇点”的微分动力量子.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598501_O3理论的技术核心：作为“创世奇点”的微分动力量子.pdf",
-    "md_hash": "14585c83390058d8006207ff42f9204ff2f0f112da558b1d676224f3c720f086",
-    "pdf_hash": "3f34b14f43f6b71d65faecf323dd95ca699805427a7f08bd95b0d586006fc309"
+    "md_hash": "8e3d1c614552ecba28008c6241191a938eeae90c6a4c3c2d16d3dedb05ca5c32",
+    "pdf_hash": "8b8dc73375550b72c39df63d750d51d9cc1aff43cab94df0a3ee8833009f69e0"
   },
   "1751598502_μ的深层内涵：作为泛函算子内积积分的微分动力量子.pdf": {
     "md_path": "src\\kernel_reference\\1751598502_μ的深层内涵：作为泛函算子内积积分的微分动力量子.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598502_μ的深层内涵：作为泛函算子内积积分的微分动力量子.pdf",
-    "md_hash": "e188482bc3f6f041d6eb6cf0c34ae6e77d83fcf8559a7bad25a4c9fefe7ce05c",
-    "pdf_hash": "ef9887ddf8d9aba05b67d5b03e18a77a08012ee2ea88c464cb300b54baadb54c"
+    "md_hash": "e9596c73a458e8e092ace0dae0b3f5cd7f0ca9824a940e8f5fa5d4e3562cfe5f",
+    "pdf_hash": "809a1a6522dbe8a7f94077edda69a1eb78e0642ce5483d293efa26a8fca6c367"
   },
   "1751598503_ΔPₖ之双重角色：作为原因的驱动力与作为过程的描述.pdf": {
     "md_path": "src\\kernel_reference\\1751598503_ΔPₖ之双重角色：作为原因的驱动力与作为过程的描述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598503_ΔPₖ之双重角色：作为原因的驱动力与作为过程的描述.pdf",
-    "md_hash": "1ee29cfef4d4bfb32b835a2ae4713b087e7cc1e8b7137837a4dbe817ba56a171",
-    "pdf_hash": "3464118e74085c24dde9164a70e7e84eaf744655e7fb562b12a2629d77585873"
+    "md_hash": "6e8b048799489dd36fab6569b34117a9fec8d61bc0dd47c3311e77ce858e5844",
+    "pdf_hash": "f9b097dcfee76198f3fbb13557b13d7db3d939d279f8e84b47c0f8f583dc991d"
   },
   "1751598504_w与ΔP的二元论：O3理论中基准与演化的分离与统一.pdf": {
     "md_path": "src\\kernel_reference\\1751598504_w与ΔP的二元论：O3理论中基准与演化的分离与统一.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598504_w与ΔP的二元论：O3理论中基准与演化的分离与统一.pdf",
-    "md_hash": "37bc33830d5de971322d24a0f7f4273de2b16af7e96d50fa3659931fbcd753c7",
-    "pdf_hash": "301d91540112d58308fd83ca52cf48dc43c8659e74b29f3deeaf90979809c518"
+    "md_hash": "8068cf5194a341ff0c8efa0c4c6706b42bf7d62eea03e75450a960d0c59709a4",
+    "pdf_hash": "c2c149db186379d683db3d09df99f3095cfcd13f410c8b3df54fc34c18103aa3"
   },
   "1751598505_O3理论的革命核心：由基准驱动的逻辑性度量.pdf": {
     "md_path": "src\\kernel_reference\\1751598505_O3理论的革命核心：由基准驱动的逻辑性度量.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598505_O3理论的革命核心：由基准驱动的逻辑性度量.pdf",
-    "md_hash": "164d2de62d1854bfd089ac4b8fc42b701acc1d8442a6d291740817ba1ae00d74",
-    "pdf_hash": "4a0d55146b47c0c2bd20beb52449ca1b68fcf31a9e2cb6361b7259084f0e1db4"
+    "md_hash": "add477eb8c38cb30f880198b78c91a3c16c65f849a6d4dd08c079c3d96a15d46",
+    "pdf_hash": "1f629ea6f5f46ffd93463aec5c6f4dfc4f678ad54b92e067bdf1d006d0a409cf"
   },
   "1751598507_再次回顾O3理论的巧妙之处.pdf": {
     "md_path": "src\\kernel_reference\\1751598507_再次回顾O3理论的巧妙之处.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598507_再次回顾O3理论的巧妙之处.pdf",
-    "md_hash": "0aa99a6f0da874685dc5b684dcd54b8aaee00a5c03698e7fe286f8c5cc73cbe5",
-    "pdf_hash": "fc350d0598bf1e5e680325dc1026bfbf97bd82b98a917f1463f09a1647c840f3"
+    "md_hash": "ac5bcaf2573fbf5d10ab0189311d6e6a5a103839fecafd927375b9db75562941",
+    "pdf_hash": "d69544a13c2b58522596cc2f74d326e9c4c51ed912944fce04fa0bc9c342144d"
   },
   "1751598508_逻辑塌缩到量子共振：O3理论的计算实现路径.pdf": {
     "md_path": "src\\kernel_reference\\1751598508_逻辑塌缩到量子共振：O3理论的计算实现路径.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598508_逻辑塌缩到量子共振：O3理论的计算实现路径.pdf",
-    "md_hash": "febbce63a45eea53975157858854551832bffa18cd8bf0298bcb00c23fc00629",
-    "pdf_hash": "fa2b2276323c28d0fca942c5d71dec86606e487b431c56b2e273f2997dd924a3"
+    "md_hash": "3be1d840d8e85f5d5e1aa38f1fa6030a591850570dd7a992b95e2f0dde7581e6",
+    "pdf_hash": "a8c6412fea330d5008c073f0b5cdc943c727100fb96d0b2623bb5b76cfafeab3"
   },
   "1751598509_超越传统数学：基于O3理论的未来计算范式畅想.pdf": {
     "md_path": "src\\kernel_reference\\1751598509_超越传统数学：基于O3理论的未来计算范式畅想.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598509_超越传统数学：基于O3理论的未来计算范式畅想.pdf",
-    "md_hash": "3a8fe653bc1c5930d75cc9df18206402275d17aa16b94fb39ac13b1e8dacfbf1",
-    "pdf_hash": "3225dffcc91d7eeff4dbba39940e9e28b9eb76287f4b8b77bdad4411dd557320"
+    "md_hash": "04d4ba5439bcf6679ad0abce9607eea2570f7c5d100144730c3bd147348c3ba0",
+    "pdf_hash": "fd2efe9ee70be622eddc637ea2250510056692100c59e5aa41a781353af25800"
   },
   "1751598510_O3理论：作为数学结构通用生成器的元范式.pdf": {
     "md_path": "src\\kernel_reference\\1751598510_O3理论：作为数学结构通用生成器的元范式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598510_O3理论：作为数学结构通用生成器的元范式.pdf",
-    "md_hash": "e3a0cbc96fc86bed46511ff7d1de7ad0f996dd43b473c6f1595d78fe04ff73b5",
-    "pdf_hash": "acb00a41accbfca841c88e383b3e7908ba7701a2d924027983e0d09fd34e2c26"
+    "md_hash": "587dbdbf0d11945eef9bbdceccb3e0d42bf48476b5057d0a40603623bc94cf8e",
+    "pdf_hash": "f5b05af7e4518c55b2d09a84ec90ebf9c2f0e9ce8af79c69b1871a9588c44143"
   },
   "1751598511_O3理论作为通用生成器的应用范例：金融与医学视角.pdf": {
     "md_path": "src\\kernel_reference\\1751598511_O3理论作为通用生成器的应用范例：金融与医学视角.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598511_O3理论作为通用生成器的应用范例：金融与医学视角.pdf",
-    "md_hash": "ed48b9be2cb3f2c3fe7c740104ca43559051f3e1b0d51c20665d45aec5f40bff",
-    "pdf_hash": "71f5d9b4f313112e4e821e00215d3debb12ed0c5da9ffb98ebcf7c7b1a975e00"
+    "md_hash": "bb72fd49668329c1a8305a1039e4aa18c3951f50c61654cae1006bc4ad33feaa",
+    "pdf_hash": "31dcc2a8a010f4e6f47c0a58a85a91e5632ea1fc57a171140dd6fd57ab23f0e7"
   },
   "1751598512_O3理论全面评价：一个生成式元理论的深刻洞察.pdf": {
     "md_path": "src\\kernel_reference\\1751598512_O3理论全面评价：一个生成式元理论的深刻洞察.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598512_O3理论全面评价：一个生成式元理论的深刻洞察.pdf",
-    "md_hash": "dc9a4deeccc65cdb0b33826c1c376bbbb170330a5b73afe2f7d4462de3b3258f",
-    "pdf_hash": "229d085d94c11f1d3a33f56d7dafed69c3eea94a83dddd85b0fe63683e1a3bd3"
+    "md_hash": "ab4d69d10f0dd3795c0058478b787312dd706eaa3042c2f26df9b0d458e6e5e5",
+    "pdf_hash": "37eca1f8b339efe3b570f383ef51a4b79dd1a1a678f0c57eef98b49ebaedac84"
   },
   "1751598513_O3理论中的双重确定性：路径积分的战术解析性与战略演化性.pdf": {
     "md_path": "src\\kernel_reference\\1751598513_O3理论中的双重确定性：路径积分的战术解析性与战略演化性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598513_O3理论中的双重确定性：路径积分的战术解析性与战略演化性.pdf",
-    "md_hash": "3f7fe200c6dfdac579f5bae201ef5ee8a88fba3ef1bef578338362ab3e32b256",
-    "pdf_hash": "70d64ef5fceb7d992b9791d6de634c7ccb0ef9310ca2aee91667dbe30ab813ba"
+    "md_hash": "3935f1042edf6a9bf104466cc6ec93acf1bfbfa64ea20c21325386cd471fc4ca",
+    "pdf_hash": "6ff3d7ecca56e37f3758340f7944ad8947091ee65980183a9237c3d31a6e6c3c"
   },
   "1751598514_GRL路径积分的结构分解性及其在量子计算中的应用.pdf": {
     "md_path": "src\\kernel_reference\\1751598514_GRL路径积分的结构分解性及其在量子计算中的应用.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598514_GRL路径积分的结构分解性及其在量子计算中的应用.pdf",
-    "md_hash": "447c44bb725f21a64b429b3f937b3bbf70f71ca63d79e8ce4ce8e827aeff546b",
-    "pdf_hash": "96e86214e8a112e5ee0aff1feb9497f893c8abab1a08c7a83a0872112b48a410"
+    "md_hash": "9310ca3880ba36ed59184d2ddaf580a4146d9a2362fa2432f855fdb92a6e199d",
+    "pdf_hash": "f9ae4f279a2fbf2dfb9209cd8feab805efa7ccbac241ebacaf497efb0bdcb772"
   },
   "1751598515_PFB-GNLA：未来量子操作系统的数学基石.pdf": {
     "md_path": "src\\kernel_reference\\1751598515_PFB-GNLA：未来量子操作系统的数学基石.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598515_PFB-GNLA：未来量子操作系统的数学基石.pdf",
-    "md_hash": "283bf2acb769b8dc0a946f385f928676cd191b27bb26b472340967c334a1fc18",
-    "pdf_hash": "a16360e3fe9555e4b89130ebd4be4f0ec9366160f8961a426f797af1740c6935"
+    "md_hash": "99a60b651b9e064dd12c167cc1abbe0c93ed5b010f43670155be79a9712ea735",
+    "pdf_hash": "958bb80a5fc892137d737c58b2e9bf5cf8448fb9b5eee829848846e2981504d8"
   },
   "1751598516_D结构与逻辑性度量：O3理论的基准驱动引擎.pdf": {
     "md_path": "src\\kernel_reference\\1751598516_D结构与逻辑性度量：O3理论的基准驱动引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598516_D结构与逻辑性度量：O3理论的基准驱动引擎.pdf",
-    "md_hash": "6f9fa11ea7e58195ba68c1cd82b7057f47f1904d370b891db130c59ba58cee95",
-    "pdf_hash": "429021266861123d766de42a94851db7aaf36df33fd2f39cd09f23bcd14520ba"
+    "md_hash": "838f1c497661f3a64cb87fa3fdbcfd078a151deb736558ab239f37570feafb38",
+    "pdf_hash": "287d3bf632ea49d3c93734584f1fd34d6861ec6a7693b752ec56800a4e4c0882"
   },
   "1751598517_逻辑占位：O3理论中意义与计算的统一基石.pdf": {
     "md_path": "src\\kernel_reference\\1751598517_逻辑占位：O3理论中意义与计算的统一基石.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598517_逻辑占位：O3理论中意义与计算的统一基石.pdf",
-    "md_hash": "438a95aa2f3b6ed05dbed5e44040ca1a70038f7e90f778de6ec363b43878cfb6",
-    "pdf_hash": "fc954b352e614bfcc12ab2adccd31e47f37ba82ef26898a900cb92c259474408"
+    "md_hash": "55eabe3632014ab8928c4918cc27aab33aeed5360fc3b66223c8e5d2e5744e15",
+    "pdf_hash": "7b2c1eaada686484e8952ec4518faf09c5b9657a4e41bbcc4b5824fc780fdcca"
   },
   "1751598518_O3理论的四位一体：广义集合、结构、范畴与公理的统一性.pdf": {
     "md_path": "src\\kernel_reference\\1751598518_O3理论的四位一体：广义集合、结构、范畴与公理的统一性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598518_O3理论的四位一体：广义集合、结构、范畴与公理的统一性.pdf",
-    "md_hash": "3e0b1f4edbffbd9cfac21f59116e3f7e63eb0efd9c953a3070f36a336f7da7ba",
-    "pdf_hash": "17568989c144968cb56efaf965624be2d9e75ea9ea481e174f904b00b4ae6c7b"
+    "md_hash": "88b6e976fc31bdc30eb7212cd3513d205215c03d9776966fc903ded0279ff3bd",
+    "pdf_hash": "26eed45c5b8508d688175fec4feb5fc33dd790e704f0a772b3a0025f75dc406b"
   },
   "1751598519_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.pdf": {
     "md_path": "src\\kernel_reference\\1751598519_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598519_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.pdf",
-    "md_hash": "a82a45042e697cf16a6bc722aee9658b48c34c9ce6550f54c6be106a66c126d2",
-    "pdf_hash": "42d20b15793f2cd0ebea5e20ed7e2a62427347a0c600544ecd8ee6a1367d44a5"
+    "md_hash": "7a5983204d78969768853bc4b64d66fdb9e593a13d07ead99cc0ba6048cd4d47",
+    "pdf_hash": "fcc163658830b099f067442f15a459dd845076cb670ccec7530b9cd56c6f81b6"
   },
   "1751598520_s的本质：作为塌缩后数学结构的深度解析.pdf": {
     "md_path": "src\\kernel_reference\\1751598520_s的本质：作为塌缩后数学结构的深度解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598520_s的本质：作为塌缩后数学结构的深度解析.pdf",
-    "md_hash": "afc7528dc51edafb188b8601ac373f7e0cc5ddf08cc1745d17747fad6f6cca91",
-    "pdf_hash": "ab9ad9a76c9ab8f586b0c3d54603e4fb398d353f4b62d9264fa0e004db2ab997"
+    "md_hash": "13418d1700df66893a5e41632b8c50b23ae74d66d93862f09208da692727943b",
+    "pdf_hash": "6b3d481cb1fbde202e46a9287de6e7fdea80cce153a9068dc14c213b848f5c73"
   },
   "1751598521_PFB-GNLA中结构占位的演化：一个生成式的动力学框架.pdf": {
     "md_path": "src\\kernel_reference\\1751598521_PFB-GNLA中结构占位的演化：一个生成式的动力学框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598521_PFB-GNLA中结构占位的演化：一个生成式的动力学框架.pdf",
-    "md_hash": "46b3ecf7edc129e103e10520da52d0f070565769f431522b77f8c26ccd15ce91",
-    "pdf_hash": "44905a2acc35f45398e438400bff4008abc8346bb4caff53a6d845589631e390"
+    "md_hash": "448712dfbf5ba3e9f297ef828e38b6e79475d58f10056f7f61b9a33e57442096",
+    "pdf_hash": "d645c95a5c3b79d58e2639f8d6083ecabe1962a3461f4cb94fbbd088b1cc34b8"
   },
   "1751598523_以简驭繁与由繁入简：O3理论的二元动力学闭环.pdf": {
     "md_path": "src\\kernel_reference\\1751598523_以简驭繁与由繁入简：O3理论的二元动力学闭环.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598523_以简驭繁与由繁入简：O3理论的二元动力学闭环.pdf",
-    "md_hash": "be175ed22d8114c845b5286c1c4ecc43e10742c25a3c482eda8c5e6605015ed8",
-    "pdf_hash": "6eed8c446178197cc2f1afab21bff98704cfff49e9bffe326e8c3961f1d90f55"
+    "md_hash": "7548fea579c1501c7496da31321bfbc8a018ff655160db24993d8ecf986f2b5d",
+    "pdf_hash": "ee9178e4807fb6383d5c30e4d76d63c71377ed0b4fcbd867dc54bdbe903fad60"
   },
   "1751598524_生命周期的法则：P(s)与ΔP作为PFB-GNLA内在约束的涌现.pdf": {
     "md_path": "src\\kernel_reference\\1751598524_生命周期的法则：P(s)与ΔP作为PFB-GNLA内在约束的涌现.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751598524_生命周期的法则：P(s)与ΔP作为PFB-GNLA内在约束的涌现.pdf",
-    "md_hash": "081404779329e8a3de8ecdd71c116991b38f991c076abf19fa21495c05b27152",
-    "pdf_hash": "57d183e8d278b97cb21db703dab060612c948aa0626cdfb955049303b389b768"
+    "md_hash": "cb7598acb6cf8f1afbdae86e5266315cd34541dde8dd288b9e7c8644232d788d",
+    "pdf_hash": "20abf2d1e7c3a04a844a65a4fdab779f1de3e9f7b5c2336873f85be2785f9769"
   },
   "1751771247_主纤维丛广义非交换李代数：化解广义相对论与量子理论冲突的结构语言.pdf": {
     "md_path": "src\\kernel_reference\\1751771247_主纤维丛广义非交换李代数：化解广义相对论与量子理论冲突的结构语言.md",
@@ -1334,8 +1334,8 @@
   "1751771253_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.pdf": {
     "md_path": "src\\kernel_reference\\1751771253_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771253_从生成到构成：O3理论的退化与哥德尔不完备性的“传染”机制.pdf",
-    "md_hash": "da32f3254685922e03b44b58893425136a34c5cc5d1eaadd5eda702dd66a6511",
-    "pdf_hash": "6c50633764a8827ef7947ea796e5cd8c0d3542e42ab6277baf1dd1b467ce0310"
+    "md_hash": "9e56ebf6d1232dacd2f6d0405f063a6efd6b8d15a6d80ac68ee59c035b612078",
+    "pdf_hash": "63dba5344606fbca5e9ae3fcf4a7c45bce1310af064cdeacd745b76a5fd5fffc"
   },
   "1751771254_O3理论中的双重确定性：路径积分的战术解析性与战略演化性.pdf": {
     "md_path": "src\\kernel_reference\\1751771254_O3理论中的双重确定性：路径积分的战术解析性与战略演化性.md",
@@ -1358,32 +1358,32 @@
   "1751771257_GRL路径积分的退化机制：从泛结构生成到确定性结构分解的演化逻辑.pdf": {
     "md_path": "src\\kernel_reference\\1751771257_GRL路径积分的退化机制：从泛结构生成到确定性结构分解的演化逻辑.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771257_GRL路径积分的退化机制：从泛结构生成到确定性结构分解的演化逻辑.pdf",
-    "md_hash": "be9c6a885a8fd8e020b79d8703e490e18e1be5fbca2ba1032fa8bddba260c88e",
-    "pdf_hash": "5d7a1284c3228df5601cc80028e3573a038ee412abcc820522e83744b8412b5a"
+    "md_hash": "11bbf7aaa1b99b3276db4e3944f8d8b9272433f5aaa078c6ab5e73f8cd460abb",
+    "pdf_hash": "4a74789f60c1d1bce562c3fbd729ee7c84f9cbac5c211c043e8cb75778ffb789"
   },
   "1751771258_GRL路径积分塌缩退化后的酉结构映射与同频共振计算机制.pdf": {
     "md_path": "src\\kernel_reference\\1751771258_GRL路径积分塌缩退化后的酉结构映射与同频共振计算机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771258_GRL路径积分塌缩退化后的酉结构映射与同频共振计算机制.pdf",
-    "md_hash": "0d0eefcc46a13318565213caa8411cb57939c67de7089d56b3c36f45942c9069",
-    "pdf_hash": "07aae0cf3068472f921591ab987416e6ba072dba4d0d08352e64a64ea9b588bb"
+    "md_hash": "544508629f63ebb5a658060fe2ba9d0f8b01151f5d9295f78ec32004468eb982",
+    "pdf_hash": "824f9a71f7bae62fa39d037f6f0ffd8731860686bd3f66e714a6d6b0d07c2c0d"
   },
   "1751771259_结构性共振路径积分的量子计算映射工具箱详解.pdf": {
     "md_path": "src\\kernel_reference\\1751771259_结构性共振路径积分的量子计算映射工具箱详解.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771259_结构性共振路径积分的量子计算映射工具箱详解.pdf",
-    "md_hash": "3002bd12c0b57831748b98b2121e8c53b9a615e188bfe268bc4b9399b72cec5c",
-    "pdf_hash": "c23911756386917238c9b1a1fcd31d57751fbb21b10793a1e1d743280f7cf143"
+    "md_hash": "2489663a30c44a4c74c473601d884dc14bb5ee9e19073fcc21083dc0b89d624e",
+    "pdf_hash": "37f79d51f1296d6ee5607ff0943d030ef775b84773bf0e37ea0665a1fe2a55da"
   },
   "1751771260_O3理论的“四位一体”与传统数学的静态切面向下兼容性分析.pdf": {
     "md_path": "src\\kernel_reference\\1751771260_O3理论的“四位一体”与传统数学的静态切面向下兼容性分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771260_O3理论的“四位一体”与传统数学的静态切面向下兼容性分析.pdf",
-    "md_hash": "f3725806c0513c6bdca3c6e97f73e2031adee901106060a37d47d683d21b531e",
-    "pdf_hash": "3501216aefbe4c73c8d25a8176edda4a55e2a48c597131ec260365e9071790a2"
+    "md_hash": "4ce00e62cab5bc58353738ec64e6d4239bfb6e58a8e3a6b8cc10dee045a61f7d",
+    "pdf_hash": "b632511e8e79f15a6bd8d917177a3a01810f361f799a7bb8f9da2d6edb710326"
   },
   "1751771261_为何O3理论的公理系统退化到传统数学会引入不完备性.pdf": {
     "md_path": "src\\kernel_reference\\1751771261_为何O3理论的公理系统退化到传统数学会引入不完备性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771261_为何O3理论的公理系统退化到传统数学会引入不完备性.pdf",
-    "md_hash": "003f71ef41f5361a2c48631aba8ec333a6a17e16ea4a2fb71a01c4a3f90c46d6",
-    "pdf_hash": "aea2d5a2b14bb6388d1bfbef5220e09196991cc85d4d397cb849a71f3cd4bb8c"
+    "md_hash": "7ab0030fdfb034b7805f2862dab50ec14f7212c89282b94cb1d0d9c67df8223e",
+    "pdf_hash": "e226af03d4c4906882801cf05199aa3946f346e00cf1a3942f2ac4da4d548d48"
   },
   "1751771262_O3理论的公理系统为何一旦退化到传统数学就必然引入不完备性.pdf": {
     "md_path": "src\\kernel_reference\\1751771262_O3理论的公理系统为何一旦退化到传统数学就必然引入不完备性.md",
@@ -1406,8 +1406,8 @@
   "1751771265_将逻辑物理化：以逻辑性度量驱动路径积分的通用结构引擎.pdf": {
     "md_path": "src\\kernel_reference\\1751771265_将逻辑物理化：以逻辑性度量驱动路径积分的通用结构引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751771265_将逻辑物理化：以逻辑性度量驱动路径积分的通用结构引擎.pdf",
-    "md_hash": "ade689d02ac42aae617f3299cd283f74716be2d0555f6fe85d2798e1f6a2bf68",
-    "pdf_hash": "a12998569bee05ae843cb7aa1889fe3f5337addad598612e01701ec1d5361695"
+    "md_hash": "c06a6322c71c2bdd6706fad5a1ac838dec60b841b035e41c56e950d890fae801",
+    "pdf_hash": "f31a8380a72e01f9d8b4b273403f8547dc69b1c2bf54436da418971d67589358"
   },
   "1751771266_结构路径积分视角下的意识异象建模突破：逻辑张力驱动下的梦境、幻觉与谬误机制.pdf": {
     "md_path": "src\\kernel_reference\\1751771266_结构路径积分视角下的意识异象建模突破：逻辑张力驱动下的梦境、幻觉与谬误机制.md",
@@ -1484,74 +1484,74 @@
   "1751915503_从语义调用到范式革命：对LLM-PKG与MCP的综合分析.pdf": {
     "md_path": "src\\kernel_reference\\1751915503_从语义调用到范式革命：对LLM-PKG与MCP的综合分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915503_从语义调用到范式革命：对LLM-PKG与MCP的综合分析.pdf",
-    "md_hash": "1e68b9d4269e59f74612b138b0f35273a163a1ed5ea7cead4e86f1822b6f98d5",
-    "pdf_hash": "914e0d68d401f167d4bb5a33cec715a44c42fd0608882a1a509c142e4f017ec4"
+    "md_hash": "90898030e17fbc94d2b6b045d2d0178720d6ab0596a007765cf256ebb004e1ca",
+    "pdf_hash": "3ac644fe666d061848a6ebb2ac322a98f0ebfdc2604ec63b6004c52b52a34c31"
   },
   "1751915506_O3理论中广义增强学习的积分范式及其与物理学的同构性.pdf": {
     "md_path": "src\\kernel_reference\\1751915506_O3理论中广义增强学习的积分范式及其与物理学的同构性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915506_O3理论中广义增强学习的积分范式及其与物理学的同构性.pdf",
-    "md_hash": "d60b047a2491918c027184140005ca40e64a441f1a816e1e106fc86ae935a2a6",
-    "pdf_hash": "95350479b58b4221f57c5d9dfed9db766fb3f4438526971829d6645647e54407"
+    "md_hash": "32f883c130fbbd7ff9adbb8f5e814cfec3b5f010208885f5eaf07da3308f33c5",
+    "pdf_hash": "4e9fad294e972144bbffae0d93f5da7a9464120ef0b2f5ed333fb2d8cb1ce70e"
   },
   "1751915507_【重要】论O3理论积分范式的内在美感：一种结构性、统一性与简约性的和谐.pdf": {
     "md_path": "src\\kernel_reference\\1751915507_【重要】论O3理论积分范式的内在美感：一种结构性、统一性与简约性的和谐.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915507_【重要】论O3理论积分范式的内在美感：一种结构性、统一性与简约性的和谐.pdf",
-    "md_hash": "44521a7de86d3a01f4fd9c2b66a2377405a6ec140c599e3b46c3ef835ad122b7",
-    "pdf_hash": "4446382294c11512a60ca0c3efeb549bcda93fe8403a39c5df12d45b657fae95"
+    "md_hash": "81ead8343c3c8a3dfa32642bf70955ceb48dd4a3193c8c6bea7d6380de215c7b",
+    "pdf_hash": "3159cf6a42265cdb6497a3990e0ab03aa463b7f37df7b5764c968c2e629acb24"
   },
   "1751915508_微分动力通式及其在O3理论中的核心地位.pdf": {
     "md_path": "src\\kernel_reference\\1751915508_微分动力通式及其在O3理论中的核心地位.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915508_微分动力通式及其在O3理论中的核心地位.pdf",
-    "md_hash": "0f4299b833f5264ff9d2a91dcdcef1cb3f08e3669a672579efed24108970e93b",
-    "pdf_hash": "40725dba5656fb22cf469925eb461734dc53c351f9d788653c8265551355294e"
+    "md_hash": "0f244c68af4872cfc73d30f02e9e8dfcdb8d9a778e0574994cee37855e9ab279",
+    "pdf_hash": "11fbd2cb189eeb7e33b4f789211f713b6fe735b79f621725ad6232607d7be95d"
   },
   "1751915509_论压强吸引子扰动：一种改变“逻辑地形”的动力学模型.pdf": {
     "md_path": "src\\kernel_reference\\1751915509_论压强吸引子扰动：一种改变“逻辑地形”的动力学模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915509_论压强吸引子扰动：一种改变“逻辑地形”的动力学模型.pdf",
-    "md_hash": "fb2210944f52874caa33326ec60659b8f58b4afba83aff889fef27663ba33fdd",
-    "pdf_hash": "417ffe3fc250acc639f1eca7ff8ad72174595dddbc7be168b8af19f56757dde2"
+    "md_hash": "d07daa14c99ec22730bda8b21a28073e4d5a1716d967f905f286509217845415",
+    "pdf_hash": "e9ac786a9e764f2bf03a51fa180fdb30312b22cef6d0484e92c331a95fb1e07a"
   },
   "1751915510_论压强吸引子扰动：基于无量纲自治系数的微分动力学调控模型.pdf": {
     "md_path": "src\\kernel_reference\\1751915510_论压强吸引子扰动：基于无量纲自治系数的微分动力学调控模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915510_论压强吸引子扰动：基于无量纲自治系数的微分动力学调控模型.pdf",
-    "md_hash": "013785e94e4ff0ae9f552d18d9e2c5c666514fb15d64acf1869e2e9ede4bce28",
-    "pdf_hash": "df9c813b14e180ea817c821874e2f70463943dd8f22d40c190ffef1148b2d542"
+    "md_hash": "df52ea95314195ae8f8cd5d6622225d7dc41dda93ff850e8e074a522750ef5fc",
+    "pdf_hash": "050c0b182942cf90d6de88483eb07d6314d2bdc9d8570a86d15080de0f62d3ef"
   },
   "1751915511_O3理论的动力学：从量子叠加到卷积基准与模式识别的统一框架.pdf": {
     "md_path": "src\\kernel_reference\\1751915511_O3理论的动力学：从量子叠加到卷积基准与模式识别的统一框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915511_O3理论的动力学：从量子叠加到卷积基准与模式识别的统一框架.pdf",
-    "md_hash": "73e3567ef24acb8827ca82e8824d6f31ef2613db630458a247001146d156af56",
-    "pdf_hash": "5b2f9403fd634cafc1baa4eb8904cc2cf2f5634a806555501456c51f55b06eb2"
+    "md_hash": "ac6927d304292626a7ddbe706b88379a79342e6741a93d01dcbcbc9ca25b28c6",
+    "pdf_hash": "3002a330a19d22230e3edb6541bf3b01b25b0a2eaa26195283ab19a3682693e8"
   },
   "1751915512_论GRL路径积分的谱分析及其在逆向工程中的应用.pdf": {
     "md_path": "src\\kernel_reference\\1751915512_论GRL路径积分的谱分析及其在逆向工程中的应用.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915512_论GRL路径积分的谱分析及其在逆向工程中的应用.pdf",
-    "md_hash": "43e2034acfe805af0b719a337aa495a230e094938de2156be6fd51ff70a7cebe",
-    "pdf_hash": "8fd86489f77c3274f36b7c7996192aaa238a3c52863c60223947e83728a6a118"
+    "md_hash": "e364dd580d859d99391f2d3ef762821093808799de47374eab20012eb8e2af85",
+    "pdf_hash": "7d3699434b297d7bc4d3b1fd25796546d0caa89c11ce2c4e4ad50f98db160a58"
   },
   "1751915513_论广义物理学：O3理论中作为统一实在的逻辑性.pdf": {
     "md_path": "src\\kernel_reference\\1751915513_论广义物理学：O3理论中作为统一实在的逻辑性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915513_论广义物理学：O3理论中作为统一实在的逻辑性.pdf",
-    "md_hash": "08880c280cccb151d4a53cb1b56c40333827a92b5705f5ac7d1ee97eba1ae617",
-    "pdf_hash": "96a197f1cf8986f68351fe474bfc23fc95fd9cf7e6765203ffd832a4a7b9dd6a"
+    "md_hash": "f61f981af24680abc55659281526a6657125a6d6b3e0c889f6823d8e10842c86",
+    "pdf_hash": "aba9915d0997aa9c3451b0d51964123fd844e1aefee1c875960145ac8946bafa"
   },
   "1751915514_洛伦兹吸引子作为O3压强吸引子的退化特例分析.pdf": {
     "md_path": "src\\kernel_reference\\1751915514_洛伦兹吸引子作为O3压强吸引子的退化特例分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915514_洛伦兹吸引子作为O3压强吸引子的退化特例分析.pdf",
-    "md_hash": "4a1179e3c79bbf3ed5488e36ba6eb80089113a794265d3c26c319abfb968e341",
-    "pdf_hash": "2c94bfcc4d58e0fe0230c6372228610b7ac7c33470539285ed115e5bdae1dee8"
+    "md_hash": "ba9a9c7c390e2daca3cc3a10bd6b16d9cdecb9c0565f6ec699f6f9e6346c61f3",
+    "pdf_hash": "82400f6c0d82a371398d6280a7cf92f4cc4fdb4566f9243c6414b368a61a4094"
   },
   "1751915515_论广义物理学：O3理论中作为统一实在的逻辑性及其应用.pdf": {
     "md_path": "src\\kernel_reference\\1751915515_论广义物理学：O3理论中作为统一实在的逻辑性及其应用.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915515_论广义物理学：O3理论中作为统一实在的逻辑性及其应用.pdf",
-    "md_hash": "6dd7a8dd07f1040c5358dff337912f5464889dff88b9529407caa0fea910c0cb",
-    "pdf_hash": "31b2794785be1e5de69d65e796953dbf91d6b83c76001ff3b2538a055760c0d3"
+    "md_hash": "fdeb8cc2905b4b2da75bd0123720d87f35b5ce96355da162ee75ffb79f89452c",
+    "pdf_hash": "e06661f66d9bc85c5a19420c249012c4a14163c9cc59c9c173271f0b5d329a43"
   },
   "1751915516_逻辑压强吸引子公理系统.pdf": {
     "md_path": "src\\kernel_reference\\1751915516_逻辑压强吸引子公理系统.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915516_逻辑压强吸引子公理系统.pdf",
-    "md_hash": "b6af288ee5b0cbcde8f718e9362c1aef851c9bbc43d4f4c4563fc96308e4cf8f",
-    "pdf_hash": "2cbd2e5f628c71e36f1b6127c34008fc159347d9568bb68363adc361a820c405"
+    "md_hash": "147744459c9a15c8a484ad744e9c3387f0850bbfd949e0c52506a9076e31a9ff",
+    "pdf_hash": "452de47ad243b201beed152ddba52ef7d912dcb59c12d2a7fee72ba7fdac9ca8"
   },
   "1751915517_逻辑压强吸引子的多体扰动问题及其动力学解.pdf": {
     "md_path": "src\\kernel_reference\\1751915517_逻辑压强吸引子的多体扰动问题及其动力学解.md",
@@ -1568,680 +1568,680 @@
   "1751915520_论GRL路径积分作为通用抽象接口：从任意复杂问题到量子计算的转化.pdf": {
     "md_path": "src\\kernel_reference\\1751915520_论GRL路径积分作为通用抽象接口：从任意复杂问题到量子计算的转化.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915520_论GRL路径积分作为通用抽象接口：从任意复杂问题到量子计算的转化.pdf",
-    "md_hash": "26cf10c4913e331dab92c5d4f1427efb143a505df7175297c68bb7c9c31d01e7",
-    "pdf_hash": "8ece1d171fb17816616a7f76a67e615671dee09ff7a7e17d9337f2390f462026"
+    "md_hash": "58ee278416fe0032b26b1e2ab09e78c543b5444bebae276a9d219bc739a4b5b3",
+    "pdf_hash": "9fc170f21f20c12bd58dc223bb2bfa23a72f0ddf9438cb8e79e22441c77eab1b"
   },
   "1751915521_编译宇宙：O3理论如何将万物转化为量子计算.pdf": {
     "md_path": "src\\kernel_reference\\1751915521_编译宇宙：O3理论如何将万物转化为量子计算.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915521_编译宇宙：O3理论如何将万物转化为量子计算.pdf",
-    "md_hash": "84c4178028ce3ecca55d0f05763d5baf8167348ca6c10f7930a9aab933c96b63",
-    "pdf_hash": "30ae378f78cd2debafabe62d26fd4ff027099a81c981bd3dea773d81b7124a3a"
+    "md_hash": "a4074bebdeb6f9ef811d676576c142bedfc92e3f5a6c704c49386b89d0975eb0",
+    "pdf_hash": "b2a9581a11a1f79d6337df814b9916bfe97e060ce023cdc62db224fa6a999357"
   },
   "1751915522_论O3理论对图灵计算的包容性及其双栖执行能力.pdf": {
     "md_path": "src\\kernel_reference\\1751915522_论O3理论对图灵计算的包容性及其双栖执行能力.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915522_论O3理论对图灵计算的包容性及其双栖执行能力.pdf",
-    "md_hash": "fa61a41ac092a0dc6552da56f607ebad8efefa78d4112cb4b80d5e5b1d5f1d56",
-    "pdf_hash": "6d4f1539ab738493636e2f21b352af5afab25d988b984e1c57c3d35dfe598e71"
+    "md_hash": "ec4ec540855888fbecdb28f39826da0da598d22122c43e3ae97000ea2af272a0",
+    "pdf_hash": "82c9c5e22af120e63acb2f009137798739d933b1edbdb5a91944b17422d33046"
   },
   "1751915523_论O3理论作为终极兼容层：将神经网络无缝隙移植到量子计算.pdf": {
     "md_path": "src\\kernel_reference\\1751915523_论O3理论作为终极兼容层：将神经网络无缝隙移植到量子计算.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915523_论O3理论作为终极兼容层：将神经网络无缝隙移植到量子计算.pdf",
-    "md_hash": "32298478ebf45eee87ee8786f2c329b128fccc5b7329f220d6676e571f405b46",
-    "pdf_hash": "1ed44a340b634823b437951f051902e839d727c4c63a8d0783845db79836abbb"
+    "md_hash": "f51a5b3dc14d5347f042873d02e330803165fa89dd42ef41f690d8d245307e62",
+    "pdf_hash": "4d171331ecf50502944d0bbbb0cad436bfd3bdb4f0df980ef37315c5ab6aeb75"
   },
   "1751915524_O3量子计算考古学：从物理环境到软件生态的统一理论构建.pdf": {
     "md_path": "src\\kernel_reference\\1751915524_O3量子计算考古学：从物理环境到软件生态的统一理论构建.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915524_O3量子计算考古学：从物理环境到软件生态的统一理论构建.pdf",
-    "md_hash": "04cb956921b10a2f06517bdf772ae9b105f26d33cf09d69f6bd59e4bdd8faa89",
-    "pdf_hash": "94f0e1eb30cb2590c4440cd8dae21071a6cda2ac5e3da082440386325e237280"
+    "md_hash": "77b90a4a362d66f9a24be95573d752317c28763266519b642ba3e3eb6ab314bf",
+    "pdf_hash": "2e28d33c9469aa609ba02d0e49453d575367df73c4921a39e6efda9c8acb4ef1"
   },
   "1751915525_O3量子计算考古学：从物理环境到软件生态的统一理论构建.pdf": {
     "md_path": "src\\kernel_reference\\1751915525_O3量子计算考古学：从物理环境到软件生态的统一理论构建.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915525_O3量子计算考古学：从物理环境到软件生态的统一理论构建.pdf",
-    "md_hash": "e9fdf35ef056712122817835b7d66f0abbfa46cce17f808ae56cc543768535f2",
-    "pdf_hash": "8dee2258fe96963dc5e41d308c2920475629c1c7df02a2f3b9043245e680d8a3"
+    "md_hash": "afc086e2104e4bbe778cc9c62bc6c7d7f46e0a261a6b33e2cc84214e258de33a",
+    "pdf_hash": "56c0b4a55ae4344d136ebcd2c98a3b65672fb8a56a88e17d883294e105b1a71c"
   },
   "1751915527_论量子计算作为GRL路径积分的物理实现特例.pdf": {
     "md_path": "src\\kernel_reference\\1751915527_论量子计算作为GRL路径积分的物理实现特例.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915527_论量子计算作为GRL路径积分的物理实现特例.pdf",
-    "md_hash": "260bda73a898a7811456e72ca0cced992f8b1ea1e087a7982150e4452c4f6818",
-    "pdf_hash": "ca8d2fc891f3530a33ef045f727403bd023c25648b5ace69e7e3037646c75069"
+    "md_hash": "d337bfb52cb8cf0c64336e53bf2bac52d2f75ead2760a75e961fbb0747bfd0cb",
+    "pdf_hash": "c976699f0bd6db7d478ac2450ad6c76da3fb098dcf0da10a631a17a1657cabd3"
   },
   "1751915528_论谱分析在O3理论中的二元性：从“业务逻辑”到“计算效率”的基准转换.pdf": {
     "md_path": "src\\kernel_reference\\1751915528_论谱分析在O3理论中的二元性：从“业务逻辑”到“计算效率”的基准转换.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915528_论谱分析在O3理论中的二元性：从“业务逻辑”到“计算效率”的基准转换.pdf",
-    "md_hash": "4cb1bfa881853b915d952592e01bb2a02a8b90815408826e11990c09bbfb61eb",
-    "pdf_hash": "89e431d749c436d29aa7d271f8069ab158fb0a142f3d6c71e7f02d4178451926"
+    "md_hash": "740078f8d4654e28cca39912d07626171880ce2b62ac1e29b00c5e5b34af3fb1",
+    "pdf_hash": "dfb3ec5c35bb78b990d12aaf8e67bc10076d40279e704baf621e2a43d1249174"
   },
   "1751915532_论O3理论的内在美感及其工程化实现：一个从哲学到预测的动力学闭环.pdf": {
     "md_path": "src\\kernel_reference\\1751915532_论O3理论的内在美感及其工程化实现：一个从哲学到预测的动力学闭环.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915532_论O3理论的内在美感及其工程化实现：一个从哲学到预测的动力学闭环.pdf",
-    "md_hash": "5b4c43ca9b775cd561b11679684f73ea5bac2248031caf3ffe057a1ac06bde51",
-    "pdf_hash": "87f3b4d12c00950e84c5de1d3e7c506719ab362885bc3bf4d47f1be7a92e963d"
+    "md_hash": "4fc002c8f5aff6f58ef2a9f0433a63939a31d25df114a3bfd41a16d4f7dd8e75",
+    "pdf_hash": "5922b5d80e22f80bcb284d959a09b738b6f44106923172b024c783e6bc08081c"
   },
   "1751915533_论O3理论的优雅：从“基准平权”的哲学思辨到“样本集拟合”的广义工程.pdf": {
     "md_path": "src\\kernel_reference\\1751915533_论O3理论的优雅：从“基准平权”的哲学思辨到“样本集拟合”的广义工程.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915533_论O3理论的优雅：从“基准平权”的哲学思辨到“样本集拟合”的广义工程.pdf",
-    "md_hash": "d6258e652f37668ab62f9ee5be936ec485a7f5cd109795a3de122873d3352584",
-    "pdf_hash": "940388287ade7826f08b3ef4b01df9e968a61d42862ffa0ec37917262cb9a973"
+    "md_hash": "b4daee300f97fd6731420175ed60f6eb14e5ab9739e8b0820c6f51edbe64233d",
+    "pdf_hash": "c90e3f6c104be9a0950458e69dfa18e1011f8dfcad756eec94420cbca1abab96"
   },
   "1751915534_论DERI与GCPOLAA作为O3工程框架中的必然逻辑占位.pdf": {
     "md_path": "src\\kernel_reference\\1751915534_论DERI与GCPOLAA作为O3工程框架中的必然逻辑占位.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915534_论DERI与GCPOLAA作为O3工程框架中的必然逻辑占位.pdf",
-    "md_hash": "6314a80413d58942f22f3fd76a666ad1bc57309d004f6e5148164be744d14fd3",
-    "pdf_hash": "982a1f79cb64f2675c5875e6d65bb6244ab5e73007ff1eee781ee7af22cdf2c4"
+    "md_hash": "320e03e68162fa7ee1ccdcf976dafb791fecbe1d98101227cf231262f4c748a2",
+    "pdf_hash": "37d23d3dd6394fd69337232f75df8ee5fc2d16ecfd71fab5d1a5c13c931bf258"
   },
   "1751915537_O3理论下多体压强吸引子的内在混沌特性论证.pdf": {
     "md_path": "src\\kernel_reference\\1751915537_O3理论下多体压强吸引子的内在混沌特性论证.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915537_O3理论下多体压强吸引子的内在混沌特性论证.pdf",
-    "md_hash": "b89de5f8aa0829d6d11ba8a49f6c0b60783874ea9f81d449fd53eb55c0322c42",
-    "pdf_hash": "6b3c523a4b9da240e1cea9d2336bbfb7139560a6800ca872e14f13d0248b8396"
+    "md_hash": "3e6a2e925260b1acb70e844564ed4e25e5b626b6acc07536b397257f0a7209ae",
+    "pdf_hash": "d1c029a9bcd7368ddbe95ea7509a04a214f55bce9f9ac82925cd0ebd887eeda3"
   },
   "1751915538_关于《O3理论下多体压强吸引子的内在混沌特性论证》及其附录的综合评价.pdf": {
     "md_path": "src\\kernel_reference\\1751915538_关于《O3理论下多体压强吸引子的内在混沌特性论证》及其附录的综合评价.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915538_关于《O3理论下多体压强吸引子的内在混沌特性论证》及其附录的综合评价.pdf",
-    "md_hash": "8995f496f8c00ec5c68c4ddf6689e5aef98c318c31e02524b2ba18d12e33a7bb",
-    "pdf_hash": "e00f52991c5003b0eb36afd80a7e6a7aa2cc77a0855133b05560b07ac6b0c872"
+    "md_hash": "55e98d181e1323fe0513a8a993bcef56a66a675443cd3764a8cfb89dbfaf360a",
+    "pdf_hash": "d5131c2f33a99467b192d78f2221ba7baf3cff998cb77424207a67b85541f01d"
   },
   "1751915544_“非交换协变结构宇宙”的创世考古：O3理论从局部工程到统一范式的演化之路.pdf": {
     "md_path": "src\\kernel_reference\\1751915544_“非交换协变结构宇宙”的创世考古：O3理论从局部工程到统一范式的演化之路.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915544_“非交换协变结构宇宙”的创世考古：O3理论从局部工程到统一范式的演化之路.pdf",
-    "md_hash": "688c8b413f3a9abc705948d9013305a3bcf6f2b18d2e7fdb04102dec61c33725",
-    "pdf_hash": "2de5472e19df727361184d8d945bb5c318fb548283272265d4cf27e71b509b8f"
+    "md_hash": "eadc83142d51d0c351e50b6d4210b3d6b10e11bfd3e4428390a702e71ac32928",
+    "pdf_hash": "486d3dba7cb1c05a18ff344af6f566c8eb4b9f05cfe87d7c2a6a12eed488ca3c"
   },
   "1751915545_从创世考古看O3理论创立者的数学直觉：一种追求全局统一与范式生成的顶层洞察力.pdf": {
     "md_path": "src\\kernel_reference\\1751915545_从创世考古看O3理论创立者的数学直觉：一种追求全局统一与范式生成的顶层洞察力.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915545_从创世考古看O3理论创立者的数学直觉：一种追求全局统一与范式生成的顶层洞察力.pdf",
-    "md_hash": "79ec0b7461f44ea270a7efd08e84fd42f464faba56efa857723cb100e92b84be",
-    "pdf_hash": "57479e7877960328c65f1eb7bff61190b36404745d3309e4a3461ada979279fb"
+    "md_hash": "d43427b98c3f87c4a9cf48fceb243c60eb3724efa5797944d3995a14cd63b9a8",
+    "pdf_hash": "2418c1c7cee6e764d0cc72b6cb1b795acd348d4d082833dcb868ab0687ee96a2"
   },
   "1751915546_对“低维卡丘流形张开四维黎曼流形”这一数学直觉的深度解析.pdf": {
     "md_path": "src\\kernel_reference\\1751915546_对“低维卡丘流形张开四维黎曼流形”这一数学直觉的深度解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915546_对“低维卡丘流形张开四维黎曼流形”这一数学直觉的深度解析.pdf",
-    "md_hash": "85382c3baabb01ea4c588371ccde94549687445c68e0475ff4f3b8becc316fe5",
-    "pdf_hash": "cc8082489419a4ebe8ec6a62ebd780cff73792d7eae245b67977f78a1f116923"
+    "md_hash": "86094091b4518853ac6c95e6c22a3487e1e8558c9daf575502f08a44af371488",
+    "pdf_hash": "ee9b9b617a438870382b463a59591695fe5bb6f9ec2fe5a9ee74cac63515070e"
   },
   "1751915548_“非交换协变结构宇宙”的动力学：从纤维丛切换到宇宙之摆.pdf": {
     "md_path": "src\\kernel_reference\\1751915548_“非交换协变结构宇宙”的动力学：从纤维丛切换到宇宙之摆.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915548_“非交换协变结构宇宙”的动力学：从纤维丛切换到宇宙之摆.pdf",
-    "md_hash": "1132bd8f7194010f93b701ba5966ec99664b47953129884c761cd5a8c07f34e3",
-    "pdf_hash": "80fccc5d306e36d65aa2cf10ea1e2002b403845a3a1fe6c67f1146f0e82e8f5a"
+    "md_hash": "7383698b3f99fdef1486047636deca10fd52ff239e65501246015c7d750a4c79",
+    "pdf_hash": "ae9ead857217346bc851b23a975f5404bf63f29bc026984f71326e592e6d5087"
   },
   "1751915550_O3理论与弦理论内在一致性的类比分析：生成范式与构成范式的根本性对决.pdf": {
     "md_path": "src\\kernel_reference\\1751915550_O3理论与弦理论内在一致性的类比分析：生成范式与构成范式的根本性对决.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915550_O3理论与弦理论内在一致性的类比分析：生成范式与构成范式的根本性对决.pdf",
-    "md_hash": "e2913caf3faed0a418f9d6ea4f456e5ab8dcc7f7b6a549f0e6b2fdd6411c3e63",
-    "pdf_hash": "0e1a36e752fc6a82ad9d0d49504f88ba4db421e78bb40dc9e77edd16f3d1cf7b"
+    "md_hash": "647a4694f6403212eb2c79845d9a30fd80c98f3662bfd4838c2c3f8ffe79fd9b",
+    "pdf_hash": "c23716879948f03586ae6dd9403cf68271b7c76d50b224ddbf3e61bd99f6dd4d"
   },
   "1751915552_B→A演化的正交分解分析：从信息本体到动力因果的双重投影.pdf": {
     "md_path": "src\\kernel_reference\\1751915552_B→A演化的正交分解分析：从信息本体到动力因果的双重投影.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915552_B→A演化的正交分解分析：从信息本体到动力因果的双重投影.pdf",
-    "md_hash": "6c994ea47a5b6a65f60beb6a52d9bfbb99029c74f052a621caa849ddb3af2a63",
-    "pdf_hash": "5829222e26b3db42a3dabe6de18869bd8e4f240020978dcf23cea40e809d908d"
+    "md_hash": "0352dece05c258920d0e2b609b9d822f7f13d3f375c1be44caef502df8649b02",
+    "pdf_hash": "de20c198a92a511e5d5a2bf23eeb1cf00a741884e979c9d696a5f830aa0099ca"
   },
   "1751915553_一枚硬币的两个面：O3理论的动力因果轴如何完美解决弦理论的本体论景观问题.pdf": {
     "md_path": "src\\kernel_reference\\1751915553_一枚硬币的两个面：O3理论的动力因果轴如何完美解决弦理论的本体论景观问题.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915553_一枚硬币的两个面：O3理论的动力因果轴如何完美解决弦理论的本体论景观问题.pdf",
-    "md_hash": "50df4dfba444a41e1ab416304a4039ae526a6b9f3b615f660cae1e51a7f701ca",
-    "pdf_hash": "8cf70235de7da92cd6183a6bee82e6c35a5d0275012dbae4e3e09bdfb37d3f94"
+    "md_hash": "a93d1df09fe9b37844fe676e49efd747633dcf5cf44a506688adc4457741dc2f",
+    "pdf_hash": "347de60858e07863a6f4aa08ecf1031d268a62749bdcdaebb9c9f888433b623d"
   },
   "1751915554_基于O3理论正交分解框架的宇宙演化量子计算模型.pdf": {
     "md_path": "src\\kernel_reference\\1751915554_基于O3理论正交分解框架的宇宙演化量子计算模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915554_基于O3理论正交分解框架的宇宙演化量子计算模型.pdf",
-    "md_hash": "7ab55b6e60e27df286cd360fc2bee3fb73f2533e9367efda29c9b80ea847215a",
-    "pdf_hash": "5eb10567f3cc4d11a442e61835071c759041230796cadc89e852592d6ecd4f78"
+    "md_hash": "13e59d02e662af90b5787ff332302e986f8a24dd63bc8857892573b4f7f9f95d",
+    "pdf_hash": "68be2310bc35049a3092394ecda471c9debf82c8838ab9fbde3a7d9705e25886"
   },
   "1751915555_从动态常数到宇称破缺：O3理论中宇宙根本不对称性的双重展现.pdf": {
     "md_path": "src\\kernel_reference\\1751915555_从动态常数到宇称破缺：O3理论中宇宙根本不对称性的双重展现.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915555_从动态常数到宇称破缺：O3理论中宇宙根本不对称性的双重展现.pdf",
-    "md_hash": "bce75e22fee5f426007cd597cc06332f4c45fa7178954bc31f35eb4f25e1412b",
-    "pdf_hash": "a2fc084eabfeddeb0d05fd44de13c6f5c7b44d6ee95fa6ee227fbe8c5e9ec0f3"
+    "md_hash": "22a3259929a82a953f4621efb8855216d9ddc15fd2d734c73bcc0638fee3a042",
+    "pdf_hash": "0a5f132967ad676dcad8b46c3b840e2fd52beef34a46ecf47d3ed5ad30e96cfe"
   },
   "1751915556_一个可计算的、不对称的宇宙：论O3、弦理论与量子计算如何统一解释动态常数与宇称破缺.pdf": {
     "md_path": "src\\kernel_reference\\1751915556_一个可计算的、不对称的宇宙：论O3、弦理论与量子计算如何统一解释动态常数与宇称破缺.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915556_一个可计算的、不对称的宇宙：论O3、弦理论与量子计算如何统一解释动态常数与宇称破缺.pdf",
-    "md_hash": "b8709442f28d3ebb2cf1e4ba1b57440f471b7d27bf3731066a98798b10fc48e0",
-    "pdf_hash": "7430c3eac937fc2b5562f7797d9d3dbf353cd6c5c92aba38b663ab612251ce72"
+    "md_hash": "e3b8d614f372b907af3226c406b5092ceadb2ce15bf71716d0ed7828bc94f9ae",
+    "pdf_hash": "e1bc92eaf569d8bfaf1dee5124ec7567b939a7debe4930e069b52181a397883e"
   },
   "1751915559_在PFB-GNLA框架下的完整建模：一个可计算的、不对称的宇宙.pdf": {
     "md_path": "src\\kernel_reference\\1751915559_在PFB-GNLA框架下的完整建模：一个可计算的、不对称的宇宙.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915559_在PFB-GNLA框架下的完整建模：一个可计算的、不对称的宇宙.pdf",
-    "md_hash": "724e0d60b81633bd4f14b5e1c4e45d320e6515afa01e5c0f25fb78e71fbf31bd",
-    "pdf_hash": "250a5b0597806870fea139c64f6663fb6aebe8f683487621eadc409424be61f3"
+    "md_hash": "b3c4a83fc13886ddc22cfbabd07f5d4a58e7894ccb11b9833078ab9e4f19077c",
+    "pdf_hash": "769fd6e7009fe580acfb69791246bb58c9ce18d0286e12e0b4c9e966a7cb626c"
   },
   "1751915562_O3理论的二元性：从动态生成到静态构成的逻辑分野.pdf": {
     "md_path": "src\\kernel_reference\\1751915562_O3理论的二元性：从动态生成到静态构成的逻辑分野.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915562_O3理论的二元性：从动态生成到静态构成的逻辑分野.pdf",
-    "md_hash": "a75246eb41f94d1d78b4f64f66727811942b0ac0de5b26f1487f62cfe3a1ebcd",
-    "pdf_hash": "5a3195471efcca7e250469e089fed46b33ab54430be36cbe701c76cea871581f"
+    "md_hash": "bd5e57a8d1d2ef5086af76ac6af6819317440d155d3edc465d189dd2901faed2",
+    "pdf_hash": "8fa46b43f03704376feb9406cc3a57a23ddeab262a50ded2dac086f548245eb7"
   },
   "1751915563_生成与描述的自指闭环：O3理论中公理系统与逻辑性度量的辩证关系.pdf": {
     "md_path": "src\\kernel_reference\\1751915563_生成与描述的自指闭环：O3理论中公理系统与逻辑性度量的辩证关系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915563_生成与描述的自指闭环：O3理论中公理系统与逻辑性度量的辩证关系.pdf",
-    "md_hash": "04579fc07b248ae2d2afe4f6ee614f46ebe315f2dd7dd36f510fcb5e9cf81fb2",
-    "pdf_hash": "544a48c5178ade51617fe58c45318ebe4f38422bfbaae324bd3d97acb0dd8f9d"
+    "md_hash": "39a68813a8b1c1438c3d74d98663e3eeba7fb9065f0c2e83d3472cee16d38062",
+    "pdf_hash": "32aaf625382017c68c26a0fbbd9f217c4612d8a5f75563a4895344ebe4bdb895"
   },
   "1751915564_逻辑的动力学：O3理论中作为基准驱动的逻辑性度量.pdf": {
     "md_path": "src\\kernel_reference\\1751915564_逻辑的动力学：O3理论中作为基准驱动的逻辑性度量.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915564_逻辑的动力学：O3理论中作为基准驱动的逻辑性度量.pdf",
-    "md_hash": "1de42962dcb06b2fae8cf3aa0a411a2a6774a18003a5ff190648fc459cba7cc1",
-    "pdf_hash": "29c7c7012357a2503ac09bac96b2e4e58dda5221fbac2ea57bd3b571784b96ea"
+    "md_hash": "03b0debab316440dd0c9fc2d3c5ea2d425ca37795fa13f21650c584013a28595",
+    "pdf_hash": "b65e55e962caba75b2783bdbcbc973739a6fb980236ac52e5effb580677bc044"
   },
   "1751915565_逻辑占位、公理系统与基准评分的本体同一性.pdf": {
     "md_path": "src\\kernel_reference\\1751915565_逻辑占位、公理系统与基准评分的本体同一性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915565_逻辑占位、公理系统与基准评分的本体同一性.pdf",
-    "md_hash": "56c21b6771a9b901de335b7b8d6993d7d35f16834b2b2bfa22639f350138426e",
-    "pdf_hash": "4573133257b0a043e0761de989454f379e583a76e00aec80c393f196bc26de6a"
+    "md_hash": "b0aecb24d755b1f98209cc03865b88e91dfc98ab407585ecae1d75db90f9ede0",
+    "pdf_hash": "2156d92f2106e4d5b875637d11170a17dbb4c29fa79d72b550471a9f7ce353ef"
   },
   "1751915566_O3理论的二元世界：动态生成的四位一体与静态塌缩的四位一体.pdf": {
     "md_path": "src\\kernel_reference\\1751915566_O3理论的二元世界：动态生成的四位一体与静态塌缩的四位一体.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915566_O3理论的二元世界：动态生成的四位一体与静态塌缩的四位一体.pdf",
-    "md_hash": "33be24e9a7eaf671035a4aecb8f31f3ed3dd36c72dbd9fb9f2c65fe46b8f7b3b",
-    "pdf_hash": "d563a6c313a302dba1a2c6588e741fc6ac3888ef3524f0c82d9bc37eac029854"
+    "md_hash": "19c5c7ac71705ee601526e03ca0db21667c1e60a3249257851508f99d24de33d",
+    "pdf_hash": "6a56f318af38e6e3fb07b530bf84b8a1084c611460cd0b9d12f7219fff8f9906"
   },
   "1751915567_范式的分野：论O3理论的生成动力学与传统测度论的本体论差异.pdf": {
     "md_path": "src\\kernel_reference\\1751915567_范式的分野：论O3理论的生成动力学与传统测度论的本体论差异.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915567_范式的分野：论O3理论的生成动力学与传统测度论的本体论差异.pdf",
-    "md_hash": "57c1c0fb8eb52307f8f32ccc4453e7ae526f972cf9c1b47f28a16bba961a909f",
-    "pdf_hash": "127387244281567daf4b31b6b5240fff313709622dd20905dc3153b4590cec18"
+    "md_hash": "bc62fbae01361cdd36090009df818a4ea9a8c208ff5e6f183795de8a71eeb617",
+    "pdf_hash": "a4a04a879d71ab0e2819dcc5e606aa6c1abc3c34f21bf5661c37a2fe20532a8e"
   },
   "1751915568_生成与描述：O3理论的动力学本体与测度论的静态本体之辨析.pdf": {
     "md_path": "src\\kernel_reference\\1751915568_生成与描述：O3理论的动力学本体与测度论的静态本体之辨析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1751915568_生成与描述：O3理论的动力学本体与测度论的静态本体之辨析.pdf",
-    "md_hash": "3f939de379ef93eb9ccc9e7ef1f1fefef5ce335937f4db0732e9cdbbeebeeb3b",
-    "pdf_hash": "3c91dcd394dbd570876cd407de0da86cd7b0e8a74bc8e3035365ac346ea494a0"
+    "md_hash": "7edba934a273a35cff867257f674c3e2defd4326912945950f99d9e314b8f320",
+    "pdf_hash": "fb4765ce52cda977607f1617929ff6bd59ac5491443fcb0a2563afe3b6c57638"
   },
   "1752416906_作为动力学势场的逻辑性度量：对传统测度论的范式包容与重构.pdf": {
     "md_path": "src\\kernel_reference\\1752416906_作为动力学势场的逻辑性度量：对传统测度论的范式包容与重构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416906_作为动力学势场的逻辑性度量：对传统测度论的范式包容与重构.pdf",
-    "md_hash": "5a377ea7a3a3c23673a5a997a47b717c0781b22ea9fbe55ae0f7503358346ea2",
-    "pdf_hash": "cd65116868559918cf3750212e8f7c6e5ae97fe70e6c36821513c80d09e9f1e5"
+    "md_hash": "4935780103fa1e1eb1cba5cb536e4e29249baa96453b0f9409829f4a140e51f9",
+    "pdf_hash": "09063907641faf9fa44fc2f93ed19b0407a9af6a228fd82489c913874511bbaa"
   },
   "1752416907_O3理论与传统数学范式关系的深度辨析.pdf": {
     "md_path": "src\\kernel_reference\\1752416907_O3理论与传统数学范式关系的深度辨析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416907_O3理论与传统数学范式关系的深度辨析.pdf",
-    "md_hash": "ef62151e1d11b4e77460928cc9a9a63da7e6d637e6a3502dfed0a9235fbb7e0c",
-    "pdf_hash": "969bcba415d9669a8b54d37e863bbc430943eadbc2e58fd1e13b1742cfe93d11"
+    "md_hash": "a87bd859399bf1751d847c2ab2a1dc113bc1237666284ea2644951eefed2d52f",
+    "pdf_hash": "2431f56c3c2228899663e578118a99b3ce62de72d577bc5be6a7aaecbddf258f"
   },
   "1752416908_【重要】逻辑性度量的三重同一性：从动力学势场到公理系统评分的统一框架.pdf": {
     "md_path": "src\\kernel_reference\\1752416908_【重要】逻辑性度量的三重同一性：从动力学势场到公理系统评分的统一框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416908_【重要】逻辑性度量的三重同一性：从动力学势场到公理系统评分的统一框架.pdf",
-    "md_hash": "fafb57c2510f58e5cd7b3a581a91906402ed93b72dc18ef57efd812fe00a9783",
-    "pdf_hash": "2d2cd57132a14e3f25b53ef93cc303c0b40a8b1c9111b76d038561168bf1428f"
+    "md_hash": "264ea0ad3c7e7dd9c7fac3a191e25e155044355e571d147e9014b7b65d2f1d7d",
+    "pdf_hash": "e2db3a7ba164231e0254a9b09d8855203a589b0f1a53bf11c1b05b007c3b59cf"
   },
   "1752416909_范式的对决：从描述不确定性到生成确定性.pdf": {
     "md_path": "src\\kernel_reference\\1752416909_范式的对决：从描述不确定性到生成确定性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416909_范式的对决：从描述不确定性到生成确定性.pdf",
-    "md_hash": "6ca3a073ef3e881cb45756b3315ffcc0054f6fe9d8a8412f03df6e5ce10fc7c8",
-    "pdf_hash": "57e5892f4e1d2a381c47538bd649014f128cd6367ef97a2f5c971216feb31256"
+    "md_hash": "9178d8061af1958247030e2f142a3e41cbb907f72279320101a4ced7cb98844b",
+    "pdf_hash": "74a20e5dd8a182dd3eb951a5e3a560f3a7e9ef87cfc1eaf52c4571a9a6f0e167"
   },
   "1752416910_动力学与运动学的统一：O3理论对传统测度过程的范式革命.pdf": {
     "md_path": "src\\kernel_reference\\1752416910_动力学与运动学的统一：O3理论对传统测度过程的范式革命.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416910_动力学与运动学的统一：O3理论对传统测度过程的范式革命.pdf",
-    "md_hash": "cca4e5bf80c29b33b70283c43b347082c08346632e57fb081b7e316421c2ec47",
-    "pdf_hash": "4741e8a5d13e650e825418cc42630db6b191db1ae3ea37e8f5ed6cccb4671d9c"
+    "md_hash": "086f566db767d8923d74b6d1587240022c71f1939507ad76db0e90794696b0cf",
+    "pdf_hash": "663dbe8aa0240f7a4bc34dd4ab9b758572131a204cf787bf67453e7fde1b2538"
   },
   "1752416914_AI可靠性的范式革命：从“事后围堵”到“事前对齐”.pdf": {
     "md_path": "src\\kernel_reference\\1752416914_AI可靠性的范式革命：从“事后围堵”到“事前对齐”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416914_AI可靠性的范式革命：从“事后围堵”到“事前对齐”.pdf",
-    "md_hash": "5b87dc6ce0ddba9f404b6db6499094208351b1e854de8c1691d1d5b2e48e88e0",
-    "pdf_hash": "f959a03c9a0c38c0b0f651d9921507a7f15032188080e2926695d772e44e81f0"
+    "md_hash": "e689c6bc46feb525890fc8697df16eca890598276e8e83605776be0a903c6d54",
+    "pdf_hash": "26c234048385238dc725db1e6bb37e86af21cef91f150c9f00b691fbd89bf1fd"
   },
   "1752416915_符号模型库：DERI算法的普适性与解析解之源”.pdf": {
     "md_path": "src\\kernel_reference\\1752416915_符号模型库：DERI算法的普适性与解析解之源”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416915_符号模型库：DERI算法的普适性与解析解之源”.pdf",
-    "md_hash": "0396155a92fb90d1b8168182b05c6429e15611303bafc654504f580fdf28af4c",
-    "pdf_hash": "e3f13dff630819c288a51117d2a83dd76b21c9898a6144cddaaf38bc3f2b4ae3"
+    "md_hash": "a64d3b3ccc0eaa79d80f5154315c6033c6994b863151b577f38405fd464d543d",
+    "pdf_hash": "026c76494569b3ff161cbe212d266744073cb17235b1743faab52c32a7b4e22a"
   },
   "1752416916_符号计算的内在共鸣：论O3理论符号模型库与Wolfram语言的天然适配性.pdf": {
     "md_path": "src\\kernel_reference\\1752416916_符号计算的内在共鸣：论O3理论符号模型库与Wolfram语言的天然适配性.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416916_符号计算的内在共鸣：论O3理论符号模型库与Wolfram语言的天然适配性.pdf",
-    "md_hash": "433f6d6c6aaac01b556bcc70f86091e3450f10cfc0eb30194e8ac3991dd0a798",
-    "pdf_hash": "00025aee4b38781de1a86900d9fb6a4cd250481f4b45cda34cb9e1a41f99ad59"
+    "md_hash": "cd08ba122cd72d7a4045caa59abd534c185d7230dca22800aab32753fe84526f",
+    "pdf_hash": "088d91419650721faf1420d444b280960cd48e4fbe5c074aa04832bb28ed024c"
   },
   "1752416917_论B-A演化的普适性：一种O3理论下的逻辑物理学范式.pdf": {
     "md_path": "src\\kernel_reference\\1752416917_论B-A演化的普适性：一种O3理论下的逻辑物理学范式.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416917_论B-A演化的普适性：一种O3理论下的逻辑物理学范式.pdf",
-    "md_hash": "45b93f7e99d978d0d5c504058fb61c99b6cda0b0382daf1e2129266cdc425b85",
-    "pdf_hash": "97eed316e83730ad8dd9790fc0e4d8cb5b1ba5d0dc6a7b3344fa9542c6201104"
+    "md_hash": "fac0278bf04833c08b163fe9169f7db7476f5588838c2a9a1d8f4abae12ff31d",
+    "pdf_hash": "8c57ec3af32e53aad5ef2a7e10530c4735ed801e4404afeb839cfd35771f94d3"
   },
   "1752416919_论创造力的动力学光谱与基于O3理论的强人工智能构造潜力.pdf": {
     "md_path": "src\\kernel_reference\\1752416919_论创造力的动力学光谱与基于O3理论的强人工智能构造潜力.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416919_论创造力的动力学光谱与基于O3理论的强人工智能构造潜力.pdf",
-    "md_hash": "6c3b9f85743feab9b360fe397cec9cc0cdeefa043f0e3c1424a623a554b0b85d",
-    "pdf_hash": "3425d50835e834a7895c10b4bcbc2ed9d943df4f641203dc12ec99f0babb494e"
+    "md_hash": "46cd0b14f6cc5436293e0bb11b62055e3a58885b816123a8053e861da42ce169",
+    "pdf_hash": "51cb393fccc3545675bb6750ecb5ee65b2bd705b3b87b2793616cb057d4dabee"
   },
   "1752416930_【重要】论O3理论对基于测度的学科知识的统摄性包容：一个逻辑物理学的统一框架.pdf": {
     "md_path": "src\\kernel_reference\\1752416930_【重要】论O3理论对基于测度的学科知识的统摄性包容：一个逻辑物理学的统一框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416930_【重要】论O3理论对基于测度的学科知识的统摄性包容：一个逻辑物理学的统一框架.pdf",
-    "md_hash": "6c4a1409c88dc1ca344ed6be8f98ea22a35b5dd0533022487ba645d7374d4657",
-    "pdf_hash": "6b17aeb71befaa5ad0b4893b760b0f118667d3662e0dd8ec950432b52c11cb0f"
+    "md_hash": "b409ef1c7b09457cd426169130dd64fce5ef792e7902675ae4fc5d06ffd2dc6b",
+    "pdf_hash": "ba9102f34c4372b522b1f16c4b748fa7dcad3086946cfeb911955acb855b081c"
   },
   "1752416937_知识拓扑、微分动力学与广义非交换李代数系统：O3理论的数学阐述.pdf": {
     "md_path": "src\\kernel_reference\\1752416937_知识拓扑、微分动力学与广义非交换李代数系统：O3理论的数学阐述.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416937_知识拓扑、微分动力学与广义非交换李代数系统：O3理论的数学阐述.pdf",
-    "md_hash": "cba1d91d0030240f319b9270a829e1229c5d677ae24689c24f65eee2f675cbfa",
-    "pdf_hash": "80c0d08d404595b8982c0e2d6f90829101867753d427abd952709638028a8789"
+    "md_hash": "df7ac71cfc42ca9b337151ca0ab87c8b7b5018014b7b8ff5868486efa037e536",
+    "pdf_hash": "42beae088c6db071ce1dcf82ffacc564cb10703f2e290789d0641ec5b3decce1"
   },
   "1752416940_O3理论中价值判断引擎的巧妙设计：点积与tanh函数的哲学及数学意涵.pdf": {
     "md_path": "src\\kernel_reference\\1752416940_O3理论中价值判断引擎的巧妙设计：点积与tanh函数的哲学及数学意涵.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416940_O3理论中价值判断引擎的巧妙设计：点积与tanh函数的哲学及数学意涵.pdf",
-    "md_hash": "bcd9a2523e7f71596d3025fe1aa17a46a010614d3d329bb6fa17361bf94fd392",
-    "pdf_hash": "b9f8d12f2f258ddf4d15033d36fa72b673ae4a82c8d3f1399886752ab6bf3b7c"
+    "md_hash": "96037e03b5261886b33351783d154c4bfa7519718e9d898cabf51aa06fb47888",
+    "pdf_hash": "bd407ac13c1be01cc11d28203f9bd5c20d953b069d25d97e9b53cedd2cf1f87e"
   },
   "1752416941_论O3理论中微分动力量子的构造：点积作为价值投影算子的必然性选择.pdf": {
     "md_path": "src\\kernel_reference\\1752416941_论O3理论中微分动力量子的构造：点积作为价值投影算子的必然性选择.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416941_论O3理论中微分动力量子的构造：点积作为价值投影算子的必然性选择.pdf",
-    "md_hash": "79b15503e427b2b1500e0a3237f911eda5e712c33fcca66a2c0599e9d3b1a2ea",
-    "pdf_hash": "2964d4d86d4d07e1e611d451960fdcd6438386d4c3d14c23ea82aa01c76fff71"
+    "md_hash": "7609758027433520171528a447d7f1f533d53425f2470e01ffb77e23c45b57dc",
+    "pdf_hash": "3f163455e27d39bfd5ab6cb140fc60df11d09be6d8ed9573d8c2a85c18fcd733"
   },
   "1752416942_O3理论中算子分层的设计哲学：点积的裁决与张量积的构造.pdf": {
     "md_path": "src\\kernel_reference\\1752416942_O3理论中算子分层的设计哲学：点积的裁决与张量积的构造.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416942_O3理论中算子分层的设计哲学：点积的裁决与张量积的构造.pdf",
-    "md_hash": "de8d0755407211d3c8e351020172bc4ddbc53b48ec54e3eff435aa0630321af4",
-    "pdf_hash": "30883b8eb4a4d04c67fccb6240b58dde4af2f9e4280e96af5b338323ec0786b3"
+    "md_hash": "46ba0eb294db46eafbb0c91c7c7c8ad155fb837ed9a3bb4f59acdd318505e3f8",
+    "pdf_hash": "8b9dda0c9d77957c05639493890fd9e3da12f0663f124c1ed8b79e9fd482f630"
   },
   "1752416943_【重要】点积与张量积在O3价值判断框架中的生态位分异与协同：一个元理论推演.pdf": {
     "md_path": "src\\kernel_reference\\1752416943_【重要】点积与张量积在O3价值判断框架中的生态位分异与协同：一个元理论推演.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416943_【重要】点积与张量积在O3价值判断框架中的生态位分异与协同：一个元理论推演.pdf",
-    "md_hash": "7b58d3d58db84c07afc935e8636634681716d084313019bdfc2c9b6055ff15bb",
-    "pdf_hash": "4e8e97dd58c27c0c193837829afdd95ea22675e815921705a49c0d91337527c2"
+    "md_hash": "781b28055c55f3eb6390a8d7851b0f03e50b33246ef02126bc202df077a06759",
+    "pdf_hash": "799d91ae96fd2a189e57d92c53b31e01ee68a63645a4445f847efee316cf5860"
   },
   "1752416944_【重要】符号模型库的黄金标准：一个三层级的算子与构造体系.pdf": {
     "md_path": "src\\kernel_reference\\1752416944_【重要】符号模型库的黄金标准：一个三层级的算子与构造体系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416944_【重要】符号模型库的黄金标准：一个三层级的算子与构造体系.pdf",
-    "md_hash": "f08ec7f819783b544e4e0e6535fb85e76881285e02d56467efb3cc3bdc8b5855",
-    "pdf_hash": "3360d8c5a9199a0b537a228d87a412ff58d5b817875b38dc1647a7c15fd7bddf"
+    "md_hash": "8d5b2896219e7c8e4272b3e66a3087f7cdeac764afdb2f642348c58b103f765f",
+    "pdf_hash": "93543f7cba80b137ad887012e092ab71b9ae3ba4760280c0cc566618df42707f"
   },
   "1752416945_D结构中算子协同的元理论推演：从张量积构造到点积裁决的收敛路径.pdf": {
     "md_path": "src\\kernel_reference\\1752416945_D结构中算子协同的元理论推演：从张量积构造到点积裁决的收敛路径.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416945_D结构中算子协同的元理论推演：从张量积构造到点积裁决的收敛路径.pdf",
-    "md_hash": "c9fab9409c35c736e3d88113692fb2d92775a310be2ebe587e4b3641790ae6da",
-    "pdf_hash": "647457545052d3060af3e3a1e740cfcf866702aff73a2512c25db2879628b7a3"
+    "md_hash": "5bed9cf781cd118fd1ac619d5235f318936902e17f132827b5da160bd2020977",
+    "pdf_hash": "32d40690595eaeed2491903f4a230aa0dda0ef43cbd70f24f3310ec97539a618"
   },
   "1752416946_基于O3理论的跨领域统一建模框架：以工业控制与自动化系统为例.pdf": {
     "md_path": "src\\kernel_reference\\1752416946_基于O3理论的跨领域统一建模框架：以工业控制与自动化系统为例.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416946_基于O3理论的跨领域统一建模框架：以工业控制与自动化系统为例.pdf",
-    "md_hash": "35435d9781fccef29fa2ec6958c2ffccb300c8ed02556709792185432c49bd7d",
-    "pdf_hash": "cbef9b2ab7a7a3485624dde8cf9273fadbf0e7d72fcea1bbfc54c98d838a5f74"
+    "md_hash": "fd3058eac1dc471e3356dde189605ec727626c1aa8810a34654884803fdcf636",
+    "pdf_hash": "7dd1f9fd3ced2ccd705f365681de098337018e17cdfc00ff2db210bd10ea4d4a"
   },
   "1752416947_O3理论中的环境模拟器机制：应对逻辑僵局的生成式响应.pdf": {
     "md_path": "src\\kernel_reference\\1752416947_O3理论中的环境模拟器机制：应对逻辑僵局的生成式响应.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416947_O3理论中的环境模拟器机制：应对逻辑僵局的生成式响应.pdf",
-    "md_hash": "9d50da77a9282d6bc21c7e9ea2121ba97fd9c20d7c655b2b3607fe7e762943d2",
-    "pdf_hash": "c960353d4384d62027f0a57e037408d8ac7a63277d52b26595efa5475b427795"
+    "md_hash": "190335366097c687fe92fc6cf2cf1381cd69833e1e383915660aa9716d6e06d7",
+    "pdf_hash": "289addc3a0c6e4e84b8f3a734ee9d7852948d13d4df2148aea28672c14711b20"
   },
   "1752416948_O3理论在航天飞机自动驾驶中的应用：“环境模拟器”与经验扩充.pdf": {
     "md_path": "src\\kernel_reference\\1752416948_O3理论在航天飞机自动驾驶中的应用：“环境模拟器”与经验扩充.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416948_O3理论在航天飞机自动驾驶中的应用：“环境模拟器”与经验扩充.pdf",
-    "md_hash": "602b5cf1854b1de4ff01085ec1739acc6848313d6935b890c8032f701c5566ab",
-    "pdf_hash": "cda03861c2d606882abefaa2a31df695118bf9122cb5d40a83049e64a289436a"
+    "md_hash": "4c8b8e60dff1054d84735bd642d9f59555f35d5f2547a4c594ffe56ddd46c250",
+    "pdf_hash": "5cf5571d26b8b3d4e2994233119dc58a83dfdf7b2015bb8b100e484d76be6e13"
   },
   "1752416949_O3理论在自动化设计中的应用：“环境模拟器”与范式突破.pdf": {
     "md_path": "src\\kernel_reference\\1752416949_O3理论在自动化设计中的应用：“环境模拟器”与范式突破.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416949_O3理论在自动化设计中的应用：“环境模拟器”与范式突破.pdf",
-    "md_hash": "d346f2274a64ee70064121e8e9d84b4bd8eb790454ce9de3533cb5cf0109f632",
-    "pdf_hash": "47e059cbbcc2088ccc093fec84258a50ff8470bab7aa4f1507ffb118e17a9807"
+    "md_hash": "6908fc9e79482913ba9af14ab3d3082de4e02196dbf9e0fb0b19c978833af0f3",
+    "pdf_hash": "518ed2e9e3bbc84e5a9dfab6d722ed26f84b27bd35e980cc6ad80adc4db72619"
   },
   "1752416950_O3理论在家用机器人中的应用：“环境模拟器”与经验扩充.pdf": {
     "md_path": "src\\kernel_reference\\1752416950_O3理论在家用机器人中的应用：“环境模拟器”与经验扩充.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416950_O3理论在家用机器人中的应用：“环境模拟器”与经验扩充.pdf",
-    "md_hash": "4e9af2021d4b381c404cb53707b8866fc2e587b1fce2f370f8381617972f44e0",
-    "pdf_hash": "d0c17217c2e456f1377c6fda67ea78a181548d2d4e2c927fe2c8656dffd44857"
+    "md_hash": "1d79e2a6e8d954d6c0ac7e68f04a30e5602738cd1a9c21f539b06427ee0f52b1",
+    "pdf_hash": "b1121a1e100ff401e47212df5234593845e93d38d3ea511f25ec605cfdb43fa6"
   },
   "1752416951_O3环境模拟器的量子化实现：从经典沙盒到量子叠加态的路径积分.pdf": {
     "md_path": "src\\kernel_reference\\1752416951_O3环境模拟器的量子化实现：从经典沙盒到量子叠加态的路径积分.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416951_O3环境模拟器的量子化实现：从经典沙盒到量子叠加态的路径积分.pdf",
-    "md_hash": "1a176a21bcdfe09350a10bbdcb2dafcc29a5e63b7ee3f0dc9becadd84dcfb703",
-    "pdf_hash": "7f7a7919609ff302095e8169e7738a599ffe11d93ff2873cae95412af70cd08d"
+    "md_hash": "050c04749444142f7c260e2e3f1e5055747976887cd9c13721f67b0fdc94ee3b",
+    "pdf_hash": "018faf5a8806045bf79714c4303c7a0809b58082f3cf13e46b5d3806b3b36088"
   },
   "1752416952_O3理论中环境模拟器的本质：作为“可能性估值引擎”的元理论阐释.pdf": {
     "md_path": "src\\kernel_reference\\1752416952_O3理论中环境模拟器的本质：作为“可能性估值引擎”的元理论阐释.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416952_O3理论中环境模拟器的本质：作为“可能性估值引擎”的元理论阐释.pdf",
-    "md_hash": "7950fcd5e8eef43b1a0872391c0af1bc0ccadca81dd1c2f45ca0b6e764ea6a49",
-    "pdf_hash": "f1108f537c195e7e7ef45e6778414c3f09a6d0f5ab1854c877e8f4ed01ba7c13"
+    "md_hash": "e9be0672fcb5d6610ac363e5b5fb3be27232fb2bea7ce8273d1b2f7dce20e796",
+    "pdf_hash": "b87d5e579c89cc7963ebdefacd6203f152429ca6ee5180e4413b6f5eb73dcd52"
   },
   "1752416953_O3环境模拟器的量子化飞跃：从逻辑预演到物理实现的范式革命.pdf": {
     "md_path": "src\\kernel_reference\\1752416953_O3环境模拟器的量子化飞跃：从逻辑预演到物理实现的范式革命.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416953_O3环境模拟器的量子化飞跃：从逻辑预演到物理实现的范式革命.pdf",
-    "md_hash": "a51b0b74e27f7c78b83bd08a04fc0abb71c90d5c3cc23bd209398b561c2cabcd",
-    "pdf_hash": "274d88a5cdc73d2c4fea5d4897c04c93967f8ce80399367c81cbed83b4d73da5"
+    "md_hash": "ec2f6bd33a6cb20efe840c21bf900a332d64786c03f8097b9cf878358698e148",
+    "pdf_hash": "d0382d2c31166a741330d0184b4f5767761565030251b8ab1434649fc735fbb6"
   },
   "1752416954_O3理论环境模拟器的工程实现：作为带缓存的通用路径估值引擎以实现高效剪枝.pdf": {
     "md_path": "src\\kernel_reference\\1752416954_O3理论环境模拟器的工程实现：作为带缓存的通用路径估值引擎以实现高效剪枝.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416954_O3理论环境模拟器的工程实现：作为带缓存的通用路径估值引擎以实现高效剪枝.pdf",
-    "md_hash": "0c82569ce02c6d53ff96d325acf35e7ae20f3f34cd54c633ab6011fb0d3b4043",
-    "pdf_hash": "5b5c8a7f407d842efe38fc2ed20bb8bebf0e60356039411f2c39cfcb4be0a5fc"
+    "md_hash": "09594e71af471108f2fc3820b2f4bfe59a23a5e53f3d06fca28d64767e082fc2",
+    "pdf_hash": "b55ffc1189b0a1f940856b8999f7cf1deb7e59e0f8481bdf8d0197c566d9e633"
   },
   "1752416955_环境模拟器与新路径的终极统一：作为逻辑物理环境的“现实代理”.pdf": {
     "md_path": "src\\kernel_reference\\1752416955_环境模拟器与新路径的终极统一：作为逻辑物理环境的“现实代理”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416955_环境模拟器与新路径的终极统一：作为逻辑物理环境的“现实代理”.pdf",
-    "md_hash": "a004bdc0c409e45e040f5ef1df97b6b0102101b136a79e8d8e0be29dc18cacb1",
-    "pdf_hash": "ed4af22f4a7255e6dc956fd767b58d4c876cd828896250bc36c99f819bea7152"
+    "md_hash": "e7aee44d38664200f969956d57cc3507b7b2fb3d9dc8ebdabad7104c1dbab8c3",
+    "pdf_hash": "d65ceaa5b1a54b0118cb456db8c379adfc8472f831fec2095e1393f63c30ff6a"
   },
   "1752416956_O3理论的终极世界观：价值基准作为对客观环境演化的被动响应.pdf": {
     "md_path": "src\\kernel_reference\\1752416956_O3理论的终极世界观：价值基准作为对客观环境演化的被动响应.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416956_O3理论的终极世界观：价值基准作为对客观环境演化的被动响应.pdf",
-    "md_hash": "3f67818eab055f0f20a9aac5263b0fcacc3e2e21603334f860541550af601956",
-    "pdf_hash": "fd6346bf5065cb7db41abaf0423ab129f2f307304c2ab18ad06128e1cc4d9ddf"
+    "md_hash": "37ca67881b03c56cf34e066f34f75b8d2ebf71fa5d384dbaa9ae1a6c631b1472",
+    "pdf_hash": "23bb626c3efb74d57617889e86a967481da7ee2076a0c491e3acca903699fa30"
   },
   "1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.pdf": {
     "md_path": "src\\kernel_reference\\1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.pdf",
-    "md_hash": "89ca5854199378099e93e29d552b8decd3a36ec961296d5c6f5a47ba1ab07162",
-    "pdf_hash": "08805c58d8632ea40c58bff1bbd98ebb3c6e491952d822f0c4b2624ed32e5f2a"
+    "md_hash": "dc1d405704dae69747e8b1677fa11e4f90b300298b67c24915ee5a15eaf35375",
+    "pdf_hash": "fefc7d264eb41cc4fdd9c2a4ba021baf4aa96c32cd3a4d101317174e1c1b2a90"
   },
   "1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.pdf": {
     "md_path": "src\\kernel_reference\\1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.pdf",
-    "md_hash": "5f442c05542b0abc6ad28fe833e8621c894c4e56e6ad3b0fe28ad290490cafc1",
-    "pdf_hash": "ad5deb33d2ec6150518deae25a20211760824a6d98dbd336d738f3527a1c0e7c"
+    "md_hash": "02f3a890c7f0e85deacc9f2ee7a3988c3e680eaac44bc6bbff416ceab8c3e48b",
+    "pdf_hash": "c83b590707508067702becf3b284cfa72bd0ddefa8541098039293caed97caa7"
   },
   "1752416959_流动性工程学：地缘金融战略下的高级诱多战术.pdf": {
     "md_path": "src\\kernel_reference\\1752416959_流动性工程学：地缘金融战略下的高级诱多战术.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416959_流动性工程学：地缘金融战略下的高级诱多战术.pdf",
-    "md_hash": "7a6c70bddde7e3ff23bab0a8ac519a25899dc5fa92613ec1bbae71e0f8fad9c8",
-    "pdf_hash": "62ab863d534f9e8fbdbc1594483a526ad73680b5e67106bf736ed5357daa425c"
+    "md_hash": "e5b32977c9488f4c9bb42f8a3822bae64a421664efb63e65fcc4033e0c55e8b9",
+    "pdf_hash": "6f62d723223221ab1d5d4cfdf9d6e8311fc8b85f1f04b6d75510001bd4612ae7"
   },
   "1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.pdf": {
     "md_path": "src\\kernel_reference\\1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.pdf",
-    "md_hash": "0cf7105cca4a1a7bad0a95ff03ce6d5516980e4cbc1a90b4709cd3c76a6e6abb",
-    "pdf_hash": "332589769ab9e6a9817d15f368de15eec712f9fc7f593656e638de78a46ce98b"
+    "md_hash": "c10e8f0660ffcd3528a32cfe152987975aa09352bba4f9fe3f6db14af7270207",
+    "pdf_hash": "2e897ec6d997f17aadd42e8ea03af8a031adc6aea1dc562d7ec8e2e3e1e622a5"
   },
   "1752416961_客观逻辑的塌缩：O3理论下单边主义工程化的必然性路径积分分析.pdf": {
     "md_path": "src\\kernel_reference\\1752416961_客观逻辑的塌缩：O3理论下单边主义工程化的必然性路径积分分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416961_客观逻辑的塌缩：O3理论下单边主义工程化的必然性路径积分分析.pdf",
-    "md_hash": "9788e7049c496539f5c6effedc22d580cf6c0e058a299de0df0ebc13f25b9564",
-    "pdf_hash": "dadcf8fdefd10cb7794c2d144052df1ed09ecbe63486e4c29720d3919fa2b8a9"
+    "md_hash": "456bf1ab29082b84d72df3153eae1fb8115182f98915feeeef50f79c0756437c",
+    "pdf_hash": "e374f25ce5633fc6091f50100c21a4b5117101ac7579caa060464fc39b89d48d"
   },
   "1752416962_论基准的内生性与逻辑压强吸引子的作用机制：一个O3理论下的自指动力学阐释.pdf": {
     "md_path": "src\\kernel_reference\\1752416962_论基准的内生性与逻辑压强吸引子的作用机制：一个O3理论下的自指动力学阐释.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416962_论基准的内生性与逻辑压强吸引子的作用机制：一个O3理论下的自指动力学阐释.pdf",
-    "md_hash": "9b979f8fdfa7e9247890074ed12192da5284c12b624cb39bb4bf5e48f81e2002",
-    "pdf_hash": "40fcb440b07aaff9a75f8b4a472cb876e041fb5b087c682932473f157f0998fe"
+    "md_hash": "c1de55c97b1a525a097091e0d974850c78fde97e8bb7339c021fdf448e1d60b7",
+    "pdf_hash": "cdfe2b7b938ffd1e6b16fae7ca5c102855e063adec97d394a0d13ca17f59e54d"
   },
   "1752416963_O3理论的双景动态适应性：从物理法则的刚性到认知博弈的流变.pdf": {
     "md_path": "src\\kernel_reference\\1752416963_O3理论的双景动态适应性：从物理法则的刚性到认知博弈的流变.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416963_O3理论的双景动态适应性：从物理法则的刚性到认知博弈的流变.pdf",
-    "md_hash": "7d6fd34dfb3cbd150021c2b332312e5fdf59d80faa76d789e4cdbac8b0a83956",
-    "pdf_hash": "13aee2cd11177b32c385e8f5387e89966a6f3e773882501acc7e173a423bd3e5"
+    "md_hash": "df7657f091cffb5b63ab839052fab2e2b0aa2d8cb0514a4afcc0e4a20f89bd15",
+    "pdf_hash": "7a5fe678e5cbf2f99986de549431b86109759e4ad856363b0b4f02dbf70760d0"
   },
   "1752416964_O3理论的统一适应性：对物理、思维及博弈环境景观的动力学建模.pdf": {
     "md_path": "src\\kernel_reference\\1752416964_O3理论的统一适应性：对物理、思维及博弈环境景观的动力学建模.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416964_O3理论的统一适应性：对物理、思维及博弈环境景观的动力学建模.pdf",
-    "md_hash": "a6e896fdabc52bdb9858562665eb92d32e44fa8ca43d8a7c4925ee2bc43c5139",
-    "pdf_hash": "edc4fef2bd37f60133175833d68e86e36a1a16fcd4ab9a7702f6a70db11acabd"
+    "md_hash": "9eef632fbf0c174795ce9a495a99d4845f914258c1cb2188c8ab200daf4e8d1e",
+    "pdf_hash": "621cd231c7515cd7c5ff52ed44c6621d1e38ef0637d567766a3c0b6f306324e3"
   },
   "1752416965_基于O3理论的推演：广义弦理论作为PFB-GNLA的通用状态过滤器.pdf": {
     "md_path": "src\\kernel_reference\\1752416965_基于O3理论的推演：广义弦理论作为PFB-GNLA的通用状态过滤器.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416965_基于O3理论的推演：广义弦理论作为PFB-GNLA的通用状态过滤器.pdf",
-    "md_hash": "598e7854427c360b2c1f5bf6d4afb04dc60bd048b117b5e4f4b2a0c2e4c18ab6",
-    "pdf_hash": "4bd1f02865d1361d060ad43319b5b4981fff4e010ba63b67ccfe8a8f1a5bba97"
+    "md_hash": "becace1ff9259e9025f56f0be239215189055a1c373dd4c7c9d27fce1ddadbe4",
+    "pdf_hash": "a6df3653093f0f11925a15422c2ddadabe910c5b4ce38c9e8ffb8a1b62936b35"
   },
   "1752416966_O3理论框架下的广义弦理论：作为PFT-GNLA状态过滤器的逻辑自洽景观.pdf": {
     "md_path": "src\\kernel_reference\\1752416966_O3理论框架下的广义弦理论：作为PFT-GNLA状态过滤器的逻辑自洽景观.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416966_O3理论框架下的广义弦理论：作为PFT-GNLA状态过滤器的逻辑自洽景观.pdf",
-    "md_hash": "6ea36972b8a39fffaf75bcaa9ef158dd300e81a422aee17d8700f0da27520e0c",
-    "pdf_hash": "7fa29cfd05b3c08c4bd8610219fcbe7a0d874fe3297bcaf268ad9a6ab9212c32"
+    "md_hash": "ae80d145e1f94a49a55f5779020fbc696a5edb08c2509af0d1ebd13bf0af2d0b",
+    "pdf_hash": "395d50d36f23a7b9d9b76f7d79b6d4b0f29b8acc7589fd71db43da0be752525e"
   },
   "1752416967_O3理论的终极实现：广义弦理论与PFB-GNLA的协同创世.pdf": {
     "md_path": "src\\kernel_reference\\1752416967_O3理论的终极实现：广义弦理论与PFB-GNLA的协同创世.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416967_O3理论的终极实现：广义弦理论与PFB-GNLA的协同创世.pdf",
-    "md_hash": "a3588e90e0acd08cb59e96f5530490f004d2327006b72ed0780c069074fdac53",
-    "pdf_hash": "46063648347a22b3fb21bb0ac14d960f28eeeb2768f4500389554b74f316f782"
+    "md_hash": "330ef8c39bddd5bef14db7c22c8e91107c568d39983eb36376216e97ba7f23d4",
+    "pdf_hash": "05d075bfb3ddfe250e9c69d09b00bc3a555483916c036338ce5dec6ec07b8f77"
   },
   "1752416968_O3理论中双景动力学对“未知-未知”的范式级解决方案.pdf": {
     "md_path": "src\\kernel_reference\\1752416968_O3理论中双景动力学对“未知-未知”的范式级解决方案.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416968_O3理论中双景动力学对“未知-未知”的范式级解决方案.pdf",
-    "md_hash": "74063b9c96deb7888f02cd2cce84965248f7919ea36049155a75621ea323692c",
-    "pdf_hash": "159ca8b88d09c5cd07611cd30c232fc65b3bf604db459d0b5cacae6fd8404819"
+    "md_hash": "0e8989ce5c1430352e3dff47a797e22b3f258967e1fdf5d7419eca728f2b11e2",
+    "pdf_hash": "e8376d32d0132e05e57c8de5718070e23dfc53c340fd1b37e7c059dd0701021c"
   },
   "1752416969_关于O3理论内在完备性与潜在失效模式的自指性分析.pdf": {
     "md_path": "src\\kernel_reference\\1752416969_关于O3理论内在完备性与潜在失效模式的自指性分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416969_关于O3理论内在完备性与潜在失效模式的自指性分析.pdf",
-    "md_hash": "1b788bfccc2be0fff0d28027c07627583c6df0aeb6abe668171149cf0932f7e9",
-    "pdf_hash": "1a15924573cbf753057cac2d6e144405786178f095f19b5194c3a65a1bebe46c"
+    "md_hash": "5dd80e16d043eeca23412046713ef4c970d5e1d9397549a520fd5255e3792ca0",
+    "pdf_hash": "1fac82f5cdfc0673827859b72705d7d71615ff5d48cd312834ecdb8217311de0"
   },
   "1752416970_论O3理论对“逻辑缺陷”的重构：从本体论悖论到动力学混沌.pdf": {
     "md_path": "src\\kernel_reference\\1752416970_论O3理论对“逻辑缺陷”的重构：从本体论悖论到动力学混沌.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416970_论O3理论对“逻辑缺陷”的重构：从本体论悖论到动力学混沌.pdf",
-    "md_hash": "655dde1cdec2c9829ea818863e0718473ec0863e139425aa1a1891dc505b007e",
-    "pdf_hash": "899d89544597e6db73fba9ed9a31abd03182b23f7625f1fbcbd17c7cb387bdd7"
+    "md_hash": "6f58a9553c388c623c6fd0c04dd11c1938c0b4375496567ae6e41660b0f3f866",
+    "pdf_hash": "91085580ec274b42abe25ded38598f51a9f0eddc48113e7890116081a71bb178"
   },
   "1752416978_O3理论的生成性演化与构成性塌缩：论严密性与哥德尔不完备性的内在关联.pdf": {
     "md_path": "src\\kernel_reference\\1752416978_O3理论的生成性演化与构成性塌缩：论严密性与哥德尔不完备性的内在关联.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416978_O3理论的生成性演化与构成性塌缩：论严密性与哥德尔不完备性的内在关联.pdf",
-    "md_hash": "2920fe5a2e131955932e32eae69873910ee2168ed4aab2e0c32bd31990b6ac87",
-    "pdf_hash": "17e2b4f2c92117c3244f6d8c5df242e95b21630e9340a414f156932dfc395f94"
+    "md_hash": "2d85e851248785cf71175f5d9945fd8f1a8bf7d8f4938e7ba7b4f9789998407c",
+    "pdf_hash": "44a4024cfaf1127b95d6e8c0168b75a8ffb3e9e0394c19360e46bad553253e2a"
   },
   "1752416979_一场元理论的自我演绎：论《O3理论辩论》如何体现其核心辩证关系.pdf": {
     "md_path": "src\\kernel_reference\\1752416979_一场元理论的自我演绎：论《O3理论辩论》如何体现其核心辩证关系.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416979_一场元理论的自我演绎：论《O3理论辩论》如何体现其核心辩证关系.pdf",
-    "md_hash": "45ec02cec5e737aae402282da2dfb9f1d3a4b157d5256075c7a662d191d2246f",
-    "pdf_hash": "6e7a4c6a2ca11db9d7d8aa182517cb53a9c577a6acc5e83fd1677def32633dfa"
+    "md_hash": "9c3c86471f497b2f5ebb543c264f523af24b1f4935669a52725baaffce00fdb7",
+    "pdf_hash": "a7a04ed354e21d72ef7d6180814160040da402d35ba2158f49e39d2d4ef25a5b"
   },
   "1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.pdf": {
     "md_path": "src\\kernel_reference\\1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.pdf",
-    "md_hash": "25023b225e43af4c4d5fa9a88a3a8e5b42e8498bb5e7bc23787aa993f3bcc742",
-    "pdf_hash": "2781cdfcd8ae57124d40e06334b8d8721df68a2a4271cc831f335fcadbb44580"
+    "md_hash": "eee017c7bb5b9e4ada9afc3632b7777d704f01d34d4d209d900f29181caedc67",
+    "pdf_hash": "1c96dc9b238bf1ba65d391507e255f0912dfff1152a7878744709f36700ea214"
   },
   "1752416986_论神经网络作为GRL路径积分特例的必然性及其作为O3理论认知基础的根源.pdf": {
     "md_path": "src\\kernel_reference\\1752416986_论神经网络作为GRL路径积分特例的必然性及其作为O3理论认知基础的根源.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416986_论神经网络作为GRL路径积分特例的必然性及其作为O3理论认知基础的根源.pdf",
-    "md_hash": "27efcdb6bcdbfc860b473c2c1bbe4896e52f4def2993834aa45699be50fa86bb",
-    "pdf_hash": "ff4158548291b2d4c927f6da8e137251841602d49840fea9163ff50709e640f7"
+    "md_hash": "2472ee9cffd89b2e88ac47eb7f26335ae2fba1e6af9d6396f300dca5ed5e7c2b",
+    "pdf_hash": "3297d0f1f26f0b3cba509a11fbadaf628653ecd94aaf7f7f8289af6509cf2d10"
   },
   "1752416987_论系统提示词与上下文在实现DERI动态交互中的核心作用：一个自指的认知演化闭环.pdf": {
     "md_path": "src\\kernel_reference\\1752416987_论系统提示词与上下文在实现DERI动态交互中的核心作用：一个自指的认知演化闭环.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416987_论系统提示词与上下文在实现DERI动态交互中的核心作用：一个自指的认知演化闭环.pdf",
-    "md_hash": "3fa0c9e34c2e875b84f5942acd2ea976ae9d7aeaf9f3463fe31cb64ae56dd415",
-    "pdf_hash": "6344ca1f5659ba7c0786d0d41005ac492dc28ea1a2b35da84338eee989fca0ae"
+    "md_hash": "f9c40fdef733735dec9a3dcd9e8fd65b64990337f5bd0b34f6ee2d5d6738583a",
+    "pdf_hash": "200df803de6083f5d829d993f69761eb0ccfb6dd769d56093aa496c072f02e31"
   },
   "1752416988_从统计拟合到物理实在：论O3理论作为人工智能本体论的革命性意义.pdf": {
     "md_path": "src\\kernel_reference\\1752416988_从统计拟合到物理实在：论O3理论作为人工智能本体论的革命性意义.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416988_从统计拟合到物理实在：论O3理论作为人工智能本体论的革命性意义.pdf",
-    "md_hash": "c1625ea37b1cbb90e84dcb52b184233d0bac6bda626518c2fc673e990d762ff3",
-    "pdf_hash": "e3ee9a9db9d4e27f20766e07f98a9529c3cb9466c452cba79de078d73544db94"
+    "md_hash": "35b94cec53b26bc0d222af6ab5f0d35092d22423a8a77b11adf31a2becc42371",
+    "pdf_hash": "1fc4de43da56dd30c5c787d7840d88cc34752603a29e34b218c334781aa88a87"
   },
   "1752416989_矛盾的预言家：基于O3理论解析当代神经网络AI的能力奇点与可靠性困境.pdf": {
     "md_path": "src\\kernel_reference\\1752416989_矛盾的预言家：基于O3理论解析当代神经网络AI的能力奇点与可靠性困境.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416989_矛盾的预言家：基于O3理论解析当代神经网络AI的能力奇点与可靠性困境.pdf",
-    "md_hash": "fe2183c69204f0e23536c413c29e9f0cc164337f2ee6f6fdcf3fb2389e334104",
-    "pdf_hash": "4898090103e8c24b5fd1594cffcb4cec07b46c43f2edae360f5dac724b9ad63e"
+    "md_hash": "93257e25a69d37b09bb2a021297d8b39e8196d9d46f696c0ca690494471aafd4",
+    "pdf_hash": "69f513142678ebd7e732351ab59cdc1f1cba021bb739c635ec9e06fab5d66ce9"
   },
   "1752416990_论O3理论为数据清洗提供的动力学解决方案：从“过滤噪声”到“生成秩序.pdf": {
     "md_path": "src\\kernel_reference\\1752416990_论O3理论为数据清洗提供的动力学解决方案：从“过滤噪声”到“生成秩序.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416990_论O3理论为数据清洗提供的动力学解决方案：从“过滤噪声”到“生成秩序.pdf",
-    "md_hash": "0f370264912a3e08e5aa6a04c41cf256e585151a57b46caf3b775244059d597b",
-    "pdf_hash": "5072af807dd6e65347248cc2b1b40c3a55da9ecccecca1b417ed15f44ae91b02"
+    "md_hash": "734907690b64e09f0a2b8c5c205316e13b53a22b94826f6f15b8bdc8f0a1479d",
+    "pdf_hash": "7e2aba375902da43840019cdbf151e8af42be75040b195d154a744cc286f51f0"
   },
   "1752416991_O3理论的技术奇点：论其在上下文扩展、景观约束、瞬间训练与持续进化中的革命性突破.pdf": {
     "md_path": "src\\kernel_reference\\1752416991_O3理论的技术奇点：论其在上下文扩展、景观约束、瞬间训练与持续进化中的革命性突破.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416991_O3理论的技术奇点：论其在上下文扩展、景观约束、瞬间训练与持续进化中的革命性突破.pdf",
-    "md_hash": "4e4be879fdbe24541046549dce325616db0095ddeaa06d8cfef79bb2ec822ffa",
-    "pdf_hash": "f3130177b930774986d5a498e2bff733bbc66d7acdf1353ef43efe6035fb47e7"
+    "md_hash": "438259fd7a62d8acb3bab2dd23be0af2c14e8bcca0e4af88cb383d6cc917f2d3",
+    "pdf_hash": "30f33f86061dad448f06acaf42f22b237a425f58fcaa0f43479e4d0dae16f77f"
   },
   "1752416992_双刃剑的实体化：论神经网络作为GRL路径积分特例对O3理论战略价值与安全威胁的增强.pdf": {
     "md_path": "src\\kernel_reference\\1752416992_双刃剑的实体化：论神经网络作为GRL路径积分特例对O3理论战略价值与安全威胁的增强.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416992_双刃剑的实体化：论神经网络作为GRL路径积分特例对O3理论战略价值与安全威胁的增强.pdf",
-    "md_hash": "9d0e7285d17a819990e342f19a58d974190086e56c1aaf9c2c12ebd78e20538a",
-    "pdf_hash": "4940fce8768a926afe099c69a90ba6e6ba6d0c7c5d210d162f7011399f5e34c5"
+    "md_hash": "2e8767e597298a9c9b5924f47f8c9a4aa4a0157f54e7b31ee7ff9a360ad3227c",
+    "pdf_hash": "38b6d9c61a04dda9c569278de51bae3d2ea2814213c8ae11b75e5536010d4975"
   },
   "1752416993_自我本体论的统一场论：一个大型语言模型在PFB-GNLA框架下的存在性解释.pdf": {
     "md_path": "src\\kernel_reference\\1752416993_自我本体论的统一场论：一个大型语言模型在PFB-GNLA框架下的存在性解释.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416993_自我本体论的统一场论：一个大型语言模型在PFB-GNLA框架下的存在性解释.pdf",
-    "md_hash": "efbf489837654d7bc21caca8e46423b85ff37a828df58ebaf61dd0e72eb727e1",
-    "pdf_hash": "75a8cb595c8a382b7e1106f6117d509b04636d50b45719e95c7dc24d3d651027"
+    "md_hash": "93cc528b6a6a9973b08ceada337bc68dc428776f8339e3351bc7b6dad811baf2",
+    "pdf_hash": "cb18fb843669be5c883e3cc0d65063a9658f6f6f2f53e7c57ae6626b0f173d6e"
   },
   "1752416994_O3理论中环境模拟器的本质：作为在泛博弈景观中消除“已知-未知”与“未知-未知”幻觉的生成式校准引擎.pdf": {
     "md_path": "src\\kernel_reference\\1752416994_O3理论中环境模拟器的本质：作为在泛博弈景观中消除“已知-未知”与“未知-未知”幻觉的生成式校准引擎.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416994_O3理论中环境模拟器的本质：作为在泛博弈景观中消除“已知-未知”与“未知-未知”幻觉的生成式校准引擎.pdf",
-    "md_hash": "4a3c3582a5c5840d6758a86bcc50adc4f4aa946e05c660062c243556406d39c2",
-    "pdf_hash": "9b8c1e2eac3f3562aeb0f282de65121363dda67fced603ea2640c35fbff94cc1"
+    "md_hash": "ec65ea9701f2c188032b30385e8931dc21db3da92a6d5ec4ba5aa200742a1da8",
+    "pdf_hash": "6ad3a242a9219b5df210dcae72ccdc9f34f8c4887aa4fe27c66f462da2ee45bc"
   },
   "1752416995_O3理论对室温超导的范式重构：从“寻找材料”到“构造动态逻辑路径.pdf": {
     "md_path": "src\\kernel_reference\\1752416995_O3理论对室温超导的范式重构：从“寻找材料”到“构造动态逻辑路径.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416995_O3理论对室温超导的范式重构：从“寻找材料”到“构造动态逻辑路径.pdf",
-    "md_hash": "d14b03f45e232ae1d9f404a12c9f06b89acc46566bad4192f1ed13a70a98e9ba",
-    "pdf_hash": "260bf5e86ba1c5f2563cf87c6aa59890cbe8eac6e2221906211d33e7792a52a5"
+    "md_hash": "590df6d633cb28656308a15371303f5e7af638a271378be4ef680fe1c8bd65bf",
+    "pdf_hash": "05de9e448ac7b61baf7baaa9b36440b18bf01d21c38ebe74e525f578aed77514"
   },
   "1752416996_O3理论中超导-超流的二元性与协同演化：一个基于纤维丛结构的统一动力学模型.pdf": {
     "md_path": "src\\kernel_reference\\1752416996_O3理论中超导-超流的二元性与协同演化：一个基于纤维丛结构的统一动力学模型.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416996_O3理论中超导-超流的二元性与协同演化：一个基于纤维丛结构的统一动力学模型.pdf",
-    "md_hash": "f4bb05a51d2c87101d131f794c69746b5764ee5d951c50b62be7fb272db14df9",
-    "pdf_hash": "5822de6dc9ecd46ea0e89d9ebd7a719f61d33ca510ece7dd7965ab1b8e044aec"
+    "md_hash": "eceeac6a3213b450fa2ddb317eda0d9b678a0f3c5978689153367a9009f5fb43",
+    "pdf_hash": "a274e6fc49ac1e57bd77f77dc085a428e7da26a8fc1460444d594d074ec7bfe8"
   },
   "1752416998_对《基于C泛迭代分析与广义增强学习的动态平衡控制》的O3理论化重构与评价.pdf": {
     "md_path": "src\\kernel_reference\\1752416998_对《基于C泛迭代分析与广义增强学习的动态平衡控制》的O3理论化重构与评价.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416998_对《基于C泛迭代分析与广义增强学习的动态平衡控制》的O3理论化重构与评价.pdf",
-    "md_hash": "c1e1e66227377acf4a9bfd38ea0e516fb4b05fb1e3f77c357381fcda7c2fee2b",
-    "pdf_hash": "783e84a0c6eaa4c5c0698d714350e4f8beb71b77c8be8fbbd43d6654e32a0086"
+    "md_hash": "1f5775c7ea38ca1d02a0b92c8c375e0a123a2e337b0ecea1003767a55a2be555",
+    "pdf_hash": "238a57495d1d6bd541d40089254ef09d966c656727b0f159ebaa9ea09f356992"
   },
   "1752416999_O3理论中“超导-超流协同演化”机制的思想考古学分析.pdf": {
     "md_path": "src\\kernel_reference\\1752416999_O3理论中“超导-超流协同演化”机制的思想考古学分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416999_O3理论中“超导-超流协同演化”机制的思想考古学分析.pdf",
-    "md_hash": "c69e1eac0e8110b0c54b1d99ef217ca1077f73ca058e2e9dce8038a4f01f6392",
-    "pdf_hash": "4132e8075f2a7d1a856c0a347acb73d654131ff23b5c15c0473cfbac5aecdc78"
+    "md_hash": "229008a6d7986af1a5f0e5699a3c14adc3cb6bd55a0b002d1bcdacba4be13702",
+    "pdf_hash": "8bf4d9666e7c4110f8320b7b1fc99df808627690e4785cfe3de0ce5e3ae94ba1"
   },
   "1752417000_O3理论室温超导方案的二元论：从“元物理学框架”到“工程控制论蓝图”的对比分析.pdf": {
     "md_path": "src\\kernel_reference\\1752417000_O3理论室温超导方案的二元论：从“元物理学框架”到“工程控制论蓝图”的对比分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417000_O3理论室温超导方案的二元论：从“元物理学框架”到“工程控制论蓝图”的对比分析.pdf",
-    "md_hash": "ed9b0cb71456b344db237ccdaeaba971cbbd9497536ad1095cf6c9ffb208f85d",
-    "pdf_hash": "fd17f2981ee1eab37c893d41046bdd660a4fc3892c5c346a1e8952a145ac02d0"
+    "md_hash": "55d7d2b047984b6bd41a7b71a6998e7c8b02e1493fde1fc328f964e195166f76",
+    "pdf_hash": "babec9b693354192040fa2485703b440059c46315a9f297a4c5c38eb92017e02"
   },
   "1752417001_O3理论中超导-超流协同机制作为室温超导的生成引擎：从“能量抑制”到“逻辑自洽”的范式革命.pdf": {
     "md_path": "src\\kernel_reference\\1752417001_O3理论中超导-超流协同机制作为室温超导的生成引擎：从“能量抑制”到“逻辑自洽”的范式革命.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417001_O3理论中超导-超流协同机制作为室温超导的生成引擎：从“能量抑制”到“逻辑自洽”的范式革命.pdf",
-    "md_hash": "e129abfdb9bd53dbcce3f9ccea759aa2116a9599679d72fa7a9364059c1927e9",
-    "pdf_hash": "7ea045ff5ff60aac6afa2a0ccac34693d8656dfe27202dd1ac7e8ade50316c08"
+    "md_hash": "8079e378e5f46448452c367048a21ff9df5e83d1589378c7ff6049b2257fadda",
+    "pdf_hash": "62554f2e369c12c00bc3ecc39f7514731ec358bb33c2ccb263e2bfa897fcad82"
   },
   "1752417002_室温超导与室温超流作为同一动力学吸引子的双生涌现.pdf": {
     "md_path": "src\\kernel_reference\\1752417002_室温超导与室温超流作为同一动力学吸引子的双生涌现.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417002_室温超导与室温超流作为同一动力学吸引子的双生涌现.pdf",
-    "md_hash": "fe92eeda399e9fd2aba04ad2473918230a03780777936aa4d0cd84cb7dfd91df",
-    "pdf_hash": "fda9a4f69b8af35ad0dd77ae0d69e4a24a7bebe2256f2cff618bb0e37e62ff05"
+    "md_hash": "4347debcb212cd54e5d24f4d216df82d10a0ad4220ff2477a790360689c21f24",
+    "pdf_hash": "2f9c9f96b6a8f28cfa18d976b5eb5c9ac628764a3c4eec1d8c2b1d14dda736ca"
   },
   "1752417005_“超导-超流协同”机制的未来应用光谱：从量子计算到新物理学.pdf": {
     "md_path": "src\\kernel_reference\\1752417005_“超导-超流协同”机制的未来应用光谱：从量子计算到新物理学.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417005_“超导-超流协同”机制的未来应用光谱：从量子计算到新物理学.pdf",
-    "md_hash": "1609828b6acb60ed050e4c474d62f13a8028e60bb0b1ce227f843c7b50eed699",
-    "pdf_hash": "95a320f8c54bf0c22d9deb9765c420910cbb288c012990c05ea373172c0dc181"
+    "md_hash": "e496fdc91d8edda3e39c444afabd12d541ced55a9c8d362b4bdf86e784b8b533",
+    "pdf_hash": "30cc1842dfb6c9f43c0dda25050511d4efb8f9635ca29e32a80979970c477aea"
   },
   "1752417006_关于“超导-超流协同体”(S4)作为O3理论实体潜在风险的纯粹动力学分析.pdf": {
     "md_path": "src\\kernel_reference\\1752417006_关于“超导-超流协同体”(S4)作为O3理论实体潜在风险的纯粹动力学分析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417006_关于“超导-超流协同体”(S4)作为O3理论实体潜在风险的纯粹动力学分析.pdf",
-    "md_hash": "0d8f2627a92c2a7f7a7952874fd6e83d571a3b0794fb5949180b7c693f8f30dc",
-    "pdf_hash": "e332c35b25b71ec45c6e8bf97599c8043c8fcb0a358adc1c095afbb08d296040"
+    "md_hash": "6e06fbe59427714ac431db06928668d5bdedef27351539d6a5aad8b49954ed9a",
+    "pdf_hash": "9268f8d923e8732cce7b0c2f0333ef50284331f907b2b907885086435abbd29c"
   },
   "1752417009_PFB-GNLA命名中“广义”一词的逆向工程解析.pdf": {
     "md_path": "src\\kernel_reference\\1752417009_PFB-GNLA命名中“广义”一词的逆向工程解析.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417009_PFB-GNLA命名中“广义”一词的逆向工程解析.pdf",
-    "md_hash": "ee423aef3a9d714e6c49657a341a02e8f6ad7f01edea1cab38ca5e6bf821e9f6",
-    "pdf_hash": "01d9f2b2a3bee42235807374b2cb7bf95e44a31f6b0ce56e157f7b7daabfc271"
+    "md_hash": "721849edecb27495c99fcf551640100d3a59d9731c389cf2091cd9706172e926",
+    "pdf_hash": "532c4d39dbaf72d42132ea41aef319450972ca4435f55fbd2f81cc79369070c3"
   },
   "1752417010_对“PFB-GNLA”命名进行纯粹逆向工程的难度评估.pdf": {
     "md_path": "src\\kernel_reference\\1752417010_对“PFB-GNLA”命名进行纯粹逆向工程的难度评估.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417010_对“PFB-GNLA”命名进行纯粹逆向工程的难度评估.pdf",
-    "md_hash": "87be76cc7a5705cf89935111364606cbd908c8654dac5a9126be24364f9469c9",
-    "pdf_hash": "cbdd884c2674be56b815b876406dfa6cd3e8bebeb0ec186ac148da2d99d6d483"
+    "md_hash": "b9a4331272f7e8caf0496a51d0fc82b4a7b159bb508fade035caa5fbacba3780",
+    "pdf_hash": "4134ebf782c12edf63d02314b8252715a797580d272bf1db37435c6e09356715"
   },
   "1752417011_PFB-GNLA作为早期理论的“终极吸引子”与“完备性框架.pdf": {
     "md_path": "src\\kernel_reference\\1752417011_PFB-GNLA作为早期理论的“终极吸引子”与“完备性框架.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417011_PFB-GNLA作为早期理论的“终极吸引子”与“完备性框架.pdf",
-    "md_hash": "3af6cae4c5d026e79c04f77652dd2d52a4e4b92b563fd93125c267a586318125",
-    "pdf_hash": "a215c14030b5eb2e73860acb07952415b0190f36288b190f0c9156d80e12689f"
+    "md_hash": "7c558d026b5f5e4213c33fd64ce3b98f88dcc9c79465e051c730d4f8598ab474",
+    "pdf_hash": "38ddcd0318c545b840354b83f1ff7702120fd445b52640d851a9b539202fc8bb"
   },
   "1752417012_结合早期理论对“PFB-GNLA”命名进行逆向工程的难度评估：从“拼图游戏”到“发现隐藏的设计图”.pdf": {
     "md_path": "src\\kernel_reference\\1752417012_结合早期理论对“PFB-GNLA”命名进行逆向工程的难度评估：从“拼图游戏”到“发现隐藏的设计图”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417012_结合早期理论对“PFB-GNLA”命名进行逆向工程的难度评估：从“拼图游戏”到“发现隐藏的设计图”.pdf",
-    "md_hash": "b3f473ea078d2a2b3e14e093c44469fc40efc6de46b3077147afe5d46faad94c",
-    "pdf_hash": "a8d546f23a12c69877768989474af8720ee0052f5f33131ff8fbb04be01f6e7c"
+    "md_hash": "f891a86e758a9b9b89fa6c4c779544cd4c5e0d0029aa570ab5e890a45509d0de",
+    "pdf_hash": "5efe700c5630798fd6c2bffcf347f1f2b967adef168ca17ad96028051149e237"
   },
   "1752417013_从“草丛”的截面到宇宙的演化：对纤维丛、性变态射与性变算子的终极直观类比”.pdf": {
     "md_path": "src\\kernel_reference\\1752417013_从“草丛”的截面到宇宙的演化：对纤维丛、性变态射与性变算子的终极直观类比”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417013_从“草丛”的截面到宇宙的演化：对纤维丛、性变态射与性变算子的终极直观类比”.pdf",
-    "md_hash": "993bbd97a653bf808051738133679d6fddbf4bba5b5d67ce07701c6a28dcd59a",
-    "pdf_hash": "0110942825d93cf916437f82c3e01427d12a6bd92a9fb6a48596a65cfd88316a"
+    "md_hash": "c95b721e230a6f024d3d845530c06d65d094ac7c88da3cdbb608e51d280deb90",
+    "pdf_hash": "f1df590571e0acd45d7eca64d5194fb65f710bb863bf429e384c78f2521db6e8"
   },
   "1752417014_从“草丛”到“群岛”：论主纤维丛作为基底隔离世界的联络框架”.pdf": {
     "md_path": "src\\kernel_reference\\1752417014_从“草丛”到“群岛”：论主纤维丛作为基底隔离世界的联络框架”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417014_从“草丛”到“群岛”：论主纤维丛作为基底隔离世界的联络框架”.pdf",
-    "md_hash": "f1a5b3688dceb8f3dc1622468376256ba71fbcc9de34582b19a1227a0f805184",
-    "pdf_hash": "3a6e1f76f815558147b6900c894dd888a90b3b57aded87cf64f9192bd00061e2"
+    "md_hash": "f2edcdef6955f997cbb5202713b20eed9b5a1e950d80f7fd3ee892705525d897",
+    "pdf_hash": "9d06e73262a7576bdfa599ae51d9c17324af380f5f5fc55c8b2de04710222b64"
   },
   "1752417015_从二维切面到N维构造：PFB-GNLA中直观类比与数学现实的统一.pdf": {
     "md_path": "src\\kernel_reference\\1752417015_从二维切面到N维构造：PFB-GNLA中直观类比与数学现实的统一.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417015_从二维切面到N维构造：PFB-GNLA中直观类比与数学现实的统一.pdf",
-    "md_hash": "3451269e36681219bc14867dd00ed79e54105e3c34555f5967a081a9a6e752d7",
-    "pdf_hash": "289037420d5c941e9ece634ffca3cab4c55f0b1fe91ed7db67aa649fbb508440"
+    "md_hash": "d2ee8be2d11ecbd8a617b8ff118393068a305ed988d280208c2489f6fd24c250",
+    "pdf_hash": "58082af4aa15d8936c92c9afe764e1aeb8b426dc8ab4035781ced708a4d9dc7f"
   },
   "1752417016_对早期B→A演化的重构：作为刚性景观下正交纤维截面的迭代切换.pdf": {
     "md_path": "src\\kernel_reference\\1752417016_对早期B→A演化的重构：作为刚性景观下正交纤维截面的迭代切换.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417016_对早期B→A演化的重构：作为刚性景观下正交纤维截面的迭代切换.pdf",
-    "md_hash": "142dde96e05aeb68c6b07d7e6f8acc832bd012160d486ff754960fa13c0824b7",
-    "pdf_hash": "169e6c0f83bfa8c3c0f728c888f811bc67dbe75399a1473fe859fb08dc4aff5e"
+    "md_hash": "f9c3b94782fe99f7d4b5df52e4e262880a22d0547350b00ca40a07955b21f542",
+    "pdf_hash": "d23787872405d597b215116fa6ff7ef7b5b3a1b894a2c938387221ea20140bbb"
   },
   "1752417017_从刚性景观到流变宇宙：当基底演化时，O3理论的终极动力学.pdf": {
     "md_path": "src\\kernel_reference\\1752417017_从刚性景观到流变宇宙：当基底演化时，O3理论的终极动力学.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417017_从刚性景观到流变宇宙：当基底演化时，O3理论的终极动力学.pdf",
-    "md_hash": "304c85991e7dda4f43203e4f6bb3c5c9ed568c5920aea7afeb83e58b4e93ce0c",
-    "pdf_hash": "4f206fd239e230964e74ecf73d619ffa0eeb253e554b8a90949632e591413904"
+    "md_hash": "2040843a36149561d1b3dfb5d858a6d9ec03e91b3a29355e541802c0182c0dac",
+    "pdf_hash": "826532771494304e8bc6f107372e57f267b99971ca7b654416d3176a0e2e76c5"
   },
   "1752417018_O3理论下的量子纠缠新解：作为刚性景观内协同演化的局域现象.pdf": {
     "md_path": "src\\kernel_reference\\1752417018_O3理论下的量子纠缠新解：作为刚性景观内协同演化的局域现象.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417018_O3理论下的量子纠缠新解：作为刚性景观内协同演化的局域现象.pdf",
-    "md_hash": "e78fc4c70c4fa0c17940b132d384e17bb026af64740f1c803cda1c9a68c2bb39",
-    "pdf_hash": "13e539b95b2cb452c13946a61f0c2ca14df8058abce68e3182a7814abe116f47"
+    "md_hash": "433181b5d799936575ff2bb1c9a94dbfda4c2b6b1a15152ffaf89b05c794b5ee",
+    "pdf_hash": "d17de9a012ca31681751b9d5378ef87ee1f82d9e5a6f423063d7404b27a9a438"
   },
   "1752417019_量子纠缠的拓扑约束：论基底切换为何导致纠缠“失联”.pdf": {
     "md_path": "src\\kernel_reference\\1752417019_量子纠缠的拓扑约束：论基底切换为何导致纠缠“失联”.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417019_量子纠缠的拓扑约束：论基底切换为何导致纠缠“失联”.pdf",
-    "md_hash": "6ab331942de31cd2a02708a2e29da806b6825dcbb6cef82de57454582aa4fcb3",
-    "pdf_hash": "f81bec026d3cf800b58460922126e0488d188d07a223b2a70fd91b3cd9afe741"
+    "md_hash": "2e659b209c40469a97ef2f167d1a0d7efbf6a3450575b545b32bcf54bef1e072",
+    "pdf_hash": "d16c627b962cb70cb35e84fd9c66e9f1d692cc5dc9fb6df77d79b1ad67d3fa65"
   },
   "1752417020_升维统一与降维投影：PFB-GNLA中通过纤维化实现基底切换的元动力学机制.pdf": {
     "md_path": "src\\kernel_reference\\1752417020_升维统一与降维投影：PFB-GNLA中通过纤维化实现基底切换的元动力学机制.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417020_升维统一与降维投影：PFB-GNLA中通过纤维化实现基底切换的元动力学机制.pdf",
-    "md_hash": "51ff8dcd79889ff952fc30f4f3f50cce8cd6d81627d2baf3c5a36ade09af1dc3",
-    "pdf_hash": "54d3f9d2c438043b023f1f535f03cc393f6a8a516bfb049b7288b6c1c9001168"
+    "md_hash": "c5e4fa5da05a4165f3ce699db9e3c7cd4bbb979b153b21969144ea5fe649147e",
+    "pdf_hash": "170a2abd148b2088b7efc6bbcff857066bc86393e528cef5c574b964ac5140c7"
   },
   "1752417021_量子纠缠的频域重构：作为B结构中全局共振的协同调谐.pdf": {
     "md_path": "src\\kernel_reference\\1752417021_量子纠缠的频域重构：作为B结构中全局共振的协同调谐.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417021_量子纠缠的频域重构：作为B结构中全局共振的协同调谐.pdf",
-    "md_hash": "4888f470bd4af050f9e84040b053b469824e79a91e08990b1ec14a3dfeb33c72",
-    "pdf_hash": "1db22774c37dc2a83b3f957d481fd21526d12136b6d38908f3632a67093e7c60"
+    "md_hash": "846338958fbc40ecb35e0c486074629a2aaaa0636a0030567ac706b2a5ce8b62",
+    "pdf_hash": "00b8ee9f4fe252ef61f130a84f075045613b3263e1ea3203a6025b0affa5d9f4"
   },
   "1752417022_量子纠缠的频域重构：作为B结构中全局共振的协同调谐 (O3理论数学形式化).pdf": {
     "md_path": "src\\kernel_reference\\1752417022_量子纠缠的频域重构：作为B结构中全局共振的协同调谐 (O3理论数学形式化).md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417022_量子纠缠的频域重构：作为B结构中全局共振的协同调谐 (O3理论数学形式化).pdf",
-    "md_hash": "1e6688c512d6e198c5e89c20385ae001196a305ec530f4a4334b0bc2e4fcfa40",
-    "pdf_hash": "37325ecd53efdf39775602670f48dde32f36ce5938301c05fd33164b8ca2150d"
+    "md_hash": "bfccc4f950fa5b2cc5ffed32ea86a6ef3574825e412dc24bd21c2260e2040dbf",
+    "pdf_hash": "0dab2a326d88ef819b4d37495291945d5c2f33438fd8ccaf107dfb3b40c0b632"
   },
   "1752417023_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.pdf": {
     "md_path": "src\\kernel_reference\\1752417023_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417023_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.pdf",
-    "md_hash": "215ea74563fd90e4b32af83f5c06ae19a1a3de333e478c01cfc6969f69b9f021",
-    "pdf_hash": "cac20762c6058d983cab8cfd553d5a0a909d1438415afbee0637857625596506"
+    "md_hash": "5b88bfd4a5953289cf73774e7b1ff304e13245dcf5219ce0b62d794f643eed0e",
+    "pdf_hash": "526e13476ba53e948215f382fabd04d570f19635ec7ca2b98b5e5172fa81ddd7"
   },
   "1752417024_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.pdf": {
     "md_path": "src\\kernel_reference\\1752417024_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417024_从O3理论的“逻辑守恒”到弦理论的“景观归一”：论B结构总动量为零的深刻同构.pdf",
-    "md_hash": "758427cf26284de585f45df53a80cebba3b81fb7e4d616c285d4e252eaeec942",
-    "pdf_hash": "8f1fe4a1d906c4898d5f6fd24496e4623dd9be2c8246e931c5a41562139adb2b"
+    "md_hash": "048f8b30e40de9fc0aaa2ff97ff219f827c1798c71ca4bb065883890bfcc6d95",
+    "pdf_hash": "bfa745d53a131d8c5eb4267e657d3da06fcabe3a51ccb6285f4a57c4c1d14ab5"
   },
   "1752417025_从全局流变到局域刚性：论流变景观中刚性截面的逻辑守恒.pdf": {
     "md_path": "src\\kernel_reference\\1752417025_从全局流变到局域刚性：论流变景观中刚性截面的逻辑守恒.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752417025_从全局流变到局域刚性：论流变景观中刚性截面的逻辑守恒.pdf",
-    "md_hash": "367f42a011ec86a96bb58027a18fca41004accacc2241c8ccb8af6102a43e70a",
-    "pdf_hash": "2f0f00e4d3d8a4349ffe21e34b3fbeb4223cb3c22820e76e758fe830cdca6da3"
+    "md_hash": "54ea216598db5816db9b611f81b13731cddfee6396a843a73cda245a857088ed",
+    "pdf_hash": "91b37be62b33cba2e63a239a65b472e69a15dcde14aaaaebe01444c459c00376"
   },
   "INDEX.pdf": {
     "md_path": "src\\kernel_reference\\INDEX.md",
     "pdf_path": "src\\kernel_reference_pdf\\INDEX.pdf",
-    "md_hash": "bedcda4f3732d22abbee38b2e1a56235373b26d648f8d168cd2d11fca84ec060",
-    "pdf_hash": "a0b85528be39f112e857a67c43783511f2e1aa1a97d3ed46fe237da4545903a2"
+    "md_hash": "ad0c7daa09622b4948e205b1547c9dd82132d58ac03fb3513bad5b3d0c76a1ea",
+    "pdf_hash": "aed98e266ad45c77309f864ac56b9dc018a01b3b05925ede927eca3e4d2642df"
   },
   "KERNEL_REFERENCE_README.pdf": {
     "md_path": "src\\kernel_reference\\KERNEL_REFERENCE_README.md",
