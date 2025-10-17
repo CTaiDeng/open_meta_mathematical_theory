@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2025 GaoZheng
+
 const {Notebook} = require('crossnote');
 const path = require('path');
 const fs = require('fs');

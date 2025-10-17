@@ -1,16 +1,20 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# Copyright (C) 2025 GaoZheng
+
 import glob
 import os
 import re
 import subprocess
 import json
 import hashlib
+from pathlib import Path
 
 # --- 请在这里修改您的文件夹路径 ---
 # 使用 r"..." 格式可以防止路径中的反斜杠被错误地转义，特别是在 Windows 上。
 # 示例 (Windows):
-ROOT_DIRECTORY = r"D:\WorkSpace\31-FlowerPig\open_meta_mathematical_theory"
-INPUT_DIRECTORY = f"{ROOT_DIRECTORY}\src\kernel_reference"
-OUTPUT_DIRECTORY = f"{ROOT_DIRECTORY}\src\kernel_reference_pdf"
+ROOT_DIRECTORY = str(Path(__file__).resolve().parents[2])
+INPUT_DIRECTORY = os.path.join(ROOT_DIRECTORY, 'src', 'kernel_reference')
+OUTPUT_DIRECTORY = os.path.join(ROOT_DIRECTORY, 'src', 'kernel_reference_pdf')
 
 
 # 示例 (macOS / Linux):

@@ -1,0 +1,3 @@
+# Python dependencies for script/md_to_pdf/batch_convert.py
+# No third-party packages required; uses Python standard library only.
+
