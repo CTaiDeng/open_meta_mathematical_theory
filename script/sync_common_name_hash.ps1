@@ -5,7 +5,7 @@ Copyright (C) 2025 GaoZheng
 用途：
 - 在 `src/kernel_reference` 与 `src/full_reference` 之间，基于“共同文件名（交集）”建立/校验/重建哈希映射（JSON 存储于 `src/full_reference/common_name_hash_map.json`）。
 - 菜单模式：
-  1) 初始化映射（若已存在则跳过）
+  1) 初始化映射（若存在则覆盖）
   2) 打印变更（缺失/变更/新增交集/失去交集）
   3) 打印不一致（打印存在但不一致的）
   4) 生成不一致 CSV（生成存在但不一致的导入 CSV）
@@ -217,13 +217,11 @@ function Print-Changes([hashtable]$saved,[hashtable]$current,[string]$krDir,[str
 
 function Do-Init(){
   $p = Get-RepoPaths
-  if(Test-Path -LiteralPath $p.MapPath -PathType Leaf){
-    Write-Host ("映射已存在：{0} —— 跳过初始化。" -f $p.MapPath) -ForegroundColor Yellow
-    return
-  }
+  $existed = Test-Path -LiteralPath $p.MapPath -PathType Leaf
   $map = Build-Mapping -krDir $p.KernelDir -frDir $p.FullDir
   Save-Mapping -map $map -mapPath $p.MapPath
-  Write-Host ("已创建映射：{0}，条目数：{1}" -f $p.MapPath, $map.Keys.Count) -ForegroundColor Green
+  $action = if($existed){ '覆盖' } else { '创建' }
+  Write-Host ("已{0}映射：{1}，条目数：{2}" -f $action, $p.MapPath, $map.Keys.Count) -ForegroundColor Green
 }
 
 function Do-Check(){
@@ -259,7 +257,7 @@ function Show-Menu(){
   while($true){
     Write-Host ''
     Write-Host '==== 共同文件名哈希映射 ====' -ForegroundColor White
-    Write-Host '1) 初始化映射（若已存在则跳过）'
+    Write-Host '1) 初始化映射（若存在则覆盖）'
     Write-Host '2) 打印变更（缺失/变更/新增交集/失去交集）'
     Write-Host '3) 打印不一致（打印存在但不一致的）'
     Write-Host '4) 生成不一致 CSV（生成存在但不一致的导入 CSV）'

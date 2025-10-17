@@ -85,26 +85,66 @@ foreach($f in $files){
 }
 
 # 生成内容
-$out = New-Object System.Collections.Generic.List[string]
-$out.Add('**基于分类的索引（含摘要）**')
-$out.Add('')
 $total = $files.Count
-$out.Add("- 总计：$total 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。")
-$out.Add('')
+$target = Join-Path $dir 'INDEX.md'
 
-# 使用手动定义的头样式替换自动生成的简化头部
-$out = New-Object System.Collections.Generic.List[string]
-$out.Add('# **基于分类的索引（含摘要）**')
-$out.Add('')
-$out.Add('### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)')
-$out.Add('### [作者：GaoZheng](https://mymetamathematics.blogspot.com)')
-$out.Add('')
-$out.Add('---')
-$out.Add('')
-$out.Add("### 总计：$total 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。")
-$out.Add('')
-$out.Add('---')
-$out.Add('')
+function Build-Header-With-Preservation([int]$totalCount){
+  $list = New-Object System.Collections.Generic.List[string]
+  if(Test-Path -LiteralPath $target -PathType Leaf){
+    $lines = Get-Content -LiteralPath $target -Encoding UTF8
+    $firstSepIdx = -1; $sumIdx = -1; $postSumSepIdx = -1
+    for($i=0; $i -lt $lines.Length; $i++){
+      if($firstSepIdx -lt 0 -and $lines[$i].Trim() -eq '---'){ $firstSepIdx = $i; continue }
+      if($sumIdx -lt 0 -and $lines[$i] -match '^\s*###\s*总计：'){ $sumIdx = $i; continue }
+      if($sumIdx -ge 0 -and $postSumSepIdx -lt 0 -and $lines[$i].Trim() -eq '---'){ $postSumSepIdx = $i; break }
+    }
+    if($firstSepIdx -ge 0 -and $sumIdx -gt $firstSepIdx -and $postSumSepIdx -gt $sumIdx){
+      # 复制头部至“总计”后的第一条分隔线，期间仅更新总计数字
+      $header = New-Object System.Collections.Generic.List[string]
+      foreach($idx in 0..$postSumSepIdx){ $header.Add($lines[$idx]) }
+      # 更新总计行中的数字，保持其余字符不变
+      $orig = $header[$sumIdx]
+      # 尽量原位更新数字：定位“总计：”与后续“篇”之间的数字，保持其余字符与空白不变
+      $updated = $orig
+      $k1 = $orig.IndexOf('总计：')
+      if($k1 -ge 0){
+        $k2 = $orig.IndexOf('篇', $k1)
+        if($k2 -gt $k1){
+          $prefix = $orig.Substring(0, $k1 + '总计：'.Length)
+          $mid    = $orig.Substring($k1 + '总计：'.Length, $k2 - ($k1 + '总计：'.Length))
+          $suffix = $orig.Substring($k2)
+          # 仅替换中段中的第一个数字序列
+          $mid2 = [Regex]::Replace($mid, '\d+', [string]$totalCount, 1)
+          $updated = $prefix + $mid2 + $suffix
+        }
+      }
+      $header[$sumIdx] = $updated
+      foreach($ln in $header){ $list.Add($ln) }
+      # 追加一个空行（若原文在该分隔线后已有空行则保持后续生成的段落自然分隔）
+      if($list.Count -eq 0 -or $list[$list.Count-1] -ne ''){ $list.Add('') }
+      return $list
+    }
+  }
+  # 回退：使用固定头样式（无声明区）
+  $list.Add('# **基于分类的索引（含摘要）**')
+  $list.Add('')
+  $list.Add('### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)')
+  $list.Add('### [作者：GaoZheng](https://mymetamathematics.blogspot.com)')
+  $list.Add('')
+  $list.Add('---')
+  $list.Add('')
+  $list.Add("### 总计：$totalCount 篇；第一行仅显示文件名（代码样式，无链接/无项目符），下一行输出清洗后的摘要。")
+  $list.Add('')
+  $list.Add('---')
+  $list.Add('')
+  return $list
+}
+
+$out = Build-Header-With-Preservation -totalCount $total
+# 确保 $out 为可增长列表，避免固定大小集合导致 Add 失败
+$__tmp = New-Object System.Collections.Generic.List[string]
+foreach($ln in $out){ $__tmp.Add($ln) }
+$out = $__tmp
 
 foreach($cat in $categories.Keys){
   if(-not $groups.ContainsKey($cat)){ continue }
@@ -119,7 +159,6 @@ foreach($cat in $categories.Keys){
   $out.Add('')
 }
 
-$target = Join-Path $dir 'INDEX.md'
 $out | Set-Content -LiteralPath $target -Encoding UTF8
 Write-Host "Generated: $target with $total entries."
 
