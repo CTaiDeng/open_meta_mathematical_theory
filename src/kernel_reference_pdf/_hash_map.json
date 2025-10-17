@@ -2240,14 +2240,14 @@
   "INDEX.pdf": {
     "md_path": "src\\kernel_reference\\INDEX.md",
     "pdf_path": "src\\kernel_reference_pdf\\INDEX.pdf",
-    "md_hash": "3283285843134aa8f79200a0960e87b0e7265c67504ff167020bb6a5b0153687",
-    "pdf_hash": "7694e84d1740352babdb89312b0b58065dfa0976b1b961105b7e1a084a3f74b4"
+    "md_hash": "bedcda4f3732d22abbee38b2e1a56235373b26d648f8d168cd2d11fca84ec060",
+    "pdf_hash": "a0b85528be39f112e857a67c43783511f2e1aa1a97d3ed46fe237da4545903a2"
   },
   "KERNEL_REFERENCE_README.pdf": {
     "md_path": "src\\kernel_reference\\KERNEL_REFERENCE_README.md",
     "pdf_path": "src\\kernel_reference_pdf\\KERNEL_REFERENCE_README.pdf",
-    "md_hash": "4eff947cec4b219262069c0401fa864a4c25d761019d31cc10e991b1bb947cb1",
-    "pdf_hash": "2b9bc6c062fddacf821409743104f3c7951e18294cbea976ed7b524420afb8dc"
+    "md_hash": "093c61a304a1cf595d8ada710d3bbb6c6d5582d414999775ae6405856c5404ce",
+    "pdf_hash": "31d67042a9259e0263fc6a105c0af907ed180511ecc4fa4176bb4e9948c1c66d"
   },
   "LICENSE.pdf": {
     "md_path": "src\\kernel_reference\\LICENSE.md",
