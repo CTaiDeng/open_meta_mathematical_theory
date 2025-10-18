@@ -188,6 +188,14 @@ if ([string]::IsNullOrWhiteSpace($Dest)) {
   $Dest = $repoName
 }
 
+# snapshot destination existence and key subdir state
+$destExistsStart = Test-Path -LiteralPath $Dest -PathType Container
+$hadGiteeStart = $false
+if ($destExistsStart) {
+  $giteePathStart = Join-Path -Path $Dest -ChildPath 'gitee'
+  if (Test-Path -LiteralPath $giteePathStart -PathType Container) { $hadGiteeStart = $true }
+}
+
 ${needSync} = $false
 if (Test-Path -LiteralPath $Dest -PathType Container) {
   if ((Get-ChildItem -LiteralPath $Dest -Force | Measure-Object).Count -gt 0) {
@@ -322,4 +330,23 @@ if (-not $clonedIntoDest) {
   }
   Pop-Location
 }
+
+# ensure gitee directory policy
+try {
+  $giteeDirFinal = Join-Path -Path $Dest -ChildPath 'gitee'
+  if (-not $destExistsStart) {
+    if (-not (Test-Path -LiteralPath $giteeDirFinal -PathType Container)) {
+      New-Item -ItemType Directory -Path $giteeDirFinal -Force | Out-Null
+      Write-Host "[partial-clone] created gitee directory (new destination)"
+    }
+  } elseif ($hadGiteeStart) {
+    if (-not (Test-Path -LiteralPath $giteeDirFinal -PathType Container)) {
+      New-Item -ItemType Directory -Path $giteeDirFinal -Force | Out-Null
+      Write-Host "[partial-clone] restored gitee directory"
+    }
+  }
+} catch {
+  Write-Warning ("[partial-clone] failed to ensure gitee directory: " + $_.Exception.Message)
+}
+
 exit 0
