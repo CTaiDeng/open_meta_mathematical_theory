@@ -261,11 +261,9 @@ if ($excludeJsonPath -and (Test-Path -LiteralPath $excludeJsonPath)) {
 
 # enforce required entries in whitelist
 $required = @(
-  ".git",
   "partial_clone.cmd",
   "partial_clone.ps1",
-  "partial_clone_exclude_whitelist.json",
-  "gitee"
+  "partial_clone_exclude_whitelist.json"
 )
 
 # normalize and merge
