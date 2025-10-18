@@ -1,0 +1,16 @@
+cff-version: "1.2.0"
+message: "如果你在研究或出版物中使用本项目，请按以下信息引用。"
+title: "开放元数学理论（open_meta_mathematical_theory）"
+type: edited-work
+authors:
+  - name: "GaoZheng"
+    email: "banyanlimit@gmail.com"
+repository-code: "https://github.com/CTaiDeng/open_meta_mathematical_theory"
+url: "https://github.com/CTaiDeng/open_meta_mathematical_theory"
+abstract: "本项目围绕 O3 理论（开放、生成式的元数学理论）进行整理与发布，包含文档与参考实现。"
+keywords:
+  - 元数学
+  - O3 理论
+license: CC-BY-NC-ND-4.0
+repository-code-license: GPL-3.0-only
+license-notes: "知识库文档使用 CC BY-NC-ND 4.0；源代码使用 GPL-3.0-only。"
