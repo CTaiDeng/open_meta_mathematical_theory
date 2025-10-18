@@ -85,7 +85,7 @@ function Get-RelNormalized([string]$root, [string]$fullPath) {
     $rootFull = [System.IO.Path]::GetFullPath($root)
     $fileFull = [System.IO.Path]::GetFullPath($fullPath)
     if ($fileFull.StartsWith($rootFull, [System.StringComparison]::OrdinalIgnoreCase)) {
-      $rel = $fileFull.Substring($rootFull.Length).TrimStart('/','\\')
+      $rel = $fileFull.Substring($rootFull.Length).TrimStart([char[]]"/\\")
     } else {
       $rel = $fileFull
     }
