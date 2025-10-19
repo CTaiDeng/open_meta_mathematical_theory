@@ -24,7 +24,6 @@
 # To help fund GROMACS development, we humbly ask that you cite
 # the research papers on the package. Check out https://www.gromacs.org.
 
-
 """
 Add GPL-3.0 headers to source files, mirroring add_gpl3_headers.ps1 behavior.
 Only applies to code files (not Markdown) under default path: script
