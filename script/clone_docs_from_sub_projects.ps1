@@ -30,7 +30,8 @@ param(
   [switch]$SkipClone,
   [switch]$SkipCopy,
   [switch]$SkipIndex,
-  [switch]$KeepOut
+  [switch]$KeepOut,
+  [switch]$NoCleanMd
 )
 
 Set-StrictMode -Version Latest
@@ -118,9 +119,10 @@ function Copy-FromSource([string]$srcPath, [string]$destDir){
     throw "源目录不存在：$srcPath"
   }
   Ensure-Dir $destDir
+  if(-not $NoCleanMd){ Write-Verbose "清空目标目录内现有 *.md（默认强制刷新）: $destDir"; Remove-AllMarkdown -destDir $destDir }
   Write-Step "复制内容：$srcPath -> $destDir"
-  $items = Get-ChildItem -LiteralPath $srcPath -Recurse -Force |
-    Where-Object { $_.PSIsContainer -eq $false -and $_.FullName -notmatch '\\.git(\\|$)' }
+  $items = Get-ChildItem -LiteralPath $srcPath -Recurse -Force -File -Filter '*.md' |
+    Where-Object { $_.Name -ne 'INDEX.md' -and $_.FullName -notmatch '\\.git(\\|$)' }
   foreach($it in $items){
     $rel = [System.IO.Path]::GetRelativePath($srcPath, $it.FullName)
     # 去除前导分隔符（兼容 / 和 \）
@@ -141,7 +143,7 @@ function Copy-TopLevelFiles([string]$srcPath, [string]$destDir){
   Ensure-Dir $destDir
   Write-Step "复制内容（不递归）：$srcPath -> $destDir"
   $items = Get-ChildItem -LiteralPath $srcPath -Force -File |
-    Where-Object { $_.Name -notin @('LICENSE.md','INDEX.md') }
+    Where-Object { $_.Name -ne 'INDEX.md' }
   foreach($it in $items){
     $to  = Join-Path $destDir $it.Name
     if($PSCmdlet.ShouldProcess($to, '复制文件')){ Copy-Item -LiteralPath $it.FullName -Destination $to -Force }
@@ -195,6 +197,17 @@ function Clean-ForbiddenDirs([string]$destDir){
     if($forbidden -contains $d.Name){
       Write-Verbose "移除禁止目录：$($d.FullName)"
       if($PSCmdlet.ShouldProcess($d.FullName, '删除禁止目录')){ Remove-Item -LiteralPath $d.FullName -Recurse -Force -ErrorAction SilentlyContinue }
+    }
+  }
+}
+
+# 强制刷新：删除目标目录下所有 .md 文件（递归）
+function Remove-AllMarkdown([string]$destDir){
+  if(-not (Test-Path -LiteralPath $destDir -PathType Container)){ return }
+  $mdFiles = Get-ChildItem -LiteralPath $destDir -Recurse -Force -File -Filter '*.md'
+  foreach($f in $mdFiles){
+    if($PSCmdlet.ShouldProcess($f.FullName, '删除 .md 文件')){
+      Remove-Item -LiteralPath $f.FullName -Force -ErrorAction SilentlyContinue
     }
   }
 }
@@ -298,7 +311,7 @@ foreach($repo in $repos){
 
   if(-not $SkipCopy -and -not $skipCopyThisRepo){
     # 仅复制顶层文件（不递归，不进入子目录）
-    Copy-TopLevelFiles -srcPath $sourcePath -destDir $destDir
+    Copy-FromSource -srcPath $sourcePath -destDir $destDir
     # 再次清理禁止目录，避免误创建
     Clean-ForbiddenDirs -destDir $destDir
   } else {

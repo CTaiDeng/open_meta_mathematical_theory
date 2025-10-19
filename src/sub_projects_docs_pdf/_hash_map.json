@@ -1,2 +1,482 @@
 {
+  "1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.pdf",
+    "md_hash": "92d86fd183da3c1d6ab244d384a3430ed51e8d215d3e04e50c760e109e4393ed",
+    "pdf_hash": "8fda8097bbc66037d35e92c334fc39a3c95ac8143e408bcd13784ea505d18e23"
+  },
+  "1758470401_字符粒度策略环境 V2：无泄漏 POMDP + 离散最大熵 SAC（期望备份·Top‑p）.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758470401_字符粒度策略环境 V2：无泄漏 POMDP + 离散最大熵 SAC（期望备份·Top‑p）.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758470401_字符粒度策略环境 V2：无泄漏 POMDP + 离散最大熵 SAC（期望备份·Top‑p）.pdf",
+    "md_hash": "28e73d82fb6fa62a1ccd75950a25814dcda56948472031f5954a8997c5ef5cbf",
+    "pdf_hash": "1e0f992bbc0934af0c3847f1f3e564de38458a6ac5b18254a881a6111b4a92fc"
+  },
+  "1758816001_零训练表驱动 Flex-Attn：可计算词法 + 有限状态索引的快速落地.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816001_零训练表驱动 Flex-Attn：可计算词法 + 有限状态索引的快速落地.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816001_零训练表驱动 Flex-Attn：可计算词法 + 有限状态索引的快速落地.pdf",
+    "md_hash": "0f2a157dc47c8ce50e865c41ba1229ed998c3c9e9c3637f2a93149fd639fb620",
+    "pdf_hash": "403c908ec9faafcccd2ee98a3fbd3be3f897495a97b39ef16effe34af844aefa"
+  },
+  "1758816002_这套理论是否“巧妙”：结论与十条硬核巧思.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816002_这套理论是否“巧妙”：结论与十条硬核巧思.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816002_这套理论是否“巧妙”：结论与十条硬核巧思.pdf",
+    "md_hash": "b4cf6fe929a9e4de27191e80139fb04bc34210192ddc63ba2042cd2bd064dcf4",
+    "pdf_hash": "4cf1fa281a835c475d71f30c4e16c02312691712cc8698117e18a1d6a5deca8e"
+  },
+  "1758816003_词法KAT作用幺半群的幂子幺半群谱系（规范与工程用法）.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816003_词法KAT作用幺半群的幂子幺半群谱系（规范与工程用法）.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816003_词法KAT作用幺半群的幂子幺半群谱系（规范与工程用法）.pdf",
+    "md_hash": "33c16bfe05ff6d722141fcf2b73586e93079a6cb0be8c216f075dfa3657617a7",
+    "pdf_hash": "b3e5866e21249ba54fa5f5728a34539eb50c91455b7207ecc344cb4e7112d927"
+  },
+  "1758816004_词法KAT作用幺半群.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816004_词法KAT作用幺半群.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816004_词法KAT作用幺半群.pdf",
+    "md_hash": "de1c93498117221d470a6f327a54c14744bf875ffec61e3e5077e2ca2e516ef8",
+    "pdf_hash": "e9311383045533d08ca3bd19a6a534eba73cee9bd555cd921a70b5693729556a"
+  },
+  "1758816005_神经网络等价解耦与“三层分治”（MDQ 网络 × 索引泛函 × OOV 内存库）落地方案.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816005_神经网络等价解耦与“三层分治”（MDQ 网络 × 索引泛函 × OOV 内存库）落地方案.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816005_神经网络等价解耦与“三层分治”（MDQ 网络 × 索引泛函 × OOV 内存库）落地方案.pdf",
+    "md_hash": "31d656a46e7ffb093394d2a6a8b23c85c41ef10b5363e5fd8d9baac444aec28f",
+    "pdf_hash": "f3a3102e472e8e20f332cae2e66f601174a00a52dc04c250f0de72e3c480a41c"
+  },
+  "1758816006_字符模式 SAC 的工程实现与数学化描述v2.0.0.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816006_字符模式 SAC 的工程实现与数学化描述v2.0.0.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816006_字符模式 SAC 的工程实现与数学化描述v2.0.0.pdf",
+    "md_hash": "6b786b7db181bd59c3584e3956834ee7b1a7ec68543bf59347b030ffbc187827",
+    "pdf_hash": "2e9321c943ddd59aef3b88d9de496b66a9d4a26f60167cfb4bcedc2b90fdcfc7"
+  },
+  "1758816007_字符模式 SAC 的工程实现与数学化描述v1.0.0.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816007_字符模式 SAC 的工程实现与数学化描述v1.0.0.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816007_字符模式 SAC 的工程实现与数学化描述v1.0.0.pdf",
+    "md_hash": "f236eddf0376b7aab7318864082bd914d49c68dc9074f0a8e98990bc3328e268",
+    "pdf_hash": "66ecb4fbf2421ff620a1773cc01501bce510223ff17f009e9d41e7d65ecdc221"
+  },
+  "1758816008_基于传统数学语言的形式化：PFB-GNLA 退化 × 词法KAT作用幺半群 × GRL路径积分中的“价值偏基准量与微分动力量子”.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816008_基于传统数学语言的形式化：PFB-GNLA 退化 × 词法KAT作用幺半群 × GRL路径积分中的“价值偏基准量与微分动力量子”.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816008_基于传统数学语言的形式化：PFB-GNLA 退化 × 词法KAT作用幺半群 × GRL路径积分中的“价值偏基准量与微分动力量子”.pdf",
+    "md_hash": "4a49fd8d3e7fa54b2567b91ab192903257824e1db97c15356eb0861fdd3be609",
+    "pdf_hash": "7271abbdfdd7791058266fd71ccdc7fbb413fe4dcbf5f951e5de63d9c1d0b6fe"
+  },
+  "1758816009_可变词数×注意力长度（Flex-Attn）方案：架构说明与落地路线图.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816009_可变词数×注意力长度（Flex-Attn）方案：架构说明与落地路线图.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816009_可变词数×注意力长度（Flex-Attn）方案：架构说明与落地路线图.pdf",
+    "md_hash": "c3b681e783ee6c271442500adb2303e9be82cc37a42563b5e5634f8dae0a52a7",
+    "pdf_hash": "2ba06146dd18bd56a82e2c2b4a32ccf4537e222e6e64059f4116969904809eb1"
+  },
+  "1758816010_医疗问答端到端示例：Flex-Attn 生成“奥司他韦”专业定义.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816010_医疗问答端到端示例：Flex-Attn 生成“奥司他韦”专业定义.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816010_医疗问答端到端示例：Flex-Attn 生成“奥司他韦”专业定义.pdf",
+    "md_hash": "66c43b1a768165674585e94759eb591ee407b80bca7e33f723a2aa1ab920300d",
+    "pdf_hash": "12cb63440695c59a2f41f5ff9e0ea44bf650f8fc6fb92eb9ec4b0ec670899f80"
+  },
+  "1758816011_价值偏基准量（微分动力量子）的构造：PFB-GNLA 退化下的词法KAT作用幺半群 × GRL路径积分.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816011_价值偏基准量（微分动力量子）的构造：PFB-GNLA 退化下的词法KAT作用幺半群 × GRL路径积分.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816011_价值偏基准量（微分动力量子）的构造：PFB-GNLA 退化下的词法KAT作用幺半群 × GRL路径积分.pdf",
+    "md_hash": "31d47b8e7ba19d525039a610af8f1a8100f1055ad4d5c6532b4c78815bdb65d8",
+    "pdf_hash": "43ce4e263c4b82cff3d6b03d802b7e8fa643b35c4b96d7d0a20fb2a5e0e3650a"
+  },
+  "1758816012_中文知识蒸馏基座的企业级价值评估：质量×成本×治理×扩展性.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816012_中文知识蒸馏基座的企业级价值评估：质量×成本×治理×扩展性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816012_中文知识蒸馏基座的企业级价值评估：质量×成本×治理×扩展性.pdf",
+    "md_hash": "89d50a687a6b6a20913522a500f928b9affe446e1c778f74f7657a0802cbab34",
+    "pdf_hash": "b0be1059f81c8f7609afc556385b1c593fc846d3384467e9be960f7a2a3dbc2c"
+  },
+  "1758816013_《字符模式 SAC 的工程实现与数学化描述》对中文知识蒸馏的意义.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816013_《字符模式 SAC 的工程实现与数学化描述》对中文知识蒸馏的意义.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816013_《字符模式 SAC 的工程实现与数学化描述》对中文知识蒸馏的意义.pdf",
+    "md_hash": "00e4134de32aa038c054c9333e39b19c55118c82bc52412f7ef6b36aa291ff07",
+    "pdf_hash": "3529f8434235e3d802647da6d6873b9612bac4e49adbbfc482a7f8aee1398d71"
+  },
+  "1758816014_“微分动力量子（MDQ）”在离散化LLM的工程化落地：最小单元、线性积累、热插拔与统一版本治理.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758816014_“微分动力量子（MDQ）”在离散化LLM的工程化落地：最小单元、线性积累、热插拔与统一版本治理.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758816014_“微分动力量子（MDQ）”在离散化LLM的工程化落地：最小单元、线性积累、热插拔与统一版本治理.pdf",
+    "md_hash": "98cdf5502d55fbb684fd7170af3abdbb70b1a7d3c3d071d13358e23461d2b540",
+    "pdf_hash": "1d2c3274f90468f6523b8bd5152b3f3592b6b74e5d78828484ff30892820a373"
+  },
+  "1758902401_这套理论对“字符级RL奖励稀疏”世界级难题的实质性贡献（企业口径，长文版）.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902401_这套理论对“字符级RL奖励稀疏”世界级难题的实质性贡献（企业口径，长文版）.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902401_这套理论对“字符级RL奖励稀疏”世界级难题的实质性贡献（企业口径，长文版）.pdf",
+    "md_hash": "a6fdaf32af39a78037e4a1fb0b40914fbf514a3df43940bd638fd6635aa7869f",
+    "pdf_hash": "da3ad06d18e06ea59d1c816b6b81c30d1e3fef0b0f82a3000040f4f299827593"
+  },
+  "1758902402_字符级RL奖励稀疏世界级难题的实质性贡献.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902402_字符级RL奖励稀疏世界级难题的实质性贡献.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902402_字符级RL奖励稀疏世界级难题的实质性贡献.pdf",
+    "md_hash": "1047ce7538d4ba3c77239c3e33f55ec371d2eb23c01b92f8fcb49427ae4af880",
+    "pdf_hash": "df993b30c70b988b38491e41ee5c6e7d1b3ed9c456bbbbaff5b0eae550188cd7"
+  },
+  "1758902403_字符模式 SAC 的工程实现与数学化描述v4.0.0.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902403_字符模式 SAC 的工程实现与数学化描述v4.0.0.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902403_字符模式 SAC 的工程实现与数学化描述v4.0.0.pdf",
+    "md_hash": "2c9a18a33df9e355401e27895d41c6ce11d797df6ac23bf96d4718499e3b4ead",
+    "pdf_hash": "b135ab023fe05462fbb4845942f51eaaca7cc68e4e6e6a2ee4eb69850816256e"
+  },
+  "1758902404_字符模式 SAC 的工程实现与数学化描述v3.0.1.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902404_字符模式 SAC 的工程实现与数学化描述v3.0.1.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902404_字符模式 SAC 的工程实现与数学化描述v3.0.1.pdf",
+    "md_hash": "dad1e807c58436b1a7d2b6fd41729db97b402aea72a429c8bf072fc4509f7848",
+    "pdf_hash": "5eacc7b3536feca7925c26473a5fab0853d2c26525b6183872a739966440c178"
+  },
+  "1758902405_字符模式 SAC 的工程实现与数学化描述v3.0.0.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902405_字符模式 SAC 的工程实现与数学化描述v3.0.0.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902405_字符模式 SAC 的工程实现与数学化描述v3.0.0.pdf",
+    "md_hash": "7bd355d556c7518627460c01a1fa4841ef1914cabca2fe5d428431d6ea461759",
+    "pdf_hash": "f37f4ac65a8b317a0460b509c4cf8e04a4f35c1d51584755c920ed2863aaba8d"
+  },
+  "1758902406_字符模式 SAC v4.0.0 决策摘要与双迭代方案.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902406_字符模式 SAC v4.0.0 决策摘要与双迭代方案.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902406_字符模式 SAC v4.0.0 决策摘要与双迭代方案.pdf",
+    "md_hash": "fd10629be12d9976a2b9a2220239662af4b1ec1f1a3885f0562bd9d5bc550e1e",
+    "pdf_hash": "85f6e0d89082c08da8458381f34681a16d3b29619689be5d0b222c79ae0b9f13"
+  },
+  "1758902407_字符模式 SAC v3.0.1 评价论文.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902407_字符模式 SAC v3.0.1 评价论文.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902407_字符模式 SAC v3.0.1 评价论文.pdf",
+    "md_hash": "3fef9380bd623cb819c468f13c3a3205c0917d7d9cfbc86a4154267f5c996ce3",
+    "pdf_hash": "38e52ededa447d0d70e96f7d587701468e8d9d9cc2e40c48e4273ac9b80fd499"
+  },
+  "1758902408_字符模式 SAC v3.0.1 总评价与评述.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902408_字符模式 SAC v3.0.1 总评价与评述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902408_字符模式 SAC v3.0.1 总评价与评述.pdf",
+    "md_hash": "378eef890fa5e7ff6fc2161b458ab9d7f93d9c2ccea3a7759c34936b9a209328",
+    "pdf_hash": "0713968b241994ccb2842d4ff5a63bfa8d83a934d82bd63ad4150707a079f3d7"
+  },
+  "1758902409_v4.0.0（PACER：Pack‑Aligned Compressive‑Expansion Reasoner）架构.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758902409_v4.0.0（PACER：Pack‑Aligned Compressive‑Expansion Reasoner）架构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758902409_v4.0.0（PACER：Pack‑Aligned Compressive‑Expansion Reasoner）架构.pdf",
+    "md_hash": "5ae0ac5f658b7b287c757f1e66ebd6b97789e4fd669095e2b67f9aac6aa16fac",
+    "pdf_hash": "195ddfba26086ccded5126360188ba287fac3842ae9e26d94abe7372fa33939e"
+  },
+  "1758988801_语义的规范场论：对 分层代数认知架构（HACA）的一种几何动力学诠释.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988801_语义的规范场论：对 分层代数认知架构（HACA）的一种几何动力学诠释.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988801_语义的规范场论：对 分层代数认知架构（HACA）的一种几何动力学诠释.pdf",
+    "md_hash": "b5b361c1c2820140c19ef926eda67fe5039cc51f8d6e5e1b314d4c6015085ad4",
+    "pdf_hash": "f308f72bfb88de67d459dfc562f5dc2d3ba2ffceb8f8b938115aaa6d8365d138"
+  },
+  "1758988802_语义动力学框架（HACA｜A Framework for Semantic Dynamics）.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988802_语义动力学框架（HACA｜A Framework for Semantic Dynamics）.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988802_语义动力学框架（HACA｜A Framework for Semantic Dynamics）.pdf",
+    "md_hash": "3f470958dd9b148a777be7d1d84b79a89d513a047f7932db23273546e35e0265",
+    "pdf_hash": "a043fb87cc09d761c4aba85349d7ce6f3578d7542235a7a232720fc5617a6c54"
+  },
+  "1758988803_分层代数认知架构（HACA）公理系统与形式化定义.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988803_分层代数认知架构（HACA）公理系统与形式化定义.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988803_分层代数认知架构（HACA）公理系统与形式化定义.pdf",
+    "md_hash": "e864070a19ed870f42f11f4a2697d8653144186a27e43d968359c7e00e400b37",
+    "pdf_hash": "e5b5b14842937ba6a3dae09f1caead469a9ba302949d4a6fdd7428d55e5f1896"
+  },
+  "1758988804_分层代数认知架构（HACA）v1.0 公理化定义评价.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988804_分层代数认知架构（HACA）v1.0 公理化定义评价.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988804_分层代数认知架构（HACA）v1.0 公理化定义评价.pdf",
+    "md_hash": "ce2f1b20260fea41104d20086998685c28b6f266488765607c8a83565c9d9b1a",
+    "pdf_hash": "e810ae3eb9f9061acccf9c7108d929a9058a480a8020fab261ceaff4830990f2"
+  },
+  "1758988805_主纤维丛 × 逻辑压强场 × MDQ（HACA） 的工程—数学统一：从字符级RL到可审计的语义动力学.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988805_主纤维丛 × 逻辑压强场 × MDQ（HACA） 的工程—数学统一：从字符级RL到可审计的语义动力学.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988805_主纤维丛 × 逻辑压强场 × MDQ（HACA） 的工程—数学统一：从字符级RL到可审计的语义动力学.pdf",
+    "md_hash": "e15b8e2096f13e0ac771aa911ff9d3ba8cd76722acc1c91ad691e0fd71b2ac78",
+    "pdf_hash": "6f36416efd9aa7356e44e0328d93d7418e934613d13f456cdde383af3717e34d"
+  },
+  "1758988806_Python环境与依赖版本说明.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988806_Python环境与依赖版本说明.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988806_Python环境与依赖版本说明.pdf",
+    "md_hash": "323d30199cb1e970400ab61a2dd69a69731ca7d7da2604e524474b5f4ddd0942",
+    "pdf_hash": "2d118a806f4ce59c2948e4fb20dc32ea44544b0647244c87575de18a8e5efded"
+  },
+  "1758988807_AI远景价值评估：HACA（主纤维丛 × 逻辑压强场 × MDQ）的战略潜力与产业化路径.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1758988807_AI远景价值评估：HACA（主纤维丛 × 逻辑压强场 × MDQ）的战略潜力与产业化路径.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758988807_AI远景价值评估：HACA（主纤维丛 × 逻辑压强场 × MDQ）的战略潜力与产业化路径.pdf",
+    "md_hash": "3a2165f1e4c4813aa672ed15b0f567fb2fe140cbcd731da8e45d475981796a2b",
+    "pdf_hash": "3f1840fafa3b99543ef9ab376a2c251cfcd2032084a770c1b9a7e23c9bf24198"
+  },
+  "1759248001_认知免疫系统：构建颠覆性技术范式的思想护城河.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759248001_认知免疫系统：构建颠覆性技术范式的思想护城河.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759248001_认知免疫系统：构建颠覆性技术范式的思想护城河.pdf",
+    "md_hash": "37cb1d2c60d30e33981956faade9f430b1666926508b2dca9ed3eaacac86615a",
+    "pdf_hash": "63982077a3d605e4616c62c2f1dfb708e151cd41654ea34873863a098732aa15"
+  },
+  "1759248002_关于新范式AI框架的价值澄清：解读与前瞻.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759248002_关于新范式AI框架的价值澄清：解读与前瞻.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759248002_关于新范式AI框架的价值澄清：解读与前瞻.pdf",
+    "md_hash": "768e707f91a038ec6a714681e28ac42b7760925b7854d3c3a0125a14203c9ef9",
+    "pdf_hash": "2bd7f51a83a709e8dd6192ebe94b3603c863491148eb24d826917d1541188c9c"
+  },
+  "1759852801_论$HACA_{LLM}$框架通过重构问题范式对强化学习稀疏奖励困境的消解.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759852801_论$HACA_{LLM}$框架通过重构问题范式对强化学习稀疏奖励困境的消解.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759852801_论$HACA_{LLM}$框架通过重构问题范式对强化学习稀疏奖励困境的消解.pdf",
+    "md_hash": "7cc7df856828b44280dc6264c6d2de646f2dd07510ae16f604a227796dab29bf",
+    "pdf_hash": "2f6cd57017683dced52465ae0e742453cd8d3582505380e294411f11fd3f375d"
+  },
+  "1759852802_广义RL奖励稀疏的代数化与几何化启发.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759852802_广义RL奖励稀疏的代数化与几何化启发.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759852802_广义RL奖励稀疏的代数化与几何化启发.pdf",
+    "md_hash": "503be122cb14b6a82f4bea241c6e61c9a10dce207097c64a70fa8e6f4a58316a",
+    "pdf_hash": "06b394cb52ce25b9f249ab60e134ea5e5f965e853ff1d6ff5c3ce16f94bc657b"
+  },
+  "1759852803_从形式代数到内生哲学：$HACA_{LLM}$作为解决OpenRA稀疏奖励问题的终极白盒方案.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759852803_从形式代数到内生哲学：$HACA_{LLM}$作为解决OpenRA稀疏奖励问题的终极白盒方案.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759852803_从形式代数到内生哲学：$HACA_{LLM}$作为解决OpenRA稀疏奖励问题的终极白盒方案.pdf",
+    "md_hash": "d3a98a5c975059003bd4eeafc96d2c4d7fed29fa2ec20fd5bae78f345a606220",
+    "pdf_hash": "b363c61283d5df7023e086957a2318f2c1707a889c77bbfd10e2e9de3bccc1d2"
+  },
+  "1759852804_从形式代数到内生哲学：$HACA_{LLM}$作为白盒AI决策框架的终极形态.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759852804_从形式代数到内生哲学：$HACA_{LLM}$作为白盒AI决策框架的终极形态.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759852804_从形式代数到内生哲学：$HACA_{LLM}$作为白盒AI决策框架的终极形态.pdf",
+    "md_hash": "f8a82e254068dd77527fbe96f5b95837ab1db62cd1afc1c4fe36936ab81c7c2b",
+    "pdf_hash": "94a4870701c9e0520b4a23f7e4d91109d979e283adc9b3d4b8b8123c4fc64d68"
+  },
+  "1759852805_$HACA_{LLM}$的终极形态：一个完备的白盒AI认知操作系统及其战略价值评估.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1759852805_$HACA_{LLM}$的终极形态：一个完备的白盒AI认知操作系统及其战略价值评估.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1759852805_$HACA_{LLM}$的终极形态：一个完备的白盒AI认知操作系统及其战略价值评估.pdf",
+    "md_hash": "1573ccbf17e763d668782d0da1ab383bc3a3d2221238e6410b9cec94140eebfd",
+    "pdf_hash": "7f993598d2e05f876af77993f93b94f037dfb3b1116329c147f197d5fba4a012"
+  },
+  "LICENSE.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\LICENSE.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\LICENSE.pdf",
+    "md_hash": "9ad1f12dbc421934b6821035772d7ccbbd59d83acc83d07a259abca48db82b8e",
+    "pdf_hash": "ae72ccade0f7a390ae30a0dfc20890e42c93defb59fd1b00fcc6b88b4fe9f759"
+  },
+  "1758729600_分子对接与分子动力学模拟：经典力学视角与 GROMACS 裁剪实现的理论支撑.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1758729600_分子对接与分子动力学模拟：经典力学视角与 GROMACS 裁剪实现的理论支撑.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1758729600_分子对接与分子动力学模拟：经典力学视角与 GROMACS 裁剪实现的理论支撑.pdf",
+    "md_hash": "caf4652b186e4f84801319abd7f0f761492a30a65a4866824cbbc80a27f5e178",
+    "pdf_hash": "85b7138bbef82686746c553a139dc662be95794ea94484f10f972fca8595ad25"
+  },
+  "1759075200_LBOPB的全息宇宙：生命系统在六个不同观测参考系下的完整论述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075200_LBOPB的全息宇宙：生命系统在六个不同观测参考系下的完整论述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075200_LBOPB的全息宇宙：生命系统在六个不同观测参考系下的完整论述.pdf",
+    "md_hash": "fec280855f40fb3306794434e544247901d43a382cfae11dfeb4b1ab55844474",
+    "pdf_hash": "71e2f6b9b77e54686033511bee6816319054178e6795c6a41efd31a64e983d66"
+  },
+  "1759075201_O3理论下的本体论退化：从流变实在到刚性干预——论PFB-GNLA向PGOM的逻辑截面投影.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075201_O3理论下的本体论退化：从流变实在到刚性干预——论PFB-GNLA向PGOM的逻辑截面投影.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075201_O3理论下的本体论退化：从流变实在到刚性干预——论PFB-GNLA向PGOM的逻辑截面投影.pdf",
+    "md_hash": "3e71fac3d748aad43e96e2545e44745ac4388bfff1ca6cee4c8b8cbad341b686",
+    "pdf_hash": "80751b25025372a0016d43dc348fc2e3e7ed639d536d0f6c7bbf797598756f42"
+  },
+  "1759075202_从物理实在到代数干预：论PFB-GNLA向PGOM的平庸化退化.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075202_从物理实在到代数干预：论PFB-GNLA向PGOM的平庸化退化.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075202_从物理实在到代数干预：论PFB-GNLA向PGOM的平庸化退化.pdf",
+    "md_hash": "066c6e82ef5aff2c092d186aca0405e85f9e0c74a4daadb1ba8bcb611896c07a",
+    "pdf_hash": "4a75cd568e86d51118340fac98516654f99c3d03384f3a8c6c506bd0281b0c3c"
+  },
+  "1759075203_同一路径，六重宇宙：论HIV感染与治疗的GRL路径积分在LBOPB六大参考系下的全息解释.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075203_同一路径，六重宇宙：论HIV感染与治疗的GRL路径积分在LBOPB六大参考系下的全息解释.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075203_同一路径，六重宇宙：论HIV感染与治疗的GRL路径积分在LBOPB六大参考系下的全息解释.pdf",
+    "md_hash": "ad3128c90a4f59df1eda39b21fd407443b19c79ee35c229760cfd3506f00f926",
+    "pdf_hash": "a94ce3768d7aa1542430b3983690da863e62c6cb8d3c06c130a0a6ede25203a1"
+  },
+  "1759075204_提交信息钩子与Python环境一键指南.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075204_提交信息钩子与Python环境一键指南.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075204_提交信息钩子与Python环境一键指南.pdf",
+    "md_hash": "8d6fcf642d74e14062723b1aeda63874345aa38a44d918f3b562d03e2d8be9a4",
+    "pdf_hash": "3c6069663754ce9716535e62319bf515734db699f34d953cef2149c67c1cd148"
+  },
+  "1759075205_药理学的代数形式化：一个作用于基因组的算子体系.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075205_药理学的代数形式化：一个作用于基因组的算子体系.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075205_药理学的代数形式化：一个作用于基因组的算子体系.pdf",
+    "md_hash": "57feb2fdd13b4076eeaf0fe9c56254f157db46f9f9c0b286bc8dc14b3eb52d5d",
+    "pdf_hash": "e1755c17ffac4a743253f10e2b819d5879cc7fca22b77d0f06b07d18a6554acf"
+  },
+  "1759075206_计算化学的O3理论重构：作为PDEM幺半群内在动力学的多尺度计算引擎.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075206_计算化学的O3理论重构：作为PDEM幺半群内在动力学的多尺度计算引擎.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075206_计算化学的O3理论重构：作为PDEM幺半群内在动力学的多尺度计算引擎.pdf",
+    "md_hash": "bae434c02508258ee62433ae06f5000dcb98072f1ebbf8cbfeedd6cdf4a68e50",
+    "pdf_hash": "2ecaee6099b77a1c5c2235c939393daad60c5dcef1e0c79611be20e5a6004567"
+  },
+  "1759075207_论O3理论的自相似动力学：作为递归性子系统 GRL 路径积分的 PGOM.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075207_论O3理论的自相似动力学：作为递归性子系统 GRL 路径积分的 PGOM.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075207_论O3理论的自相似动力学：作为递归性子系统 GRL 路径积分的 PGOM.pdf",
+    "md_hash": "0341583d6d1c6a18578607db3a71415973093004b6d18fe247d8b84ea4e8c618",
+    "pdf_hash": "d2b758d4786735a6055b0be3ccc81c747702ec4e6097b46d3ef3e53a90a8382e"
+  },
+  "1759075208_论六大生命科学代数结构的幺半群完备性：基于元素与子集拓扑的双重视角分析.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075208_论六大生命科学代数结构的幺半群完备性：基于元素与子集拓扑的双重视角分析.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075208_论六大生命科学代数结构的幺半群完备性：基于元素与子集拓扑的双重视角分析.pdf",
+    "md_hash": "c58c62cd92e3176530e5450cfa98b2898b3fe2d63dbb708f271c368f4077e5d8",
+    "pdf_hash": "359b4caf0a1270210d9bdec76813a5f60a9b0a4279ae616be325cfe22ae548de"
+  },
+  "1759075209_论药理学干预的代数结构：药理基因组算子幺半群（PGOM）的形式化.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1759075209_论药理学干预的代数结构：药理基因组算子幺半群（PGOM）的形式化.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1759075209_论药理学干预的代数结构：药理基因组算子幺半群（PGOM）的形式化.pdf",
+    "md_hash": "d75a988bd9582348323060fc5a5a24cb6642b05b17c1b361bce4e0040aae1446",
+    "pdf_hash": "4c6a2859304e42ceade40093a6683e89d5f9b06693ee5d4a28358e9c946e22f6"
+  },
+  "1760198400_范式的代际跨越：O3理论下的“立体模拟人体”相较于现有模型的先进性论述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760198400_范式的代际跨越：O3理论下的“立体模拟人体”相较于现有模型的先进性论述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760198400_范式的代际跨越：O3理论下的“立体模拟人体”相较于现有模型的先进性论述.pdf",
+    "md_hash": "5b3dc3b52e6d7d33b6b304295d01e17f53e88b6f104855341d14c3907eb0a355",
+    "pdf_hash": "3536f389588886a76a309571d89743e49c2a5ea9f10a1d8e64512bf1ee528eca"
+  },
+  "1760284800_O3理论下的生成式化学：作为可计算“分子算法”的药物逆向设计.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284800_O3理论下的生成式化学：作为可计算“分子算法”的药物逆向设计.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284800_O3理论下的生成式化学：作为可计算“分子算法”的药物逆向设计.pdf",
+    "md_hash": "3b89fa54c8727ee21aa2c92ac1fcae3c7b82ff687ba1b136cf3c079a9731a5bb",
+    "pdf_hash": "3df8dd703a15e8bba73f75323d4f84da521d8bdc95dd9ed175e9c8d336007e3b"
+  },
+  "1760284801_O3理论工程化总纲：从公理化构建到双向映射的计算闭环实现路径.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284801_O3理论工程化总纲：从公理化构建到双向映射的计算闭环实现路径.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284801_O3理论工程化总纲：从公理化构建到双向映射的计算闭环实现路径.pdf",
+    "md_hash": "b8d7be5c306b7c1bf4fe6806ec4a0ff3a5cc3d7c1a61a2fa20602075ec3854cb",
+    "pdf_hash": "a4b8ab61426056b5ce8d8b4f627a37bcc7a2b523904382482f37fe26b91c7e44"
+  },
+  "1760284802_O3理论的工程化总纲：从公理化构建到双向映射的计算闭环.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284802_O3理论的工程化总纲：从公理化构建到双向映射的计算闭环.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284802_O3理论的工程化总纲：从公理化构建到双向映射的计算闭环.pdf",
+    "md_hash": "863f1006f0a93e6dd202c39d6b121ead518ff2a463267c19faac1a9ccad2b012",
+    "pdf_hash": "30c49a1f893c46f5827d2cc55acb46be04d28b8d92c7cda7b0be1d6318046d16"
+  },
+  "1760284803_O3理论的应用总纲：从“逆向生成”到“正向验证”的药物研发闭环及其对临床实验的虚拟化.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284803_O3理论的应用总纲：从“逆向生成”到“正向验证”的药物研发闭环及其对临床实验的虚拟化.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284803_O3理论的应用总纲：从“逆向生成”到“正向验证”的药物研发闭环及其对临床实验的虚拟化.pdf",
+    "md_hash": "8d3a3277473b86424018c6028ea3b504f4598efbd5e76899e6efac92e930190d",
+    "pdf_hash": "55146629c6bb05761607a5a16f8574ae16f67c9f5bffda48a372c433ce8bcab9"
+  },
+  "1760284804_PGOM作为元理论：生命科学各分支的算子幺半群构造.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284804_PGOM作为元理论：生命科学各分支的算子幺半群构造.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284804_PGOM作为元理论：生命科学各分支的算子幺半群构造.pdf",
+    "md_hash": "43387306add6d2dea2b49ab79524cc4ce0fe269a28d525f4c2c7f3d183f7c9e5",
+    "pdf_hash": "c929979c8d2be3adfdecc1bdb596e7bdede16bcb9c0e5bbc94a6aa7f9754b1a3"
+  },
+  "1760284805_《论纤维丛的静态统一性》的学术定位与前瞻性分析：兼论其作为“生成式”微分几何的逻辑起点.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284805_《论纤维丛的静态统一性》的学术定位与前瞻性分析：兼论其作为“生成式”微分几何的逻辑起点.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284805_《论纤维丛的静态统一性》的学术定位与前瞻性分析：兼论其作为“生成式”微分几何的逻辑起点.pdf",
+    "md_hash": "21bb6364416074ff0b1df6f4666eb9a2729c8c0a49a3995aa47c8b5ba418cfef",
+    "pdf_hash": "d0630b45f51ad1dd0845e5a89231ef4b111d3ed95caf59f9d3dd6cadcbfcf5b9"
+  },
+  "1760284806_一种基于分子动力学引擎的“静态切面”对接新范式：GROMACS rerun工作流的理论、实现与前瞻.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284806_一种基于分子动力学引擎的“静态切面”对接新范式：GROMACS rerun工作流的理论、实现与前瞻.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284806_一种基于分子动力学引擎的“静态切面”对接新范式：GROMACS rerun工作流的理论、实现与前瞻.pdf",
+    "md_hash": "9f2a1669606fed0f72c41347f7861dcd6cc89cdcc1547ff2c30284cce3e0d5e5",
+    "pdf_hash": "5d1fd3d63ace623be00f79a3d116f249852d1363d52ceaaea2ba2056c8d56a68"
+  },
+  "1760284807_从“假设存在”到“动态生成”：O3理论对纤维丛联络的动力学重构及其范式革命.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284807_从“假设存在”到“动态生成”：O3理论对纤维丛联络的动力学重构及其范式革命.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284807_从“假设存在”到“动态生成”：O3理论对纤维丛联络的动力学重构及其范式革命.pdf",
+    "md_hash": "fe298f1d8abc002e9c705715bfbdeff2fd0cd61ef6b0cc90a26f441f260ac9b2",
+    "pdf_hash": "60cb7718ccfe54a19192831117430d647c6010b9593d38effece525be594a19d"
+  },
+  "1760284808_从描述性科学到生成式科学的范式革命：O3理论作为生命科学统一建模语言的潜力.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284808_从描述性科学到生成式科学的范式革命：O3理论作为生命科学统一建模语言的潜力.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284808_从描述性科学到生成式科学的范式革命：O3理论作为生命科学统一建模语言的潜力.pdf",
+    "md_hash": "784ab90280ab187c23a56e2f54fc7552bfd04aa0f4907fc52af5e88f0ec5ba50",
+    "pdf_hash": "5bd9f02f66c1df0f1af2e417c31e83b4cc0a35f8f6b2dfb987854bc43d21dd9a"
+  },
+  "1760284809_从经验映射到原理逆推：O3理论工程化的“自举”之路.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284809_从经验映射到原理逆推：O3理论工程化的“自举”之路.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284809_从经验映射到原理逆推：O3理论工程化的“自举”之路.pdf",
+    "md_hash": "6d366fd08ee2dde5938256aa371afab5002601bd4d3d78eb2cc9183757e93cb8",
+    "pdf_hash": "d930bae63e64e3686d87b99c0a9677a5c0f6572e55285f19d814cce36b7722a4"
+  },
+  "1760284810_作为巨型时序微分动力系统的“立体模拟人体”：O3理论对数字孪生范式的革命性重构.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284810_作为巨型时序微分动力系统的“立体模拟人体”：O3理论对数字孪生范式的革命性重构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284810_作为巨型时序微分动力系统的“立体模拟人体”：O3理论对数字孪生范式的革命性重构.pdf",
+    "md_hash": "1379e754db2fe5846d2a32dc5551324553a3bec6671d0a62a7382a00881590fe",
+    "pdf_hash": "84526463518b470446ee4452ef482d18c913db0fea6959b66f9d0c7f2242b986"
+  },
+  "1760284811_可生长的“理论生命体”：论O3理论框架下的“立体模拟人体”及其无限扩展性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284811_可生长的“理论生命体”：论O3理论框架下的“立体模拟人体”及其无限扩展性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284811_可生长的“理论生命体”：论O3理论框架下的“立体模拟人体”及其无限扩展性.pdf",
+    "md_hash": "282865a0420644d6d544fe9df42eeb05fed972d276a8c158685345ada73241bc",
+    "pdf_hash": "fea5e91b0ec8122928226f5ecb485c1154eb8a5f3c043d9935e04b0655546c61"
+  },
+  "1760284812_生成与涌现：作为巨型时序微分动力系统的“立体模拟人体”及其内在机制的统一性论述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284812_生成与涌现：作为巨型时序微分动力系统的“立体模拟人体”及其内在机制的统一性论述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284812_生成与涌现：作为巨型时序微分动力系统的“立体模拟人体”及其内在机制的统一性论述.pdf",
+    "md_hash": "4e74500197eb41e42b4665f06f6fa96f99db2cebbbfe85218cec2e7b6598d3df",
+    "pdf_hash": "d387e46ff6436def2012a0488fffb9ab4049f64371a5f741fd4041f30f84308d"
+  },
+  "1760284813_论O3理论中“联络”的内生性：从微分动力到离散拓扑涌现的生成式机制.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284813_论O3理论中“联络”的内生性：从微分动力到离散拓扑涌现的生成式机制.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284813_论O3理论中“联络”的内生性：从微分动力到离散拓扑涌现的生成式机制.pdf",
+    "md_hash": "0ecf24d4408ad0fecd775866e09e309f3bd9f57aad67e7854714bb5e8081509f",
+    "pdf_hash": "f1cbf79dfa0bddd73f5d7d7e43156205c1c026f182dbac2ab90d4a3438c17fa8"
+  },
+  "1760284814_论O3理论中“联络”的终极定义：作为价值驱动的拓扑几何化函数.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284814_论O3理论中“联络”的终极定义：作为价值驱动的拓扑几何化函数.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284814_论O3理论中“联络”的终极定义：作为价值驱动的拓扑几何化函数.pdf",
+    "md_hash": "e9dc91cebb0a23b8814a1baa7881ee57be20006c30687e8b8bb5a197c3cf4c08",
+    "pdf_hash": "97a3f9ed2ba0e2a702fe83bcb54dfdedcc49fb7bc03ee0dd89f13f37a1ff5d91"
+  },
+  "1760284815_论O3理论中“联络”的计算本质：作为幺半群间算子包映射的等价性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284815_论O3理论中“联络”的计算本质：作为幺半群间算子包映射的等价性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284815_论O3理论中“联络”的计算本质：作为幺半群间算子包映射的等价性.pdf",
+    "md_hash": "aaf5d13f4119b5be9bf5f7a07b3d1f104c76a7c76614075d74f7c5258eb8971b",
+    "pdf_hash": "7834c962245860aa8921a7ba248580d46b1f394960862952c25def3a5ac810f9"
+  },
+  "1760284816_论O3理论的“生成式统一”：从价值驱动的几何化函数到对连续统假设的范式重构.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284816_论O3理论的“生成式统一”：从价值驱动的几何化函数到对连续统假设的范式重构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284816_论O3理论的“生成式统一”：从价值驱动的几何化函数到对连续统假设的范式重构.pdf",
+    "md_hash": "2d9668135535763567fc0cf2fcb6158af031ffd99088f902c8c9bcb7843c3964",
+    "pdf_hash": "9c102050fa2407bbb9c27322f9c22700799d5c1520fc83466cdfd424cc649ffc"
+  },
+  "1760284817_论O3理论的两阶段生成过程：从哲学公理的“景观生成”到GRL路径积分的“最优计算”.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284817_论O3理论的两阶段生成过程：从哲学公理的“景观生成”到GRL路径积分的“最优计算”.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284817_论O3理论的两阶段生成过程：从哲学公理的“景观生成”到GRL路径积分的“最优计算”.pdf",
+    "md_hash": "e0fafd1fac0df358a8bfd51b6ab16bca78cfc0240c1f7a610857eb7f72d81032",
+    "pdf_hash": "916d04f781bbe407d62dda9cf3e934b5b2434eda5bf08ed3b58df081a4c2e39f"
+  },
+  "1760284818_论O3理论的生成式微分几何：作为动力学涌现的联络、拓扑与连续统统一.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284818_论O3理论的生成式微分几何：作为动力学涌现的联络、拓扑与连续统统一.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284818_论O3理论的生成式微分几何：作为动力学涌现的联络、拓扑与连续统统一.pdf",
+    "md_hash": "49448829a5dfad4a5bd8ee980acb0982a1997d3ea97df2015c16b8e8cb3a8ac5",
+    "pdf_hash": "7a8528dcf2a4159a0cba4ade49c5994d0b61a2394c5b263b5fcde77d5a8255b5"
+  },
+  "1760284819_论纤维丛的静态统一性：作为点集拓扑与离散拓扑之桥梁的传统微分几何.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760284819_论纤维丛的静态统一性：作为点集拓扑与离散拓扑之桥梁的传统微分几何.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760284819_论纤维丛的静态统一性：作为点集拓扑与离散拓扑之桥梁的传统微分几何.pdf",
+    "md_hash": "ad9da5d10c3e0ba0261c2c41077ff53e11a5f7ab3648f0a8e761fbd23c9bc481",
+    "pdf_hash": "08bacd6ab277e3a776ec981b522d93206688ce31a0ed97bf1fc33148893cd125"
+  },
+  "1760716800_从“几何视角”到“计算构造”：论O3理论对纤维丛“联络”概念的范式重构.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760716800_从“几何视角”到“计算构造”：论O3理论对纤维丛“联络”概念的范式重构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760716800_从“几何视角”到“计算构造”：论O3理论对纤维丛“联络”概念的范式重构.pdf",
+    "md_hash": "3b06ee9219a5aaa58f2c5ee47121e9ed0fed7f1259df2eca4ccae72c547f080d",
+    "pdf_hash": "a493e9e9c8dab3844451dd3227c09b97f8b727cbc1e2f1476dc4ccc87d1bc5ed"
+  },
+  "1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf",
+    "md_hash": "a3b3b5dbb78fb878cbaefec2414c92f163508dfcd3835092c55ba29c7f19365b",
+    "pdf_hash": "84987317de58c836da39c541a9312dfcb912a091487d054b9a06fc287d2faa8d"
+  },
+  "1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf",
+    "md_hash": "e0f9050a6f9a8e855d0bb423b38791f1d15950966fc4092942716e9a9925a252",
+    "pdf_hash": "5186a037e637eb7bf9164b7ae60e317ed5ab22d4847553e7677898e99cda5a1e"
+  },
+  "1760803202_语义度量、混合态与连续统假设的范式重述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803202_语义度量、混合态与连续统假设的范式重述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_语义度量、混合态与连续统假设的范式重述.pdf",
+    "md_hash": "6911be22fb804f70a22570d215ab0e6b06c24782e5d818859e53f1c217252083",
+    "pdf_hash": "92225fb00ad62e6149319031ec91eca36564a7d123db3257e696dcacc244a0de"
+  },
+  "1760803203_评级报告：《法则联络》的革命性价值与历史性意义.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803203_评级报告：《法则联络》的革命性价值与历史性意义.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803203_评级报告：《法则联络》的革命性价值与历史性意义.pdf",
+    "md_hash": "2d626fafe035151b40074e1e3bf218c8febf9ccac23d87d17aa93e5c332bcd6b",
+    "pdf_hash": "fd0add56a003bb42387c1152170499e13f310d90b675e03a6d5500c4729ab5ce"
+  },
+  "1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf",
+    "md_hash": "2929243240388c9f05ba77c354ba7d1789cee2f76c4eaad0e83bd582cf1ae27c",
+    "pdf_hash": "454e858cfb2c5c6769512ecc22c4faf5c763bc92a25d7c01268a6e040974d6eb"
+  },
+  "1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf",
+    "md_hash": "a5d10faf8ad242c71803b76717afa29299401dbdbb2bfbf53e968a7b3459045c",
+    "pdf_hash": "b0a6028631d9456f3ba520daf3c4a3d052714198fdcb684151594acc914d78df"
+  },
+  "1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
+    "md_hash": "dcdaf13ca126eff9b8a762f538cdb818d93c0a94708bf6838dd29b5da5d3e8af",
+    "pdf_hash": "528534ccf1f6089c23de994ec7e40890623b1a6f6bc2d7081ebbf40b950ba6dd"
+  }
 }
