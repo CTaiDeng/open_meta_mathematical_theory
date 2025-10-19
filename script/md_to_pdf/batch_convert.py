@@ -7,7 +7,6 @@ import re
 import subprocess
 import json
 import hashlib
-import uuid
 from pathlib import Path
 
 # 根路径与默认输入/输出（kernel_reference 专用）
@@ -149,36 +148,16 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "md_hash": current_md_hash,
                 "pdf_hash": current_pdf_hash,
             }
-            # 非转换情形不强制即时落盘；最终会统一保存
             print(f"\n--- SKIPPING (无变化): {pdf_filename} ---")
             continue
 
         print(f"\n--- 开始转换: {filename} ---")
-        temp_md_path = None
         try:
-            # 临时 MD：头部插入一行空行（不改原文件）
-            dir_name = os.path.dirname(md_file)
-            base_token = uuid.uuid4().hex[:8]
-            temp_md_path = os.path.join(dir_name, f"._tmp_convert_{base_token}_{os.path.basename(md_file)}")
-
-            with open(md_file, 'rb') as rf:
-                content = rf.read()
-            bom = b''
-            rest = content
-            if content.startswith(b"\xef\xbb\xbf"):
-                bom = content[:3]
-                rest = content[3:]
-            newline = b"\r\n" if b"\r\n" in rest else b"\n"
-            with open(temp_md_path, 'wb') as wf:
-                header = "License：CC BY-NC-ND 4.0".encode('utf-8')
-                wf.write(bom + header + newline + rest)
-
-            # 转前记录输出目录现有 PDF 列表
             before_pdfs = {f for f in os.listdir(output_dir) if f.lower().endswith('.pdf')}
 
-            # 调用 Node 执行转换（针对临时 MD）
+            # 直接使用原始 MD（不插入任何额外首行）
             result = subprocess.run(
-                ['node', node_script_path, temp_md_path, output_dir],
+                ['node', node_script_path, md_file, output_dir],
                 check=True,
                 capture_output=True,
                 encoding='utf-8'
@@ -201,10 +180,7 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                         pass
                 elif len(new_candidates) > 1:
                     try:
-                        src = max(
-                            (os.path.join(output_dir, n) for n in new_candidates),
-                            key=lambda p: os.path.getmtime(p)
-                        )
+                        src = max((os.path.join(output_dir, n) for n in new_candidates), key=lambda p: os.path.getmtime(p))
                         if os.path.exists(expected_pdf_path):
                             os.remove(expected_pdf_path)
                         os.replace(src, expected_pdf_path)
@@ -244,7 +220,7 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "pdf_hash": _sha256_of_file(expected_pdf_path) if os.path.exists(expected_pdf_path) else None,
             }
             _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
-            break
+            return
         except Exception as e:
             print(f"转换异常({filename}): {e}")
             hash_map[pdf_filename] = {
@@ -254,12 +230,6 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "pdf_hash": _sha256_of_file(expected_pdf_path) if os.path.exists(expected_pdf_path) else None,
             }
             _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
-        finally:
-            if temp_md_path and os.path.exists(temp_md_path):
-                try:
-                    os.remove(temp_md_path)
-                except Exception:
-                    pass
 
     # 统一保存（兜底）
     sanitized_map = _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY)
@@ -269,3 +239,4 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
 
 if __name__ == '__main__':
     batch_convert_md_to_pdf(INPUT_DIRECTORY, OUTPUT_DIRECTORY)
+
