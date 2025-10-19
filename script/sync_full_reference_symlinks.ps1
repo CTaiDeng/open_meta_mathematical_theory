@@ -10,6 +10,8 @@ param(
   [string]$Config = 'src/full_reference/Link.json',
   # 符号链接的目标根目录（仓库内）。
   [string]$DestRoot = 'src/full_reference',
+  # 生成链接名 -> 源文件绝对路径的映射 JSON（写入到仓库内）。
+  [string]$ExportMapPath = 'src/full_reference/symlink_target_map.json',
   # 是否递归扫描源目录。
   [switch]$Recurse = $true,
   # 重复文件（同名）选择策略：first（按源目录顺序优先）、latest（按源文件修改时间最新）。
@@ -63,6 +65,32 @@ function Is-ValidKernelName([string]$name){
 function Ensure-DestRoot([string]$path){ if (-not (Test-Path -LiteralPath $path)) { New-Item -ItemType Directory -Path $path | Out-Null } }
 
 function Norm([string]$p){ try { return [IO.Path]::GetFullPath($p) } catch { return $p } }
+
+function Build-LinkTargetMap([string]$destAbs){
+  $map = [ordered]@{}
+  $items = Get-ChildItem -LiteralPath $destAbs -File -ErrorAction SilentlyContinue
+  foreach($e in $items){
+    try {
+      $itm = Get-Item -LiteralPath $e.FullName -Force -ErrorAction Stop
+      if (-not ($itm.Attributes -band [IO.FileAttributes]::ReparsePoint)) { continue }
+      $t = $itm.Target
+      if ([string]::IsNullOrWhiteSpace($t)) { continue }
+      if (-not [IO.Path]::IsPathRooted($t)){
+        $base = Split-Path -Parent $e.FullName
+        $t = Join-Path $base $t
+      }
+      $map[$e.Name] = Norm $t
+    } catch { }
+  }
+  return $map
+}
+
+function Save-LinkTargetMap($map,[string]$path){
+  $json = ($map | ConvertTo-Json -Depth 5)
+  $parent = Split-Path -Path $path -Parent
+  if (-not (Test-Path -LiteralPath $parent -PathType Container)) { New-Item -ItemType Directory -Path $parent | Out-Null }
+  $json | Set-Content -LiteralPath $path -Encoding UTF8
+}
 
 $sources = Load-SourcesFromConfig (Resolve-RepoPath $Config)
 if (-not $sources -or $sources.Count -eq 0) {
@@ -153,6 +181,16 @@ foreach($name in $desired.Keys){
 
 Write-Host ("Summary => created={0} updated={1} removed={2} skipped={3} duplicates_seen={4} out_dir={5}" -f $created,$updated,$removed,$skipped,$dups,$destAbs)
 
+# 生成链接名 -> 源文件绝对路径的映射 JSON
+try {
+  $exportAbs = Resolve-RepoPath $ExportMapPath
+  $linkMap = Build-LinkTargetMap -destAbs $destAbs
+  Save-LinkTargetMap -map $linkMap -path $exportAbs
+  Write-Host ("Wrote link target map: {0} (count={1})" -f $exportAbs, ($linkMap.Keys.Count)) -ForegroundColor Green
+} catch {
+  Write-Warning ("导出链接映射失败：{0}" -f $_.Exception.Message)
+}
+
 # 用法：
 # 干跑预览（不写入）：
 #   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -WhatIf
@@ -160,5 +198,7 @@ Write-Host ("Summary => created={0} updated={1} removed={2} skipped={3} duplicat
 #   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1
 # 指定配置/输出目录：
 #   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -Config 'src/full_reference/Link.json' -DestRoot 'src/full_reference'
+# 导出链接映射（JSON 路径可改）：
+#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -ExportMapPath 'src/full_reference/symlink_target_map.json'
 # 重复文件策略（选最新修改时间）：
 #   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -DuplicatePolicy latest

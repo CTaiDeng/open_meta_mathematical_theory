@@ -5,8 +5,9 @@ Copyright (C) 2025 GaoZheng
 用途：
 - 基于 `src/full_reference/common_name_hash_diff.csv` 的文件名列表，将
   `src/kernel_reference/<name>` 的文件复制到 `src/full_reference/<name>` 的“源文件绝对路径”。
-- 若 `src/full_reference/<name>` 为符号链接，则解析其 `Target` 并复制到该绝对路径；
-  若不是符号链接但存在，则直接覆盖该文件；若不存在则跳过并告警。
+- 解析目标优先级：
+  1) 读取 `src/full_reference/symlink_target_map.json` 中 `<name> -> 绝对路径` 并使用；
+  2) 若映射缺失，回退：解析 `src/full_reference/<name>`（若为符号链接，取其 `Target`；若为普通文件，直接覆盖；缺失则跳过）。
 
 使用：
 - 干跑预览：
@@ -15,6 +16,8 @@ Copyright (C) 2025 GaoZheng
   pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1
 - 指定 CSV 路径：
   pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1 -CsvPath 'src/full_reference/common_name_hash_diff.csv'
+ - 指定链接映射 JSON：
+   pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1 -MapPath 'src/full_reference/symlink_target_map.json'
 
 CSV 格式（由 `sync_common_name_hash.ps1 -Mode diff` 生成）：
   name,kernel_reference,full_reference
@@ -22,7 +25,8 @@ CSV 格式（由 `sync_common_name_hash.ps1 -Mode diff` 生成）：
 #>
 [CmdletBinding(SupportsShouldProcess = $true)]
 param(
-  [string]$CsvPath = 'src/full_reference/common_name_hash_diff.csv'
+  [string]$CsvPath = 'src/full_reference/common_name_hash_diff.csv',
+  [string]$MapPath = 'src/full_reference/symlink_target_map.json'
 )
 
 Set-StrictMode -Version Latest
@@ -35,6 +39,19 @@ function Repo-Root {
 
 function Resolve-Abs([string]$p){
   try{ return (Resolve-Path -LiteralPath $p -ErrorAction Stop).Path } catch { return $p }
+}
+
+function Load-LinkMap([string]$path){
+  if(-not (Test-Path -LiteralPath $path -PathType Leaf)){ return $null }
+  try{
+    $raw = Get-Content -LiteralPath $path -Raw -Encoding UTF8
+    if([string]::IsNullOrWhiteSpace($raw)){ return $null }
+    $obj = $raw | ConvertFrom-Json -ErrorAction Stop
+    # 转换为 hashtable（name -> absolutePath）
+    $dict = @{}
+    foreach($p in $obj.PSObject.Properties){ $dict[$p.Name] = [string]$p.Value }
+    return $dict
+  } catch { return $null }
 }
 
 function Get-FullTarget([string]$fullLinkPath){
@@ -64,14 +81,26 @@ function Ensure-ParentDir([string]$path){
   }
 }
 
-function Copy-One([string]$name,[string]$krDir,[string]$frDir){
+function Copy-One([string]$name,[string]$krDir,[string]$frDir,[hashtable]$linkMap){
   $src = Join-Path $krDir $name
   $frLink = Join-Path $frDir $name
   if(-not (Test-Path -LiteralPath $src -PathType Leaf)){
     Write-Warning ("kernel_reference 源文件不存在：{0}" -f $src)
     return $false
   }
-  $target = Get-FullTarget -fullLinkPath $frLink
+  # 优先使用链接映射 JSON
+  $target = $null
+  if($linkMap -and $linkMap.ContainsKey($name)){
+    $t = [string]$linkMap[$name]
+    if(-not [string]::IsNullOrWhiteSpace($t)){
+      if([IO.Path]::IsPathRooted($t)) { $target = Resolve-Abs $t }
+      else { $target = Resolve-Abs (Join-Path (Split-Path -Parent $frLink) $t) }
+    }
+  }
+  if([string]::IsNullOrWhiteSpace($target)){
+    # 回退：读取 full_reference/<name>
+    $target = Get-FullTarget -fullLinkPath $frLink
+  }
   if([string]::IsNullOrWhiteSpace($target)){
     Write-Warning ("full_reference 目标缺失或不可解析：{0}" -f $frLink)
     return $false
@@ -88,6 +117,7 @@ $root = Repo-Root
 $krDir = Join-Path $root 'src\kernel_reference'
 $frDir = Join-Path $root 'src\full_reference'
 $csvAbs = Resolve-Abs $CsvPath
+$mapAbs = Resolve-Abs $MapPath
 
 if(-not (Test-Path -LiteralPath $csvAbs -PathType Leaf)){
   throw "CSV 不存在：$csvAbs"
@@ -96,12 +126,15 @@ if(-not (Test-Path -LiteralPath $csvAbs -PathType Leaf)){
 $rows = Import-Csv -LiteralPath $csvAbs -Encoding UTF8
 if($null -eq $rows){ $rows = @() }
 
+# 加载可选映射 JSON（若不存在则为 $null）
+$linkMap = Load-LinkMap -path $mapAbs
+
 $total=0; $ok=0; $skip=0
 foreach($row in $rows){
   $name = [string]$row.name
   if([string]::IsNullOrWhiteSpace($name)){ continue }
   $total++
-  $res = Copy-One -name $name -krDir $krDir -frDir $frDir
+  $res = Copy-One -name $name -krDir $krDir -frDir $frDir -linkMap $linkMap
   if($res){ $ok++ } else { $skip++ }
 }
 

@@ -59,7 +59,7 @@ function Get-RepoNameFromUrl([string]$url){
   return $name
 }
 
-function Invoke-SparseClone([string]$url, [string]$sourceSubdir, [string]$outDir){
+function Invoke-SparseClone([string]$url, [string]$sourceSubdir, [string]$outDir, [switch]$TopFilesOnly, [string]$FileGlob='*.md'){
   $repoName = Get-RepoNameFromUrl $url
   $cloneDir = Join-Path -Path $outDir -ChildPath $repoName
   Ensure-Dir $outDir
@@ -74,14 +74,37 @@ function Invoke-SparseClone([string]$url, [string]$sourceSubdir, [string]$outDir
   }
   Pause-IfStep "已准备克隆目录：$cloneDir"
 
-  Write-Verbose "初始化 sparse-checkout（cone 模式）"
-  if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout init --cone")){
-    git -C "$cloneDir" sparse-checkout init --cone | Write-Verbose
-  }
   $src = Normalize-Rel $sourceSubdir
-  Write-Verbose "设置稀疏路径：$src"
-  if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout set $src")){
-    git -C "$cloneDir" sparse-checkout set -- "$src" | Write-Verbose
+  $srcSlash = ($src -replace '\\','/')
+
+  if($TopFilesOnly){
+    Write-Verbose "初始化 sparse-checkout（no-cone，顶层文件模式）"
+    if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout init --no-cone")){
+      git -C "$cloneDir" sparse-checkout init --no-cone | Write-Verbose
+    }
+    $pattern = "/$srcSlash/$FileGlob"
+    Write-Verbose "设置稀疏模式（no-cone set）：$pattern"
+    if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout set --no-cone $pattern")){
+      git -C "$cloneDir" sparse-checkout set --no-cone -- "$pattern" | Write-Verbose
+    }
+    if($LASTEXITCODE -ne 0){
+      Write-Verbose "no-cone 模式失败（exit $LASTEXITCODE），回退至 cone 模式目录级稀疏。"
+      if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout init --cone [fallback]")){
+        git -C "$cloneDir" sparse-checkout init --cone | Write-Verbose
+      }
+      if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout set $src [fallback]")){
+        git -C "$cloneDir" sparse-checkout set -- "$src" | Write-Verbose
+      }
+    }
+  } else {
+    Write-Verbose "初始化 sparse-checkout（cone 模式）"
+    if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout init --cone")){
+      git -C "$cloneDir" sparse-checkout init --cone | Write-Verbose
+    }
+    Write-Verbose "设置稀疏路径：$src"
+    if($PSCmdlet.ShouldProcess($cloneDir, "git sparse-checkout set $src")){
+      git -C "$cloneDir" sparse-checkout set -- "$src" | Write-Verbose
+    }
   }
   if($PSCmdlet.ShouldProcess($cloneDir, "git checkout")){
     git -C "$cloneDir" checkout | Write-Verbose
@@ -185,7 +208,7 @@ function UpdateReadmeSections([string]$readmePath, [hashtable]$sections){
       '',
       '- 本目录用于汇聚部分外部子仓库中的文档子目录（通过稀疏克隆复制到本仓库）。',
       '- 克隆映射配置见：`src/sub_projects_docs/sub_projects_clone_map.json`。',
-      '- 更新步骤：运行 `pwsh -NoLogo -File script/clone_docs_from_sub_projects/clone_docs_from_sub_projects.ps1 -Verbose`。',
+      '- 更新步骤：运行 `pwsh -NoLogo -File script/clone_docs_from_sub_projects.ps1 -Verbose`。',
       '- 临时克隆目录：`out`（如无特殊需要，可保留以便增量更新）。',
       '-',
       '- 索引规则：非递归扫描各子目录下的 `*.md` 文件；为每个文件尝试抽取其“`## 摘要`”段落的前 `N` 个字符（默认 `300`）。',
@@ -254,7 +277,8 @@ foreach($repo in $repos){
     throw "配置项不完整：$($repo | ConvertTo-Json -Compress)"
   }
   if(-not $SkipClone){
-    $res = Invoke-SparseClone -url $url -sourceSubdir $srcSub -outDir $OutDir
+    # 仅需顶层 Markdown 文件，启用 TopFilesOnly 以减少检出规模、提升速度
+    $res = Invoke-SparseClone -url $url -sourceSubdir $srcSub -outDir $OutDir -TopFilesOnly
     $sourcePath = [string]$res.SourcePath
   } else {
     $repoName = Get-RepoNameFromUrl $url
