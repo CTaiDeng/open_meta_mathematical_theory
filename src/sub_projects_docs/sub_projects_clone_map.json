@@ -1,0 +1,15 @@
+{
+  "repos": [
+    {
+      "url": "https://github.com/CTaiDeng/gromacs-2024.1_developer.git",
+      "source_subdir": "my_docs/project_docs",
+      "dest_dir": "src/sub_projects_docs/lbopb"
+    },
+    {
+      "url": "https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2.git",
+      "source_subdir": "docs",
+      "dest_dir": "src/sub_projects_docs/haca"
+    }
+  ]
+}
+
