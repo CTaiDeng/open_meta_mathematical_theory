@@ -473,12 +473,6 @@
     "md_hash": "a5d10faf8ad242c71803b76717afa29299401dbdbb2bfbf53e968a7b3459045c",
     "pdf_hash": "b0a6028631d9456f3ba520daf3c4a3d052714198fdcb684151594acc914d78df"
   },
-  "1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
-    "md_hash": "dcdaf13ca126eff9b8a762f538cdb818d93c0a94708bf6838dd29b5da5d3e8af",
-    "pdf_hash": "528534ccf1f6089c23de994ec7e40890623b1a6f6bc2d7081ebbf40b950ba6dd"
-  },
   "src\\sub_projects_docs_pdf\\haca_pdf\\1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.pdf": {
     "md_path": "src\\sub_projects_docs\\haca\\1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1758297601_将阅读理解形式化为“认知资本”的交易与增值过程：基于传统数学的严格论证.pdf",
@@ -953,12 +947,6 @@
     "md_hash": "a5d10faf8ad242c71803b76717afa29299401dbdbb2bfbf53e968a7b3459045c",
     "pdf_hash": "429bdeead9e95a3d4accdc9b9b9bb298219dedb5fcc280f204faa9aedffd3fb1"
   },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
-    "md_hash": "dcdaf13ca126eff9b8a762f538cdb818d93c0a94708bf6838dd29b5da5d3e8af",
-    "pdf_hash": "28df7bfcc53bfa20be7441e2c50ebcb55f60997a9c11e77918ca48de7592de9b"
-  },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\LICENSE.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\LICENSE.pdf",
@@ -968,13 +956,25 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "1b7314ae262c5af542e415f93a3d1c5f75598a075fe07c3d826892fa1f6317e9",
-    "pdf_hash": "7319832ca4fbd2e89816822ea122df8e0f7a19dcfd944d67f595739ff6e08dee"
+    "md_hash": "91540834c92afaa14c570c542ac27650f12732ff390195cdd65090900bf6e3c3",
+    "pdf_hash": "8e413dcb223228c4d0a42812d36885d43eb3c9a9d060987acfe0870857288354"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\LICENSE.pdf",
     "md_hash": "9ad1f12dbc421934b6821035772d7ccbbd59d83acc83d07a259abca48db82b8e",
     "pdf_hash": "8479c15f5aa0d95c1af05b4fbffde16fc96f14dd321ea211a924459d42086ce4"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
+    "md_hash": "ddb2a03491b536a08bc8579155ea62daf12fb360046991d67a86e12629b1d061",
+    "pdf_hash": "21aac064a0dfd77693d5ae21b0c4c0e75ac93331c72a8b81d92c8a4ac539d31e"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf",
+    "md_hash": "2fe84a61a414138c9e7fdf5ab0c4d5d56dd7ca1b376afebf7b4e98c77069445e",
+    "pdf_hash": "9e710f794a3cd24bf2b8dcbc264d1a13175407cac9acefbda83ff0f52fc2fd28"
   }
 }

@@ -82,6 +82,45 @@ def _sanitize_paths_in_hash_map(data: dict, root_dir: str):
     return sanitized
 
 
+def _to_abs_under_root(path_str: str):
+    if not path_str or not isinstance(path_str, str):
+        return None
+    return path_str if os.path.isabs(path_str) else os.path.join(ROOT_DIRECTORY, path_str)
+
+
+def _cleanup_stale_md_entries_and_pdfs(hash_map: dict, hash_map_path: str):
+    if not isinstance(hash_map, dict) or not hash_map:
+        return hash_map
+
+    to_delete_keys = []
+    for k, v in list(hash_map.items()):
+        if not isinstance(v, dict):
+            continue
+        md_rel = v.get('md_path')
+        md_abs = _to_abs_under_root(md_rel)
+        if not md_abs or not os.path.exists(md_abs):
+            # MD 不存在：删除对应 PDF 并移除映射项
+            pdf_path_rel = v.get('pdf_path')
+            pdf_abs = _to_abs_under_root(pdf_path_rel)
+            # 回落策略：按 map 的 key（相对 pdf 路径）定位
+            if not pdf_abs and isinstance(k, str):
+                pdf_abs = _to_abs_under_root(k)
+            try:
+                if pdf_abs and os.path.exists(pdf_abs):
+                    os.remove(pdf_abs)
+                    print(f"[CLEANUP] 删除失效 PDF: {pdf_abs}")
+            except Exception as e:
+                print(f"[CLEANUP][WARN] 删除 PDF 失败({pdf_abs}): {e}")
+            to_delete_keys.append(k)
+
+    for k in to_delete_keys:
+        hash_map.pop(k, None)
+        print(f"[CLEANUP] 已移除映射: {k}")
+
+    _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
+    return hash_map
+
+
 def _process_one_subproject(sub_dir_name: str, output_sub_dir_name: str, hash_map: dict):
     input_dir = os.path.join(SUB_DOCS_ROOT, sub_dir_name)
     output_dir = os.path.join(SUB_DOCS_PDF_ROOT, output_sub_dir_name)
@@ -367,6 +406,8 @@ def _process_specific_files(md_files: list, output_dir: str, hash_map: dict):
 def main():
     os.makedirs(SUB_DOCS_PDF_ROOT, exist_ok=True)
     hash_map = _load_hash_map(HASH_MAP_PATH)
+    # 在处理前清理“源 md 已删除”的 pdf 与映射项（全局映射）
+    hash_map = _cleanup_stale_md_entries_and_pdfs(hash_map, HASH_MAP_PATH)
 
     for sub, out_sub in SUBPROJECTS.items():
         _process_one_subproject(sub, out_sub, hash_map)

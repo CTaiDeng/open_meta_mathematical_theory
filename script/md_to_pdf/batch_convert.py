@@ -72,6 +72,46 @@ def _sanitize_paths_in_hash_map(data, root_dir):
     return sanitized
 
 
+def _to_abs_under_root(path_str: str):
+    if not path_str or not isinstance(path_str, str):
+        return None
+    return path_str if os.path.isabs(path_str) else os.path.join(ROOT_DIRECTORY, path_str)
+
+
+def _cleanup_stale_md_entries_and_pdfs(hash_map: dict, hash_map_path: str, output_dir: str):
+    if not isinstance(hash_map, dict) or not hash_map:
+        return hash_map
+
+    to_delete_keys = []
+    for k, v in list(hash_map.items()):
+        if not isinstance(v, dict):
+            continue
+        md_rel = v.get('md_path')
+        md_abs = _to_abs_under_root(md_rel)
+        if not md_abs or not os.path.exists(md_abs):
+            # MD 不存在：删除对应 PDF 并移除映射项
+            pdf_path_rel = v.get('pdf_path')
+            pdf_abs = _to_abs_under_root(pdf_path_rel)
+            # 回落策略：按 key 推断 pdf 文件名（kernel 批量使用文件名做 key）
+            if not pdf_abs:
+                pdf_abs = os.path.join(output_dir, k)
+            try:
+                if pdf_abs and os.path.exists(pdf_abs):
+                    os.remove(pdf_abs)
+                    print(f"[CLEANUP] 删除失效 PDF: {pdf_abs}")
+            except Exception as e:
+                print(f"[CLEANUP][WARN] 删除 PDF 失败({pdf_abs}): {e}")
+            to_delete_keys.append(k)
+
+    for k in to_delete_keys:
+        hash_map.pop(k, None)
+        print(f"[CLEANUP] 已移除映射: {k}")
+
+    # 持久化清理后的映射（相对路径标准化）
+    _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
+    return hash_map
+
+
 def batch_convert_md_to_pdf(input_dir, output_dir):
     # 校验与准备目录
     if not os.path.isdir(input_dir):
@@ -101,6 +141,8 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
     # 哈希映射
     hash_map_path = os.path.join(output_dir, '_hash_map.json')
     hash_map = _load_hash_map(hash_map_path)
+    # 在处理前清理“源 md 已删除”的 pdf 与映射项
+    hash_map = _cleanup_stale_md_entries_and_pdfs(hash_map, hash_map_path, output_dir)
 
     for md_file in markdown_files:
         filename = os.path.basename(md_file)
@@ -239,4 +281,3 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
 
 if __name__ == '__main__':
     batch_convert_md_to_pdf(INPUT_DIRECTORY, OUTPUT_DIRECTORY)
-
