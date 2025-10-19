@@ -10,13 +10,23 @@ import hashlib
 import uuid
 from pathlib import Path
 
-# 根路径与默认输入/输出（kernel_reference 专用）
+
+# 仓库根目录
 ROOT_DIRECTORY = str(Path(__file__).resolve().parents[2])
-INPUT_DIRECTORY = os.path.join(ROOT_DIRECTORY, 'src', 'kernel_reference')
-OUTPUT_DIRECTORY = os.path.join(ROOT_DIRECTORY, 'src', 'kernel_reference_pdf')
+
+# 源与目标映射（子项目 -> 输出子目录）
+SUBPROJECTS = {
+    'haca': 'haca_pdf',
+    'lbopb': 'lbopb_pdf',
+}
+
+# 路径常量
+SUB_DOCS_ROOT = os.path.join(ROOT_DIRECTORY, 'src', 'sub_projects_docs')
+SUB_DOCS_PDF_ROOT = os.path.join(ROOT_DIRECTORY, 'src', 'sub_projects_docs_pdf')
+HASH_MAP_PATH = os.path.join(SUB_DOCS_PDF_ROOT, '_hash_map.json')
 
 
-def _sha256_of_file(path):
+def _sha256_of_file(path: str):
     if not os.path.exists(path) or not os.path.isfile(path):
         return None
     h = hashlib.sha256()
@@ -26,7 +36,7 @@ def _sha256_of_file(path):
     return h.hexdigest()
 
 
-def _load_hash_map(json_path):
+def _load_hash_map(json_path: str):
     if not os.path.exists(json_path):
         return {}
     try:
@@ -37,20 +47,20 @@ def _load_hash_map(json_path):
         return {}
 
 
-def _save_hash_map(json_path, data):
+def _save_hash_map(json_path: str, data: dict):
     os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def _to_rel_under_root(path):
+def _to_rel_under_root(path: str):
     try:
         return os.path.relpath(path, ROOT_DIRECTORY)
     except Exception:
         return path
 
 
-def _sanitize_paths_in_hash_map(data, root_dir):
+def _sanitize_paths_in_hash_map(data: dict, root_dir: str):
     if not isinstance(data, dict):
         return data
     sanitized = {}
@@ -73,49 +83,57 @@ def _sanitize_paths_in_hash_map(data, root_dir):
     return sanitized
 
 
-def batch_convert_md_to_pdf(input_dir, output_dir):
-    # 校验与准备目录
+def _process_one_subproject(sub_dir_name: str, output_sub_dir_name: str, hash_map: dict):
+    input_dir = os.path.join(SUB_DOCS_ROOT, sub_dir_name)
+    output_dir = os.path.join(SUB_DOCS_PDF_ROOT, output_sub_dir_name)
+
     if not os.path.isdir(input_dir):
-        print(f"警告: 输入目录 '{input_dir}' 不存在或无效。")
+        print(f"[WARN] 输入目录不存在或无效: {input_dir}")
         return
 
     os.makedirs(output_dir, exist_ok=True)
 
-    # 递归收集 .md 文件
-    markdown_files = glob.glob(os.path.join(input_dir, '**', '*.md'), recursive=True)
+    # 递归查找 .md 文件
+    search_pattern = os.path.join(input_dir, '**', '*.md')
+    markdown_files = glob.glob(search_pattern, recursive=True)
     if not markdown_files:
-        print(f"目录 '{input_dir}' 下未找到任何 Markdown 文件。")
+        print(f"[INFO] 未找到 Markdown 文件: {input_dir}")
         return
 
-    print(f"找到 {len(markdown_files)} 个 Markdown 文件，开始处理...")
-
-    # Node 脚本路径
+    # Node.js 转换脚本路径
     script_dir = os.path.dirname(os.path.abspath(__file__))
     node_script_path = os.path.join(script_dir, 'convert.js')
     if not os.path.exists(node_script_path):
-        print("错误: 未找到 'convert.js'，请确认脚本在同一目录。")
+        print("[ERROR] convert.js 未找到，请确认脚本位置。")
         return
 
-    # 跳过模式（与原脚本一致）
+    # 跳过模式（保持与 kernel 脚本一致）
     skip_pattern = re.compile(r'^\d+_\.md$')
 
-    # 哈希映射
-    hash_map_path = os.path.join(output_dir, '_hash_map.json')
-    hash_map = _load_hash_map(hash_map_path)
+    # 额外排除列表（按需扩展）
+    excluded_basenames = {
+        'README.md',
+        'INDEX.md',
+    }
 
     for md_file in markdown_files:
         filename = os.path.basename(md_file)
-        if skip_pattern.match(filename):
-            print(f"\n--- SKIPPING (模式匹配): {filename} ---")
+
+        # 排除 README 与特定模式
+        if filename in excluded_basenames or skip_pattern.match(filename):
+            print(f"\n--- SKIPPING: {filename} ---")
             continue
 
+        # 目标 PDF 路径（放置在子项目专属输出目录）
         pdf_filename = os.path.splitext(filename)[0] + '.pdf'
         expected_pdf_path = os.path.join(output_dir, pdf_filename)
 
+        # 计算当前哈希
         pdf_exists = os.path.exists(expected_pdf_path)
         current_pdf_hash = _sha256_of_file(expected_pdf_path) if pdf_exists else None
         current_md_hash = _sha256_of_file(md_file)
 
+        # 读取历史记录
         entry = hash_map.get(pdf_filename) if isinstance(hash_map, dict) else None
         stored_pdf_hash = entry.get('pdf_hash') if isinstance(entry, dict) else None
         stored_md_hash = entry.get('md_hash') if isinstance(entry, dict) else None
@@ -149,18 +167,20 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "md_hash": current_md_hash,
                 "pdf_hash": current_pdf_hash,
             }
-            # 非转换情形不强制即时落盘；最终会统一保存
+            # 立即持久化（补全/修复变更）
+            _save_hash_map(HASH_MAP_PATH, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
             print(f"\n--- SKIPPING (无变化): {pdf_filename} ---")
             continue
 
         print(f"\n--- 开始转换: {filename} ---")
         temp_md_path = None
         try:
-            # 临时 MD：头部插入一行空行（不改原文件）
+            # 在同目录创建带一个头部换行的临时 md 文件，仅供本次转换使用
             dir_name = os.path.dirname(md_file)
             base_token = uuid.uuid4().hex[:8]
             temp_md_path = os.path.join(dir_name, f"._tmp_convert_{base_token}_{os.path.basename(md_file)}")
 
+            # 以二进制读写，保留原编码/BOM，并尽量匹配原换行风格
             with open(md_file, 'rb') as rf:
                 content = rf.read()
             bom = b''
@@ -173,10 +193,7 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 header = "License：CC BY-NC-ND 4.0".encode('utf-8')
                 wf.write(bom + header + newline + rest)
 
-            # 转前记录输出目录现有 PDF 列表
-            before_pdfs = {f for f in os.listdir(output_dir) if f.lower().endswith('.pdf')}
-
-            # 调用 Node 执行转换（针对临时 MD）
+            # 使用临时 md 进行转换
             result = subprocess.run(
                 ['node', node_script_path, temp_md_path, output_dir],
                 check=True,
@@ -187,29 +204,18 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
             if result.stderr:
                 print("错误信息:", result.stderr.strip())
 
-            # 若输出名与预期不一致，尝试根据新增文件重命名到预期名
-            if not os.path.exists(expected_pdf_path):
-                after_pdfs = {f for f in os.listdir(output_dir) if f.lower().endswith('.pdf')}
-                new_candidates = list(after_pdfs - before_pdfs)
-                if len(new_candidates) == 1:
-                    src = os.path.join(output_dir, new_candidates[0])
-                    try:
-                        if os.path.exists(expected_pdf_path):
-                            os.remove(expected_pdf_path)
-                        os.replace(src, expected_pdf_path)
-                    except Exception:
-                        pass
-                elif len(new_candidates) > 1:
-                    try:
-                        src = max(
-                            (os.path.join(output_dir, n) for n in new_candidates),
-                            key=lambda p: os.path.getmtime(p)
-                        )
-                        if os.path.exists(expected_pdf_path):
-                            os.remove(expected_pdf_path)
-                        os.replace(src, expected_pdf_path)
-                    except Exception:
-                        pass
+            # 若 convert.js 以临时名输出，则重命名为期望文件名
+            generated_pdf_from_temp = os.path.join(
+                output_dir,
+                os.path.splitext(os.path.basename(temp_md_path))[0] + '.pdf'
+            )
+            if os.path.exists(generated_pdf_from_temp) and generated_pdf_from_temp != expected_pdf_path:
+                try:
+                    if os.path.exists(expected_pdf_path):
+                        os.remove(expected_pdf_path)
+                    os.replace(generated_pdf_from_temp, expected_pdf_path)
+                except Exception as _:
+                    pass
 
             new_pdf_hash = _sha256_of_file(expected_pdf_path)
             print(f"  -> 新 pdf_hash: {new_pdf_hash if new_pdf_hash else 'None'}")
@@ -219,8 +225,8 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "md_hash": current_md_hash,
                 "pdf_hash": new_pdf_hash,
             }
-            # 转换完成立即落盘，补全/修复变更
-            _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
+            # 立即持久化（补全/修复变更）
+            _save_hash_map(HASH_MAP_PATH, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
 
         except subprocess.CalledProcessError as e:
             print(f"转换失败: {filename}")
@@ -228,24 +234,19 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
             print(e.stdout.strip())
             print(e.stderr.strip())
             print("-------------------")
+            # 即便失败，也补全当前 MD 条目（PDF 仍以现状记录）
             hash_map[pdf_filename] = {
                 "md_path": _to_rel_under_root(md_file),
                 "pdf_path": _to_rel_under_root(expected_pdf_path),
                 "md_hash": current_md_hash,
                 "pdf_hash": _sha256_of_file(expected_pdf_path) if os.path.exists(expected_pdf_path) else None,
             }
-            _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
+            _save_hash_map(HASH_MAP_PATH, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
         except FileNotFoundError:
             print("错误: 未找到 'node' 命令，请安装 Node.js 并加入 PATH。")
-            hash_map[pdf_filename] = {
-                "md_path": _to_rel_under_root(md_file),
-                "pdf_path": _to_rel_under_root(expected_pdf_path),
-                "md_hash": current_md_hash,
-                "pdf_hash": _sha256_of_file(expected_pdf_path) if os.path.exists(expected_pdf_path) else None,
-            }
-            _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
             break
         except Exception as e:
+            # 兜底异常处理，同样补全映射
             print(f"转换异常({filename}): {e}")
             hash_map[pdf_filename] = {
                 "md_path": _to_rel_under_root(md_file),
@@ -253,7 +254,7 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 "md_hash": current_md_hash,
                 "pdf_hash": _sha256_of_file(expected_pdf_path) if os.path.exists(expected_pdf_path) else None,
             }
-            _save_hash_map(hash_map_path, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
+            _save_hash_map(HASH_MAP_PATH, _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY))
         finally:
             if temp_md_path and os.path.exists(temp_md_path):
                 try:
@@ -261,11 +262,23 @@ def batch_convert_md_to_pdf(input_dir, output_dir):
                 except Exception:
                     pass
 
-    # 统一保存（兜底）
+
+def main():
+    # 确保输出根目录存在
+    os.makedirs(SUB_DOCS_PDF_ROOT, exist_ok=True)
+
+    # 读取/初始化哈希映射
+    hash_map = _load_hash_map(HASH_MAP_PATH)
+
+    # 依次处理各子项目
+    for sub, out_sub in SUBPROJECTS.items():
+        _process_one_subproject(sub, out_sub, hash_map)
+
+    # 统一保存映射，路径归一为相对仓库根
     sanitized_map = _sanitize_paths_in_hash_map(hash_map, ROOT_DIRECTORY)
-    _save_hash_map(hash_map_path, sanitized_map)
-    print("\n所有文件处理完成。")
+    _save_hash_map(HASH_MAP_PATH, sanitized_map)
+    print("\n所有子项目处理完成，映射已更新：", _to_rel_under_root(HASH_MAP_PATH))
 
 
 if __name__ == '__main__':
-    batch_convert_md_to_pdf(INPUT_DIRECTORY, OUTPUT_DIRECTORY)
+    main()

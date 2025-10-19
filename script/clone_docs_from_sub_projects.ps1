@@ -12,7 +12,7 @@ Copyright (C) 2025 GaoZheng
   -ConfigPath  配置 JSON 路径（默认：src/sub_projects_docs/sub_projects_clone_map.json）
   -OutDir      临时克隆目录（默认：out）
   -DocsRoot    目标文档根（默认：src/sub_projects_docs）
-  -MaxChars    摘要截断字符数（默认：300）
+  -MaxChars    摘要截断字符数（默认：500）
   -Step        逐步调试；在关键步骤暂停等待回车
   -SkipClone   跳过克隆阶段
   -SkipCopy    跳过复制阶段
@@ -25,7 +25,7 @@ param(
   [string]$ConfigPath = 'src/sub_projects_docs/sub_projects_clone_map.json',
   [string]$OutDir = 'out',
   [string]$DocsRoot = 'src/sub_projects_docs',
-  [int]$MaxChars = 300,
+  [int]$MaxChars = 500,
   [switch]$Step,
   [switch]$SkipClone,
   [switch]$SkipCopy,
@@ -211,7 +211,7 @@ function UpdateReadmeSections([string]$readmePath, [hashtable]$sections){
       '- 更新步骤：运行 `pwsh -NoLogo -File script/clone_docs_from_sub_projects.ps1 -Verbose`。',
       '- 临时克隆目录：`out`（如无特殊需要，可保留以便增量更新）。',
       '-',
-      '- 索引规则：非递归扫描各子目录下的 `*.md` 文件；为每个文件尝试抽取其“`## 摘要`”段落的前 `N` 个字符（默认 `300`）。',
+      '- 索引规则：非递归扫描各子目录下的 `*.md` 文件；为每个文件尝试抽取其“`## 摘要`”段落的前 `N` 个字符（默认 `500`）。',
       '-',
       '- 注意：本目录为集中展示，版权与许可遵循各子项目原始仓库；本仓库不修改其授权条款。',
       ''
