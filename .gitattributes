@@ -1,24 +1,28 @@
 # Line-ending normalization and cross-platform EOL policy
 
-# Default: auto-detect text, prefer LF
-* text=auto eol=lf
+# Default: auto-detect text; do not force a global EOL
+# (Specific rules below will override as needed.)
+* text=auto
 
 # Source code and scripts — force LF (avoids bash ^M and Python diffs)
 *.py       text eol=lf
 *.sh       text eol=lf
 .githooks/* text eol=lf
 
-# Markdown and docs — LF; encoding handled by scripts (UTF-8 BOM)
-*.md       text eol=lf
+# Markdown and docs — CRLF + UTF-8 (最高优先级)
+*.md       text eol=crlf working-tree-encoding=UTF-8
+*.mdx      text eol=crlf working-tree-encoding=UTF-8
+*.txt      text eol=crlf working-tree-encoding=UTF-8
 
-# JSON/CSV and config files — LF for stable diffs
+# JSON and config files — LF for stable diffs
 *.json     text eol=lf
-*.csv      text eol=lf
 *.yml      text eol=lf
 *.yaml     text eol=lf
+
+# Data tables as documents — CRLF + UTF-8
+*.csv      text eol=crlf working-tree-encoding=UTF-8
 
 # Windows-specific scripts keep CRLF
 *.bat      text eol=crlf
 *.cmd      text eol=crlf
 *.ps1      text eol=crlf
-
