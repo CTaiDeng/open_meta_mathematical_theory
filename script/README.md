@@ -16,15 +16,14 @@
 
 ## full_reference 相关
 
-- `script/sync_full_reference_symlinks.ps1`
+- `script/full_reference_symlink_sync_and_json_build.ps1`
   - 按 `src/full_reference/Link.json` 建立 `src/full_reference` 下的符号链接，指向各外部源文件绝对路径；完成后导出 `src/full_reference/symlink_target_map.json`（链接名 -> 目标绝对路径）。
-- `script/copy_kernel_to_full_from_diff.ps1`
+- `script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1`
   - 读取 `src/full_reference/common_name_hash_diff.csv` 的 `name` 列，将 `src/kernel_reference/<name>` 拷贝到 full 端“源文件绝对路径”。优先使用 `symlink_target_map.json` 定位，缺失时回退解析 `src/full_reference/<name>`。
 
 ## 差异/一致性检查
 
-- `script/check_kernel_missing_in_full.ps1`、`script/check_full_missing_in_kernel.ps1`
-  - 双向检查缺失的 Markdown 文件（按名称），输出仓库相对路径列表。
+
 
 ## 其他工具
 

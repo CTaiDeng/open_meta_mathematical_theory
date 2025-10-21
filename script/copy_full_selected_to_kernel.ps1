@@ -4,7 +4,7 @@
 # Licensed under the GNU General Public License version 3.
 # See https://www.gnu.org/licenses/gpl-3.0.html for details.
 # 
-# pwsh -NoLogo -File script/copy_kernel_reference_from_full.ps1
+# pwsh -NoLogo -File script/copy_full_selected_to_kernel.ps1
 
 param(
   [string]$FullDir = "src\full_reference",
@@ -101,4 +101,3 @@ Write-Host "已复制 $copied 个文件（覆盖 $overwritten 个）。" -Foregr
 if ($skippedExisting.Count -gt 0 -and -not $Overwrite) {
   Write-Host "另有 $($skippedExisting.Count) 个因已存在而被跳过（使用 -Overwrite 可覆盖）。"
 }
-

@@ -11,13 +11,13 @@ Copyright (C) 2025 GaoZheng
 
 使用：
 - 干跑预览：
-  pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1 -WhatIf
+  pwsh -NoLogo -File script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1 -WhatIf
 - 实际执行：
-  pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1
+  pwsh -NoLogo -File script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1
 - 指定 CSV 路径：
-  pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1 -CsvPath 'src/full_reference/common_name_hash_diff.csv'
+  pwsh -NoLogo -File script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1 -CsvPath 'src/full_reference/common_name_hash_diff.csv'
  - 指定链接映射 JSON：
-   pwsh -NoLogo -File script/copy_kernel_to_full_from_diff.ps1 -MapPath 'src/full_reference/symlink_target_map.json'
+   pwsh -NoLogo -File script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1 -MapPath 'src/full_reference/symlink_target_map.json'
 
 CSV 格式（由 `sync_common_name_hash.ps1 -Mode diff` 生成）：
   name,kernel_reference,full_reference

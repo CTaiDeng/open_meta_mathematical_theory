@@ -15,7 +15,7 @@ $ErrorActionPreference = 'Stop'
 
 $here = $PSScriptRoot
 $repoRoot = Resolve-Path (Join-Path $here '..')
-$tool = Join-Path $here 'sync_full_reference_symlinks.ps1'
+$tool = Join-Path $here 'full_reference_symlink_sync_and_json_build.ps1'
 $cfg  = Join-Path $repoRoot 'src/full_reference/Link.json'
 
 if (-not (Test-Path -LiteralPath $tool)) { throw "Missing tool: $tool" }

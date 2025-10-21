@@ -193,12 +193,12 @@ try {
 
 # 用法：
 # 干跑预览（不写入）：
-#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -WhatIf
+#   pwsh -NoLogo -File script/full_reference_symlink_sync_and_json_build.ps1 -WhatIf
 # 实际执行（需要 Windows 开发者模式或管理员权限以允许创建符号链接）：
-#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1
+#   pwsh -NoLogo -File script/full_reference_symlink_sync_and_json_build.ps1
 # 指定配置/输出目录：
-#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -Config 'src/full_reference/Link.json' -DestRoot 'src/full_reference'
+#   pwsh -NoLogo -File script/full_reference_symlink_sync_and_json_build.ps1 -Config 'src/full_reference/Link.json' -DestRoot 'src/full_reference'
 # 导出链接映射（JSON 路径可改）：
-#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -ExportMapPath 'src/full_reference/symlink_target_map.json'
+#   pwsh -NoLogo -File script/full_reference_symlink_sync_and_json_build.ps1 -ExportMapPath 'src/full_reference/symlink_target_map.json'
 # 重复文件策略（选最新修改时间）：
-#   pwsh -NoLogo -File script/sync_full_reference_symlinks.ps1 -DuplicatePolicy latest
+#   pwsh -NoLogo -File script/full_reference_symlink_sync_and_json_build.ps1 -DuplicatePolicy latest
