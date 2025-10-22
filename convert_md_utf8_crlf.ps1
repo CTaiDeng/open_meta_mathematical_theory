@@ -120,6 +120,50 @@ function Detect-GarbledChinese([string]$text) {
   return $reasons
 }
 
+function Detect-GarbledChinese2([string]$text) {
+  # 编码无关的启发式：避免把具体非 ASCII 字符写进正则，降低脚本自体编码造成的失真。
+  $reasons = New-Object System.Collections.Generic.List[string]
+  if (-not $text) { return $reasons }
+
+  # 1) Unicode 替换符（U+FFFD）
+  $rep = [string][char]0xFFFD
+  $repHits = [regex]::Matches($text, [regex]::Escape($rep)).Count
+  if ($repHits -gt 0) { $reasons.Add("ReplacementChar:$repHits") }
+
+  # 2) Latin-1/Windows-1252 典型乱码：可疑码点（C2/C3/E2/EF/A0/AD）数量
+  $latinSuspects = 0
+  foreach ($ch in $text.ToCharArray()) {
+    $code = [int][char]$ch
+    if ($code -in 0x00C2,0x00C3,0x00E2,0x00EF,0x00A0,0x00AD) { $latinSuspects++ }
+  }
+  if ($latinSuspects -ge 3) { $reasons.Add("Latin1Burst:$latinSuspects") }
+
+  # 3) UTF-8→GBK 常见“错字集”命中数（以码点列举，避免直接嵌字）
+  #    锛(951B) 锟(951F) 链(94FE) 銆(92C6)
+  #    绛(7EDB) 绯(7EEF) 绮(7EEE) 绱(7EF1) 绾(7EFE) 缁(7F01) 缂(7F02)
+  #    鎵(9395) 鏍(93CD/93D6/93D9 常见)
+  $utf8AsGbkCodes = @(
+    0x951B,0x951F,0x94FE,0x92C6,
+    0x7EDB,0x7EEF,0x7EEE,0x7EF1,0x7EFE,0x7F01,0x7F02,
+    0x9395,0x93CD,0x93D6,0x93D9
+  )
+  $utf8AsGbkHits = 0
+  foreach ($ch in $text.ToCharArray()) {
+    if ($utf8AsGbkCodes -contains ([int][char]$ch)) { $utf8AsGbkHits++ }
+  }
+  if ($utf8AsGbkHits -ge 6) { $reasons.Add("UTF8asGBKCommon:$utf8AsGbkHits") }
+
+  # 4) 重音拉丁字母爆发（Latin-1 Supplement 区间 0x00C0–0x00FF）
+  $accentHits = 0
+  foreach ($ch in $text.ToCharArray()) {
+    $code = [int][char]$ch
+    if ($code -ge 0x00C0 -and $code -le 0x00FF) { $accentHits++ }
+  }
+  if ($accentHits -ge 6) { $reasons.Add("AccentedBurst:$accentHits") }
+
+  return $reasons
+}
+
 function Get-CjkRatio([string]$text) {
   if (-not $text) { return 0.0 }
   $total = $text.Length
@@ -135,7 +179,7 @@ function Get-CjkRatio([string]$text) {
 }
 
 function Get-MojibakeScore([string]$text) {
-  $reasons = Detect-GarbledChinese $text
+  $reasons = Detect-GarbledChinese2 $text
   $score = 0
   foreach ($r in $reasons) {
     if ($r -match ':(\d+)$') { $score += [int]$matches[1] } else { $score += 10 }
@@ -237,7 +281,7 @@ switch ($Mode) {
 
       $reasons = New-Object System.Collections.Generic.List[string]
       if (-not $isUtf8) { $reasons.Add('InvalidUTF8') }
-      $more = Detect-GarbledChinese $text
+      $more = Detect-GarbledChinese2 $text
       foreach ($r in $more) { $reasons.Add($r) }
 
       if ($reasons.Count -gt 0) {
@@ -255,6 +299,9 @@ switch ($Mode) {
     if (-not (Test-Path -LiteralPath $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
 
     # 导出 CSV（UTF-8，CRLF 由平台与 .gitattributes 保证）
+    if (Test-Path -LiteralPath $OutputCsv) {
+      try { Remove-Item -LiteralPath $OutputCsv -Force -ErrorAction SilentlyContinue } catch { }
+    }
     $results | Sort-Object Path -Unique | Export-Csv -Path $OutputCsv -NoTypeInformation -Encoding utf8
     Write-Host "[scan-summary] scanned=$scanned, flagged=$flagged, skipped=$skipped" -ForegroundColor Cyan
     Write-Host "[csv] $OutputCsv" -ForegroundColor Green
