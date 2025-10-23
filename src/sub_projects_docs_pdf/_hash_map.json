@@ -956,8 +956,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "e37e0dec00152f83c3af4beaf71040398c1b94e8167b4deb539dcbdfe2cdbff6",
-    "pdf_hash": "c147d2e555a94415114058426955c4e32927910eca1395a2cb92a2bcbb428ffd"
+    "md_hash": "ebe31acfab52834ec3472c7fb8bfbde86541504d14cbe6e5e3dea17ba47710ec",
+    "pdf_hash": "035a699a66a4f4ed3a87d5649e49d825afe2e5d7b9c06f214e59106fda5fc700"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -1064,37 +1064,91 @@
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_病理演化幺半群 (PEM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062415_病理演化幺半群 (PEM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_病理演化幺半群 (PEM) 的算子幂集算法.pdf",
-    "md_hash": "bffeab27baf558f01f036d19c7e3cc5b2cba3332b5af83cc9c6f4f971ffca3c0",
-    "pdf_hash": "a4233bac79e50b733a42914c3fda6b81acd0138c6a650ba0462952629ccc6c3a"
+    "md_hash": "9c330e7d6403aa0198d5b81225c24263bff02b62e68eb4d7644eb1b301d6fc51",
+    "pdf_hash": "32735cc8f90818d92fd543fe7d6ee2e176a0844b1a714d5e6410a95468c45c98"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_生理调控幺半群 (PRM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062416_生理调控幺半群 (PRM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_生理调控幺半群 (PRM) 的算子幂集算法.pdf",
-    "md_hash": "735804367ea8feea501f4584481427dc84d6782919ef232c4f90c51487e8d0bb",
-    "pdf_hash": "c82db9d217d8035b2dd70291d209320767f00df8656518146b9c20754115430b"
+    "md_hash": "c3232c33f724cf65a077cf29b0ad799be8acec571dd79119bd4c663af3ff7bd1",
+    "pdf_hash": "afab7035b21a409bc2281917b1ec5eeedfb77fb156752acaca97432e0d3923ec"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062417_毒理学效应幺半群 (TEM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf",
-    "md_hash": "e7490ac0849c568321101aaeb67981d97c897d5f36557cde0bd4964944b80ba2",
-    "pdf_hash": "24c21de4b5559cd756560c978b68854fe82069063c1f8efa839b1d3e799bd68f"
+    "md_hash": "b6c386f2af2f0d5411352a45eeaff9c3db36f5f22727b0a1e8add36c0d1db291",
+    "pdf_hash": "5e07d3c7630ff2aea494881e41f45f2e5cb4c1ba2eb44e406957997314c946a6"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062418_药代转运幺半群 (PKTM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062418_药代转运幺半群 (PKTM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062418_药代转运幺半群 (PKTM) 的算子幂集算法.pdf",
-    "md_hash": "2f0f1b54e7d9c28c23b1099d43c6088cffecf8a1f6be017cf626c62b461b218a",
-    "pdf_hash": "9035a020d4290b1d3698b376c087dccd610cdb6bf775aba3088c73f807a78181"
+    "md_hash": "0636e0d040fed662f177681a282856c3c4c510e371ad96ede018c288060f2e5f",
+    "pdf_hash": "3fa7b2b73a3665ed9b1ac22cc3e7b63fa7ff98754b460e9edfa88e9ee8c0843b"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062419_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062419_药理基因组幺半群 (PGOM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062419_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf",
-    "md_hash": "a10a38853bc77bb28bb082507537cb6ec694235eb30352ec3e0163593fe06397",
-    "pdf_hash": "344097db213555cd600ef83ee542be962bf30f63805df0912ee31e318bdd9d8e"
+    "md_hash": "c9e353370db957a7d911e0291bfa93ab11ba35e98223f583ece1258c3ef6a4ba",
+    "pdf_hash": "ffd5a400f404d64068bad27cfd5728e8cab42ea70f739b23723354d59159ee0c"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062420_药效效应幺半群 (PDEM) 的算子幂集算法.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761062420_药效效应幺半群 (PDEM) 的算子幂集算法.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062420_药效效应幺半群 (PDEM) 的算子幂集算法.pdf",
     "md_hash": "e5023089e94f995ad98965f7cb1c7f40c9e74eae652e0a44509b011750290a63",
     "pdf_hash": "6ca0369b0d54c15bcb4ffc557523093972c875711f39733d548ca664ef768d72"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148800_LBOPB 离散版 SAC (Discrete SAC) 算法需求描述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148800_LBOPB 离散版 SAC (Discrete SAC) 算法需求描述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148800_LBOPB 离散版 SAC (Discrete SAC) 算法需求描述.pdf",
+    "md_hash": "46b5ac2052986dee1886ea5e236bb4b2af92851a6dfd1b3deb73024a12568281",
+    "pdf_hash": "9cb0e7f3e91dd3e973f4b6451cd937f0fa817e77276b9967ddd6858611038137"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148801_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148801_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148801_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.pdf",
+    "md_hash": "08fe42174ee4e9e72724c883adde0ca230e11d69adcd9419709545c42d2cdecb",
+    "pdf_hash": "4be0fa14955e26e103cb71ca269b562c061d7ffb8fc1a936a9de072a08acc828"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148802_论公理原则作为知识蒸馏：一种面向 LBOPB 离散版 SAC 的结构化实现.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148802_论公理原则作为知识蒸馏：一种面向 LBOPB 离散版 SAC 的结构化实现.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148802_论公理原则作为知识蒸馏：一种面向 LBOPB 离散版 SAC 的结构化实现.pdf",
+    "md_hash": "2c6dc4a8369f7a2e814712c5a365c7d845e5aa912430c4af3025931a507a5b60",
+    "pdf_hash": "9324a2a74501e9ce359df4a7b3e41b76d78e220db4baa3d7475f877f730544b6"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148803_LBOPB 子项目综合评估报告.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148803_LBOPB 子项目综合评估报告.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148803_LBOPB 子项目综合评估报告.pdf",
+    "md_hash": "65859141deab7ebce40605659eb7d5b29deebd0c2d4d8bba8166369373144897",
+    "pdf_hash": "9cb5c4613c924d3d3f4178cedd8bc2c5a7a5ed7f28285b3b0e102168cf67f897"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148804_算子幂集算法（powerset.py）机制及其理论体现的详细论述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148804_算子幂集算法（powerset.py）机制及其理论体现的详细论述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148804_算子幂集算法（powerset.py）机制及其理论体现的详细论述.pdf",
+    "md_hash": "2c764950c0cfd2f51f142c6413d50ff498dff3c9ca891650e8a0f64827dbe48c",
+    "pdf_hash": "7d2a4a814730e09d4c4f86d0dbcb72e2c557aad91df85ad584bfbad11f855fc1"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.pdf",
+    "md_hash": "c55f08982d4d08bd6b7e5644f73fe662549d80090fb6c5835627c082341482bb",
+    "pdf_hash": "443358a856fe89470ff3590df0a117714c44286f9aea4be70b1337c0b8d1d837"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148806_O3-LBOPB 框架：从最小测距状态拟合到对数字孪生范式的超越.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148806_O3-LBOPB 框架：从最小测距状态拟合到对数字孪生范式的超越.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148806_O3-LBOPB 框架：从最小测距状态拟合到对数字孪生范式的超越.pdf",
+    "md_hash": "18bf20f67ba07a2d9c402d6bd35e2c9b046dedc66387677fb6b5f9181b8ce7bf",
+    "pdf_hash": "c9ad1feda287539bc2ec1cc2d9098cb4babc433fbbdcdaf34d834304b6415f61"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148807_O3-LBOPB 框架的理论潜力：基于 PFB-GNLA 与 GRL 路径积分的无限拟合能力.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148807_O3-LBOPB 框架的理论潜力：基于 PFB-GNLA 与 GRL 路径积分的无限拟合能力.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148807_O3-LBOPB 框架的理论潜力：基于 PFB-GNLA 与 GRL 路径积分的无限拟合能力.pdf",
+    "md_hash": "44ebe3a7ce4bb6c7fbc2e920a5b47608d25f6b177cd3067b2c0f2baecfa7e9fd",
+    "pdf_hash": "98eed4c0bfe91a3b7196b7aa4d8dacf7412fad6ed79c937b29a1735c55b77ed4"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.pdf",
+    "md_hash": "154e21babc267cb41a991656289ab21e55cf17f8aa3fd5cdebb774e288ee05d3",
+    "pdf_hash": "ef53968dcf3c4877ee6af42ea258df083d4e3a57c6c5d7a622d3546d73754de3"
   }
 }
