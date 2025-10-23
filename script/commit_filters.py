@@ -103,5 +103,5 @@ def collect_diff_filtered(max_patch_chars: int = 8000) -> tuple[str, str]:
     stat = _run(stat_cmd).strip()
     patch = _run(patch_cmd).strip()
     if len(patch) > max_patch_chars:
-        patch = patch[: max_patch_chars - 1] + "\n��(truncated)"
+        patch = patch[: max_patch_chars - 1] + "\n(truncated)"
     return stat, patch
