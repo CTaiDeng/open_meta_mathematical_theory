@@ -956,8 +956,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "ebe31acfab52834ec3472c7fb8bfbde86541504d14cbe6e5e3dea17ba47710ec",
-    "pdf_hash": "035a699a66a4f4ed3a87d5649e49d825afe2e5d7b9c06f214e59106fda5fc700"
+    "md_hash": "07e87c3d4a5a05f1c3c60b8e4f651d58ca58d32f81c891064d738c57a92a6472",
+    "pdf_hash": "ecaf3eaa944a5ee0f52f906899055d87b1da07ff8808262e180db962338b1982"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -1130,8 +1130,8 @@
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148805_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.pdf",
-    "md_hash": "c55f08982d4d08bd6b7e5644f73fe662549d80090fb6c5835627c082341482bb",
-    "pdf_hash": "443358a856fe89470ff3590df0a117714c44286f9aea4be70b1337c0b8d1d837"
+    "md_hash": "edc8a87b9e410c7b8ebc5abee79995a47fda86219b90ec0d625f7d408e08fc7b",
+    "pdf_hash": "f3e4c3ac99a1207e3ad8c66fc8779773b945229b6285b099bf518737c2b28afc"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148806_O3-LBOPB 框架：从最小测距状态拟合到对数字孪生范式的超越.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148806_O3-LBOPB 框架：从最小测距状态拟合到对数字孪生范式的超越.md",
@@ -1148,7 +1148,31 @@
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148808_O3-LBOPB 虚拟临床试验报告：一例晚期非小细胞肺癌（NSCLC）患者的生成式治疗方案.pdf",
-    "md_hash": "154e21babc267cb41a991656289ab21e55cf17f8aa3fd5cdebb774e288ee05d3",
-    "pdf_hash": "ef53968dcf3c4877ee6af42ea258df083d4e3a57c6c5d7a622d3546d73754de3"
+    "md_hash": "07482793f2607314615521f1d5d4fc56b98810d09017caed524f4e6f0b08535b",
+    "pdf_hash": "3d30a400396bf7a4f0ddc3773c915d877080ea5eaf5e9e8db1e56a93b9950672"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235200_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761235200_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235200_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf",
+    "md_hash": "fa23ffd73cd4c22787aa18c794637fad0ed19df5fcc1d896b18e38fcccd5c6d6",
+    "pdf_hash": "e316d3460f855797619f9ee40c6fa00e3f2cf042763291e519aa3a5cf6ba5e65"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235201_从O3理论到生成式精准医疗：一个自举学习框架及其在复杂系统干预中的应用.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761235201_从O3理论到生成式精准医疗：一个自举学习框架及其在复杂系统干预中的应用.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235201_从O3理论到生成式精准医疗：一个自举学习框架及其在复杂系统干预中的应用.pdf",
+    "md_hash": "645787d5e6d197ab287e9ccc9a144bf4074e5a04094416483bb087f24992c96c",
+    "pdf_hash": "dab0ffeb4df40c03e7522c3678229c5a1d2aa82c0f4f80502c80827ee7082af3"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf",
+    "md_hash": "8b4dc4da8d631ad27e6e43d29d3401656446733f00235b9b92bbc5b1fbfce922",
+    "pdf_hash": "b35592bd5ebfe6e6647100f738689067e2679b63e44b9d510afee90ffeb64056"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235203_rlsac_id_unixtime 知识体系作为加速计算的算法参考.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761235203_rlsac_id_unixtime 知识体系作为加速计算的算法参考.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235203_rlsac_id_unixtime 知识体系作为加速计算的算法参考.pdf",
+    "md_hash": "613aa1858213941363ef13d068103c12601a5b3dffbb09317ef7f95c4730c961",
+    "pdf_hash": "24fce68b95d65a80cd5ae1f5aa84a1ca4e95d34d8eacde0a37f8c5af7c6b660e"
   }
 }
