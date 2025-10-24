@@ -1,3 +1,5 @@
+# Encoding/EOL policy: UTF-8 (no BOM) + LF
+# Details: see `AGENTS.md`
 res
 out
 .venv
