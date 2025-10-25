@@ -159,7 +159,13 @@ foreach($cat in $categories.Keys){
   $out.Add('')
 }
 
-$out | Set-Content -LiteralPath $target -Encoding UTF8
-Write-Host "Generated: $target with $total entries."
-
+$enc = [System.Text.UTF8Encoding]::new($false)
+$sw = [System.IO.StreamWriter]::new($target, $false, $enc)
+try {
+  $sw.NewLine = "`n"
+  foreach($ln in $out){ $sw.WriteLine($ln) }
+} finally {
+  $sw.Dispose()
+}
+Write-Host "Generated: $target with $total entries. (UTF-8+LF)"
 

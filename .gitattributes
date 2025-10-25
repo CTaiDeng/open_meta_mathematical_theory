@@ -1,28 +1,40 @@
-# Line-ending normalization and cross-platform EOL policy
+# Line-ending normalization and encoding policy
+# Unified: UTF-8 (no BOM) + LF across text files
 
-# Default: auto-detect text; do not force a global EOL
-# (Specific rules below will override as needed.)
-* text=auto
+# Default: treat as text and enforce LF
+*                 text eol=lf
 
-# Source code and scripts — force LF (avoids bash ^M and Python diffs)
-*.py       text eol=lf
-*.sh       text eol=lf
-.githooks/* text eol=lf
+# Keep hooks and common text formats explicitly LF
+.githooks/*       text eol=lf
+*.py              text eol=lf
+*.sh              text eol=lf
+*.ps1             text eol=lf
+*.cmd             text eol=lf
+*.bat             text eol=lf
+*.md              text eol=lf
+*.mdx             text eol=lf
+*.txt             text eol=lf
+*.csv             text eol=lf
+*.json            text eol=lf
+*.yml             text eol=lf
+*.yaml            text eol=lf
+*.toml            text eol=lf
 
-# Markdown and docs — CRLF + UTF-8 (最高优先级)
-*.md       text eol=crlf working-tree-encoding=UTF-8
-*.mdx      text eol=crlf working-tree-encoding=UTF-8
-*.txt      text eol=crlf working-tree-encoding=UTF-8
-
-# JSON and config files — LF for stable diffs
-*.json     text eol=lf
-*.yml      text eol=lf
-*.yaml     text eol=lf
-
-# Data tables as documents — CRLF + UTF-8
-*.csv      text eol=crlf working-tree-encoding=UTF-8
-
-# Windows-specific scripts keep CRLF
-*.bat      text eol=crlf
-*.cmd      text eol=crlf
-*.ps1      text eol=crlf
+# Mark common binary formats
+*.png             -text
+*.jpg             -text
+*.jpeg            -text
+*.gif             -text
+*.pdf             -text
+*.zip             -text
+*.7z              -text
+*.gz              -text
+*.bz2             -text
+*.xz              -text
+*.exe             -text
+*.dll             -text
+*.so              -text
+*.dylib           -text
+*.lib             -text
+*.a               -text
+*.pdb             -text

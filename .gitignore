@@ -1,4 +1,5 @@
 # Encoding/EOL policy: UTF-8 (no BOM) + LF
+# Enforced via `.gitattributes` and `.githooks/pre-commit.ps1`
 # Details: see `AGENTS.md`
 res
 out
