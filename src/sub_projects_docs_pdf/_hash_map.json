@@ -812,26 +812,14 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "8239a97bd2859c399c00f2f72726894e55225dbe6f38526534e6e42868ae12e8",
-    "pdf_hash": "329297cd803b43a5e67ba98aa0f84cdb07b79338b3c52908cf22c35684b13a42"
+    "md_hash": "6ce2fa0f7d6d2f3a38065d50ccb6f00f21dd8197e466685869d028c2602e79a0",
+    "pdf_hash": "d28f2054255c0ecd72f1ae120f3ccd94c5042b34b11807d10c93fd75bfe70c57"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\LICENSE.pdf",
     "md_hash": "c892047fb67fe8780df2a8a4cf457954db8f7f542b3483897174ef1ac22a54d4",
     "pdf_hash": "c15e9b8367bb292cb78b29b389a374b29bb99737aecea67f7e0c2e6447dedd84"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062407_免疫效应幺半群 (IEM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062407_免疫效应幺半群 (IEM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062407_免疫效应幺半群 (IEM) 公理系统.pdf",
-    "md_hash": "330b61cc1329e017f07d8366f8f8e779a0e18c04dbc70d2f8c3a3257ca0f05fe",
-    "pdf_hash": "fe2bdbdf1f22528fa49a3b76da4425b1b4b63994b3909f9756290442014ada55"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_O3理论的自举之路：一个构建“法则联络”知识体系的两阶段强化学习框架.pdf",
-    "md_hash": "3b7a670adf110e580c1856a9c5008b816590d584d19d2bb2f9618db6e8dfd62a",
-    "pdf_hash": "9b177413ba6621bbf0605b3e47cc71cb9d8aedfc269cb7c3c87088a5b7a57548"
   },
   "src\\sub_projects_docs_pdf\\haca_pdf\\1758988802_分层代数认知架构（HACA）公理系统与形式化定义.pdf": {
     "md_path": "src\\sub_projects_docs\\haca\\1758988802_分层代数认知架构（HACA）公理系统与形式化定义.md",
@@ -887,168 +875,6 @@
     "md_hash": "96eff02e9f4fca82a687de1906538afc28a616ad52a862e4325da4d1a6bf3b26",
     "pdf_hash": "c9dda1f82793f2daeb3ebc90d8d263bed6f6b5d02cca8bb50747f9f412ace889"
   },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803200_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803200_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803200_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf",
-    "md_hash": "405d4dc9491755f76b45a0e2d1b310cedd674f0211ff8a71df828164a96fdbfe",
-    "pdf_hash": "71f2ff64f38c77d8b9734cb91ee224ec80450932248acc0e6753d412a2eff3cc"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803201_法则联络评价：贯通O3理论三大支柱的计算龙骨.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf",
-    "md_hash": "9c4582d24ce4815661ab29cbb6db889459aed018e2551e8370cfe957c6eef604",
-    "pdf_hash": "6b8a3b03a606264e396f1200864381d8254790caf7cc65626ff4e51d3a5873e2"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803202_法则联络：O3 理论下的算子包映射与单oidal曲率.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf",
-    "md_hash": "51c5c0b7f28db1767eb596c9d7c769b64efe73e1b382723516e1fdb82b920c94",
-    "pdf_hash": "35f08153c465e50ab8f99f7e0410b51ca304e5e47c1e9952521314be47248017"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803203_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803203_法则联络：O3理论中作为可计算构造的联络及其工程化实现.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803203_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf",
-    "md_hash": "88b3b594b1798bc51dd649a953b62a86e49341d9c4969f36164bf866d20c27c2",
-    "pdf_hash": "68c3dbe1c1bf063d6e5222ef7bd95a1d2306005a397dd9a5c97d16d8971556a6"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803204_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803204_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803204_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf",
-    "md_hash": "9d0404ab5ecdb3fc6964db9c386d7efc27334f94605f30ca2dc94b14ba6cfac7",
-    "pdf_hash": "e48e5bef244e3ccb5fb6f88917aa675af1f0cdd1171fb0be4fbb04ebbf00333c"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803205_评级报告：《法则联络》的革命性价值与历史性意义.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803205_评级报告：《法则联络》的革命性价值与历史性意义.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803205_评级报告：《法则联络》的革命性价值与历史性意义.pdf",
-    "md_hash": "682a8516c089332ede35eb16f98f06ec0a1d76fdce971ce902e92db610af7924",
-    "pdf_hash": "896e0084809dc4614a72a09f038d561f1e1055d1062acd2a9202f8e43d37eab7"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_语义度量、混合态与连续统假设的范式重述.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_语义度量、混合态与连续统假设的范式重述.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_语义度量、混合态与连续统假设的范式重述.pdf",
-    "md_hash": "8822f23ccf0fbe92d1aa711258e987dae41d3653f327bb4d2c30d3dcc04198c8",
-    "pdf_hash": "d93153fe802d1dba94f43c2fbd8942c90b9f45f5fb468b04f9750b527e716f6a"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760803207_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
-    "md_hash": "aef82391430de7da5827a976e141b6e4b44532c5d3b3412827d2ec744d17c936",
-    "pdf_hash": "9f0d33a7f62be6b161396496075b3e1422526c5ca47b1fda23a461bbc4a6873d"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760976000_生理调控幺半群 (PRM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760976000_生理调控幺半群 (PRM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760976000_生理调控幺半群 (PRM) 公理系统.pdf",
-    "md_hash": "f986bde7dea072f3aacff8c6fe752fff33d71d5f3bff75c4433d6957b03a44c2",
-    "pdf_hash": "46772d7ade6311954f4e679a84474102c91d3375f65c2a3c69563c05d0c32aa8"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760976001_病理演化幺半群 (PEM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1760976001_病理演化幺半群 (PEM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760976001_病理演化幺半群 (PEM) 公理系统.pdf",
-    "md_hash": "c1b2562cc80d2b833564f2a35a61ccf6ad6f5905b96586db0bc23bd374ada973",
-    "pdf_hash": "ab8b30689bd8c0a41b1c25bc1185859439186df45600aa3b9845e7fe9906e6fc"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062400_《免疫效应幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062400_《免疫效应幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062400_《免疫效应幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "69647fafa66f1728350000cda38306335b2b1a731eb00d2d899bd5fc0814a349",
-    "pdf_hash": "bac24c59219b62cf49cf9837ec537aabbec296f140cf59c3a8c25d400d560a2c"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062401_《毒理学效应幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062401_《毒理学效应幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062401_《毒理学效应幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "9ba85b98f9baabbcc6f46e62257fc2219ca6c980c2778ab9dce81dc0346e8aca",
-    "pdf_hash": "d8e258870c06ce655015c7f962fcd6bdc19b551214cf87e77d7a8ed06a439d82"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062402_《生理调控幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062402_《生理调控幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062402_《生理调控幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "2e2d150e52e990475b13d3cf32ed49c0b91f79053eb46abe47a465e8be1e889c",
-    "pdf_hash": "2ebc7c9b39f0cc3b76b72ecebcabf85e435050926c992ed2c6c7c4d02029f0a7"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062403_《病理演化幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062403_《病理演化幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062403_《病理演化幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "f5aec350eedc870c24cf6e7f11260836c0fefbd3848a2aba6d9e6939c08f021f",
-    "pdf_hash": "96e6da3a72e3007fea909c158a464c55b95c939847ca97e7de9d974c984f3076"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062404_《药代转运幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062404_《药代转运幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062404_《药代转运幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "1e9464501753837650ab7e98ed8eb0d9ebf02003ce06a2ac2e1cae4503f9007f",
-    "pdf_hash": "25c3f86b209445d9aca8f6cafe526d84a47a926b82cf18157a35853d19e3ef7f"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062405_《药效效应幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062405_《药效效应幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062405_《药效效应幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "3c952e1c7a3796d21b1a93d891c622a4ebd0ba1c472157aebd69225790225be2",
-    "pdf_hash": "94ded86c36868a8844c489915294bcffcfde57b21a4c3c6da2d97dddc3784690"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062406_《药理基因组算子幺半群》的核心构造及理论完备性.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062406_《药理基因组算子幺半群》的核心构造及理论完备性.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062406_《药理基因组算子幺半群》的核心构造及理论完备性.pdf",
-    "md_hash": "3fe3e2b21cc01620b5e6bf888bfcc02f69715491c419f4011ee8e0ab1427d8cb",
-    "pdf_hash": "1c4021c1a6f69c131035278acd460f5d0a8bf9a36920c2718a659cd4deb299bf"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062408_毒理学效应幺半群 (TEM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062408_毒理学效应幺半群 (TEM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062408_毒理学效应幺半群 (TEM) 公理系统.pdf",
-    "md_hash": "9f26bc306fbbfd63a9803def75ea6f4e8c6bf690eb015916b3bf7889630f4cc2",
-    "pdf_hash": "fef583d31595aa090c99ed21ea5fc1dbfa694940d1f996c22441e9153331aff4"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062409_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062409_毒理学效应幺半群 (TEM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062409_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf",
-    "md_hash": "938660951342aed8e77afb6550e95ab425b3b99656e3dbb3357038a4d4fc1fe3",
-    "pdf_hash": "0cc79579aa2eafd2f8d2d3e7fe6dda32d7c586044bee1921aae27caba05bbede"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062410_生理调控幺半群 (PRM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062410_生理调控幺半群 (PRM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062410_生理调控幺半群 (PRM) 的算子幂集算法.pdf",
-    "md_hash": "bf3e5e17c27f0378a5dc1ac5742f67ed1e64d74415d62eb329e4744a8c6220d1",
-    "pdf_hash": "2e5ea2b17528e62d408752b9317cfe188bec99d39f05f93f1bfb9d34086aed21"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062411_病理演化幺半群 (PEM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062411_病理演化幺半群 (PEM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062411_病理演化幺半群 (PEM) 的算子幂集算法.pdf",
-    "md_hash": "db9c8c0a677e7dd56fa4569e6086c2a32ac6d845780aacf9bbf9c811ac6e973f",
-    "pdf_hash": "7f5252372189a5271f7d777314b9e5a850f4feab9b1f522bf950532e2b13acbb"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062412_药代转运幺半群 (PKTM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062412_药代转运幺半群 (PKTM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062412_药代转运幺半群 (PKTM) 公理系统.pdf",
-    "md_hash": "aa3a922fc0909c36da457a084cd86973804e484c23082770133856ea473537cc",
-    "pdf_hash": "7d488cbf347958ddc716a3b53bbc596f3ee800ed0b54e66dc52422f4ae44a6ab"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062413_药代转运幺半群 (PKTM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062413_药代转运幺半群 (PKTM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062413_药代转运幺半群 (PKTM) 的算子幂集算法.pdf",
-    "md_hash": "cd93dfa01c98e9b4cfc5302452761bf0ca52d1cbefabc7a5deb629acc12fe3f9",
-    "pdf_hash": "76965e7dca95a4a9837a63d61ea042fb343802531a3cbf7d31b9795371d6a417"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062414_药效效应幺半群 (PDEM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062414_药效效应幺半群 (PDEM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062414_药效效应幺半群 (PDEM) 公理系统.pdf",
-    "md_hash": "1dbaffb7b7faeaec0fc6d263bd32e5c70b46da7bf47264325b4bead447f31698",
-    "pdf_hash": "cc97488529199d96768ab7c4a9c3c8cd75a77345095e11f5c93028aae39b467d"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_药效效应幺半群 (PDEM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062415_药效效应幺半群 (PDEM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_药效效应幺半群 (PDEM) 的算子幂集算法.pdf",
-    "md_hash": "e5c7a6b79350f44e9e3c4cf0b7ec2ff6eb519cc714934d72c0d4ef53ef4088d2",
-    "pdf_hash": "45f16c91be16b4038e3a478aa4dfc3bbdb849f87b70bd02a9be9ede266082ee9"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_药理基因组幺半群 (PGOM) 公理系统.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062416_药理基因组幺半群 (PGOM) 公理系统.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_药理基因组幺半群 (PGOM) 公理系统.pdf",
-    "md_hash": "aec39b8b5a1bec526399eefc1e8fc83a961f4d23ad7e55613c5940a05ec5a571",
-    "pdf_hash": "f30d6b2c768f70e4541d33b7c47734cd4ba43e5ddd714b3e43f0ee2da8abd013"
-  },
-  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf": {
-    "md_path": "src\\sub_projects_docs\\lbopb\\1761062417_药理基因组幺半群 (PGOM) 的算子幂集算法.md",
-    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf",
-    "md_hash": "b4e28f2c9290e25801b381ed7331a5a6e7555f04b8756175ce5970dd942b04af",
-    "pdf_hash": "445a8c8cf08e6fcf2526748825df462224f5967c01ea2591439e18fb107e08cf"
-  },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148800_LBOPB 子项目综合评估报告.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148800_LBOPB 子项目综合评估报告.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148800_LBOPB 子项目综合评估报告.pdf",
@@ -1064,8 +890,8 @@
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148802_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148802_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148802_LBOPB 离散版 SAC 框架下的样本生成与筛选：公理原则与大语言模型的协同机制.pdf",
-    "md_hash": "5dd0fa78e21120efcdff6a73b15d6385f9ed79b37cdda54e05181a12867e0d7d",
-    "pdf_hash": "5b9fb41924109fd4a09834de9a0974cec836b1756b3a227f56e5fd0b96424c64"
+    "md_hash": "5b402ce0ccc59e3191b4e87c8e2fc0f39eed93a33f1ab3c2a0f6a40f8022e6ee",
+    "pdf_hash": "1087d244a6a89b87723007ed224d324105c7cd80c80f56e7db5689215e32f0c3"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761148803_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1761148803_O3-LBOPB 框架的应用蓝图：从科学发现到生成式精准医疗.md",
@@ -1126,5 +952,179 @@
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235203_从O3理论到生成式精准医疗：一个自举学习框架及其在复杂系统干预中的应用.pdf",
     "md_hash": "b8f70fc2fb56bf7b32c6afc98d6941342a909aad62f722e7f8dc3e699878faf4",
     "pdf_hash": "939e58f2200bec1448469f3d77cf69aa904a4748d24b39ed6f85235d53de8f09"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803200_法则联络：O3 理论下的算子包映射与单oidal曲率.pdf",
+    "md_hash": "51c5c0b7f28db1767eb596c9d7c769b64efe73e1b382723516e1fdb82b920c94",
+    "pdf_hash": "e719365409b55afb651a7b1b1a190a6804898a69a1ee70e866c3d72559aa10f6"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf",
+    "md_hash": "88b3b594b1798bc51dd649a953b62a86e49341d9c4969f36164bf866d20c27c2",
+    "pdf_hash": "314700eaee022794ca11e3e50868ced3afd38dcee808441b68ec249dc1553eeb"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_语义度量、混合态与连续统假设的范式重述.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803202_语义度量、混合态与连续统假设的范式重述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_语义度量、混合态与连续统假设的范式重述.pdf",
+    "md_hash": "8822f23ccf0fbe92d1aa711258e987dae41d3653f327bb4d2c30d3dcc04198c8",
+    "pdf_hash": "df884989758e122daa6fe0f48025095d06fd32f8b20c9a94e99b28544fb1c39b"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803203_评级报告：《法则联络》的革命性价值与历史性意义.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803203_评级报告：《法则联络》的革命性价值与历史性意义.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803203_评级报告：《法则联络》的革命性价值与历史性意义.pdf",
+    "md_hash": "682a8516c089332ede35eb16f98f06ec0a1d76fdce971ce902e92db610af7924",
+    "pdf_hash": "434f3e8ad81250bc2dfe216134da4ff25f2f1ab759280c6e005a836698a51648"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803204_法则联络评价：贯通O3理论三大支柱的计算龙骨.pdf",
+    "md_hash": "9c4582d24ce4815661ab29cbb6db889459aed018e2551e8370cfe957c6eef604",
+    "pdf_hash": "15e1584468ba93be40fb68dc30126f88a7e42e155e361220772fb12c8e020934"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803205_多层级法则联络评价：论O3理论中基于退化的异构系统计算构造.pdf",
+    "md_hash": "405d4dc9491755f76b45a0e2d1b310cedd674f0211ff8a71df828164a96fdbfe",
+    "pdf_hash": "3deb4529f3f6229ea0e868a4a545de691b2641cda193898b6a530ba9edf1a542"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803206_🚩多层级法则联络：论O3理论中异构系统的生成式演化与计算统一.pdf",
+    "md_hash": "aef82391430de7da5827a976e141b6e4b44532c5d3b3412827d2ec744d17c936",
+    "pdf_hash": "b28f46b724ecf7ef96bc8eacf5545c3c50388f296fd27e6f6e5ca7d9ec749752"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803207_相变宇宙：论法则联络驱动的结构演化与层级化纤维丛世界观.pdf",
+    "md_hash": "9d0404ab5ecdb3fc6964db9c386d7efc27334f94605f30ca2dc94b14ba6cfac7",
+    "pdf_hash": "81d1cd9bab813bc51fbb0fe03aba580ee56c0964d8b50bae8a0416c3633bdd64"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062400_病理演化幺半群 (PEM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062400_病理演化幺半群 (PEM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062400_病理演化幺半群 (PEM) 公理系统.pdf",
+    "md_hash": "c1b2562cc80d2b833564f2a35a61ccf6ad6f5905b96586db0bc23bd374ada973",
+    "pdf_hash": "2fbf06e3f8cc1081c850b50d2d5d5c001490bdb4e7d6a6702c303720ea1a586c"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062401_生理调控幺半群 (PRM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062401_生理调控幺半群 (PRM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062401_生理调控幺半群 (PRM) 公理系统.pdf",
+    "md_hash": "f986bde7dea072f3aacff8c6fe752fff33d71d5f3bff75c4433d6957b03a44c2",
+    "pdf_hash": "1a14b0efc11bab6596b67c32a78e84f88c3329cab0c2854bad8b282eea970098"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062402_毒理学效应幺半群 (TEM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062402_毒理学效应幺半群 (TEM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062402_毒理学效应幺半群 (TEM) 公理系统.pdf",
+    "md_hash": "9f26bc306fbbfd63a9803def75ea6f4e8c6bf690eb015916b3bf7889630f4cc2",
+    "pdf_hash": "c5a6845a8d714a7297f3749787a19f71c82e6cf7b4602c567e9217a737c30179"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062403_药代转运幺半群 (PKTM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062403_药代转运幺半群 (PKTM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062403_药代转运幺半群 (PKTM) 公理系统.pdf",
+    "md_hash": "aa3a922fc0909c36da457a084cd86973804e484c23082770133856ea473537cc",
+    "pdf_hash": "47fc75728f2bb98b846aedeecf33269e43230a7feb5b001f897eeaca5d27bcc7"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062404_药理基因组幺半群 (PGOM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062404_药理基因组幺半群 (PGOM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062404_药理基因组幺半群 (PGOM) 公理系统.pdf",
+    "md_hash": "aec39b8b5a1bec526399eefc1e8fc83a961f4d23ad7e55613c5940a05ec5a571",
+    "pdf_hash": "ff8b648659b9dfd1708f11aa5ff78d1bc8ddadcb613a4ce0f9c13b808681c1e6"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062405_药效效应幺半群 (PDEM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062405_药效效应幺半群 (PDEM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062405_药效效应幺半群 (PDEM) 公理系统.pdf",
+    "md_hash": "1dbaffb7b7faeaec0fc6d263bd32e5c70b46da7bf47264325b4bead447f31698",
+    "pdf_hash": "186a512e7d06b8aa6a8ca19e91371c32c77f553af46970c9a9cad1b6221d1585"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062406_免疫效应幺半群 (IEM) 公理系统.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062406_免疫效应幺半群 (IEM) 公理系统.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062406_免疫效应幺半群 (IEM) 公理系统.pdf",
+    "md_hash": "330b61cc1329e017f07d8366f8f8e779a0e18c04dbc70d2f8c3a3257ca0f05fe",
+    "pdf_hash": "1646fc49bf6065acb188f494489d0e9f09c43a92c3b9f9d0f8b853963d4e1812"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062407_《病理演化幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062407_《病理演化幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062407_《病理演化幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "f5aec350eedc870c24cf6e7f11260836c0fefbd3848a2aba6d9e6939c08f021f",
+    "pdf_hash": "d0f356908c56a2dceb27d5aaa29c0d89a88b363bb56384fc886d1d937cf373d1"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062408_《生理调控幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062408_《生理调控幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062408_《生理调控幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "2e2d150e52e990475b13d3cf32ed49c0b91f79053eb46abe47a465e8be1e889c",
+    "pdf_hash": "a62d7c12add55836453c279097e1c9af7750445dfe4fa3885ce18b15fa157a24"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062409_《毒理学效应幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062409_《毒理学效应幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062409_《毒理学效应幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "9ba85b98f9baabbcc6f46e62257fc2219ca6c980c2778ab9dce81dc0346e8aca",
+    "pdf_hash": "a8239ee1590e1de81083a8365f4071ad8c5456ab8e8d1b3d9688055729d548e2"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062410_《药代转运幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062410_《药代转运幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062410_《药代转运幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "1e9464501753837650ab7e98ed8eb0d9ebf02003ce06a2ac2e1cae4503f9007f",
+    "pdf_hash": "7aec8eba850b9f99bc496314d7b37857d57556c9ed877b42c5d5d8a9d75f594d"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062411_《药理基因组算子幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062411_《药理基因组算子幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062411_《药理基因组算子幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "3fe3e2b21cc01620b5e6bf888bfcc02f69715491c419f4011ee8e0ab1427d8cb",
+    "pdf_hash": "a39dff130b2cee887037a95465a74772e1d5b54ddaefa34de65d2b4e8a82b750"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062412_《药效效应幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062412_《药效效应幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062412_《药效效应幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "3c952e1c7a3796d21b1a93d891c622a4ebd0ba1c472157aebd69225790225be2",
+    "pdf_hash": "f10e90bac611957977b481ffd27ff8a3544142689ff3d3cb17bd93f7ee607898"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062413_《免疫效应幺半群》的核心构造及理论完备性.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062413_《免疫效应幺半群》的核心构造及理论完备性.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062413_《免疫效应幺半群》的核心构造及理论完备性.pdf",
+    "md_hash": "69647fafa66f1728350000cda38306335b2b1a731eb00d2d899bd5fc0814a349",
+    "pdf_hash": "bb16fbde4ba70cec4ec24dd96df2b4209d7d93e080afe2758ff53aac7e2aaf25"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062414_病理演化幺半群 (PEM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062414_病理演化幺半群 (PEM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062414_病理演化幺半群 (PEM) 的算子幂集算法.pdf",
+    "md_hash": "db9c8c0a677e7dd56fa4569e6086c2a32ac6d845780aacf9bbf9c811ac6e973f",
+    "pdf_hash": "df6585df76ccc19017edb48e6d4ad7c02a9e7b18974a0a9df2ed32fd4f434c24"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_生理调控幺半群 (PRM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062415_生理调控幺半群 (PRM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062415_生理调控幺半群 (PRM) 的算子幂集算法.pdf",
+    "md_hash": "bf3e5e17c27f0378a5dc1ac5742f67ed1e64d74415d62eb329e4744a8c6220d1",
+    "pdf_hash": "cb4efe06453d15687bdd4aeb62ab8a58b48c37bbf51544518e3d63a889fadb85"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062416_毒理学效应幺半群 (TEM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062416_毒理学效应幺半群 (TEM) 的算子幂集算法.pdf",
+    "md_hash": "938660951342aed8e77afb6550e95ab425b3b99656e3dbb3357038a4d4fc1fe3",
+    "pdf_hash": "fb69e55b6857af26b0bbdb5fef5a0d72fb330a71770aa5dec457dc097aaf18a1"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_药代转运幺半群 (PKTM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062417_药代转运幺半群 (PKTM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062417_药代转运幺半群 (PKTM) 的算子幂集算法.pdf",
+    "md_hash": "cd93dfa01c98e9b4cfc5302452761bf0ca52d1cbefabc7a5deb629acc12fe3f9",
+    "pdf_hash": "0c9b70b4bd2256ae8dfacf30ee6bae4532de9c719561b2faa57cd22c0d06e6a0"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062418_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062418_药理基因组幺半群 (PGOM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062418_药理基因组幺半群 (PGOM) 的算子幂集算法.pdf",
+    "md_hash": "b4e28f2c9290e25801b381ed7331a5a6e7555f04b8756175ce5970dd942b04af",
+    "pdf_hash": "25f0b01425defd1f28fd856136563a90757ecfeef523846750c9ed632bc4519c"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062419_药效效应幺半群 (PDEM) 的算子幂集算法.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761062419_药效效应幺半群 (PDEM) 的算子幂集算法.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761062419_药效效应幺半群 (PDEM) 的算子幂集算法.pdf",
+    "md_hash": "e5c7a6b79350f44e9e3c4cf0b7ec2ff6eb519cc714934d72c0d4ef53ef4088d2",
+    "pdf_hash": "d4edf10d1af37673cf1ccff4c03f9324a450f116ea974c482c8a1f336bfdcb56"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_从“状态即诊断”到通用健康引擎：O3理论对精准医疗的终极范式革命.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1761235202_从“状态即诊断”到通用健康引擎：O3理论对精准医疗的终极范式革命.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_从“状态即诊断”到通用健康引擎：O3理论对精准医疗的终极范式革命.pdf",
+    "md_hash": "3b7a670adf110e580c1856a9c5008b816590d584d19d2bb2f9618db6e8dfd62a",
+    "pdf_hash": "09369f0691c3e8287b746f5983edc9d95f5359774ad9f2afb825fa47e49b4db4"
   }
 }
