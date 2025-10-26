@@ -82,7 +82,9 @@ function Save-Mapping([hashtable]$map,[string]$mapPath){
   $json = ($map | ConvertTo-Json -Depth 5)
   $parent = Split-Path -Path $mapPath -Parent
   if(-not (Test-Path -LiteralPath $parent -PathType Container)){ New-Item -ItemType Directory -Path $parent | Out-Null }
-  $json | Set-Content -LiteralPath $mapPath -Encoding UTF8
+  $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
+  $text = $json -replace "`r`n","`n"
+  [System.IO.File]::WriteAllText($mapPath, $text, $utf8NoBom)
 }
 
 function Export-InconsistenciesCsv($items,[string]$path){
@@ -92,7 +94,10 @@ function Export-InconsistenciesCsv($items,[string]$path){
   }
   if($null -eq $items -or $items.Count -eq 0){
     # 输出仅表头，便于后续流水线使用
-    "name,kernel_reference,full_reference" | Set-Content -LiteralPath $path -Encoding UTF8
+    $enc = [System.Text.UTF8Encoding]::new($false)
+    $header = "name,kernel_reference,full_reference"
+    if(-not $header.EndsWith("`n")){ $header += "`n" }
+    [System.IO.File]::WriteAllText($path, $header, $enc)
     Write-Host ("已导出 CSV（空结果，仅表头）：{0}" -f $path) -ForegroundColor Yellow
     return
   }
@@ -104,7 +109,11 @@ function Export-InconsistenciesCsv($items,[string]$path){
       full_reference    = $i.full_reference
     }
   }
-  $objs | Export-Csv -LiteralPath $path -NoTypeInformation -Encoding UTF8
+  $enc = [System.Text.UTF8Encoding]::new($false)
+  $csvLines = $objs | ConvertTo-Csv -NoTypeInformation
+  $csv = ($csvLines -join "`n")
+  if(-not $csv.EndsWith("`n")){ $csv += "`n" }
+  [System.IO.File]::WriteAllText($path, $csv, $enc)
   Write-Host ("已导出 CSV：{0}" -f $path) -ForegroundColor Green
 }
 

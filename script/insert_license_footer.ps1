@@ -18,7 +18,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
-function Get-Eol([string]$text){ if($text -match "\r\n"){ return "`r`n" } else { return "`n" } }
+function Get-Eol([string]$text){ return "`n" }
 function Read-All([string]$path){ return Get-Content -LiteralPath $path -Raw -Encoding UTF8 }
 function Write-All([string]$path, [string]$text){ $enc=[System.Text.UTF8Encoding]::new($false); [System.IO.File]::WriteAllText($path,$text,$enc) }
 

@@ -38,7 +38,7 @@ def _load_hash_map(json_path):
 
 def _save_hash_map(json_path, data):
     os.makedirs(os.path.dirname(json_path), exist_ok=True)
-    with open(json_path, 'w', encoding='utf-8') as f:
+    with open(json_path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 

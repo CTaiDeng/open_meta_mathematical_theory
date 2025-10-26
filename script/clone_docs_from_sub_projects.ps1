@@ -238,7 +238,10 @@ function UpdateReadmeSections([string]$readmePath, [hashtable]$sections){
       if((@($sections[$k])).Count -eq 0){ $out.Add('（暂无条目）') }
       $out.Add('')
     }
-    $out | Set-Content -LiteralPath $readmePath -Encoding UTF8
+    $enc = [System.Text.UTF8Encoding]::new($false)
+    $text = ($out -join "`n")
+    if(-not $text.EndsWith("`n")){ $text += "`n" }
+    [System.IO.File]::WriteAllText($readmePath, $text, $enc)
     return
   }
 
@@ -272,7 +275,10 @@ function UpdateReadmeSections([string]$readmePath, [hashtable]$sections){
     $out = @($pre + $mid.ToArray() + $post)
     $all = $out
   }
-  $all | Set-Content -LiteralPath $readmePath -Encoding UTF8
+  $enc = [System.Text.UTF8Encoding]::new($false)
+  $text = ($all -join "`n")
+  if(-not $text.EndsWith("`n")){ $text += "`n" }
+  [System.IO.File]::WriteAllText($readmePath, $text, $enc)
 }
 
 # 主流程

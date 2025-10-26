@@ -13,8 +13,7 @@ Param(
 $ErrorActionPreference = 'Stop'
 
 function Get-EolStyle([string]$text){
-    if($text -match "\r\n"){ return "`r`n" }
-    else { return "`n" }
+    return "`n"
 }
 
 function Insert-VersionLine([string]$text, [string]$version){
@@ -86,4 +85,3 @@ Write-Output ("Summary => Updated: {0}; Skipped: {1}; Total: {2}" -f $updated, $
 # Usage examples:
 # pwsh -NoLogo -File script/add_version_to_kernel_md.ps1 -Root 'res/kernel' -Version 'v1.0.0' -WhatIf
 # pwsh -NoLogo -File script/add_version_to_kernel_md.ps1 -Root 'res/kernel' -Version 'v1.0.0'
-

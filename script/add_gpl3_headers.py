@@ -263,7 +263,8 @@ def insert_header(path: Path, spdx: str = "GPL-3.0-only") -> bool:
         out = "\n".join(new_lines)
         if not out.endswith("\n"):
             out += "\n"
-        path.write_text(out, encoding="utf-8")
+        with path.open('w', encoding='utf-8', newline='\n') as f:
+            f.write(out)
         return True
 
     # If already consolidated (SPDX + modified GROMACS hint), skip
@@ -282,7 +283,8 @@ def insert_header(path: Path, spdx: str = "GPL-3.0-only") -> bool:
             out = "\n".join(lines)
             if not out.endswith("\n"):
                 out += "\n"
-            path.write_text(out, encoding="utf-8")
+            with path.open('w', encoding='utf-8', newline='\n') as f:
+                f.write(out)
             return True
         return False
     header = make_header_lines(style, spdx)
@@ -299,7 +301,8 @@ def insert_header(path: Path, spdx: str = "GPL-3.0-only") -> bool:
     out = "\n".join(new_lines)
     if not out.endswith("\n"):
         out += "\n"
-    path.write_text(out, encoding="utf-8")
+    with path.open('w', encoding='utf-8', newline='\n') as f:
+        f.write(out)
     return True
 
 
@@ -355,7 +358,6 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
 
 
 

@@ -25,7 +25,7 @@ function Get-DateFromName([string]$name){
   } catch { return $null }
 }
 
-function Get-Eol([string]$text){ if($text -match "\r\n"){ return "`r`n" } else { return "`n" } }
+function Get-Eol([string]$text){ return "`n" }
 
 function Read-All([string]$path){ return Get-Content -LiteralPath $path -Raw -Encoding UTF8 }
 

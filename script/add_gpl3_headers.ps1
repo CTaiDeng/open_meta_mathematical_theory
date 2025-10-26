@@ -129,7 +129,7 @@ function Insert-Header($path) {
     $style = Detect-Style $path
     $lines = Get-Content -LiteralPath $path -Raw -ErrorAction Stop
     $crlf = ($lines -match "`r`n")
-    $eol = if ($crlf) { "`r`n" } else { "`n" }
+    $eol = "`n"
     $arr = $lines -split "`r?`n"
     # Consolidation path: detect our SPDX header and legacy GROMACS LGPL header near the top
     $head = -join ($arr | Select-Object -First 200)
@@ -201,7 +201,8 @@ function Insert-Header($path) {
       $new += $arr[$i..($arr.Count-1)]
       $content = ($new -join $eol)
       if (-not $content.EndsWith($eol)) { $content += $eol }
-      Set-Content -LiteralPath $path -Value $content -Encoding utf8
+      $enc = [System.Text.UTF8Encoding]::new($false)
+      [System.IO.File]::WriteAllText($path, $content, $enc)
       return $true
     }
 
@@ -218,7 +219,8 @@ function Insert-Header($path) {
       if ($changed) {
         $content = ($arr -join $eol)
         if (-not $content.EndsWith($eol)) { $content += $eol }
-        Set-Content -LiteralPath $path -Value $content -Encoding utf8
+        $enc = [System.Text.UTF8Encoding]::new($false)
+        [System.IO.File]::WriteAllText($path, $content, $enc)
         return $true
       }
       return $false
@@ -240,7 +242,8 @@ function Insert-Header($path) {
     }
     $content = ($new -join $eol)
     if (-not $content.EndsWith($eol)) { $content += $eol }
-    Set-Content -LiteralPath $path -Value $content -Encoding utf8
+    $enc = [System.Text.UTF8Encoding]::new($false)
+    [System.IO.File]::WriteAllText($path, $content, $enc)
     return $true
   }
 
@@ -273,7 +276,6 @@ function Insert-Header($path) {
 } finally {
   Pop-Location
 }
-
 
 
 

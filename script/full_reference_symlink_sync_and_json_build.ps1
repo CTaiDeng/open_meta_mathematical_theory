@@ -89,7 +89,9 @@ function Save-LinkTargetMap($map,[string]$path){
   $json = ($map | ConvertTo-Json -Depth 5)
   $parent = Split-Path -Path $path -Parent
   if (-not (Test-Path -LiteralPath $parent -PathType Container)) { New-Item -ItemType Directory -Path $parent | Out-Null }
-  $json | Set-Content -LiteralPath $path -Encoding UTF8
+  $enc = [System.Text.UTF8Encoding]::new($false)
+  $text = $json -replace "`r`n","`n"
+  [System.IO.File]::WriteAllText($path, $text, $enc)
 }
 
 $sources = Load-SourcesFromConfig (Resolve-RepoPath $Config)

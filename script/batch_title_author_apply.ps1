@@ -58,14 +58,14 @@ function Read-Utf8Preserve {
 
 function Write-Utf8Preserve {
   param([string]$Path, [string]$Text, [bool]$WithBOM)
-  $enc = New-Object System.Text.UTF8Encoding($WithBOM)
+  $enc = New-Object System.Text.UTF8Encoding($false)
   $bytes = $enc.GetBytes($Text)
   [System.IO.File]::WriteAllBytes($Path, $bytes)
 }
 
 function Get-EOL {
   param([string]$Text)
-  if ($Text -match "`r`n") { return "`r`n" } else { return "`n" }
+  return "`n"
 }
 
 function Is-MeaningfulHeadingText {
@@ -205,5 +205,4 @@ catch {
   Write-Error $_
   exit 1
 }
-
 
