@@ -812,8 +812,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "6ce2fa0f7d6d2f3a38065d50ccb6f00f21dd8197e466685869d028c2602e79a0",
-    "pdf_hash": "d28f2054255c0ecd72f1ae120f3ccd94c5042b34b11807d10c93fd75bfe70c57"
+    "md_hash": "80661b3d190f8dca41103b0d41672c04e1be5e5b872be410cb894cc86bd2a858",
+    "pdf_hash": "e912917a5afa7bc2534a3f72a40976c1d3b9acfd74237f0bf947b6dfcf70db38"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -962,8 +962,8 @@
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803201_法则联络：O3理论中作为可计算构造的联络及其工程化实现.pdf",
-    "md_hash": "88b3b594b1798bc51dd649a953b62a86e49341d9c4969f36164bf866d20c27c2",
-    "pdf_hash": "314700eaee022794ca11e3e50868ced3afd38dcee808441b68ec249dc1553eeb"
+    "md_hash": "2b3fbf601bc9bebf9237f20e0135c56d5bb56ad4e102ad5e1abca17bfcba3cb5",
+    "pdf_hash": "86c964ec5d67eba347410dcb0aa4051ff97423d42d7b7b4b8e2b88366ecea699"
   },
   "src\\sub_projects_docs_pdf\\lbopb_pdf\\1760803202_语义度量、混合态与连续统假设的范式重述.pdf": {
     "md_path": "src\\sub_projects_docs\\lbopb\\1760803202_语义度量、混合态与连续统假设的范式重述.md",
@@ -1126,5 +1126,23 @@
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1761235202_从“状态即诊断”到通用健康引擎：O3理论对精准医疗的终极范式革命.pdf",
     "md_hash": "3b7a670adf110e580c1856a9c5008b816590d584d19d2bb2f9618db6e8dfd62a",
     "pdf_hash": "09369f0691c3e8287b746f5983edc9d95f5359774ad9f2afb825fa47e49b4db4"
+  },
+  "src\\sub_projects_docs_pdf\\haca_pdf\\1761408000_从代数算子到语义几何：HACA／PACER 框架的核心理论阐述.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1761408000_从代数算子到语义几何：HACA／PACER 框架的核心理论阐述.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1761408000_从代数算子到语义几何：HACA／PACER 框架的核心理论阐述.pdf",
+    "md_hash": "668c6c3087b9850059b59fa3c874101aa37c85eda5c670ba0bd15e1f4a54ebc8",
+    "pdf_hash": "9adc18c3192ed86fc06d0ca269d1d4ffe7d75dcb2920805f5fb571f13c26c5c2"
+  },
+  "src\\sub_projects_docs_pdf\\haca_pdf\\1761408001_统一语义：基于 O3／HACA 框架的现代汉语与古典名著高维纤维丛重构.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1761408001_统一语义：基于 O3／HACA 框架的现代汉语与古典名著高维纤维丛重构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1761408001_统一语义：基于 O3／HACA 框架的现代汉语与古典名著高维纤维丛重构.pdf",
+    "md_hash": "40f9d5c60c441ccba52017f841df0c1ce24257b59855474a0c515ee181b0a1a2",
+    "pdf_hash": "2a7fd334e3a645c63da922ac2ce398a834b22774a8d46995b6e7abad09bdf284"
+  },
+  "src\\sub_projects_docs_pdf\\haca_pdf\\1761408002_语义的辩证法：论 O3－HACA 框架中语言的超集-子集动态与“生动性”生成机制.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1761408002_语义的辩证法：论 O3－HACA 框架中语言的超集-子集动态与“生动性”生成机制.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1761408002_语义的辩证法：论 O3－HACA 框架中语言的超集-子集动态与“生动性”生成机制.pdf",
+    "md_hash": "07bae370128f033aff5e30e5e9a0c953e34067a7ab4544543f49da0668bf6054",
+    "pdf_hash": "eccd85fff6b2278dfddc46c644dd7e92572221ff7ed1c470705c694ff1083d72"
   }
 }
