@@ -20,7 +20,6 @@ $dir  = Join-Path $root 'src\kernel_reference'
 #   1) “关于‘O3理论’原创性及命名重合的澄清声明”
 #   2) “O3的寓意声明”
 #   3) “关于核心术语‘偏好’改为‘基准’的特别说明”
-#   4) “关于核心语义“O3理论的本质为由繁入简的生成范式”改为“O3理论的本质为由繁入简的构造范式”的特别说明”
 # - 脚本不得写入或修改 `src/kernel_reference/KERNEL_REFERENCE_README.md` 的声明区。
 
 # 分类规则（按优先级匹配一个主类）
