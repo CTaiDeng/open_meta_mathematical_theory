@@ -4,7 +4,7 @@
 # Licensed under the GNU General Public License version 3.
 # See https://www.gnu.org/licenses/gpl-3.0.html for details.
 param(
-  [int]$MaxChars = 300
+  [int]$MaxChars = 500
 )
 
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
