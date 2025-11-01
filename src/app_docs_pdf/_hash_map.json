@@ -1,0 +1,14 @@
+{
+  "1761690943_魔群月光猜想的生成式证明：基于O3理论中PFB-GNLA的退化与双重投影的理论推演.pdf": {
+    "md_path": "src\\app_docs\\1761690943_魔群月光猜想的生成式证明：基于O3理论中PFB-GNLA的退化与双重投影的理论推演.md",
+    "pdf_path": "src\\app_docs_pdf\\1761690943_魔群月光猜想的生成式证明：基于O3理论中PFB-GNLA的退化与双重投影的理论推演.pdf",
+    "md_hash": "4227907163985779a878bae01531386d5a6033db2b7b183ff3e5979b041c7bbb",
+    "pdf_hash": "acf0e9e529718849ce19be906aa92c2789bfa2433b558911d3911c399050c467"
+  },
+  "LICENSE.pdf": {
+    "md_path": "src\\app_docs\\LICENSE.md",
+    "pdf_path": "src\\app_docs_pdf\\LICENSE.pdf",
+    "md_hash": "c892047fb67fe8780df2a8a4cf457954db8f7f542b3483897174ef1ac22a54d4",
+    "pdf_hash": "ec14d18298e616be46f37849487711e8ab62254ea2fb171fbce03939ccf75223"
+  }
+}
