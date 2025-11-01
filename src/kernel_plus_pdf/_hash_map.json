@@ -46,5 +46,11 @@
     "pdf_path": "src\\kernel_plus_pdf\\LICENSE.pdf",
     "md_hash": "c892047fb67fe8780df2a8a4cf457954db8f7f542b3483897174ef1ac22a54d4",
     "pdf_hash": "aad4eaea5ce5e4182375b3941bf29f77d7ab65836f573cb758786086721f93bb"
+  },
+  "README.pdf": {
+    "md_path": "src\\kernel_plus\\README.md",
+    "pdf_path": "src\\kernel_plus_pdf\\README.pdf",
+    "md_hash": "93374447f61eba00d8567b5c31991b43b6f40a95cf9935d9f169c0622b1b9085",
+    "pdf_hash": "9d0b2e08f67ac4bece6474211273b73a74b3447c0090ebbd0ca9e3f6d19af26a"
   }
 }

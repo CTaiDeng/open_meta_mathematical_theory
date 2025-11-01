@@ -1,50 +1,61 @@
-# 脚本总览与开发协议
+# 脚本清单与开发协议
 
-本目录收录仓库内的自动化脚本与脚本包，统一采用 UTF-8 编码，PowerShell 脚本默认为 `pwsh` 执行。以下为主要脚本用途与入口命令。
+本目录收录仓库内的自动化脚本。脚本输出统一为 UTF-8 编码，PowerShell 脚本默认由 `pwsh` 执行。以下为主要脚本与用途、示例命令。
 
 ## 子项目文档
 
 - `script/clone_docs_from_sub_projects.ps1`
-  - 按 `src/sub_projects_docs/sub_projects_clone_map.json` 进行“部分稀疏克隆”，将外部仓库指定子目录的顶层 `*.md` 文件复制至 `src/sub_projects_docs/<name>`；并生成/更新 `src/sub_projects_docs/README.md` 索引。
+  - 按 `src/sub_projects_docs/sub_projects_clone_map.json` 配置，稀疏克隆并复制外部仓库指定目录的顶层 `*.md` 文件到 `src/sub_projects_docs/<name>`；生成/更新 `src/sub_projects_docs/README.md` 索引。
   - 关键参数：`-SkipClone`、`-SkipCopy`、`-SkipIndex`、`-KeepOut`、`-MaxChars`、`-Step`。
-  - 稀疏克隆优化：优先使用 `--no-cone` + `/<subdir>/*.md` 精确匹配，失败则回退 `--cone`。
+  - 稀疏克隆优化：优先使用 `--no-cone` + `/<subdir>/*.md` 精确匹配，失败时回退 `--cone`。
 
-## kernel_reference 相关
+## kernel_reference 目录
 
-- `script/kernel_reference_build_index.ps1`
-  - 重建 `src/kernel_reference/INDEX.md`，遵守固定头样式与“声明区”保持不动的规则。
+- `script/build_index_kernel_reference.ps1`
+  - 重建 `src/kernel_reference/INDEX.md`；保留固定头样式与声明区，仅更新“总计：{N} 篇”与条目列表。
 
-## full_reference 相关
+## kernel_plus 目录
+
+- `script/build_index_kernel_plus.ps1`
+  - 生成/更新 `src/kernel_plus/README.md`；仅收录形如 `<unittime秒>_*.md` 的文件，排除 `LICENSE.md`。
+
+## app_docs 目录
+
+- `script/build_index_app_docs.ps1`
+  - 生成/更新 `src/app_docs/README.md`；仅收录形如 `<unittime秒>_*.md` 的文件，排除 `LICENSE.md`。如需兼容 `src/app_doc`，可传参 `-TargetDir src/app_doc`。
+
+## full_reference 目录
 
 - `script/full_reference_symlink_sync_and_json_build.ps1`
-  - 按 `src/full_reference/Link.json` 建立 `src/full_reference` 下的符号链接，指向各外部源文件绝对路径；完成后导出 `src/full_reference/symlink_target_map.json`（链接名 -> 目标绝对路径）。
+  - 读取 `src/full_reference/Link.json` 与 `src/full_reference` 下的符号链接，指向外部源文件的路径；生成后导出 `src/full_reference/symlink_target_map.json`（源 -> 目标 的路径映射）。
 - `script/copy_kernel_reference_to_full_reference_by_diff_use_csv_map.ps1`
-  - 读取 `src/full_reference/common_name_hash_diff.csv` 的 `name` 列，将 `src/kernel_reference/<name>` 拷贝到 full 端“源文件绝对路径”。优先使用 `symlink_target_map.json` 定位，缺失时回退解析 `src/full_reference/<name>`。
+  - 读取 `src/full_reference/common_name_hash_diff.csv` 中 `name` 列，将 `src/kernel_reference/<name>` 同步到 full 侧。源文件采用路径映射；无法定位时回落复制到 `src/full_reference/<name>`。
 
-## 差异/一致性检查
+## 批处理/一键脚本
 
 
 
-## 其他工具
+## 统一处理
 
 - `script/add_gpl3_headers.ps1`、`script/add_gpl3_headers.py`
-  - 为脚本/源码文件补齐或规范化 GPL-3 许可头，遵循“单年版权头”规范。
+  - 为脚本/源码文件补齐规范化 GPL-3 许可证头；遵循项目版权头规范。
 
 ---
 
 ## 开发协议（摘要）
 
-- 受保护的授权文件（仅人工维护，脚本不得改写）：
+- 以下授权文件为人工维护文件，脚本不得自动修改：
   - `src/docs/LICENSE.md`、`src/kernel_reference/LICENSE.md`、`src/full_reference/LICENSE.md`、`LICENSE`
-- 新建脚本（`.ps1`/`.py`/`.sh`/`.cmd`/`.bat`）：
-  - 头部必须包含：`SPDX-License-Identifier: GPL-3.0-only` 与 `Copyright (C) 2025 GaoZheng`
-  - 若存在 shebang 或编码声明，许可证头置于其后。
-- 版权头规范：统一为 `Copyright (C) 2025 GaoZheng`
-- Markdown 操作：批量处理时跳过名为 `INDEX.md` 的文件；`src/kernel_reference/INDEX.md` 条目结构与声明区不得脚本化更改。
+- 新增脚本（`.ps1`/`.py`/`.sh`/`.cmd`/`.bat`）需：
+  - 头部包含：`SPDX-License-Identifier: GPL-3.0-only` 与 `Copyright (C) 2025 GaoZheng`
+  - 若存在 shebang，则许可证头置于 shebang 下一行
+- 版权头规范统一为 `Copyright (C) 2025 GaoZheng`
+- Markdown 批量处理时跳过 `INDEX.md`；`src/kernel_reference/INDEX.md` 的结构受 AGENTS.md 限制，相关脚本需遵循。
 
 ---
 
 ## 维护约定
 
-- 当更新与子项目文档聚合相关的脚本（如 `clone_docs_from_sub_projects.ps1`）时，请同步校对并更新 `src/sub_projects_docs/README.md` 中的使用说明与示例命令，确保路径与参数描述一致。
+- 涉及子项目文档聚合的脚本（如 `clone_docs_from_sub_projects.ps1`）更新时，应同步校对 `src/sub_projects_docs/README.md` 的使用说明与示例命令，确保路径与参数一致。
+- 索引构建脚本更名或新增时，需同步维护本文件中的脚本清单与示例命令，并与 AGENTS.md 约束一致；脚本输出统一为 UTF-8（无BOM）+ LF。
 

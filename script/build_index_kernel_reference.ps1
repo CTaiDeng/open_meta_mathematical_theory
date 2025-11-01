@@ -13,30 +13,25 @@ $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path '.').Path
 $dir  = Join-Path $root 'src\kernel_reference'
 
-# 约定（严格遵守 AGENTS.md）：
-# - INDEX.md 头部的“声明区”为人工维护，脚本仅更新“总计：{N} 篇”数字与条目列表；
-#   必须完整保留声明区与其分隔线及行序，避免任何格式抖动。
-# - 声明区固定主题（四段，需完整保留）：
-#   1) “关于‘O3理论’原创性及命名重合的澄清声明”
-#   2) “O3的寓意声明”
-#   3) “关于核心术语‘偏好’改为‘基准’的特别说明”
-# - 脚本不得写入或修改 `src/kernel_reference/KERNEL_REFERENCE_README.md` 的声明区。
+# 约束与细节遵循 AGENTS.md：
+# - INDEX.md 头部的“固定头样式”及“声明区”为人工维护，脚本仅更新“总计：{N} 篇”数字与后续条目列表。
+# - 脚本不得写入/修改 KERNEL_REFERENCE_README.md 的声明区。
 
-# 分类规则（按优先级匹配一个主类）
+# 分类规则（按正则匹配一类优先）
 $categories = [ordered]@{
-  '传统/O3/PFB-GNLA论证' = @('严谨论证','近似实现','PFB-GNLA','O3理论','解析解AI','O3元数学','传统数学');
-  '算法/路径积分/逆参'   = @('DERI','GCPOLAA','路径积分','逆参','状态路径','w\(t\)');
-  '量子/观察者/卡丘/宇宙' = @('量子','观察者','卡丘','宇宙','流形');
-  '元数学理论'           = @('元数学','泛逻辑','泛迭代','公理化','C泛范畴','泛拓扑','泛抽象代数');
-  'GRL/广义增强学习'     = @('广义增强学习','\bGRL\b','解析解');
-  '广义集合/分形/康托'   = @('集合论','康托','分形','集合');
-  '金融/量化交易/价→账→参' = @('量化交易','价→账','价—账','相对价');
-  '生命科学/PGOM/LBOPB/HIV' = @('PGOM','LBOPB','生命','HIV');
-  'AI对齐/原则/博弈/统计解' = @('对齐','原则','博弈','统计解','随机生成');
-  '连续统假设'           = @('连续统假设');
-  '长时序/认知模型'       = @('长时序','认知模型');
+  '传统/O3/PFB-GNLA论证' = @('上位论证','实际验证','PFB-GNLA','O3理论','通用AI','O3元数学','传统数学');
+  '算法/路径论/控制'   = @('DERI','GCPOLAA','路径论','控制','状态路径','w\(t\)');
+  '系统/观察/信息/复杂' = @('系统','观察','信息','复杂','演化');
+  '元数学基座'           = @('元数学','泛逻辑','迭代论','范畴论','C范畴','拓扑','形而上');
+  'GRL/生成式强化学习'     = @('强化学习','\bGRL\b','生成式');
+  '群论几何/图论/网络'   = @('群论','图论','网络','流形');
+  '哲学/认识论/德·工·术' = @('认识论','德·工·术','德工术','契约');
+  '应用数学/PGOM/LBOPB/HIV' = @('PGOM','LBOPB','病毒','HIV');
+  'AI工程/原理/算法/统计学' = @('工程','原理','算法','统计','概率论');
+  '时空统筹'           = @('时空统筹');
+  '时滞/未知模型'       = @('时滞','未知模型');
   'D结构'                = @('D结构');
-  '其他综述/评价'         = @('发展','评价','交汇','综述');
+  '扩展/附录'         = @('扩展','附录','补充','例证');
   '未分类'               = @();
 }
 
@@ -52,17 +47,11 @@ function Get-PrimaryCategory([string]$name){
 function Clean-Text([string]$text){
   if([string]::IsNullOrWhiteSpace($text)){ return '' }
   $t = $text
-  # 删除“目录”分节（从目录标题到下一个标题/文末）
   $t = [Regex]::Replace($t,'(?ms)^\s*#{1,6}\s*目\s*录\s*$.*?(?=^\s*#{1,6}\s*\S|\z)','')
-  # 删除center块、水平线
   $t = $t -replace '(?is)<center>.*?</center>','' -replace '(?m)^\s*[-*_]{3,}\s*$',''
-  # 删除块引用中的“说明：”以及独立“说明：”行
   $t = $t -replace '(?m)^\s*>?\s*说明[:：].*$',''
-  # 删除Markdown标题前缀 #### 等，但保留标题文字
   $t = $t -replace '(?m)^\s{0,3}#{1,6}\s*',''
-  # 删除粗体/斜体/行内代码/数学
   $t = $t -replace '(\*\*|__|\*)','' -replace '`','' -replace '\$[^$]*\$',''
-  # 删除多余空行与空白
   $lines = $t -split "\r?\n" | Where-Object { $_ -ne '' -and $_.Trim().Length -gt 0 -and $_.Trim() -ne '目录' }
   $t = ($lines -join ' ')
   $t = ($t -replace '\s+',' ').Trim()
@@ -71,8 +60,7 @@ function Clean-Text([string]$text){
 
 function Get-Abstract([string]$path, [int]$max=500){
   try{ $raw = Get-Content -LiteralPath $path -Raw -Encoding UTF8 } catch { return '' }
-  # 优先取“摘要”段落
-  $m = [Regex]::Match($raw, '(?ms)^\s*#{1,6}\s*摘要[:：]?\s*$([^#]+)')
+  $m = [Regex]::Match($raw, '(?ms)^\s*#{1,6}\s*摘\s*要[:：]?\s*$([^#]+)')
   if($m.Success){ $text = $m.Groups[1].Value } else { $text = $raw }
   $text = Clean-Text $text
   if([string]::IsNullOrWhiteSpace($text)){ return '' }
@@ -84,7 +72,6 @@ $files = Get-ChildItem -LiteralPath $dir -Recurse -File -Filter '*.md' |
          Where-Object { $_.Name -ne 'INDEX.md' -and $_.Name -ne 'LICENSE.md' -and $_.Name -ne 'KERNEL_REFERENCE_README.md' -and -not $_.Name.EndsWith('说明.md') } |
          Sort-Object FullName
 
-# 构建分组
 $groups = @{}
 foreach($f in $files){
   $name = $f.Name
@@ -93,7 +80,6 @@ foreach($f in $files){
   $groups[$cat].Add($f)
 }
 
-# 生成内容
 $total = $files.Count
 $target = Join-Path $dir 'INDEX.md'
 
@@ -108,12 +94,9 @@ function Build-Header-With-Preservation([int]$totalCount){
       if($sumIdx -ge 0 -and $postSumSepIdx -lt 0 -and $lines[$i].Trim() -eq '---'){ $postSumSepIdx = $i; break }
     }
     if($firstSepIdx -ge 0 -and $sumIdx -gt $firstSepIdx -and $postSumSepIdx -gt $sumIdx){
-      # 复制头部至“总计”后的第一条分隔线，期间仅更新总计数字
       $header = New-Object System.Collections.Generic.List[string]
       foreach($idx in 0..$postSumSepIdx){ $header.Add($lines[$idx]) }
-      # 更新总计行中的数字，保持其余字符不变
       $orig = $header[$sumIdx]
-      # 尽量原位更新数字：定位“总计：”与后续“篇”之间的数字，保持其余字符与空白不变
       $updated = $orig
       $k1 = $orig.IndexOf('总计：')
       if($k1 -ge 0){
@@ -122,19 +105,16 @@ function Build-Header-With-Preservation([int]$totalCount){
           $prefix = $orig.Substring(0, $k1 + '总计：'.Length)
           $mid    = $orig.Substring($k1 + '总计：'.Length, $k2 - ($k1 + '总计：'.Length))
           $suffix = $orig.Substring($k2)
-          # 仅替换中段中的第一个数字序列
           $mid2 = [Regex]::Replace($mid, '\d+', [string]$totalCount, 1)
           $updated = $prefix + $mid2 + $suffix
         }
       }
       $header[$sumIdx] = $updated
       foreach($ln in $header){ $list.Add($ln) }
-      # 追加一个空行（若原文在该分隔线后已有空行则保持后续生成的段落自然分隔）
       if($list.Count -eq 0 -or $list[$list.Count-1] -ne ''){ $list.Add('') }
       return $list
     }
   }
-  # 回退：使用固定头样式（无声明区）
   $list.Add('# **基于分类的索引（含摘要）**')
   $list.Add('')
   $list.Add('### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)')
@@ -150,7 +130,6 @@ function Build-Header-With-Preservation([int]$totalCount){
 }
 
 $out = Build-Header-With-Preservation -totalCount $total
-# 确保 $out 为可增长列表，避免固定大小集合导致 Add 失败
 $__tmp = New-Object System.Collections.Generic.List[string]
 foreach($ln in $out){ $__tmp.Add($ln) }
 $out = $__tmp
@@ -161,9 +140,8 @@ foreach($cat in $categories.Keys){
   $out.Add('')
   foreach($f in ($groups[$cat] | Sort-Object FullName)){
     $abstract   = Get-Abstract $f.FullName $MaxChars
-    # 文件形如：`文件名.md`（不加-，不加链接）
     $out.Add('`' + $f.Name + '`')
-    if($abstract -ne ''){ $out.Add('摘要：' + $abstract) } else { $out.Add('摘要：无（建议在文首添加“摘要”段落）') }
+    if($abstract -ne ''){ $out.Add('摘要：' + $abstract) } else { $out.Add('摘要：无（请在文档中添加“## 摘要”段落）') }
   }
   $out.Add('')
 }
@@ -176,4 +154,5 @@ try {
 } finally {
   $sw.Dispose()
 }
-Write-Host "Generated: $target with $total entries. (UTF-8+LF)"
+Write-Host "Generated: $target with $total entries. (UTF-8+LF)" 
+

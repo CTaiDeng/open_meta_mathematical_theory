@@ -10,5 +10,11 @@
     "pdf_path": "src\\app_docs_pdf\\LICENSE.pdf",
     "md_hash": "c892047fb67fe8780df2a8a4cf457954db8f7f542b3483897174ef1ac22a54d4",
     "pdf_hash": "ec14d18298e616be46f37849487711e8ab62254ea2fb171fbce03939ccf75223"
+  },
+  "README.pdf": {
+    "md_path": "src\\app_docs\\README.md",
+    "pdf_path": "src\\app_docs_pdf\\README.pdf",
+    "md_hash": "c49b318100f2bfb8f2176eca4628fab1f74cdc5f72055942d5d705f623b78311",
+    "pdf_hash": "9361c91ad69e1bd6b69d3b907654bf21da10fb18a4bdf9b3cccf571a1bfc1b0b"
   }
 }
