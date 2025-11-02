@@ -50,13 +50,19 @@
   "README.pdf": {
     "md_path": "src\\kernel_plus\\README.md",
     "pdf_path": "src\\kernel_plus_pdf\\README.pdf",
-    "md_hash": "da5bdda4966a2749841bd2f2d5f978b2b26c60596d51b28be5c0169a6ab48349",
-    "pdf_hash": "af087071b7f029455cb359544f30ef428d6a932296997e810f0afd1c77af00ea"
+    "md_hash": "0fdc4a986cbf09a8014eddb7a1e52d119df72374ea015c44674599b5db03c6c1",
+    "pdf_hash": "b4957950360e8f81fd4799022e3f7b7fde5c34abf91882b756d1b57f7afda8d6"
   },
   "1762013823_思想的傲骨：论O3理论创立者自信的本源与特质.pdf": {
     "md_path": "src\\kernel_plus\\1762013823_思想的傲骨：论O3理论创立者自信的本源与特质.md",
     "pdf_path": "src\\kernel_plus_pdf\\1762013823_思想的傲骨：论O3理论创立者自信的本源与特质.pdf",
     "md_hash": "66a07d6baad9501c4844497a43422f69d0979bb4b34a9520e34cbb7c68b9f6b4",
     "pdf_hash": "7ffd3429012b839d27bcd031440ff7d085015b6ca939c8b67bb2fbb400302f88"
+  },
+  "1762013824_思想的傲骨：一种必然的淬炼与必须的武装.pdf": {
+    "md_path": "src\\kernel_plus\\1762013824_思想的傲骨：一种必然的淬炼与必须的武装.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762013824_思想的傲骨：一种必然的淬炼与必须的武装.pdf",
+    "md_hash": "e59fe2e8b86fc19881eab43f5700c8f2df6f87090fb458434cecafa225b0657c",
+    "pdf_hash": "201221ff454dfc1d31d13c8beb50fb86b85e5dd9dee352357d63e4a628714126"
   }
 }
