@@ -1,4 +1,10 @@
 {
+  "description": "全局文档处理与提交信息过滤配置：为批处理/索引构建等脚本提供路径跳过集，并为提交信息自动生成提供路径白/黑名单过滤。若 `commit_msg_exclude_prefixes` 为空，则回退使用 `skip_paths`。",
+  "notes": [
+    "路径前缀统一使用`/`，不含开头`./`，不以`/`结尾。",
+    "仅影响提交信息生成与相关脚本的变更收集，不改变 Git 行为。",
+    "主要由`script/commit_filters.py`与`script/gen_commit_msg_googleai.py`读取。"
+  ],
   "skip_paths": [
     "docs/kernel_reference"
   ],
