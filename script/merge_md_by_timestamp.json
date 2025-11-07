@@ -1,0 +1,18 @@
+{
+  "description": "`script/merge_md_by_timestamp.py` 的配置文件。定义扫描来源目录与输出目录；仅合并基名匹配 `^\\d{10}_.+\\.md$` 的 Markdown 文件（按 UNIX 秒时间戳升序）。",
+  "notes": [
+    "路径建议使用仓库根目录的相对路径；可用 `\\\\` 或 `/`，脚本会规范化为 POSIX。",
+    "该脚本仅读取源文件，不会修改任何源内容；输出写入 `out`（或下方 `output_dir`）。",
+    "输出文件名与脚本同名：`out/merge_md_by_timestamp.json` 与 `out/merge_md_by_timestamp.md`。",
+    "如需临时覆盖配置，可用命令行参数：`--config`、`--out-dir`、`--dry-run`。",
+    "编码/换行：UTF-8（无BOM）+ LF；自动跳过不匹配命名模式的 `.md` 文件。"
+  ],
+  "source_dirs": [
+    "src/kernel_plus",
+    "src/app_docs",
+    "src/kernel_reference",
+    "src/sub_projects_docs/haca",
+    "src/sub_projects_docs/lbopb"
+  ],
+  "output_dir": "out"
+}
