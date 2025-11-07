@@ -41,6 +41,8 @@
     "script/run_full_reference_symlink_sync.ps1",
     "script/setup_python_env.cmd",
     "script/sync_common_name_hash.ps1",
+    "script/merge_md/merge_md_by_timestamp.json",
+    "script/merge_md/merge_md_by_timestamp.py",
     ".gitattributes",
     ".gitignore",
     "AGENTS.md",
