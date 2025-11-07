@@ -1,5 +1,5 @@
 {
-  "description": "`script/merge_md_by_timestamp.py` 的配置文件。定义扫描来源目录与输出目录；仅合并基名匹配 `^\\d{10}_.+\\.md$` 的 Markdown 文件（按 UNIX 秒时间戳升序）。",
+  "description": "`script/merge_md/merge_md_by_timestamp.py` 的配置文件。定义扫描来源目录与输出目录；仅合并基名匹配 `^\\d{10}_.+\\.md$` 的 Markdown 文件（按 UNIX 秒时间戳升序）。",
   "notes": [
     "路径建议使用仓库根目录的相对路径；可用 `\\\\` 或 `/`，脚本会规范化为 POSIX。",
     "该脚本仅读取源文件，不会修改任何源内容；输出写入 `out`（或下方 `output_dir`）。",
@@ -16,9 +16,10 @@
   ],
   "output_dir": "out",
   "compression": {
-    "enabled": false,
+    "enabled": true,
     "model": "gemini-2.5-pro",
     "max_chars": 500,
-    "request_interval_seconds": 0
+    "request_interval_seconds": 3
   }
 }
+

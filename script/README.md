@@ -44,13 +44,13 @@
 
 ## 文档合并导出
 
-- `script/merge_md_by_timestamp.py`
-  - 按 `script/merge_md_by_timestamp.json` 配置，收集 `source_dirs` 下基名匹配 `<UNIX时间戳秒>_*.md` 的文件，按时间戳升序合并为 JSON 与 Markdown 两份结果，输出到 `out`（或配置项 `output_dir`）。
+- `script/merge_md/merge_md_by_timestamp.py`
+  - 按 `script/merge_md/merge_md_by_timestamp.json` 配置，收集 `source_dirs` 下基名匹配 `<UNIX时间戳秒>_*.md` 的文件，按时间戳升序合并为 JSON 与 Markdown 两份结果，输出到 `out`（或配置项 `output_dir`）。
   - 主要参数：`--config`（配置文件路径）、`--out-dir`（覆盖输出目录）、`--dry-run`（仅预览不写入）。
-  - 示例：`python3 script/merge_md_by_timestamp.py`；预览：`python3 script/merge_md_by_timestamp.py --dry-run`。
+  - 示例：`python3 script/merge_md/merge_md_by_timestamp.py`；预览：`python3 script/merge_md/merge_md_by_timestamp.py --dry-run`。
 
-- `script/merge_md_by_timestamp.json`
-  - 配置项：`source_dirs`（目录列表）、`output_dir`（默认 `out`）。
+- `script/merge_md/merge_md_by_timestamp.json`
+  - 配置项：`source_dirs`（目录列表）、`output_dir`（默认 `out`）；`compression`（`enabled`/`model`/`max_chars`/`request_interval_seconds`）。
   - 默认目录包含：`src/kernel_plus`、`src/app_docs`、`src/kernel_reference`、`src/sub_projects_docs/haca`、`src/sub_projects_docs/lbopb`。
 
 ---
