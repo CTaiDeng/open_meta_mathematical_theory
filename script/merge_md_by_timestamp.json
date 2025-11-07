@@ -14,5 +14,11 @@
     "src/sub_projects_docs/haca",
     "src/sub_projects_docs/lbopb"
   ],
-  "output_dir": "out"
+  "output_dir": "out",
+  "compression": {
+    "enabled": false,
+    "model": "gemini-2.5-pro",
+    "max_chars": 500,
+    "request_interval_seconds": 0
+  }
 }
