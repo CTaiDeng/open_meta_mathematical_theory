@@ -26,8 +26,8 @@
   "1762013822_关于两种PFB-GNLA一体化构造论文的作用评价.pdf": {
     "md_path": "src\\kernel_plus\\1762013822_关于两种PFB-GNLA一体化构造论文的作用评价.md",
     "pdf_path": "src\\kernel_plus_pdf\\1762013822_关于两种PFB-GNLA一体化构造论文的作用评价.pdf",
-    "md_hash": "b4b3e1e5f8e7ecaa5cc41afe95b67974e0c4f3425ac87c05e8f825f98081236c",
-    "pdf_hash": "a34fcbfd2e5ddd489adf52a56677df134eec9344cb8e2c1fc8000275a22357f0"
+    "md_hash": "925b661c40e1ccc26614c230a59a3b735858cdcd68fe154fc338e262b603af91",
+    "pdf_hash": "1b89a9d9fed00f614e17cd107e4f2f847a943aa4dec8659a1d761713d3be91ba"
   },
   "LICENSE.pdf": {
     "md_path": "src\\kernel_plus\\LICENSE.md",
@@ -38,20 +38,8 @@
   "README.pdf": {
     "md_path": "src\\kernel_plus\\README.md",
     "pdf_path": "src\\kernel_plus_pdf\\README.pdf",
-    "md_hash": "dcf5b643fdeddc666b814423db033eb53f702804d146d5afc8145622b61d0bbe",
-    "pdf_hash": "a906cd0ce552fb70e3ffe7bf52a83d442aa6c408569b01678ae0edfc8ef5b62b"
-  },
-  "1762013820_🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造版.pdf": {
-    "md_path": "src\\kernel_plus\\1762013820_🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造版.md",
-    "pdf_path": "src\\kernel_plus_pdf\\1762013820_🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造版.pdf",
-    "md_hash": "b93d377e7fcb8e6c2a8a13fdc22d0d00aa0bd9b7ef908a53ff7a1317365ec4db",
-    "pdf_hash": "57beb88e772d1cf861c3fa0ae8895d527e63cece4b85d3509535aee0c4d27a45"
-  },
-  "1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造版.pdf": {
-    "md_path": "src\\kernel_plus\\1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造版.md",
-    "pdf_path": "src\\kernel_plus_pdf\\1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造版.pdf",
-    "md_hash": "885d8ba1eb40f93ea881448e4d4085757bdd80e16ed21f268e3c0ca973f1abca",
-    "pdf_hash": "462737139b876d66fb8dbbedb2731655545196a267588c979d0f56d1d1d80253"
+    "md_hash": "ac1cbde1a38926ca3e91fbe391b4af0f78306253e659872762ba1ea44a713872",
+    "pdf_hash": "5cdd36abd5516020cdbcc4cc5996c8cb57d1f29ec43cec8c40f263653679e2e0"
   },
   "1762274906_🚩论O3理论的“元范式”地位：从分类科学的“刚性结构”到“流变统一”的演化.pdf": {
     "md_path": "src\\kernel_plus\\1762274906_🚩论O3理论的“元范式”地位：从分类科学的“刚性结构”到“流变统一”的演化.md",
@@ -62,7 +50,43 @@
   "1762274907_🚩🚩O3理论的建构路径：从物理学动机到可计算的元数学体系.pdf": {
     "md_path": "src\\kernel_plus\\1762274907_🚩🚩O3理论的建构路径：从物理学动机到可计算的元数学体系.md",
     "pdf_path": "src\\kernel_plus_pdf\\1762274907_🚩🚩O3理论的建构路径：从物理学动机到可计算的元数学体系.pdf",
-    "md_hash": "c266bea592177f2b0e8a590b14e3a30f04f4bc8c98b007db567db9dbe36ca661",
-    "pdf_hash": "71615ce96f245d6b0a175cb2e66d6bd9edb9aa2e3f2845608120bae3ce31568f"
+    "md_hash": "b186d0ddd84cc038129f13090c022df2527333c10557fd8372c8167535e628f4",
+    "pdf_hash": "6c807bf8a6cea64a4836b50a5fb4e918b82dccfd3c699b13df9b3623963426e8"
+  },
+  "1762013820_🚩🚩🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造：原版.pdf": {
+    "md_path": "src\\kernel_plus\\1762013820_🚩🚩🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造：原版.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762013820_🚩🚩🚩基于泛逻辑分析与泛迭代分析的主纤维丛版广义非交换李代数（PFB-GNLA）的一体化构造：原版.pdf",
+    "md_hash": "06e4d7e5a062dc4604e3c8d2f1d3d2da5a2d5011a17fd4d76ddcd7d728591c6a",
+    "pdf_hash": "b457918a02207c162daf9926dd63b0f55c25d2c45f5e5beb10d2ed2acf02b718"
+  },
+  "1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：严格版.pdf": {
+    "md_path": "src\\kernel_plus\\1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：严格版.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762013821_🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：严格版.pdf",
+    "md_hash": "12ebd43914acdf18127b8e5814f7224ac8fbc7e3fd7bf2d3131c42d7cbce1a63",
+    "pdf_hash": "4c420ac69569d09b7f71ad972d399a308e8a5ebe9c762c47e66a407841c69c8e"
+  },
+  "1762545429_🚩🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：同伦版.pdf": {
+    "md_path": "src\\kernel_plus\\1762545429_🚩🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：同伦版.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762545429_🚩🚩基于传统数学的主纤维丛参数化联络与广义非交换李代数（PFB-GNLA）的一体化构造：同伦版.pdf",
+    "md_hash": "5140644dd6ce274b1a2546ff23eeaa4b5749bd6a08062c52629486544b4b4c8b",
+    "pdf_hash": "6a380f6e852c417348bc023010e670fa5d1fd70569df3d0d3db2693bb1fd8605"
+  },
+  "1762545430_严格版与同伦版 PFB-GNLA 构造的动机对照：从雅可比恒等式到指数型不变量.pdf": {
+    "md_path": "src\\kernel_plus\\1762545430_严格版与同伦版 PFB-GNLA 构造的动机对照：从雅可比恒等式到指数型不变量.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762545430_严格版与同伦版 PFB-GNLA 构造的动机对照：从雅可比恒等式到指数型不变量.pdf",
+    "md_hash": "237a9e1f57bb852edebab51d9a6ebe87fc54de7b6cea34c7063922223c426ecb",
+    "pdf_hash": "da28e6ee3f60d24c8725bbe0ccfb6ab49fce9ec86b287ca34a349d4b3ca09003"
+  },
+  "1762545431_🚩🚩🚩基于传统数学的主纤维丛可变泛函算子联络与广义非交换李代数（PFB-GNLA）的一体化构造：可变泛函-算子同伦版.pdf": {
+    "md_path": "src\\kernel_plus\\1762545431_🚩🚩🚩基于传统数学的主纤维丛可变泛函算子联络与广义非交换李代数（PFB-GNLA）的一体化构造：可变泛函-算子同伦版.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762545431_🚩🚩🚩基于传统数学的主纤维丛可变泛函算子联络与广义非交换李代数（PFB-GNLA）的一体化构造：可变泛函-算子同伦版.pdf",
+    "md_hash": "082b62aee7c4331913242afbf7da0846df7ba4f8c40cba41da26f37b5fdb414a",
+    "pdf_hash": "2849935ce0a06fd73be4516fe57884e2098d48c91b9265ed0a28e92446c85030"
+  },
+  "1762545432_🚩🚩🚩四版 PFB-GNLA 的对标与对位：从严格几何到“法则-算子”同伦，再到元数学原版.pdf": {
+    "md_path": "src\\kernel_plus\\1762545432_🚩🚩🚩四版 PFB-GNLA 的对标与对位：从严格几何到“法则-算子”同伦，再到元数学原版.md",
+    "pdf_path": "src\\kernel_plus_pdf\\1762545432_🚩🚩🚩四版 PFB-GNLA 的对标与对位：从严格几何到“法则-算子”同伦，再到元数学原版.pdf",
+    "md_hash": "508f07c02f4fb92084380e92aca47a9cd732dddca4d89aa105b37430ba2cd769",
+    "pdf_hash": "8542be2697ffea27be79b32b32e71a9e576f3559eb1668fd6550b27f0b32518d"
   }
 }
