@@ -14,7 +14,13 @@
   "README.pdf": {
     "md_path": "src\\app_docs\\README.md",
     "pdf_path": "src\\app_docs_pdf\\README.pdf",
-    "md_hash": "c49b318100f2bfb8f2176eca4628fab1f74cdc5f72055942d5d705f623b78311",
-    "pdf_hash": "9361c91ad69e1bd6b69d3b907654bf21da10fb18a4bdf9b3cccf571a1bfc1b0b"
+    "md_hash": "4de5f508bd30abf0737c9ba5345ec03fba4c6ea2f9bda8bf9119e066a2965d77",
+    "pdf_hash": "d1736068dfdf9630d3ccd3db872190d6db44e4f6cdb508918885a785e50ff6e3"
+  },
+  "1762624401_一个用于“渊源”保护与“成果”传播的双轨制许可证架构.pdf": {
+    "md_path": "src\\app_docs\\1762624401_一个用于“渊源”保护与“成果”传播的双轨制许可证架构.md",
+    "pdf_path": "src\\app_docs_pdf\\1762624401_一个用于“渊源”保护与“成果”传播的双轨制许可证架构.pdf",
+    "md_hash": "8278655b8e6c05bedbe873018cd144cbb072d39a48cb3131110b3afdd11467d7",
+    "pdf_hash": "2157d2d6972a6caf2674145d776be95947dba6da28486ec56bc610094e0d7b95"
   }
 }

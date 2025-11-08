@@ -404,6 +404,53 @@ def guess_repo_root(start: Path) -> Path:
     return start.resolve()
 
 
+def _load_existing_summaries(out_json: Path) -> Optional[List[Dict[str, Any]]]:
+    """读取先前生成的精简 JSON 的 `files` 列表，用于断点续跑。
+
+    若文件不存在或解析失败则返回 None。
+    """
+    try:
+        if not out_json.exists():
+            return None
+        with out_json.open('r', encoding='utf-8') as f:
+            data = json.load(f)
+        files = data.get('files')
+        if isinstance(files, list):
+            return files
+    except Exception:
+        return None
+    return None
+
+
+def _rewrite_md_upto(out_md: Path, entries: List[Entry], upto: int, total: int, existing_summaries: List[Dict[str, Any]], title: str) -> None:
+    """用已存在的摘要（索引区间 [0, upto)）重写 Markdown 头与对应片段。
+
+    - 始终重写（覆盖） `out_md`，确保格式一致；
+    - 文本内容使用 `existing_summaries[i]['summary']`；
+    - 路径与时间信息取当前扫描的 `entries[i]`。
+    """
+    with out_md.open('w', encoding='utf-8', newline='\n') as fmd:
+        fmd.write(f"# {title}\n\n")
+        fmd.write(f"生成时间（UTC）：{datetime.now(timezone.utc).isoformat()}\n")
+        fmd.write(f"合计文件：{total}\n\n")
+        for i in range(max(0, upto)):
+            if i >= len(entries):
+                break
+            e = entries[i]
+            dt_utc = datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat()
+            rel_posix = e.rel.as_posix()
+            summary_text = ''
+            try:
+                summary_text = (existing_summaries[i].get('summary') or '').strip()
+            except Exception:
+                summary_text = ''
+            fmd.write('---\n\n')
+            fmd.write(f"## [{i+1}/{total}] {e.name}\n\n")
+            fmd.write(f"- 源路径：`{rel_posix}`\n")
+            fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
+            fmd.write(summary_text + "\n\n")
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     script_path = Path(__file__).resolve()
     script_stem = script_path.stem
@@ -492,16 +539,69 @@ def main(argv: Optional[List[str]] = None) -> int:
     })
     _debug_print(f"[合并] 已写入完整 JSON（含全文）：{out_json_all}", '32')
 
-    # 2) 逐项压缩并写入 Markdown（摘要）
+    # 2) 逐项压缩并写入 Markdown（摘要）+ 失败重试 + 断点续跑
     md_title = f"{script_stem} 逐项摘要合并"
-    with out_md.open('w', encoding='utf-8', newline='\n') as fmd:
-        fmd.write(f"# {md_title}\n\n")
-        fmd.write(f"生成时间（UTC）：{datetime.now(timezone.utc).isoformat()}\n")
-        fmd.write(f"合计文件：{len(entries)}\n\n")
 
+    # 如存在先前输出，尝试断点续跑（覆盖失败项）
+    existing_files: Optional[List[Dict[str, Any]]] = None
+    if out_md.exists() and out_json.exists():
+        existing_files = _load_existing_summaries(out_json)
+        if existing_files:
+            _debug_print("[恢复] 检测到先前摘要输出，尝试从上次失败处续跑…", '33')
+
+    # 计算恢复起点：按顺序比对 `path`/`filename` 与当前 entries 对齐段
+    start_idx = 0
+    if existing_files:
+        n_align = min(len(existing_files), len(entries))
+        for i in range(n_align):
+            try:
+                e = entries[i]
+                rel_posix = e.rel.as_posix()
+                ef = existing_files[i]
+                if ef.get('path') != rel_posix or ef.get('filename') != e.name:
+                    break
+                comp_meta = ef.get('compression') or {}
+                # 若该项为上次失败（特定错误），从该项开始覆盖
+                if comp_meta.get('requested') and (comp_meta.get('ok') is False) and (comp_meta.get('error') == 'Gemini 无返回文本'):
+                    break
+                start_idx = i + 1
+            except Exception:
+                break
+
+    # 重写 Markdown 到 start_idx（覆盖失败项；start_idx=0 时仅写头）
+    _rewrite_md_upto(out_md, entries, start_idx, len(entries), existing_files or [], md_title)
+
+    # 初始化 summaries 为已完成部分（用于继续写 JSON）
     summaries: List[Dict[str, Any]] = []
-    for idx, e in enumerate(entries, start=1):
-        _debug_print(f"[进度] {idx}/{len(entries)}：{e.name}", '36')
+    if existing_files and start_idx > 0:
+        for i in range(start_idx):
+            e = entries[i]
+            ef = existing_files[i]
+            summaries.append({
+                'path': e.rel.as_posix(),
+                'filename': e.name,
+                'timestamp': e.ts,
+                'datetime_utc': datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat(),
+                'summary': (ef.get('summary') or ''),
+                'compression': ef.get('compression') or None,
+            })
+        comp_info_step = {
+            'enabled': comp_enabled,
+            'provider': 'gemini',
+            'model_alias': comp_model_alias,
+            'model_resolved': _gemini_model_from_alias(comp_model_alias),
+            'max_chars': comp_max_chars,
+            'principles': comp_principles,
+        }
+        write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step)
+
+    MAX_RETRY = 5
+    RETRY_SLEEP = 3.0
+
+    # 从 start_idx 开始继续处理
+    for idx in range(start_idx, len(entries)):
+        e = entries[idx]
+        _debug_print(f"[进度] {idx+1}/{len(entries)}：{e.name}", '36')
         dt_utc = datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat()
         rel_posix = e.rel.as_posix()
 
@@ -513,22 +613,46 @@ def main(argv: Optional[List[str]] = None) -> int:
         pure = (e.content or '').strip()
         if comp_enabled and pure:
             summary_requested = True
-            ok, summ, err = run_gemini_summary(
-                pure, comp_model_alias, comp_max_chars, comp_interval, on_progress=None, principles=comp_principles
-            )
-            summary_ok, summary_text, summary_err = ok, summ, err
-            if not ok or not summ:
-                # 回退：500 字截断 + 省略号
+            attempt = 0
+            while True:
+                # 首次尝试前按配置等待；后续重试不再二次等待，避免与重试睡眠叠加
+                if attempt == 0 and comp_interval and comp_interval > 0:
+                    _debug_print(f"[Gemini] 等待 {comp_interval}s 后发起请求…", '33')
+                    time.sleep(comp_interval)
+                ok, summ, err = run_gemini_summary(
+                    pure, comp_model_alias, comp_max_chars, 0.0, on_progress=None, principles=comp_principles
+                )
+                if ok and summ:
+                    summary_ok, summary_text, summary_err = True, summ, None
+                    break
+                if (not ok) and (err == 'Gemini 无返回文本') and (attempt < MAX_RETRY):
+                    attempt += 1
+                    _debug_print(f"[Gemini] 无返回文本，{RETRY_SLEEP}s 后重试（{attempt}/{MAX_RETRY}）…", '33')
+                    time.sleep(RETRY_SLEEP)
+                    continue
+                summary_ok, summary_text, summary_err = False, None, err
+                if err == 'Gemini 无返回文本' and attempt >= MAX_RETRY:
+                    print(f"达到最大重试次数（{MAX_RETRY}），在第 {idx+1} 项失败：{e.name}。中断退出以便稍后重试。")
+                    comp_info_step2 = {
+                        'enabled': comp_enabled,
+                        'provider': 'gemini',
+                        'model_alias': comp_model_alias,
+                        'model_resolved': _gemini_model_from_alias(comp_model_alias),
+                        'max_chars': comp_max_chars,
+                        'principles': comp_principles,
+                    }
+                    write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step2)
+                    return 2
+                break
+
+            if not summary_text:
                 summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else ''))
-                summary_ok = False
         else:
-            # 未启用或无内容：500 字截断
             summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else '')) if pure else ''
 
-        # 逐项写入 MD
         with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
             fmd.write('---\n\n')
-            fmd.write(f"## [{idx}/{len(entries)}] {e.name}\n\n")
+            fmd.write(f"## [{idx+1}/{len(entries)}] {e.name}\n\n")
             fmd.write(f"- 源路径：`{rel_posix}`\n")
             fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
             fmd.write((summary_text or '').strip() + "\n\n")
@@ -547,7 +671,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             },
         })
 
-        # 逐项同步写入精简 JSON（断点可续）
         comp_info_step = {
             'enabled': comp_enabled,
             'provider': 'gemini',
