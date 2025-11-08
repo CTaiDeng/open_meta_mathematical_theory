@@ -39,6 +39,14 @@
 
 - `script/add_gpl3_headers.ps1`、`script/add_gpl3_headers.py`
   - 为脚本/源码文件补齐规范化 GPL-3 许可证头；遵循项目版权头规范。
+ 
+- `script/print_env_ai.ps1`
+  - 打印与 AI 相关的环境变量状态，支持掩码显示或原文显示；可输出 JSON。
+  - 检查项：`AZURE_SPEECH_KEY`、`AZURE_SPEECH_REGION`、`GEMINI_API_KEY`、`GEMINI_MODEL`。
+  - 示例：
+    - `pwsh -NoLogo -File script/print_env_ai.ps1`
+    - 明文显示：`pwsh -NoLogo -File script/print_env_ai.ps1 -Reveal`
+    - JSON：`pwsh -NoLogo -File script/print_env_ai.ps1 -AsJson`
 
 ---
 
@@ -48,10 +56,18 @@
   - 按 `script/merge_md/merge_md_by_timestamp.json` 配置，收集 `source_dirs` 下基名匹配 `<UNIX时间戳秒>_*.md` 的文件，按时间戳升序合并为 JSON 与 Markdown 两份结果，输出到 `out`（或配置项 `output_dir`）。
   - 主要参数：`--config`（配置文件路径）、`--out-dir`（覆盖输出目录）、`--dry-run`（仅预览不写入）。
   - 示例：`python3 script/merge_md/merge_md_by_timestamp.py`；预览：`python3 script/merge_md/merge_md_by_timestamp.py --dry-run`。
+  - 输出流程（逐项摘要）：
+    - 先生成完整合并文件 `out/merge_md_by_timestamp_all.json`（含全文内容）。
+    - 然后对 `files` 中的每一项逐一进行摘要：
+      - 当 `compression.enabled=true` 时，调用 Gemini 进行信息无损压缩（约束见配置 `principles`，`max_chars=500`）。
+      - 当 `compression.enabled=false` 时，直接截断前 500 字并在末尾追加 `……`。
+    - 最终输出逐项摘要的 `out/merge_md_by_timestamp.json` 与 `out/merge_md_by_timestamp.md`。
+    - 逐项 JSON 中的 `compression` 字段包含：`enabled`、`requested`（是否发起请求）、`ok`（请求是否成功）、`error`（错误信息，若有）。成功则不再做 500 字截断；失败或未请求才做 500 字截断。
 
 - `script/merge_md/merge_md_by_timestamp.json`
   - 配置项：`source_dirs`（目录列表）、`output_dir`（默认 `out`）；`compression`（`enabled`/`model`/`max_chars`/`request_interval_seconds`）。
   - 默认目录包含：`src/kernel_plus`、`src/app_docs`、`src/kernel_reference`、`src/sub_projects_docs/haca`、`src/sub_projects_docs/lbopb`。
+  - `compression.principles`：压缩遵循的约束列表（信息无损、不重复、符号化、尽量简洁、定义一致）。
 
 ---
 

@@ -21,6 +21,7 @@ Optional Gemini compression summary:
   in env var 'GEMINI_API_KEY' or 'GOOGLE_API_KEY', the script asks Gemini to
   compress the merged content into a concise Chinese summary (<= max_chars,
   default 500). Model alias 'flash2.5' maps to 'gemini-2.5-flash'.
+- Env override: if env var 'GEMINI_MODEL' is set, it overrides the model alias.
 - Principles (configurable via 'compression.principles'):
   - 信息无损（不遗漏关键事实与结论，不引入新信息）
   - 不重复（合并同类项，去除赘述）
@@ -40,7 +41,7 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable, List, Optional, Tuple
+from typing import Iterable, List, Optional, Tuple, Dict, Any
 
 
 TIMESTAMP_BASENAME_RE = re.compile(r"^(?P<ts>\d{10})_.+\.md$")
@@ -58,8 +59,7 @@ def _colorize(text: str, color: str = '36') -> str:  # 36=cyan, 32=green, 33=yel
 
 
 def _debug_print(msg: str, color: str = '36') -> None:
-    # 简体中文 Debug：普通行 + 彩色行；若不支持彩色，则重复普通行。
-    print(msg)
+    # 简体中文 Debug：仅输出一行；若终端支持彩色，则只打印彩色行。
     if _supports_color():
         print(_colorize(msg, color))
     else:
@@ -142,6 +142,25 @@ def write_json(out_path: Path, entries: List[Entry], source_dirs: List[str], com
     with out_path.open('w', encoding='utf-8', newline='\n') as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write('\n')  # newline at EOF
+
+
+def write_json_summaries(
+    out_path: Path,
+    summaries: List[Dict[str, Any]],
+    source_dirs: List[str],
+    compression: Optional[dict] = None,
+) -> None:
+    payload = {
+        'generated_at': datetime.now(timezone.utc).isoformat(),
+        'source_dirs': source_dirs,
+        'total_files': len(summaries),
+        'files': summaries,
+    }
+    if compression is not None:
+        payload['compression'] = compression
+    with out_path.open('w', encoding='utf-8', newline='\n') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+        f.write('\n')
 
 
 def build_markdown_text(entries: List[Entry], title: Optional[str] = None) -> str:
@@ -246,7 +265,7 @@ def run_gemini_summary(
                     if p:
                         principles_lines.append(f"- {p}")
             fixed_lines = [
-                f"- 仅用简体中文输出，总字数不超过 {max_chars} 字；",
+                f"- 仅用简体中文输出，严格限制在 {max_chars} 字以内；",
                 "- 只保留关键信息与结论，去除冗余与复述；",
                 "- 不逐篇复述，不重复相同主题的内容；",
                 "- 尽可能采用符号化表达（例如 →, ⇒, ∵, ∴, ⟺, ∈, ⊆, ∀, ∃, ≈, ≡ 等）；",
@@ -261,8 +280,6 @@ def run_gemini_summary(
             ok, out = _call(prompt + text)
             if ok and out:
                 s = out.strip()
-                if len(s) > max_chars:
-                    s = s[:max_chars]
                 return True, s, None
             return False, None, 'Gemini 无返回文本'
 
@@ -279,7 +296,7 @@ def run_gemini_summary(
                         prompt_part_lines.append(f"- {p}")
             prompt_part_fixed = [
                 "- 去重、不赘述、合并同类项；",
-                "- 仅用简体中文输出，限 400 字以内；",
+                "- 仅用简体中文输出，严格限制在 400 字以内；",
                 "- 术语/定义/符号前后一致，尽量符号化表达；",
             ]
             prompt_part = (
@@ -304,7 +321,7 @@ def run_gemini_summary(
                 if p:
                     final_rules_lines.append(f"- {p}")
         final_rules_fixed = [
-            f"- 仅用简体中文输出，总字数不超过 {max_chars} 字；",
+            f"- 仅用简体中文输出，严格限制在 {max_chars} 字以内；",
             "- 不逐条复述，合并同类项，去重；",
             "- 聚焦结论与独特信息；术语/定义/符号保持一致，尽量符号化表达。",
         ]
@@ -316,8 +333,6 @@ def run_gemini_summary(
         ok, out = _call(final_prompt + joined)
         if ok and out:
             s = out.strip()
-            if len(s) > max_chars:
-                s = s[:max_chars]
             return True, s, None
         return False, None, 'Gemini 汇总失败'
     except Exception as e:
@@ -400,13 +415,18 @@ def main(argv: Optional[List[str]] = None) -> int:
     ensure_out_dir(out_dir)
     _debug_print(f"[合并] 输出目录：{out_dir}", '36')
 
-    out_json = out_dir / f"{script_stem}.json"
-    out_md = out_dir / f"{script_stem}.md"
+    out_json = out_dir / f"{script_stem}.json"  # 精简版（逐项摘要）
+    out_md = out_dir / f"{script_stem}.md"      # 逐项摘要 Markdown
+    out_json_all = out_dir / f"{script_stem}_all.json"  # 完整合并（含全文）
 
     # 读取压缩设置
     compression_cfg = cfg.get('compression', {}) if isinstance(cfg.get('compression', {}), dict) else {}
     comp_enabled = bool(compression_cfg.get('enabled', False))
     comp_model_alias = str(compression_cfg.get('model', 'flash2.5'))
+    # 环境变量优先覆盖模型（参考 script/print_env_ai.ps1）
+    env_model = os.environ.get('GEMINI_MODEL')
+    if env_model:
+        comp_model_alias = env_model.strip()
     comp_max_chars = int(compression_cfg.get('max_chars', 500))
     comp_interval = float(compression_cfg.get('request_interval_seconds', 0) or 0)
     comp_principles = compression_cfg.get('principles')
@@ -421,84 +441,100 @@ def main(argv: Optional[List[str]] = None) -> int:
             '定义一致（术语/符号/概念前后一致、一一对应）',
         ]
 
-    comp_ok: bool = False
-    comp_summary: Optional[str] = None
-    comp_error: Optional[str] = None
+    # 1) 先输出完整合并 JSON（含全文）
+    write_json(out_json_all, entries, source_dirs_raw, compression={
+        'enabled': comp_enabled,
+        'provider': 'gemini',
+        'model_alias': comp_model_alias,
+        'model_resolved': _gemini_model_from_alias(comp_model_alias),
+        'max_chars': comp_max_chars,
+        'principles': comp_principles,
+    })
+    _debug_print(f"[合并] 已写入完整 JSON（含全文）：{out_json_all}", '32')
 
-    md_title = f"{script_stem} 合并结果"
-    md_text = build_markdown_text(entries, title=md_title)
+    # 2) 逐项压缩并写入 Markdown（摘要）
+    md_title = f"{script_stem} 逐项摘要合并"
+    with out_md.open('w', encoding='utf-8', newline='\n') as fmd:
+        fmd.write(f"# {md_title}\n\n")
+        fmd.write(f"生成时间（UTC）：{datetime.now(timezone.utc).isoformat()}\n")
+        fmd.write(f"合计文件：{len(entries)}\n\n")
 
-    # 若启用压缩：先不写入最终 JSON/Markdown；逐请求落盘进度
-    progress_path = None
-    if comp_enabled:
-        progress_path = (out_dir / f"{script_stem}.progress.md").resolve()
-        _debug_print(f"[Gemini] 压缩启用；模型={comp_model_alias}，最大字数={comp_max_chars}，请求间隔={comp_interval}s", '33')
+    summaries: List[Dict[str, Any]] = []
+    for idx, e in enumerate(entries, start=1):
+        _debug_print(f"[进度] {idx}/{len(entries)}：{e.name}", '36')
+        dt_utc = datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat()
+        rel_posix = e.rel.as_posix()
 
-        def _progress_writer(i: int, n: int, txt: str) -> None:
-            header = f"### 分块 {i}/{n} 摘要\n\n"
-            mode = 'a' if progress_path and progress_path.exists() else 'w'
-            with open(progress_path, mode, encoding='utf-8', newline='\n') as pf:
-                if mode == 'w':
-                    pf.write('# Gemini 分块摘要进度\n\n')
-                    pf.write(f'生成时间（UTC）：{datetime.now(timezone.utc).isoformat()}\n\n')
-                pf.write(header)
-                pf.write((txt or '').strip() + "\n\n")
-            _debug_print(f"[进度] 已保存分块摘要 {i}/{n} 至 {progress_path}", '33')
+        summary_requested: bool = False
+        summary_ok: Optional[bool] = None
+        summary_err: Optional[str] = None
+        summary_text: Optional[str] = None
 
-        ok, summ, err = run_gemini_summary(
-            md_text, comp_model_alias, comp_max_chars, comp_interval, on_progress=_progress_writer, principles=comp_principles
-        )
-        comp_ok, comp_summary, comp_error = ok, summ, err
-        _debug_print(f"[Gemini] 完成：ok={comp_ok} error={comp_error}", '33')
+        pure = (e.content or '').strip()
+        if comp_enabled and pure:
+            summary_requested = True
+            ok, summ, err = run_gemini_summary(
+                pure, comp_model_alias, comp_max_chars, comp_interval, on_progress=None, principles=comp_principles
+            )
+            summary_ok, summary_text, summary_err = ok, summ, err
+            if not ok or not summ:
+                # 回退：500 字截断 + 省略号
+                summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else ''))
+                summary_ok = False
+        else:
+            # 未启用或无内容：500 字截断
+            summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else '')) if pure else ''
 
-    comp_info = None
-    if comp_enabled:
-        comp_info = {
+        # 逐项写入 MD
+        with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
+            fmd.write('---\n\n')
+            fmd.write(f"## [{idx}/{len(entries)}] {e.name}\n\n")
+            fmd.write(f"- 源路径：`{rel_posix}`\n")
+            fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
+            fmd.write((summary_text or '').strip() + "\n")
+
+        summaries.append({
+            'path': rel_posix,
+            'filename': e.name,
+            'timestamp': e.ts,
+            'datetime_utc': dt_utc,
+            'summary': summary_text,
+            'compression': {
+                'enabled': comp_enabled,
+                'requested': summary_requested,
+                'ok': summary_ok if summary_requested else None,
+                'error': summary_err if summary_requested else None,
+            },
+        })
+
+        # 逐项同步写入精简 JSON（断点可续）
+        comp_info_step = {
             'enabled': comp_enabled,
             'provider': 'gemini',
             'model_alias': comp_model_alias,
             'model_resolved': _gemini_model_from_alias(comp_model_alias),
             'max_chars': comp_max_chars,
-            'ok': comp_ok,
-            'error': comp_error,
-            'summary': comp_summary,
             'principles': comp_principles,
         }
+        write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step)
 
-    # 写入最终 JSON/Markdown（仅在压缩结束后执行，避免“预先写入”）
-    write_json(out_json, entries, source_dirs_raw, compression=comp_info)
-    _debug_print(f"[合并] 已写入 JSON：{out_json}", '32')
+    _debug_print(f"[合并] 已写入 Markdown：{out_md}", '32')
 
-    # 若启用压缩：在 Markdown 顶部加入“压缩摘要（Gemini）”段
-    if comp_enabled:
-        lines: List[str] = []
-        lines.append(f"# {md_title}")
-        lines.append("")
-        lines.append(f"生成时间（UTC）：{datetime.now(timezone.utc).isoformat()}")
-        lines.append(f"合计文件：{len(entries)}")
-        lines.append("")
-        lines.append('---')
-        lines.append("")
-        lines.append('## 压缩摘要（Gemini）')
-        lines.append("")
-        lines.append((comp_summary or f"（未生成）{comp_error or '未启用或发生错误'}"))
-        lines.append("")
-        # 追加详细合并内容（剔除重复头部）
-        marker = '\n---\n'
-        idx = md_text.find(marker)
-        if idx != -1:
-            lines.append(md_text[idx + 1:])
-        else:
-            lines.append(md_text)
-        with out_md.open('w', encoding='utf-8', newline='\n') as f:
-            f.write('\n'.join(lines))
-        _debug_print(f"[合并] 已写入 Markdown：{out_md}", '32')
-    else:
-        write_markdown(out_md, entries, title=md_title)
-        _debug_print(f"[合并] 已写入 Markdown：{out_md}", '32')
+    # 3) 写入精简 JSON（仅包含逐项摘要）
+    comp_info = {
+        'enabled': comp_enabled,
+        'provider': 'gemini',
+        'model_alias': comp_model_alias,
+        'model_resolved': _gemini_model_from_alias(comp_model_alias),
+        'max_chars': comp_max_chars,
+        'principles': comp_principles,
+    }
+    write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info)
+    _debug_print(f"[合并] 已写入 JSON（摘要）：{out_json}", '32')
 
-    print(f"完成：JSON -> {out_json}")
-    print(f"完成：Markdown -> {out_md}")
+    print(f"完成：JSON（全文） -> {out_json_all}")
+    print(f"完成：JSON（摘要） -> {out_json}")
+    print(f"完成：Markdown（摘要） -> {out_md}")
     print(f"总计合并文件数：{len(entries)}")
     return 0
 
