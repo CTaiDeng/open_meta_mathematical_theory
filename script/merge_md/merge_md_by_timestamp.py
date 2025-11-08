@@ -21,6 +21,12 @@ Optional Gemini compression summary:
   in env var 'GEMINI_API_KEY' or 'GOOGLE_API_KEY', the script asks Gemini to
   compress the merged content into a concise Chinese summary (<= max_chars,
   default 500). Model alias 'flash2.5' maps to 'gemini-2.5-flash'.
+- Principles (configurable via 'compression.principles'):
+  - 信息无损（不遗漏关键事实与结论，不引入新信息）
+  - 不重复（合并同类项，去除赘述）
+  - 符号化（能用数学/逻辑符号表达则优先使用）
+  - 尽可能的简洁（短句；必要时使用分号/列表）
+  - 定义一致（术语/符号/概念前后一致、一一对应）
 """
 
 from __future__ import annotations
@@ -190,6 +196,7 @@ def run_gemini_summary(
     max_chars: int,
     interval_sec: float = 0.0,
     on_progress: Optional[callable] = None,
+    principles: Optional[List[str]] = None,
 ) -> Tuple[bool, Optional[str], Optional[str]]:
     """调用 Gemini 压缩文本；当文本过长时分块请求后再二次汇总，尽量信息无损。
 
@@ -232,12 +239,23 @@ def run_gemini_summary(
 
         chunk_size = 60000  # 粗略按字符长度限制输入规模
         if len(text) <= chunk_size:
+            principles_lines = []
+            if principles:
+                for p in principles:
+                    p = str(p).strip()
+                    if p:
+                        principles_lines.append(f"- {p}")
+            fixed_lines = [
+                f"- 仅用简体中文输出，总字数不超过 {max_chars} 字；",
+                "- 只保留关键信息与结论，去除冗余与复述；",
+                "- 不逐篇复述，不重复相同主题的内容；",
+                "- 尽可能采用符号化表达（例如 →, ⇒, ∵, ∴, ⟺, ∈, ⊆, ∀, ∃, ≈, ≡ 等）；",
+                "- 保持术语/定义/符号前后一致，必要时用紧凑短句或分号分隔。",
+            ]
+            all_rules = "\n".join(principles_lines + fixed_lines)
             prompt = (
                 '你将收到一份按时间排列的多篇中文文档合并文本。请进行“信息无损”的高度凝练压缩：\n'
-                f'- 仅用简体中文输出，总字数不超过 {max_chars} 字；\n'
-                '- 只保留关键信息与结论，去除冗余与复述；\n'
-                '- 不逐篇复述，不重复相同主题的内容；\n'
-                '- 保持术语与符号精确，必要时用紧凑短句或分号分隔。\n\n'
+                f"{all_rules}\n\n"
                 '【合并文本】\n'
             )
             ok, out = _call(prompt + text)
@@ -253,8 +271,21 @@ def run_gemini_summary(
         digests: List[str] = []
         for i, ch in enumerate(chunks, 1):
             _debug_print(f"[Gemini] 分块 {i}/{len(chunks)} 摘要…", '33')
+            prompt_part_lines = []
+            if principles:
+                for p in principles:
+                    p = str(p).strip()
+                    if p:
+                        prompt_part_lines.append(f"- {p}")
+            prompt_part_fixed = [
+                "- 去重、不赘述、合并同类项；",
+                "- 仅用简体中文输出，限 400 字以内；",
+                "- 术语/定义/符号前后一致，尽量符号化表达；",
+            ]
             prompt_part = (
-                '以下是合并文档的一部分。请提炼“信息无损”的关键要点（去重、不赘述），限 400 字以内，中文输出：\n\n'
+                '以下是合并文档的一部分。请提炼“信息无损”的关键要点：\n\n' +
+                "\n".join(prompt_part_lines + prompt_part_fixed) +
+                "\n\n"
             )
             ok, out = _call(prompt_part + ch)
             digests.append((out or '').strip())
@@ -266,12 +297,21 @@ def run_gemini_summary(
 
         # 二次汇总到最终 <= max_chars
         joined = '\n'.join(digests)
+        final_rules_lines = []
+        if principles:
+            for p in principles:
+                p = str(p).strip()
+                if p:
+                    final_rules_lines.append(f"- {p}")
+        final_rules_fixed = [
+            f"- 仅用简体中文输出，总字数不超过 {max_chars} 字；",
+            "- 不逐条复述，合并同类项，去重；",
+            "- 聚焦结论与独特信息；术语/定义/符号保持一致，尽量符号化表达。",
+        ]
         final_prompt = (
-            '你将收到若干分块摘要，请在“尽量信息无损”的前提下进行最终高度凝练：\n'
-            f'- 仅用简体中文输出，总字数不超过 {max_chars} 字；\n'
-            '- 不逐条复述，合并同类项，去重；\n'
-            '- 聚焦结论与独特信息；术语精确。\n\n'
-            '【分块摘要】\n'
+            '你将收到若干分块摘要，请在“尽量信息无损”的前提下进行最终高度凝练：\n' +
+            "\n".join(final_rules_lines + final_rules_fixed) +
+            '\n\n【分块摘要】\n'
         )
         ok, out = _call(final_prompt + joined)
         if ok and out:
@@ -369,6 +409,17 @@ def main(argv: Optional[List[str]] = None) -> int:
     comp_model_alias = str(compression_cfg.get('model', 'flash2.5'))
     comp_max_chars = int(compression_cfg.get('max_chars', 500))
     comp_interval = float(compression_cfg.get('request_interval_seconds', 0) or 0)
+    comp_principles = compression_cfg.get('principles')
+    if isinstance(comp_principles, list):
+        comp_principles = [str(x) for x in comp_principles]
+    else:
+        comp_principles = [
+            '信息无损（不遗漏关键事实与结论，不引入新信息）',
+            '不重复（合并同类项，去除赘述）',
+            '符号化（能用数学/逻辑符号表达则优先使用）',
+            '尽可能的简洁（短句；必要时使用分号/列表）',
+            '定义一致（术语/符号/概念前后一致、一一对应）',
+        ]
 
     comp_ok: bool = False
     comp_summary: Optional[str] = None
@@ -395,7 +446,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             _debug_print(f"[进度] 已保存分块摘要 {i}/{n} 至 {progress_path}", '33')
 
         ok, summ, err = run_gemini_summary(
-            md_text, comp_model_alias, comp_max_chars, comp_interval, on_progress=_progress_writer
+            md_text, comp_model_alias, comp_max_chars, comp_interval, on_progress=_progress_writer, principles=comp_principles
         )
         comp_ok, comp_summary, comp_error = ok, summ, err
         _debug_print(f"[Gemini] 完成：ok={comp_ok} error={comp_error}", '33')
@@ -411,6 +462,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             'ok': comp_ok,
             'error': comp_error,
             'summary': comp_summary,
+            'principles': comp_principles,
         }
 
     # 写入最终 JSON/Markdown（仅在压缩结束后执行，避免“预先写入”）

@@ -19,7 +19,13 @@
     "enabled": true,
     "model": "gemini-2.5-pro",
     "max_chars": 500,
-    "request_interval_seconds": 3
+    "request_interval_seconds": 3,
+    "principles": [
+      "信息无损（不遗漏关键事实与结论，不引入新信息）",
+      "不重复（合并同类项，去除赘述）",
+      "符号化（能用数学/逻辑符号表达则优先使用）",
+      "尽可能的简洁（短句；必要时使用分号/列表）",
+      "定义一致（术语/符号/概念前后一致、一一对应）"
+    ]
   }
 }
-
