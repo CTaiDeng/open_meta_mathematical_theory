@@ -19,7 +19,7 @@
     "enabled": true,
     "model": "gemini-2.5-flash",
     "max_chars": 500,
-    "request_interval_seconds": 3,
+    "request_interval_seconds": 30,
     "principles": [
       "信息无损（不遗漏关键事实与结论，不引入新信息）",
       "不重复（合并同类项，去除赘述）",
