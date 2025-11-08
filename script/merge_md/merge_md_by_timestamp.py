@@ -531,7 +531,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             fmd.write(f"## [{idx}/{len(entries)}] {e.name}\n\n")
             fmd.write(f"- 源路径：`{rel_posix}`\n")
             fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
-            fmd.write((summary_text or '').strip() + "\n")
+            fmd.write((summary_text or '').strip() + "\n\n")
 
         summaries.append({
             'path': rel_posix,
