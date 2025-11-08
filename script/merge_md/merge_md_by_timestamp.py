@@ -42,6 +42,9 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable, List, Optional, Tuple, Dict, Any
+import logging
+import contextlib
+import io
 
 
 TIMESTAMP_BASENAME_RE = re.compile(r"^(?P<ts>\d{10})_.+\.md$")
@@ -209,6 +212,41 @@ def _gemini_model_from_alias(alias: str) -> str:
     return mapping.get(alias, alias or 'gemini-2.5-flash')
 
 
+def _quiet_gemini_logs() -> None:
+    """尽量抑制 google-generativeai/grpc/absl 的噪声日志（跨平台最佳努力）。"""
+    # 环境变量（仅在未设置时提供较严的默认）
+    os.environ.setdefault('GLOG_minloglevel', '3')  # 仅 FATAL
+    os.environ.setdefault('GRPC_VERBOSITY', 'ERROR')
+    os.environ.setdefault('GRPC_TRACE', '')
+    os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '3')
+    os.environ.setdefault('ABSL_LOGGING_MIN_LEVEL', '3')
+    # Python 日志器等级
+    logging.getLogger('google').setLevel(logging.ERROR)
+    logging.getLogger('google.generativeai').setLevel(logging.ERROR)
+    logging.getLogger('grpc').setLevel(logging.ERROR)
+
+
+@contextlib.contextmanager
+def _suppress_stderr_fd():
+    """在 with 区块内暂时重定向底层 fd=2 到空设备，抑制 C/C++ 层日志。"""
+    try:
+        orig_fd = os.dup(2)
+        devnull = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(devnull, 2)
+        os.close(devnull)
+        yield
+    except Exception:
+        # 若重定向失败，直接执行，不中断流程
+        yield
+    finally:
+        try:
+            if 'orig_fd' in locals():
+                os.dup2(orig_fd, 2)
+                os.close(orig_fd)
+        except Exception:
+            pass
+
+
 def run_gemini_summary(
     text: str,
     model_alias: str,
@@ -225,6 +263,7 @@ def run_gemini_summary(
     if not api_key:
         return False, None, '未检测到 GEMINI_API_KEY/GOOGLE_API_KEY 环境变量'
     try:
+        _quiet_gemini_logs()
         import google.generativeai as genai  # type: ignore
     except Exception as e:
         return False, None, f'缺少 google-generativeai 依赖：{e!s}'
@@ -240,7 +279,8 @@ def run_gemini_summary(
                 time.sleep(interval_sec)
             _debug_print("[Gemini] 正在请求…", '33')
             try:
-                resp = model.generate_content(prompt)
+                with _suppress_stderr_fd():
+                    resp = model.generate_content(prompt)
                 out = getattr(resp, 'text', None)
                 if not out and hasattr(resp, 'candidates') and resp.candidates:
                     parts = []
