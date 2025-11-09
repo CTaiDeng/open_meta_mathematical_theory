@@ -516,6 +516,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         comp_model_alias = env_model.strip()
     comp_max_chars = int(compression_cfg.get('max_chars', 500))
     comp_interval = float(compression_cfg.get('request_interval_seconds', 0) or 0)
+    # 新增：每次运行的请求上限（>0 时，本次运行处理到达到上限即正常退出，便于分批执行）
+    comp_max_requests_per_run = int(compression_cfg.get('max_requests_per_run', 0) or 0)
     comp_principles = compression_cfg.get('principles')
     if isinstance(comp_principles, list):
         comp_principles = [str(x) for x in comp_principles]
@@ -599,6 +601,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     RETRY_SLEEP = 3.0
 
     # 从 start_idx 开始继续处理
+    requests_made_this_run = 0
     for idx in range(start_idx, len(entries)):
         e = entries[idx]
         _debug_print(f"[进度] {idx+1}/{len(entries)}：{e.name}", '36')
@@ -647,6 +650,8 @@ def main(argv: Optional[List[str]] = None) -> int:
 
             if not summary_text:
                 summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else ''))
+            # 统计本次运行已发起的请求次数（包含失败/无返回的尝试），用于达阈后正常退出
+            requests_made_this_run += 1
         else:
             summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else '')) if pure else ''
 
@@ -680,6 +685,15 @@ def main(argv: Optional[List[str]] = None) -> int:
             'principles': comp_principles,
         }
         write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step)
+
+        # 若配置了“每次运行请求上限”，达到后立即正常结束（便于分批执行与限速）
+        if comp_enabled and comp_max_requests_per_run > 0 and requests_made_this_run >= comp_max_requests_per_run:
+            remaining = len(entries) - (idx + 1)
+            print(
+                f"已按配置处理 {requests_made_this_run} 篇（达到每次运行请求上限：{comp_max_requests_per_run}）。"
+            )
+            print(f"已输出中间结果：{out_md} 与 {out_json}。剩余待处理：{remaining} 篇；下次运行将从断点继续。")
+            return 0
 
     _debug_print(f"[合并] 已写入 Markdown：{out_md}", '32')
 
