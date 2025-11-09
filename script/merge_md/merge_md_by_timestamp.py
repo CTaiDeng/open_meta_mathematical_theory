@@ -673,7 +673,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     guard_model_alias = str(guard_cfg.get('model', comp_model_alias) or comp_model_alias)
     guard_blocked_topics = guard_cfg.get('blocked_topics')
     if not isinstance(guard_blocked_topics, list):
-        guard_blocked_topics = ['地缘政治', '金融市场', '量化交易']
+        guard_blocked_topics = ['地缘政治', '金融市场', '量化交易', '法律工程']
     else:
         guard_blocked_topics = [str(x).strip() for x in guard_blocked_topics if str(x).strip()]
 
@@ -767,85 +767,86 @@ def main(argv: Optional[List[str]] = None) -> int:
         summary_text: Optional[str] = None
 
         pure = (e.content or '').strip()
-
-        # 若启用内容检测，先判断是否命中受限主题；命中则提示并跳过摘要
-        if guard_enabled and pure:
-            # 本地关键字初筛
-            local_hit = False
-            for kw in guard_blocked_topics:
-                if kw and (kw in pure):
-                    local_hit = True
-                    guard_matched.append(kw)
-            if local_hit:
-                guard_hit = True
-                _debug_print(f"[跳过] 命中本地关键字主题：{sorted(set(guard_matched))}", '33')
-            elif guard_provider.lower() == 'gemini':
-                guard_requested = True
-                ok_g, res_g, err_g = run_gemini_topic_check(pure[:80000], guard_model_alias, guard_blocked_topics)
-                if ok_g and isinstance(res_g, dict):
-                    guard_hit = bool(res_g.get('hit'))
-                    guard_matched = list(res_g.get('matched') or [])
-                else:
-                    guard_hit = None
-                    guard_err = err_g
-
-        if guard_enabled and (guard_hit is True):
-            # 写入 Markdown 占位提示
-            with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
-                fmd.write('---\n\n')
-                fmd.write(f"## [{idx+1}/{len(entries)}] {e.name}\n\n")
-                fmd.write(f"- 源路径：`{rel_posix}`\n")
-                fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
-                mt = '、'.join(sorted(set(guard_matched))) if guard_matched else '命中受限主题'
-                fmd.write(f"提示：该条目涉及受限主题（{mt}），已按配置跳过摘要处理。\n\n")
-
-            summaries.append({
-                'path': rel_posix,
-                'filename': e.name,
-                'timestamp': e.ts,
-                'datetime_utc': dt_utc,
-                'summary': '',
-                'compression': {
-                    'enabled': comp_enabled,
-                    'requested': False,
-                    'ok': None,
-                    'error': None,
-                },
-                'content_guard': {
-                    'enabled': guard_enabled,
-                    'provider': guard_provider,
-                    'requested': guard_requested,
-                    'hit': True,
-                    'matched_topics': sorted(set(guard_matched)),
-                    'error': guard_err,
-                },
-                'skipped': True,
-            })
-
-            comp_info_step_guard = {
-                'enabled': comp_enabled,
-                'provider': 'gemini',
-                'model_alias': comp_model_alias,
-                'model_resolved': _gemini_model_from_alias(comp_model_alias),
-                'max_chars': comp_max_chars,
-                'principles': comp_principles,
-            }
-            write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step_guard)
-            continue
+        # 排除逻辑在提交 LLM 压缩请求时顺便判断
         if comp_enabled and pure:
             summary_requested = True
+            if guard_enabled and guard_provider.lower() == 'gemini' and guard_blocked_topics:
+                guard_requested = True
             attempt = 0
             while True:
                 # 首次尝试前按配置等待；后续重试不再二次等待，避免与重试睡眠叠加
                 if attempt == 0 and comp_interval and comp_interval > 0:
                     _debug_print(f"[Gemini] 等待 {comp_interval}s 后发起请求…", '33')
                     time.sleep(comp_interval)
-                ok, summ, err = run_gemini_summary(
-                    pure, comp_model_alias, comp_max_chars, 0.0, on_progress=None, principles=comp_principles
+                ok, res, err = run_gemini_summary(
+                    pure, comp_model_alias, comp_max_chars, 0.0, on_progress=None,
+                    principles=comp_principles,
+                    blocked_topics=(guard_blocked_topics if (guard_enabled and guard_provider.lower() == 'gemini') else None)
                 )
-                if ok and summ:
-                    summary_ok, summary_text, summary_err = True, summ, None
-                    break
+                # 统计本次运行已发起的请求次数（包含排除/失败/成功）
+                requests_made_this_run += 1
+                if ok and res is not None:
+                    # 若返回为排除 JSON，则直接写入占位并进入下一项
+                    if isinstance(res, dict) and res.get('excluded'):
+                        guard_hit = True
+                        guard_matched = list(res.get('matched') or [])
+                        # 写入 Markdown 占位提示
+                        with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
+                            fmd.write('---\n\n')
+                            fmd.write(f"## [{idx+1}/{len(entries)}] {e.name}\n\n")
+                            fmd.write(f"- 源路径：`{rel_posix}`\n")
+                            fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
+                            mt = '、'.join(sorted(set(guard_matched))) if guard_matched else '命中受限主题'
+                            fmd.write(f"提示：该条目涉及受限主题（{mt}），已按配置跳过摘要处理。\n\n")
+
+                        summaries.append({
+                            'path': rel_posix,
+                            'filename': e.name,
+                            'timestamp': e.ts,
+                            'datetime_utc': dt_utc,
+                            'summary': '',
+                            'compression': {
+                                'enabled': comp_enabled,
+                                'requested': True,
+                                'ok': True,
+                                'error': None,
+                            },
+                            'content_guard': {
+                                'enabled': guard_enabled,
+                                'provider': guard_provider,
+                                'requested': guard_requested,
+                                'hit': True,
+                                'matched_topics': sorted(set(guard_matched)),
+                                'error': None,
+                            },
+                            'skipped': True,
+                        })
+
+                        comp_info_step_guard2 = {
+                            'enabled': comp_enabled,
+                            'provider': 'gemini',
+                            'model_alias': comp_model_alias,
+                            'model_resolved': _gemini_model_from_alias(comp_model_alias),
+                            'max_chars': comp_max_chars,
+                            'principles': comp_principles,
+                        }
+                        write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step_guard2)
+
+                        # 达到请求上限则正常结束
+                        if comp_enabled and comp_max_requests_per_run > 0 and requests_made_this_run >= comp_max_requests_per_run:
+                            remaining = len(entries) - (idx + 1)
+                            print(
+                                f"已按配置处理 {requests_made_this_run} 篇（达到每次运行请求上限：{comp_max_requests_per_run}）。"
+                            )
+                            print(f"已输出中间结果：{out_md} 与 {out_json}。剩余待处理：{remaining} 篇；下次运行将从断点继续。")
+                            return 0
+                        # 跳过当前条目
+                        goto_next = True
+                        break
+                    # 正常摘要文本
+                    if isinstance(res, str):
+                        summary_ok, summary_text, summary_err = True, res, None
+                        break
                 if (not ok) and (err == 'Gemini 无返回文本') and (attempt < MAX_RETRY):
                     attempt += 1
                     _debug_print(f"[Gemini] 无返回文本，{RETRY_SLEEP}s 后重试（{attempt}/{MAX_RETRY}）…", '33')
@@ -866,10 +867,12 @@ def main(argv: Optional[List[str]] = None) -> int:
                     return 2
                 break
 
+            # 如被判定排除，则跳过摘要写入逻辑
+            if guard_hit is True:
+                continue
+
             if not summary_text:
                 summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else ''))
-            # 统计本次运行已发起的请求次数（包含失败/无返回的尝试），用于达阈后正常退出
-            requests_made_this_run += 1
         else:
             summary_text = (pure[:comp_max_chars] + ('……' if len(pure) > comp_max_chars else '')) if pure else ''
 
