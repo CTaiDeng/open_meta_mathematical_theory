@@ -246,6 +246,80 @@ def _suppress_stderr_fd():
         except Exception:
             pass
 
+def run_gemini_topic_check(
+    text: str,
+    model_alias: str,
+    blocked_topics: List[str],
+) -> Tuple[bool, Optional[Dict[str, Any]], Optional[str]]:
+    """使用 Gemini 对文本进行主题检测：是否涉及任一 `blocked_topics`。
+
+    返回：(ok, result, error)
+    - ok=True 时，result 形如 {"hit": bool, "matched": [...], "reason": str}
+    - 若无可用 API/依赖，返回 (False, None, 错误信息)
+    """
+    api_key = os.environ.get('GEMINI_API_KEY') or os.environ.get('GOOGLE_API_KEY')
+    if not api_key:
+        return False, None, '未检测到 GEMINI_API_KEY/GOOGLE_API_KEY 环境变量'
+    try:
+        _quiet_gemini_logs()
+        import google.generativeai as genai  # type: ignore
+    except Exception as e:
+        return False, None, f'缺少 google-generativeai 依赖：{e!s}'
+
+    try:
+        genai.configure(api_key=api_key)
+        model_name = _gemini_model_from_alias(model_alias)
+        model = genai.GenerativeModel(model_name)
+
+        topics_str = '、'.join(blocked_topics)
+        sys_prompt = (
+            '请判断以下中文文本是否涉及下列任一主题，并仅输出JSON：\n'
+            f"- 目标主题：{topics_str}\n"
+            "- 输出格式：{\"hit\": true|false, \"matched\": [字符串数组], \"reason\": \"<=60字\"}\n"
+            "- 要求：\n"
+            "  1) 若文本存在与上述主题相关的讨论/分析/观点/案例，则 hit=true；\n"
+            "  2) matched 仅填入命中的主题原词；\n"
+            "  3) 不要输出任何解释性文字或代码块围栏。\n\n"
+            "【文本】\n"
+        )
+
+        with _suppress_stderr_fd():
+            resp = model.generate_content(sys_prompt + text)
+        out = getattr(resp, 'text', None)
+        if not out and hasattr(resp, 'candidates') and resp.candidates:
+            parts = []
+            for c in resp.candidates:
+                try:
+                    parts.append(c.content.parts[0].text)
+                except Exception:
+                    continue
+            out = '\n'.join([p for p in parts if p])
+        if not out:
+            return False, None, 'Gemini 无返回文本'
+        s = out.strip()
+        j = None
+        try:
+            j = json.loads(s)
+        except Exception:
+            try:
+                start = s.find('{')
+                end = s.rfind('}')
+                if start != -1 and end != -1 and end > start:
+                    j = json.loads(s[start:end+1])
+            except Exception:
+                j = None
+        if not isinstance(j, dict):
+            return False, None, 'Gemini 返回内容非JSON'
+        hit = bool(j.get('hit'))
+        matched = j.get('matched')
+        if not isinstance(matched, list):
+            matched = []
+        matched = [str(x).strip() for x in matched if str(x).strip()]
+        reason = str(j.get('reason') or '').strip()
+        return True, { 'hit': hit, 'matched': matched, 'reason': reason }, None
+    except Exception as e:
+        return False, None, f'Gemini 异常：{e!s}'
+
 
 def run_gemini_summary(
     text: str,
@@ -254,7 +328,8 @@ def run_gemini_summary(
     interval_sec: float = 0.0,
     on_progress: Optional[callable] = None,
     principles: Optional[List[str]] = None,
-) -> Tuple[bool, Optional[str], Optional[str]]:
+    blocked_topics: Optional[List[str]] = None,
+) -> Tuple[bool, Optional[Any], Optional[str]]:
     """调用 Gemini 压缩文本；当文本过长时分块请求后再二次汇总，尽量信息无损。
 
     on_progress(i, n, chunk_summary) 若提供，则在每个分块摘要完成后被调用（i 从 1 开始）。
@@ -297,6 +372,29 @@ def run_gemini_summary(
                 return False, None
 
         chunk_size = 60000  # 粗略按字符长度限制输入规模
+        topics_str = '、'.join(blocked_topics) if blocked_topics else ''
+
+        def _try_parse_exclusion(s: str) -> Optional[Dict[str, Any]]:
+            try:
+                j = json.loads(s)
+            except Exception:
+                try:
+                    start = s.find('{')
+                    end = s.rfind('}')
+                    if start != -1 and end != -1 and end > start:
+                        j = json.loads(s[start:end+1])
+                    else:
+                        return None
+                except Exception:
+                    return None
+            if isinstance(j, dict) and bool(j.get('excluded')):
+                matched = j.get('matched')
+                if not isinstance(matched, list):
+                    matched = []
+                matched = [str(x).strip() for x in matched if str(x).strip()]
+                reason = str(j.get('reason') or '').strip()
+                return {'excluded': True, 'matched': matched, 'reason': reason}
+            return None
         if len(text) <= chunk_size:
             principles_lines = []
             if principles:
@@ -312,14 +410,27 @@ def run_gemini_summary(
                 "- 保持术语/定义/符号前后一致，必要时用紧凑短句或分号分隔。",
             ]
             all_rules = "\n".join(principles_lines + fixed_lines)
+            exclude_block = ''
+            if blocked_topics:
+                exclude_block = (
+                    '【排除规则】\n'
+                    f"- 若文本涉及下列任一主题（命中即可）：{topics_str}；\n"
+                    '- 则不要进行摘要；只输出严格JSON：{"excluded": true, "matched": ["<命中主题原词>"], "reason": "<=60字"}；\n'
+                    '- 仅输出上述JSON，不要包含其他文字或代码块围栏。\n\n'
+                )
             prompt = (
-                '你将收到一份按时间排列的多篇中文文档合并文本。请进行“信息无损”的高度凝练压缩：\n'
+                '你将收到一份按时间排列的多篇中文文档合并文本。若未命中排除主题，请进行“信息无损”的高度凝练压缩：\n'
                 f"{all_rules}\n\n"
+                f"{exclude_block}"
                 '【合并文本】\n'
             )
             ok, out = _call(prompt + text)
             if ok and out:
                 s = out.strip()
+                if blocked_topics:
+                    ex = _try_parse_exclusion(s)
+                    if ex is not None:
+                        return True, ex, None
                 return True, s, None
             return False, None, 'Gemini 无返回文本'
 
@@ -339,16 +450,29 @@ def run_gemini_summary(
                 "- 仅用简体中文输出，严格限制在 400 字以内；",
                 "- 术语/定义/符号前后一致，尽量符号化表达；",
             ]
+            exclude_block2 = ''
+            if blocked_topics:
+                exclude_block2 = (
+                    '【排除规则】\n'
+                    f"- 若该部分文本涉及任一主题：{topics_str}；\n"
+                    '- 则不要摘要；仅输出严格JSON：{"excluded": true, "matched": ["<命中主题原词>"], "reason": "<=60字"}；\n'
+                    '- 仅输出上述JSON，不要包含其他文字或代码块围栏。\n\n'
+                )
             prompt_part = (
-                '以下是合并文档的一部分。请提炼“信息无损”的关键要点：\n\n' +
+                '以下是合并文档的一部分。若未命中排除主题，请提炼“信息无损”的关键要点：\n\n' +
                 "\n".join(prompt_part_lines + prompt_part_fixed) +
-                "\n\n"
+                "\n\n" + exclude_block2
             )
             ok, out = _call(prompt_part + ch)
-            digests.append((out or '').strip())
+            s = (out or '').strip()
+            if blocked_topics:
+                ex = _try_parse_exclusion(s)
+                if ex is not None:
+                    return True, ex, None
+            digests.append(s)
             if on_progress:
                 try:
-                    on_progress(i, len(chunks), (out or '').strip())
+                    on_progress(i, len(chunks), s)
                 except Exception:
                     pass
 
@@ -365,14 +489,26 @@ def run_gemini_summary(
             "- 不逐条复述，合并同类项，去重；",
             "- 聚焦结论与独特信息；术语/定义/符号保持一致，尽量符号化表达。",
         ]
+        exclude_block3 = ''
+        if blocked_topics:
+            exclude_block3 = (
+                '【排除规则】\n'
+                f"- 若整体涉及任一主题：{topics_str}；\n"
+                '- 则不要摘要；仅输出严格JSON：{"excluded": true, "matched": ["<命中主题原词>"], "reason": "<=60字"}；\n'
+                '- 仅输出上述JSON，不要包含其他文字或代码块围栏。\n\n'
+            )
         final_prompt = (
             '你将收到若干分块摘要，请在“尽量信息无损”的前提下进行最终高度凝练：\n' +
             "\n".join(final_rules_lines + final_rules_fixed) +
-            '\n\n【分块摘要】\n'
+            '\n\n' + exclude_block3 + '【分块摘要】\n'
         )
         ok, out = _call(final_prompt + joined)
         if ok and out:
             s = out.strip()
+            if blocked_topics:
+                ex = _try_parse_exclusion(s)
+                if ex is not None:
+                    return True, ex, None
             return True, s, None
         return False, None, 'Gemini 汇总失败'
     except Exception as e:
@@ -530,6 +666,17 @@ def main(argv: Optional[List[str]] = None) -> int:
             '定义一致（术语/符号/概念前后一致、一一对应）',
         ]
 
+    # 内容检测配置：命中则跳过摘要
+    guard_cfg = cfg.get('content_guard', {}) if isinstance(cfg.get('content_guard', {}), dict) else {}
+    guard_enabled = bool(guard_cfg.get('enabled', False))
+    guard_provider = str(guard_cfg.get('provider', 'gemini') or 'gemini')
+    guard_model_alias = str(guard_cfg.get('model', comp_model_alias) or comp_model_alias)
+    guard_blocked_topics = guard_cfg.get('blocked_topics')
+    if not isinstance(guard_blocked_topics, list):
+        guard_blocked_topics = ['地缘政治', '金融市场', '量化交易']
+    else:
+        guard_blocked_topics = [str(x).strip() for x in guard_blocked_topics if str(x).strip()]
+
     # 1) 先输出完整合并 JSON（含全文）
     write_json(out_json_all, entries, source_dirs_raw, compression={
         'enabled': comp_enabled,
@@ -608,12 +755,83 @@ def main(argv: Optional[List[str]] = None) -> int:
         dt_utc = datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat()
         rel_posix = e.rel.as_posix()
 
+        # 内容检测状态（用于记录到 JSON）
+        guard_requested: bool = False
+        guard_hit: Optional[bool] = None
+        guard_err: Optional[str] = None
+        guard_matched: List[str] = []
+
         summary_requested: bool = False
         summary_ok: Optional[bool] = None
         summary_err: Optional[str] = None
         summary_text: Optional[str] = None
 
         pure = (e.content or '').strip()
+
+        # 若启用内容检测，先判断是否命中受限主题；命中则提示并跳过摘要
+        if guard_enabled and pure:
+            # 本地关键字初筛
+            local_hit = False
+            for kw in guard_blocked_topics:
+                if kw and (kw in pure):
+                    local_hit = True
+                    guard_matched.append(kw)
+            if local_hit:
+                guard_hit = True
+                _debug_print(f"[跳过] 命中本地关键字主题：{sorted(set(guard_matched))}", '33')
+            elif guard_provider.lower() == 'gemini':
+                guard_requested = True
+                ok_g, res_g, err_g = run_gemini_topic_check(pure[:80000], guard_model_alias, guard_blocked_topics)
+                if ok_g and isinstance(res_g, dict):
+                    guard_hit = bool(res_g.get('hit'))
+                    guard_matched = list(res_g.get('matched') or [])
+                else:
+                    guard_hit = None
+                    guard_err = err_g
+
+        if guard_enabled and (guard_hit is True):
+            # 写入 Markdown 占位提示
+            with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
+                fmd.write('---\n\n')
+                fmd.write(f"## [{idx+1}/{len(entries)}] {e.name}\n\n")
+                fmd.write(f"- 源路径：`{rel_posix}`\n")
+                fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
+                mt = '、'.join(sorted(set(guard_matched))) if guard_matched else '命中受限主题'
+                fmd.write(f"提示：该条目涉及受限主题（{mt}），已按配置跳过摘要处理。\n\n")
+
+            summaries.append({
+                'path': rel_posix,
+                'filename': e.name,
+                'timestamp': e.ts,
+                'datetime_utc': dt_utc,
+                'summary': '',
+                'compression': {
+                    'enabled': comp_enabled,
+                    'requested': False,
+                    'ok': None,
+                    'error': None,
+                },
+                'content_guard': {
+                    'enabled': guard_enabled,
+                    'provider': guard_provider,
+                    'requested': guard_requested,
+                    'hit': True,
+                    'matched_topics': sorted(set(guard_matched)),
+                    'error': guard_err,
+                },
+                'skipped': True,
+            })
+
+            comp_info_step_guard = {
+                'enabled': comp_enabled,
+                'provider': 'gemini',
+                'model_alias': comp_model_alias,
+                'model_resolved': _gemini_model_from_alias(comp_model_alias),
+                'max_chars': comp_max_chars,
+                'principles': comp_principles,
+            }
+            write_json_summaries(out_json, summaries, source_dirs_raw, compression=comp_info_step_guard)
+            continue
         if comp_enabled and pure:
             summary_requested = True
             attempt = 0
@@ -674,6 +892,15 @@ def main(argv: Optional[List[str]] = None) -> int:
                 'ok': summary_ok if summary_requested else None,
                 'error': summary_err if summary_requested else None,
             },
+            'content_guard': {
+                'enabled': guard_enabled,
+                'provider': guard_provider,
+                'requested': guard_requested,
+                'hit': guard_hit if guard_hit is not None else False,
+                'matched_topics': sorted(set(guard_matched)) if guard_matched else [],
+                'error': guard_err,
+            },
+            'skipped': False,
         })
 
         comp_info_step = {
