@@ -666,11 +666,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             '定义一致（术语/符号/概念前后一致、一一对应）',
         ]
 
-    # 内容检测配置：命中则跳过摘要
-    guard_cfg = cfg.get('content_guard', {}) if isinstance(cfg.get('content_guard', {}), dict) else {}
+    # 内容检测配置（现推荐配置在 compression.content_guard；仍兼容顶层 content_guard）
+    if isinstance(compression_cfg.get('content_guard', {}), dict):
+        guard_cfg = compression_cfg.get('content_guard', {})
+    else:
+        guard_cfg = cfg.get('content_guard', {}) if isinstance(cfg.get('content_guard', {}), dict) else {}
     guard_enabled = bool(guard_cfg.get('enabled', False))
-    guard_provider = str(guard_cfg.get('provider', 'gemini') or 'gemini')
-    guard_model_alias = str(guard_cfg.get('model', comp_model_alias) or comp_model_alias)
     guard_blocked_topics = guard_cfg.get('blocked_topics')
     if not isinstance(guard_blocked_topics, list):
         guard_blocked_topics = ['地缘政治', '金融市场', '量化交易', '法律工程']
@@ -770,7 +771,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         # 排除逻辑在提交 LLM 压缩请求时顺便判断
         if comp_enabled and pure:
             summary_requested = True
-            if guard_enabled and guard_provider.lower() == 'gemini' and guard_blocked_topics:
+            if guard_enabled and guard_blocked_topics:
                 guard_requested = True
             attempt = 0
             while True:
@@ -781,7 +782,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 ok, res, err = run_gemini_summary(
                     pure, comp_model_alias, comp_max_chars, 0.0, on_progress=None,
                     principles=comp_principles,
-                    blocked_topics=(guard_blocked_topics if (guard_enabled and guard_provider.lower() == 'gemini') else None)
+                    blocked_topics=(guard_blocked_topics if guard_enabled and guard_blocked_topics else None)
                 )
                 # 统计本次运行已发起的请求次数（包含排除/失败/成功）
                 requests_made_this_run += 1
@@ -813,7 +814,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                             },
                             'content_guard': {
                                 'enabled': guard_enabled,
-                                'provider': guard_provider,
+                                'provider': 'gemini',
                                 'requested': guard_requested,
                                 'hit': True,
                                 'matched_topics': sorted(set(guard_matched)),
@@ -841,7 +842,6 @@ def main(argv: Optional[List[str]] = None) -> int:
                             print(f"已输出中间结果：{out_md} 与 {out_json}。剩余待处理：{remaining} 篇；下次运行将从断点继续。")
                             return 0
                         # 跳过当前条目
-                        goto_next = True
                         break
                     # 正常摘要文本
                     if isinstance(res, str):
@@ -897,7 +897,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             },
             'content_guard': {
                 'enabled': guard_enabled,
-                'provider': guard_provider,
+                'provider': 'gemini',
                 'requested': guard_requested,
                 'hit': guard_hit if guard_hit is not None else False,
                 'matched_topics': sorted(set(guard_matched)) if guard_matched else [],

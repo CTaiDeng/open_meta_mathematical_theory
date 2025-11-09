@@ -29,17 +29,15 @@
       "定义一致（术语/符号/概念前后一致、一一对应）",
       "只保留理论的构造与定义，过滤一切评价，中立客观",
       "不要总结，不要评价，过滤评价"
-    ]
-  },
-  "content_guard": {
-    "enabled": true,
-    "provider": "gemini",
-    "model": "flash2.5",
-    "blocked_topics": [
-      "地缘政治",
-      "金融市场",
-      "量化交易",
-      "法律工程"
-    ]
+    ],
+    "content_guard": {
+      "enabled": true,
+      "blocked_topics": [
+        "地缘政治",
+        "金融市场",
+        "量化交易",
+        "法律工程"
+      ]
+    }
   }
 }
