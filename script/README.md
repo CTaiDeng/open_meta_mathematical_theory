@@ -61,6 +61,7 @@
     - 然后对 `files` 中的每一项逐一进行摘要：
       - 当 `compression.enabled=true` 时，调用 Gemini 进行信息无损压缩（约束见配置 `principles`，`max_chars=500`）。
       - 当 `compression.enabled=false` 时，直接截断前 500 字并在末尾追加 `……`。
+    - 跳过项（排除主题）：当 `compression.content_guard.enabled=true` 且命中 `blocked_topics` 时，本次请求仅返回排除告知，脚本只在 `out/merge_md_by_timestamp.json` 记录该条目（含 `content_guard` 与 `skipped: true`），不写入 `out/merge_md_by_timestamp.md`。断点续跑时亦会跳过这些条目的 Markdown 输出，不回写占位提示。
     - 最终输出逐项摘要的 `out/merge_md_by_timestamp.json` 与 `out/merge_md_by_timestamp.md`。
     - 逐项 JSON 中的 `compression` 字段包含：`enabled`、`requested`（是否发起请求）、`ok`（请求是否成功）、`error`（错误信息，若有）。成功则不再做 500 字截断；失败或未请求才做 500 字截断。
 

@@ -575,6 +575,12 @@ def _rewrite_md_upto(out_md: Path, entries: List[Entry], upto: int, total: int, 
             e = entries[i]
             dt_utc = datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat()
             rel_posix = e.rel.as_posix()
+            # 若该条为跳过项（skipped=true），则不在 Markdown 中生成条目
+            try:
+                if bool(existing_summaries[i].get('skipped')):
+                    continue
+            except Exception:
+                pass
             summary_text = ''
             try:
                 summary_text = (existing_summaries[i].get('summary') or '').strip()
@@ -734,6 +740,8 @@ def main(argv: Optional[List[str]] = None) -> int:
                 'datetime_utc': datetime.fromtimestamp(e.ts, tz=timezone.utc).isoformat(),
                 'summary': (ef.get('summary') or ''),
                 'compression': ef.get('compression') or None,
+                'content_guard': ef.get('content_guard') or None,
+                'skipped': bool(ef.get('skipped', False)),
             })
         comp_info_step = {
             'enabled': comp_enabled,
@@ -787,18 +795,10 @@ def main(argv: Optional[List[str]] = None) -> int:
                 # 统计本次运行已发起的请求次数（包含排除/失败/成功）
                 requests_made_this_run += 1
                 if ok and res is not None:
-                    # 若返回为排除 JSON，则直接写入占位并进入下一项
+                    # 若返回为排除 JSON，则仅写入逐项 JSON，并进入下一项（不写 Markdown）
                     if isinstance(res, dict) and res.get('excluded'):
                         guard_hit = True
                         guard_matched = list(res.get('matched') or [])
-                        # 写入 Markdown 占位提示
-                        with out_md.open('a', encoding='utf-8', newline='\n') as fmd:
-                            fmd.write('---\n\n')
-                            fmd.write(f"## [{idx+1}/{len(entries)}] {e.name}\n\n")
-                            fmd.write(f"- 源路径：`{rel_posix}`\n")
-                            fmd.write(f"- 时间戳：`{e.ts}`；UTC：`{dt_utc}`\n\n")
-                            mt = '、'.join(sorted(set(guard_matched))) if guard_matched else '命中受限主题'
-                            fmd.write(f"提示：该条目涉及受限主题（{mt}），已按配置跳过摘要处理。\n\n")
 
                         summaries.append({
                             'path': rel_posix,
