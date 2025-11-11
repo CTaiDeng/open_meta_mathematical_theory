@@ -812,8 +812,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "2db70d7d0aae560afa5a7bbdf84001fa718921c46644225f464f7b09022d4473",
-    "pdf_hash": "c1aff7cd95057c0aa450a0da13c0a16d6f6bbc23756c180e1805852e497c9459"
+    "md_hash": "5e4317933ba3014bc1fb2d9fc93ff761667e95e9b25fc1e630093e4438b29358",
+    "pdf_hash": "68e2a8766ca435060d8c482e31608a83f567d66de5cf06b2256dcf7ad0561cfe"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -1144,5 +1144,17 @@
     "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1761408002_语义的辩证法：论 O3－HACA 框架中语言的超集-子集动态与“生动性”生成机制.pdf",
     "md_hash": "07bae370128f033aff5e30e5e9a0c953e34067a7ab4544543f49da0668bf6054",
     "pdf_hash": "eccd85fff6b2278dfddc46c644dd7e92572221ff7ed1c470705c694ff1083d72"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1762444800_论O3-LBOPB框架的知识压缩范式：从数据承载到编译器（规则引擎）的跃迁及其与传统LLM蒸馏的对比分析.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1762444800_论O3-LBOPB框架的知识压缩范式：从数据承载到编译器（规则引擎）的跃迁及其与传统LLM蒸馏的对比分析.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1762444800_论O3-LBOPB框架的知识压缩范式：从数据承载到编译器（规则引擎）的跃迁及其与传统LLM蒸馏的对比分析.pdf",
+    "md_hash": "fa7cf14dc3a501cdba9d684124e521dcc011b5835004bba177dc6648f86a9feb",
+    "pdf_hash": "fc00ffa6bc0e7d72f77f22bc604fe43949358d4cbeece79514aaa860532dd847"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1762636780_🚩🚩gromacs-2024.1_developer项目的著作权设计策略：“宿主-载荷”与“双轨制”复合架构.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1762636780_🚩🚩gromacs-2024.1_developer项目的著作权设计策略：“宿主-载荷”与“双轨制”复合架构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1762636780_🚩🚩gromacs-2024.1_developer项目的著作权设计策略：“宿主-载荷”与“双轨制”复合架构.pdf",
+    "md_hash": "3849f77fca404e044242715d4218c4b151c5f1c8f2cd3df9548cd12ba4636888",
+    "pdf_hash": "c6c9d346a211ef916ee98ebb270e7d7f996abe79f91562beee89f1ee10fef438"
   }
 }
