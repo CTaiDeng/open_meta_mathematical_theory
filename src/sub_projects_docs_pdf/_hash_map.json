@@ -812,8 +812,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "5e4317933ba3014bc1fb2d9fc93ff761667e95e9b25fc1e630093e4438b29358",
-    "pdf_hash": "68e2a8766ca435060d8c482e31608a83f567d66de5cf06b2256dcf7ad0561cfe"
+    "md_hash": "1ee7c6fe2d5082537a5bad41f623554356500375dee1c281c8e48f076d6b7757",
+    "pdf_hash": "52dadc3f8f8b26deb41b590223512b8e4c4d07008feb940babd6ae4cf5a2c49d"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -1156,5 +1156,11 @@
     "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1762636780_🚩🚩gromacs-2024.1_developer项目的著作权设计策略：“宿主-载荷”与“双轨制”复合架构.pdf",
     "md_hash": "3849f77fca404e044242715d4218c4b151c5f1c8f2cd3df9548cd12ba4636888",
     "pdf_hash": "c6c9d346a211ef916ee98ebb270e7d7f996abe79f91562beee89f1ee10fef438"
+  },
+  "src\\sub_projects_docs_pdf\\haca_pdf\\1762876801_🚩🚩character_rl_sac_pacer_haca_v2 项目的著作权设计策略：“渊源”锁定与“双轨制”架构.pdf": {
+    "md_path": "src\\sub_projects_docs\\haca\\1762876801_🚩🚩character_rl_sac_pacer_haca_v2 项目的著作权设计策略：“渊源”锁定与“双轨制”架构.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1762876801_🚩🚩character_rl_sac_pacer_haca_v2 项目的著作权设计策略：“渊源”锁定与“双轨制”架构.pdf",
+    "md_hash": "d1c57b3a61d75050493bea981dbfd260bf702614d7b5bb0c72620111ce4bceaa",
+    "pdf_hash": "39480c1e8302d78656931ebeaadff23e4554d261df1cfc197a6f317334d88c58"
   }
 }
