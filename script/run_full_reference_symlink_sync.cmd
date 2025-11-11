@@ -7,7 +7,7 @@ REM See https://www.gnu.org/licenses/gpl-3.0.html for details.
 
 setlocal EnableExtensions EnableDelayedExpansion
 set SCRIPT_DIR=%~dp0
-set REPO_ROOT=%SCRIPT_DIR%..
+set REPO_ROOT=%SCRIPT_DIR%..\
 set TOOL=%SCRIPT_DIR%full_reference_symlink_sync_and_json_build.ps1
 set CFG=%REPO_ROOT%src\full_reference\Link.json
 

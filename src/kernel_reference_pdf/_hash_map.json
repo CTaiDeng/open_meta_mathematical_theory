@@ -1919,24 +1919,6 @@
     "md_hash": "b55e959881c200152f67a3fa7268de80603588e3f09d3ab7087974206f9ce4e8",
     "pdf_hash": "fd3277a079b428a1387ecf1562df30b2cbb59e48fe4433c58089630e5ec8558f"
   },
-  "1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.pdf": {
-    "md_path": "src\\kernel_reference\\1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.md",
-    "pdf_path": "src\\kernel_reference_pdf\\1752416957_【重要】元政治经济学：基于国家利益第一元公理的O3理论建模.pdf",
-    "md_hash": "6e4c45298545d43309cca10bf81a2d75eeb8b0f1881938e53dbfd05d6ab8aeb6",
-    "pdf_hash": "7ff0a32d5d70ccae05a09ef2514cab3c717dbf253461cb95a95a234fff98c298"
-  },
-  "1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.pdf": {
-    "md_path": "src\\kernel_reference\\1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.md",
-    "pdf_path": "src\\kernel_reference_pdf\\1752416958_【重要】基于O3理论的元政治经济学分析：地缘金融市场中的结构性绞杀与节奏支配.pdf",
-    "md_hash": "310c5f9a821b07359d6a6c56118b4a01eae5d21212a95433e263fd514f76e7f4",
-    "pdf_hash": "cf4c96d9c112f45d2aeabb192f16486577a2f11a2ab8a2bc7591f339c3154334"
-  },
-  "1752416959_流动性工程学：地缘金融战略下的高级诱多战术.pdf": {
-    "md_path": "src\\kernel_reference\\1752416959_流动性工程学：地缘金融战略下的高级诱多战术.md",
-    "pdf_path": "src\\kernel_reference_pdf\\1752416959_流动性工程学：地缘金融战略下的高级诱多战术.pdf",
-    "md_hash": "71ee7052ae36698012233c62b3edaa59c308746690ac2d1d2daa75fe15ed7513",
-    "pdf_hash": "9cbe643843aa4c716e6f24291a9e3948e8b8aea422f6a84bbda4c39811f902c8"
-  },
   "1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.pdf": {
     "md_path": "src\\kernel_reference\\1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.md",
     "pdf_path": "src\\kernel_reference_pdf\\1752416960_基准演化动力学：作为压强吸引子函数的权重向量重构.pdf",
@@ -2014,12 +1996,6 @@
     "pdf_path": "src\\kernel_reference_pdf\\1752416979_一场元理论的自我演绎：论《O3理论辩论》如何体现其核心辩证关系.pdf",
     "md_hash": "a340218a8f9cf31706f2d579dae22f60da8bdd78307311a63b7d445d2be191f8",
     "pdf_hash": "d3d1389fe64053b0cb615b3254f22c8c36b1899cdbc00541832392d3682da3ed"
-  },
-  "1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.pdf": {
-    "md_path": "src\\kernel_reference\\1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.md",
-    "pdf_path": "src\\kernel_reference_pdf\\1752416980_【重要】O3理论框架下对美利坚合众国系统对O3理论的适应性演化路径的元政治经济学分析.pdf",
-    "md_hash": "e742d01ccddb83cd7dc2098ee06e8c3bade80a03c1c462ac29dc003530985cfa",
-    "pdf_hash": "5bcd29194f699a8af866a586452ff7439aa55b7d77b1f0fa9d7695349ad22b35"
   },
   "1752416986_论神经网络作为GRL路径积分特例的必然性及其作为O3理论认知基础的根源.pdf": {
     "md_path": "src\\kernel_reference\\1752416986_论神经网络作为GRL路径积分特例的必然性及其作为O3理论认知基础的根源.md",
@@ -2234,8 +2210,8 @@
   "INDEX.pdf": {
     "md_path": "src\\kernel_reference\\INDEX.md",
     "pdf_path": "src\\kernel_reference_pdf\\INDEX.pdf",
-    "md_hash": "a851e3dee9d054171068549fbe0efa65ad46e0c1883a400be5ba49bf3b8457f5",
-    "pdf_hash": "c655059f8075affd9c210c520cd9bcce898d29e3d0f37c27b6228f241b293de3"
+    "md_hash": "7ab1dfc2413a413b0a6cff4204df5d592957b481200bece7f672ffdec04838b8",
+    "pdf_hash": "b735f90ba044861b21fd71b904e7cfd0645815d30d2ae368ea311169f5633081"
   },
   "KERNEL_REFERENCE_README.pdf": {
     "md_path": "src\\kernel_reference\\KERNEL_REFERENCE_README.md",
