@@ -168,3 +168,11 @@ $$
 
 *   $U(1)$ 与 $SU(2)$ 两例：提供 ($\mathcal{A},\mathcal{F},H$) 的闭式表达，展示 ($\int H$) 的整值谱、HolH 对拍、Bianchi 残差、Stasheff-gap；
 *   建议开源 notebook 与 CI：将证书输出与数据绑定 DOI，确保可复核与长期可用。
+
+---
+
+**许可声明 (License)**
+
+Copyright (C) 2025 GaoZheng
+
+本文档采用[知识共享-署名-非商业性使用-禁止演绎 4.0 国际许可协议 (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-Hans)进行许可。
