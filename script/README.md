@@ -1,5 +1,25 @@
 # 脚本清单与开发协议
 
+## check_gpl_and_arms_length.py 使用说明（最高优先级）
+
+- 作用：检查 GPL 家族依赖（默认全仓）；当使用 `--scope src` 时，额外启用“臂长通信”检查。
+- 范围：
+  - `--scope repo`（默认）：全仓检查。
+  - `--scope src`：仅检查 `src` 目录，并启用臂长通信检查。
+- 常用参数：
+  - `--json`：输出 JSON 报告。
+  - `--fail-on-gpl`：发现 GPL/AGPL/LGPL 依赖时退出码为 2。
+  - `--fail-on-armlength`：发现臂长通信违规时退出码为 3（仅 `--scope src` 有效）。
+- 返回码：`0`=通过；`2`=命中 GPL 家族（与 `--fail-on-gpl` 搭配）；`3`=臂长通信违规（与 `--fail-on-armlength` 搭配）。
+- 示例：
+  - 全仓（默认）：`python3 check_gpl_and_arms_length.py`
+  - 显式全仓 + JSON：`python3 check_gpl_and_arms_length.py --scope repo --json`
+  - 仅源码 + 严格模式：`python3 check_gpl_and_arms_length.py --scope src --fail-on-gpl --fail-on-armlength`
+
+开发协议（本脚本专属）：
+- 若对脚本的参数、默认行为、输出结构或退出码有任何变更，须在同一变更中同步更新本节内容，确保“文档与代码同步”。
+- CI 或本地统一调用此脚本时，不得绕开 `--scope` 语义；默认约定全仓扫描。
+
 本目录收录仓库内的自动化脚本。脚本输出统一为 UTF-8 编码，PowerShell 脚本默认由 `pwsh` 执行。以下为主要脚本与用途、示例命令。
 
 ## 子项目文档
@@ -81,6 +101,7 @@
   - 若存在 shebang，则许可证头置于 shebang 下一行
 - 版权头规范统一为 `Copyright (C) 2025 GaoZheng`
 - Markdown 批量处理时跳过 `INDEX.md`；`src/kernel_reference/INDEX.md` 的结构受 AGENTS.md 限制，相关脚本需遵循。
+- 对 `check_gpl_and_arms_length.py` 的 CLI 选项、默认行为与退出码的任何修改，必须同步更新本文件顶部“check_gpl_and_arms_length.py 使用说明（最高优先级）”。
 
 ---
 
