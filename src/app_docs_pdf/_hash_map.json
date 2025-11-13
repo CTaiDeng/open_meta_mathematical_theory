@@ -14,8 +14,8 @@
   "README.pdf": {
     "md_path": "src\\app_docs\\README.md",
     "pdf_path": "src\\app_docs_pdf\\README.pdf",
-    "md_hash": "36c90dd7ad993796e4584ad95e3659941c101b7ce21c1c705df555d312670736",
-    "pdf_hash": "f465b42d999573867a7e3a17dfddb305082abc3fcd38df742e386827adb2810f"
+    "md_hash": "f2fe27f9ccf7b5f19580fb6bed66f846872b81adc2715fd36b6594a9806e937c",
+    "pdf_hash": "fbe1488094d788ccb39ac53617038363f06feb04a66922ab780df38202fd4c21"
   },
   "1762624401_🚩🚩一个用于“渊源”保护与“成果”传播的双轨制许可证架构.pdf": {
     "md_path": "src\\app_docs\\1762624401_🚩🚩一个用于“渊源”保护与“成果”传播的双轨制许可证架构.md",
@@ -52,5 +52,11 @@
     "pdf_path": "src\\app_docs_pdf\\1762920753_🚩🚩G-Framework（O3）法律架构总纲：一份旨在实现学术开放与商业独占的双轨制策略简述.pdf",
     "md_hash": "eb1ed143b3192b7e8282e56431fb1ec53d4153168dcd8577c4a025f99d3d2c31",
     "pdf_hash": "87ca03cdfdc74d918b52a95f013cc8cdb01aaf22e89dcb8ed7ed54fac5c152cc"
+  },
+  "1763026276_🚩🚩G-Framework（O3）法律架构总纲：一份旨在实现学术开放与商业独占的双轨制策略简述（数学化重写版）.pdf": {
+    "md_path": "src\\app_docs\\1763026276_🚩🚩G-Framework（O3）法律架构总纲：一份旨在实现学术开放与商业独占的双轨制策略简述（数学化重写版）.md",
+    "pdf_path": "src\\app_docs_pdf\\1763026276_🚩🚩G-Framework（O3）法律架构总纲：一份旨在实现学术开放与商业独占的双轨制策略简述（数学化重写版）.pdf",
+    "md_hash": "db56dcb22e01a6045dcce2fa879d5911126b258617147220b38361bf32bdd398",
+    "pdf_hash": "ac8e46ec05132d8eace5270c59188016d47b909ecbcbeac8799e7b359570f144"
   }
 }
