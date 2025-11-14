@@ -104,11 +104,11 @@ $$
 
 ## 5 证书化与可复验（实验友好）
 
-*   **GZ-HolH**：($\Delta_{\rm HolH}=\log\Hol_{\mathcal{A}}-\int H$) 对拍偏差（小环/方环）；
-*   **GZ-Bianchi**：扩展 Bianchi 家族残差的 ($L^2/L^\infty$) 评估；
-*   **GZ-SGap**：($\sum_{\rm cyc}[x,[y,z]_H]_H-l_3$) 的谱密度；
-*   **($\textsf{GZIdx}_3$)**：($\int_\Sigma H$) 的整值性与鲁棒性；
-*   **($\textsf{GZMono}$)**：($\Hol_{\mathcal{A}_{\rm tot}}$) 的单值性破坏谱。
+* **GZ-HolH**：($\Delta_{\rm HolH}=\log\operatorname{Hol}_{\mathcal{A}}-\int H$) 对拍偏差（小环/方环）；
+* **GZ-Bianchi**：扩展 Bianchi 家族残差的 ($L^2/L^\infty$) 评估；
+* **GZ-SGap**：($\sum_{\rm cyc}[x,[y,z]_H]_H-l_3$) 的谱密度；
+* **($\textsf{GZIdx}_3$)**：($\int_\Sigma H$) 的整值性与鲁棒性；
+* **($\textsf{GZMono}$)**：($\operatorname{Hol}_{\mathcal{A}_{\rm tot}}$) 的单值性破坏谱。
     **实践建议**：提供 U(1)/SU(2) 两个最小算例 notebook；将证书输出与数据、版本一并固化为 DOI（Zenodo）。
 
 ---
