@@ -1,9 +1,13 @@
 cff-version: "1.2.0"
-message: "如果你在研究或出版物中使用本项目，请按以下信息引用。"
-title: "开放元数学理论（open_meta_mathematical_theory）"
+message: "If you use this software or monograph, please cite it as below."
+title: "Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis"
+version: "1.0.0"
+doi: "10.5281/zenodo.17651584"
+date-released: "2025-11-19"
 type: edited-work
 authors:
-  - name: "GaoZheng"
+  - family-names: "Gao"
+    given-names: "Zheng"
     email: "banyanlimit@gmail.com"
 repository-code: "https://github.com/CTaiDeng/open_meta_mathematical_theory"
 url: "https://github.com/CTaiDeng/open_meta_mathematical_theory"
