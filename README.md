@@ -9,7 +9,7 @@
 
 # Open Meta-Mathematical Theory
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17651584.svg)](https://doi.org/10.5281/zenodo.17651584)
+[![DOI](script/zenodo.17651584.svg)](https://doi.org/10.5281/zenodo.17651584)
 
 ---
 
