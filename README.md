@@ -11,7 +11,7 @@
 
 [![DOI](script/zenodo.17651584.svg)](https://doi.org/10.5281/zenodo.17651584)
 ### Citation
-#### Zheng, G. (2025). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra). In Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra): An Integrated Construction (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17651584
+#### Gao, Z. (2025). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra). In Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra): An Integrated Construction (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17651584
 
 ---
 
