@@ -3,8 +3,7 @@
 # 基于泛逻辑分析与泛迭代分析的元数学理论 （ 简称： ***O3理论*** 或 ***O3元数学理论*** 或 ***开放元数学理论*** ）
 
 ### [若为非Github的镜像点击这里为项目官方在Github的完整原版](https://github.com/CTaiDeng/open_meta_mathematical_theory)
-### [作者：GaoZheng（高政）](https://mymetamathematics.blogspot.com)
-### banyanlimit@gmail.com
+### [作者：GaoZheng（高政）](https://mymetamathematics.blogspot.com) [![ORCID](https://orcid.org/sites/default/files/images/orcid_16x16.png) https://orcid.org/0009-0008-3013-6626](https://orcid.org/0009-0008-3013-6626)
 
 ---
 
