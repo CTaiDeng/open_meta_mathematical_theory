@@ -13,6 +13,16 @@
 ### Citation
 #### Gao, Z. (2025). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra). In Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra): An Integrated Construction (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17651584
 
+<!-- ZENODO_STATS_START -->
+## 核心指标
+- 数据源：https://zenodo.org/api/records/17651584
+- 拉取时间：2025-11-22 14:21 北京时间
+- 下载量：40 次；独立下载 25 次（人均 1.60 次）
+- 浏览量：59 次；独立访客 37 次（人均 1.59 次）
+- 下载/浏览转化率：总体 0.68，独立 0.68
+<!-- ZENODO_STATS_END -->
+
+
 ---
 
 #### ***注：“O3理论/O3元数学理论/主纤维丛版广义非交换李代数(PFB-GNLA)”相关理论参见： [作者（GaoZheng）网盘分享](https://drive.google.com/drive/folders/1lrgVtvhEq8cNal0Aa0AjeCNQaRA8WERu?usp=sharing) 或 [作者（GaoZheng）开源项目](https://github.com/CTaiDeng/open_meta_mathematical_theory) 或 [作者（GaoZheng）主页](https://mymetamathematics.blogspot.com)，欢迎访问！***

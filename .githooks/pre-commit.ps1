@@ -106,9 +106,28 @@ if ($badUtf8.Count -gt 0 -or $badBom.Count -gt 0 -or $badCrlf.Count -gt 0) {
   Write-Warn '仅检查不阻拦：建议运行 `pwsh -NoLogo -File convert_to_utf8_lf.ps1` 修复后再提交。'
 }
 
+# 3) 运行 Zenodo 统计脚本（更新 README 与统计文件）
+$fetchScript = Join-Path $top 'script/fetch_zenodo_stats.py'
+if (Test-Path -LiteralPath $fetchScript) {
+  $pythonCmd = $null
+  foreach ($candidate in @('python','python3','py')) {
+    $cmd = Get-Command $candidate -ErrorAction SilentlyContinue
+    if ($cmd) { $pythonCmd = $cmd.Source; break }
+  }
+  if (-not $pythonCmd) {
+    Write-Warn '未找到可用的 python 解释器，跳过 script/fetch_zenodo_stats.py。'
+  } else {
+    Write-Info "运行 $($fetchScript.Substring($top.Length + 1)) 刷新 Zenodo 统计..."
+    try {
+      & $pythonCmd $fetchScript | Out-Null
+    } catch {
+      Write-Warn "执行失败：$($_.Exception.Message)，跳过自动刷新（不阻塞提交）。"
+    }
+  }
+}
+
 if ($SelfTest) {
   Write-Info '自检完成：renormalize + UTF-8 无BOM + LF 校验仅提示。'
 }
 
 exit 0
-
