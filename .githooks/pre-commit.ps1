@@ -30,7 +30,6 @@ $staged = @()
 try {
   $staged = @(Invoke-Git -Args @('-c','core.quotepath=false','diff','--cached','--name-only'))
 } catch { $staged = @() }
-if (-not $staged -or $staged.Count -eq 0) { exit 0 }
 
 function Get-GitAttr([string]$path){
   $raw = Invoke-Git check-attr text eol -- $path 2>$null
@@ -51,8 +50,50 @@ function Has-BOM([byte[]]$bytes){
   return ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)
 }
 
-# 1) 统一做 renormalize（仅提示，不阻拦）
+# 先运行 Zenodo 统计脚本，确保提交前刷新并自动加入暂存
+$fetchScript = Join-Path $top 'script/fetch_zenodo_stats.py'
+if (Test-Path -LiteralPath $fetchScript) {
+  $pythonCmd = $null
+  foreach ($candidate in @('python','python3','py')) {
+    $cmd = Get-Command $candidate -ErrorAction SilentlyContinue
+    if ($cmd) { $pythonCmd = $cmd.Source; break }
+  }
+  if (-not $pythonCmd) {
+    Write-Warn '未找到可用的 python 解释器，跳过 script/fetch_zenodo_stats.py。'
+  } else {
+    Write-Info "运行 $($fetchScript.Substring($top.Length + 1)) 刷新 Zenodo 统计..."
+    try {
+      & $pythonCmd $fetchScript | Out-Null
+      $generated = @(
+        'zenodo_17651584_stats.md',
+        'README.md',
+        'out/zenodo_17651584_stats.csv',
+        'out/zenodo_17651584_stats.svg'
+      )
+      $toAdd = @()
+      foreach ($rel in $generated) {
+        $abs = Join-Path $top $rel
+        if (Test-Path -LiteralPath $abs) { $toAdd += $rel }
+      }
+      if ($toAdd.Count -gt 0) {
+        Write-Info "自动添加统计输出到暂存区：$($toAdd -join ', ')"
+        Invoke-Git add -- $toAdd
+      }
+    } catch {
+      Write-Warn "执行失败：$($_.Exception.Message)，跳过自动刷新（不阻塞提交）。"
+    }
+  }
+}
+
+# 再次获取暂存文件列表（包含自动添加的输出）
+$staged = @()
+try {
+  $staged = @(Invoke-Git -Args @('-c','core.quotepath=false','diff','--cached','--name-only'))
+} catch { $staged = @() }
 $stagedPaths = @($staged | ForEach-Object { $_.Trim() }) | Where-Object { $_ -and $_ -ne '' }
+if (-not $stagedPaths -or $stagedPaths.Count -eq 0) { exit 0 }
+
+# 1) 统一做 renormalize（仅提示，不阻拦）
 $gitattributesChanged = $stagedPaths -contains '.gitattributes'
 if ($gitattributesChanged) {
   Write-Info '检测到 .gitattributes 变更，执行全仓库 renormalize...'
@@ -104,26 +145,6 @@ if ($badUtf8.Count -gt 0 -or $badBom.Count -gt 0 -or $badCrlf.Count -gt 0) {
     $badCrlf | ForEach-Object { Write-Host " - $_" }
   }
   Write-Warn '仅检查不阻拦：建议运行 `pwsh -NoLogo -File convert_to_utf8_lf.ps1` 修复后再提交。'
-}
-
-# 3) 运行 Zenodo 统计脚本（更新 README 与统计文件）
-$fetchScript = Join-Path $top 'script/fetch_zenodo_stats.py'
-if (Test-Path -LiteralPath $fetchScript) {
-  $pythonCmd = $null
-  foreach ($candidate in @('python','python3','py')) {
-    $cmd = Get-Command $candidate -ErrorAction SilentlyContinue
-    if ($cmd) { $pythonCmd = $cmd.Source; break }
-  }
-  if (-not $pythonCmd) {
-    Write-Warn '未找到可用的 python 解释器，跳过 script/fetch_zenodo_stats.py。'
-  } else {
-    Write-Info "运行 $($fetchScript.Substring($top.Length + 1)) 刷新 Zenodo 统计..."
-    try {
-      & $pythonCmd $fetchScript | Out-Null
-    } catch {
-      Write-Warn "执行失败：$($_.Exception.Message)，跳过自动刷新（不阻塞提交）。"
-    }
-  }
 }
 
 if ($SelfTest) {
