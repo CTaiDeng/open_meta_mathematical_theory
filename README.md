@@ -7,21 +7,35 @@
 
 ---
 
-# Open Meta-Mathematical Theory
+# 纯粹数学
 
 [![DOI](script/zenodo.17651584.svg)](https://doi.org/10.5281/zenodo.17651584)
 ### Citation
 #### Gao, Z. (2025). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra). In Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra): An Integrated Construction (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17651584
 
-<!-- ZENODO_STATS_START -->
-## 核心指标
-- 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-23 02:36 北京时间
-- 下载量：44 次；独立下载 27 次（人均 1.63 次）
-- 浏览量：66 次；独立访客 42 次（人均 1.57 次）
-- 下载/浏览转化率：总体 0.67，独立 0.64
-<!-- ZENODO_STATS_END -->
+# 应用数学·第1卷
 
+[![DOI](script/zenodo.17685524.svg)](https://doi.org/10.5281/zenodo.17685524)
+### Citation
+#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity (v1.1). Zenodo. https://doi.org/10.5281/zenodo.17685524
+
+---
+
+<!-- ZENODO_STATS_START -->
+## 纯粹数学（Zenodo 记录 17651584）
+- 数据源：https://zenodo.org/api/records/17651584
+- 拉取时间：2025-11-23 13:19 北京时间
+- 下载量：50 次；独立下载 29 次（人均 1.72 次）
+- 浏览量：71 次；独立访客 44 次（人均 1.61 次）
+- 下载/浏览转化率：总体 0.70，独立 0.66
+
+## 应用数学·第1卷（Zenodo 记录 17685524）
+- 数据源：https://zenodo.org/api/records/17685524
+- 拉取时间：2025-11-23 13:19 北京时间
+- 下载量：8 次；独立下载 5 次（人均 1.60 次）
+- 浏览量：5 次；独立访客 4 次（人均 1.25 次）
+- 下载/浏览转化率：总体 1.60，独立 1.25
+<!-- ZENODO_STATS_END -->
 
 ---
 

@@ -27,28 +27,58 @@
 from __future__ import annotations
 
 import datetime as _datetime
+import csv
 import json
 import re
-import csv
 from pathlib import Path
+from dataclasses import dataclass
 from typing import Any, Dict
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-ZENODO_RECORD_URL = "https://zenodo.org/api/records/17651584"
-OUTPUT_FILENAME = "zenodo_17651584_stats.md"
 REPO_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = REPO_ROOT / OUTPUT_FILENAME
+OUTPUT_PATH = REPO_ROOT / "zenodo_stats.md"
 README_PATH = REPO_ROOT / "README.md"
 START_MARKER = "<!-- ZENODO_STATS_START -->"
 END_MARKER = "<!-- ZENODO_STATS_END -->"
 OUT_DIR = REPO_ROOT / "out"
-CSV_PATH = OUT_DIR / "zenodo_17651584_stats.csv"
-SVG_PATH = OUT_DIR / "zenodo_17651584_stats.svg"
 REQUEST_TIMEOUT_SECONDS = 20
 SVG_WIDTH = 900
 SVG_HEIGHT = 700
 TZ_BEIJING = _datetime.timezone(_datetime.timedelta(hours=8))
+
+
+@dataclass(frozen=True)
+class RecordSpec:
+    name: str
+    record_id: str
+    doi: str
+
+    @property
+    def api_url(self) -> str:
+        return f"https://zenodo.org/api/records/{self.record_id}"
+
+    @property
+    def csv_path(self) -> Path:
+        return OUT_DIR / f"zenodo_{self.record_id}_stats.csv"
+
+    @property
+    def svg_path(self) -> Path:
+        return OUT_DIR / f"zenodo_{self.record_id}_stats.svg"
+
+
+RECORDS = [
+    RecordSpec(
+        name="纯粹数学",
+        record_id="17651584",
+        doi="10.5281/zenodo.17651584",
+    ),
+    RecordSpec(
+        name="应用数学·第1卷",
+        record_id="17685524",
+        doi="10.5281/zenodo.17685524",
+    ),
+]
 
 
 def _safe_ratio(numerator: int, denominator: int) -> float | None:
@@ -69,7 +99,7 @@ def fetch_record(url: str) -> Dict[str, Any]:
         return json.load(response)
 
 
-def build_markdown(stats: Dict[str, Any], fetched_at_text: str) -> str:
+def build_markdown(record: RecordSpec, stats: Dict[str, Any], fetched_at_text: str) -> str:
     downloads = int(stats.get("downloads", 0))
     unique_downloads = int(stats.get("unique_downloads", 0))
     views = int(stats.get("views", 0))
@@ -94,10 +124,10 @@ def build_markdown(stats: Dict[str, Any], fetched_at_text: str) -> str:
     )
 
     lines = [
-        "# Zenodo 记录 17651584 访问统计解读",
+        f"# {record.name}（Zenodo 记录 {record.record_id}）访问统计解读",
         "",
         "## 核心指标",
-        f"- 数据源：{ZENODO_RECORD_URL}",
+        f"- 数据源：{record.api_url}",
         f"- 拉取时间：{fetched_at_text}",
         f"- 下载量：{downloads} 次；独立下载 {unique_downloads} 次（人均 {_fmt_ratio(avg_downloads_per_user)} 次）",
         f"- 浏览量：{views} 次；独立访客 {unique_views} 次（人均 {_fmt_ratio(avg_views_per_user)} 次）",
@@ -126,25 +156,32 @@ def write_markdown(content: str) -> None:
         fh.write(content)
 
 
-def extract_core_metrics(md_path: Path) -> str:
-    lines = md_path.read_text(encoding="utf-8").splitlines()
-    captured: list[str] = []
-    in_section = False
-    for line in lines:
-        if line.strip() == "## 核心指标":
-            in_section = True
-        if in_section:
-            if line.startswith("## ") and line.strip() != "## 核心指标":
-                break
-            captured.append(line)
-    result = "\n".join(captured).strip()
-    if not result:
-        raise SystemExit("未能在统计文件中提取“## 核心指标”段落。")
-    return result
+def build_core_metrics(record: RecordSpec, stats: Dict[str, Any], fetched_at_text: str) -> str:
+    downloads = int(stats.get("downloads", 0))
+    unique_downloads = int(stats.get("unique_downloads", 0))
+    views = int(stats.get("views", 0))
+    unique_views = int(stats.get("unique_views", 0))
+
+    avg_downloads_per_user = _safe_ratio(downloads, unique_downloads)
+    avg_views_per_user = _safe_ratio(views, unique_views)
+    download_view_conversion = _safe_ratio(downloads, views)
+    unique_download_view_conversion = _safe_ratio(unique_downloads, unique_views)
+
+    return "\n".join(
+        [
+            f"## {record.name}（Zenodo 记录 {record.record_id}）",
+            f"- 数据源：{record.api_url}",
+            f"- 拉取时间：{fetched_at_text}",
+            f"- 下载量：{downloads} 次；独立下载 {unique_downloads} 次（人均 {_fmt_ratio(avg_downloads_per_user)} 次）",
+            f"- 浏览量：{views} 次；独立访客 {unique_views} 次（人均 {_fmt_ratio(avg_views_per_user)} 次）",
+            f"- 下载/浏览转化率：总体 {_fmt_ratio(download_view_conversion)}，独立 {_fmt_ratio(unique_download_view_conversion)}",
+        ]
+    )
 
 
-def inject_into_readme(core_md: str) -> None:
+def inject_into_readme(core_sections: list[str]) -> None:
     readme_text = README_PATH.read_text(encoding="utf-8")
+    core_md = "\n\n".join(core_sections)
     block = f"{START_MARKER}\n{core_md}\n{END_MARKER}"
 
     if START_MARKER in readme_text and END_MARKER in readme_text:
@@ -153,11 +190,18 @@ def inject_into_readme(core_md: str) -> None:
         )
         new_text = pattern.sub(block, readme_text)
     else:
-        anchor = "Zenodo. https://doi.org/10.5281/zenodo.17651584"
-        insert_pos = readme_text.find(anchor)
+        anchors = [
+            "Zenodo. https://doi.org/10.5281/zenodo.17685524",
+            "Zenodo. https://doi.org/10.5281/zenodo.17651584",
+        ]
+        insert_pos = -1
+        for anchor in anchors:
+            insert_pos = readme_text.find(anchor)
+            if insert_pos != -1:
+                insert_pos += len(anchor)
+                break
         if insert_pos == -1:
             raise SystemExit("未能在 README 中找到插入锚点。")
-        insert_pos += len(anchor)
         new_text = (
             readme_text[:insert_pos] + "\n\n" + block + "\n" + readme_text[insert_pos:]
         )
@@ -166,7 +210,9 @@ def inject_into_readme(core_md: str) -> None:
         fh.write(new_text)
 
 
-def append_timeseries(stats: Dict[str, Any], fetched_at_dt: _datetime.datetime) -> list[dict[str, str]]:
+def append_timeseries(
+    record: RecordSpec, stats: Dict[str, Any], fetched_at_dt: _datetime.datetime
+) -> list[dict[str, str]]:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "timestamp",
@@ -180,8 +226,8 @@ def append_timeseries(stats: Dict[str, Any], fetched_at_dt: _datetime.datetime) 
         "version_unique_views",
     ]
     rows: list[dict[str, str]] = []
-    if CSV_PATH.exists():
-        with CSV_PATH.open("r", encoding="utf-8") as fh:
+    if record.csv_path.exists():
+        with record.csv_path.open("r", encoding="utf-8") as fh:
             reader = csv.DictReader(fh)
             for row in reader:
                 if row:
@@ -200,7 +246,7 @@ def append_timeseries(stats: Dict[str, Any], fetched_at_dt: _datetime.datetime) 
     }
     rows.append(new_row)
 
-    with CSV_PATH.open("w", encoding="utf-8", newline="") as fh:
+    with record.csv_path.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
@@ -241,7 +287,7 @@ def _scale_points(
     return list(zip(xs, ys))
 
 
-def write_svg_chart(rows: list[dict[str, str]]) -> None:
+def write_svg_chart(record: RecordSpec, rows: list[dict[str, str]]) -> None:
     if not rows:
         return
 
@@ -263,7 +309,7 @@ def write_svg_chart(rows: list[dict[str, str]]) -> None:
     svg_lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{SVG_WIDTH}" height="{SVG_HEIGHT}" viewBox="0 0 {SVG_WIDTH} {SVG_HEIGHT}">',
         f'<rect x="0" y="0" width="{SVG_WIDTH}" height="{SVG_HEIGHT}" fill="#ffffff" />',
-        f'<text x="{SVG_WIDTH/2:.1f}" y="24" text-anchor="middle" font-size="16" fill="#333">Zenodo 17651584 访问统计（时序，分图）</text>',
+        f'<text x="{SVG_WIDTH/2:.1f}" y="24" text-anchor="middle" font-size="16" fill="#333">Zenodo {record.record_id} 访问统计（时序，分图）</text>',
     ]
 
     outer_margin_x = 30
@@ -360,31 +406,41 @@ def write_svg_chart(rows: list[dict[str, str]]) -> None:
     svg_lines.append("</svg>")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with SVG_PATH.open("w", encoding="utf-8", newline="\n") as fh:
+    with record.svg_path.open("w", encoding="utf-8", newline="\n") as fh:
         fh.write("\n".join(svg_lines))
 
 
 def main() -> None:
-    try:
-        record = fetch_record(ZENODO_RECORD_URL)
-    except (HTTPError, URLError, TimeoutError, RuntimeError) as exc:
-        raise SystemExit(f"拉取数据失败：{exc}")
-
-    stats = record.get("stats")
-    if not isinstance(stats, dict):
-        raise SystemExit("响应中缺少 stats 字段，无法解读。")
-
     fetched_at_dt = _datetime.datetime.now(_datetime.timezone.utc).astimezone(
         TZ_BEIJING
     )
     fetched_at_text = fetched_at_dt.strftime("%Y-%m-%d %H:%M 北京时间")
 
-    write_markdown(build_markdown(stats, fetched_at_text))
-    rows = append_timeseries(stats, fetched_at_dt)
-    write_svg_chart(rows)
-    inject_into_readme(extract_core_metrics(OUTPUT_PATH))
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    full_sections: list[str] = []
+    core_sections: list[str] = []
+    for record in RECORDS:
+        try:
+            response = fetch_record(record.api_url)
+        except (HTTPError, URLError, TimeoutError, RuntimeError) as exc:
+            raise SystemExit(f"拉取 {record.record_id} 数据失败：{exc}")
+
+        stats = response.get("stats")
+        if not isinstance(stats, dict):
+            raise SystemExit(f"响应中缺少 stats 字段，无法解读（记录 {record.record_id}）。")
+
+        full_sections.append(build_markdown(record, stats, fetched_at_text))
+        rows = append_timeseries(record, stats, fetched_at_dt)
+        write_svg_chart(record, rows)
+        core_sections.append(build_core_metrics(record, stats, fetched_at_text))
+
+    write_markdown("\n---\n\n".join(full_sections))
+    inject_into_readme(core_sections)
     relative_output = OUTPUT_PATH.relative_to(REPO_ROOT)
-    print(f"已生成 {relative_output} 并更新 README.md；写入 {CSV_PATH.relative_to(REPO_ROOT)} 与 {SVG_PATH.relative_to(REPO_ROOT)}")
+    print(
+        f"已生成 {relative_output} 并更新 README.md；CSV/SVG 输出位于 {OUT_DIR.relative_to(REPO_ROOT)}"
+    )
 
 
 if __name__ == "__main__":
