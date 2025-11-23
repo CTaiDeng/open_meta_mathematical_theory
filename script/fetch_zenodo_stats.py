@@ -30,6 +30,7 @@ import datetime as _datetime
 import csv
 import json
 import re
+import fetch_github_views as _github_views
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Any, Dict
@@ -91,6 +92,14 @@ def _fmt_ratio(value: float | None) -> str:
     return "N/A" if value is None else f"{value:.2f}"
 
 
+def _safe_date_from_ts(ts: str) -> str:
+    try:
+        dt = _datetime.datetime.fromisoformat(str(ts).replace("Z", "+00:00"))
+        return dt.date().isoformat()
+    except Exception:
+        return str(ts)
+
+
 def fetch_record(url: str) -> Dict[str, Any]:
     request = Request(url, headers={"User-Agent": "zenodo-stats-fetcher/1.0"})
     with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
@@ -147,6 +156,119 @@ def build_markdown(record: RecordSpec, stats: Dict[str, Any], fetched_at_text: s
         f"- version_unique_views：{version_unique_views}",
         "",
     ]
+
+    return "\n".join(lines)
+
+
+def build_github_traffic_section(
+    traffic: dict[str, Any],
+    fetched_at_text: str,
+    fetched_at_dt: _datetime.datetime,
+) -> str:
+    summary = traffic.get("summary") or {}
+    views_data = traffic.get("views") or {}
+    clones_data = traffic.get("clones") or {}
+    views_series = views_data.get("views") or []
+    clones_series = clones_data.get("clones") or []
+
+    owner = str(traffic.get("owner", "") or "")
+    repo = str(traffic.get("repo", "") or "")
+    per = str(summary.get("per", traffic.get("per", "day")))
+
+    clones_total = summary.get("clones_total", 0)
+    clones_uniques = summary.get("clones_uniques", 0)
+    views_total = summary.get("views_total", 0)
+    views_uniques = summary.get("views_uniques", 0)
+
+    repo_full_name = f"{owner}/{repo}" if owner and repo else "N/A"
+    repo_url = f"https://github.com/{owner}/{repo}" if owner and repo else "N/A"
+
+    lines = [
+        "# GitHub 仓库访问统计（最近 14 天）",
+        "",
+        f"- 仓库：{repo_full_name}",
+        f"- 仓库主页：{repo_url}",
+        f"- 拉取时间：{fetched_at_text}",
+        f"- 粒度：{per}",
+        f"- Clones in last 14 days: {clones_total}",
+        f"- Unique cloners in last 14 days: {clones_uniques}",
+        f"- Total views in last 14 days: {views_total}",
+        f"- Unique visitors in last 14 days: {views_uniques}",
+    ]
+
+    # 构造连续 14 天日期（缺失数据补 0）
+    date_set: set[_datetime.date] = set()
+    for series in (views_series, clones_series):
+        for item in series:
+            d_str = _safe_date_from_ts(item.get("timestamp", ""))
+            try:
+                d_obj = _datetime.date.fromisoformat(d_str)
+            except ValueError:
+                continue
+            date_set.add(d_obj)
+
+    if date_set:
+        last_date = max(date_set)
+    else:
+        last_date = fetched_at_dt.date()
+
+    date_list = [
+        last_date - _datetime.timedelta(days=delta) for delta in range(13, -1, -1)
+    ]
+
+    views_by_date: dict[_datetime.date, tuple[int, int]] = {}
+    for item in views_series:
+        d_str = _safe_date_from_ts(item.get("timestamp", ""))
+        try:
+            d_obj = _datetime.date.fromisoformat(d_str)
+        except ValueError:
+            continue
+        count = int(item.get("count", 0) or 0)
+        uniques = int(item.get("uniques", 0) or 0)
+        views_by_date[d_obj] = (count, uniques)
+
+    clones_by_date: dict[_datetime.date, tuple[int, int]] = {}
+    for item in clones_series:
+        d_str = _safe_date_from_ts(item.get("timestamp", ""))
+        try:
+            d_obj = _datetime.date.fromisoformat(d_str)
+        except ValueError:
+            continue
+        count = int(item.get("count", 0) or 0)
+        uniques = int(item.get("uniques", 0) or 0)
+        clones_by_date[d_obj] = (count, uniques)
+
+    # Views 时序明细
+    lines.extend(
+        [
+            "",
+            "## Views 时序明细",
+            "",
+            "| 日期 | 浏览量 | 独立访客 |",
+            "| --- | --- | --- |",
+        ]
+    )
+    for d_obj in date_list:
+        count, uniques = views_by_date.get(d_obj, (0, 0))
+        lines.append(f"| {d_obj.isoformat()} | {count} | {uniques} |")
+    lines.append(f"| 合计 | {views_total} | {views_uniques} |")
+
+    # Clones 时序明细
+    lines.extend(
+        [
+            "",
+            "## Clones 时序明细",
+            "",
+            "| 日期 | 克隆数 | 独立克隆者 |",
+            "| --- | --- | --- |",
+        ]
+    )
+    for d_obj in date_list:
+        count, uniques = clones_by_date.get(d_obj, (0, 0))
+        lines.append(f"| {d_obj.isoformat()} | {count} | {uniques} |")
+    lines.append(f"| 合计 | {clones_total} | {clones_uniques} |")
+
+    lines.append("")
 
     return "\n".join(lines)
 
@@ -435,6 +557,22 @@ def main() -> None:
         rows = append_timeseries(record, stats, fetched_at_dt)
         write_svg_chart(record, rows)
         core_sections.append(build_core_metrics(record, stats, fetched_at_text))
+
+    github_repos = [
+        ("CTaiDeng", "open_meta_mathematical_theory"),
+        ("CTaiDeng", "character_rl_sac_pacer_haca_v2"),
+        ("CTaiDeng", "gromacs-2024.1_developer"),
+    ]
+    for owner, repo in github_repos:
+        try:
+            github_traffic = _github_views.get_traffic(owner=owner, repo=repo)
+        except SystemExit as exc:
+            raise SystemExit(
+                f"拉取 GitHub traffic 数据失败（{owner}/{repo}）：{exc}"
+            ) from exc
+        full_sections.append(
+            build_github_traffic_section(github_traffic, fetched_at_text, fetched_at_dt)
+        )
 
     write_markdown("\n---\n\n".join(full_sections))
     inject_into_readme(core_sections)
