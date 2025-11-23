@@ -15,26 +15,26 @@
 
 # 应用数学·第1卷
 
-[![DOI](script/zenodo.17685524.svg)](https://doi.org/10.5281/zenodo.17685524)
+[![DOI](script/zenodo.17686133.svg)](https://doi.org/10.5281/zenodo.17686133)
 ### Citation
-#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity (v1.1). Zenodo. https://doi.org/10.5281/zenodo.17685524
+#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity (v1.2). Zenodo. https://doi.org/10.5281/zenodo.17686133
 
 ---
 
 <!-- ZENODO_STATS_START -->
 ## 纯粹数学（Zenodo 记录 17651584）
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-23 13:19 北京时间
+- 拉取时间：2025-11-23 14:53 北京时间
 - 下载量：50 次；独立下载 29 次（人均 1.72 次）
 - 浏览量：71 次；独立访客 44 次（人均 1.61 次）
 - 下载/浏览转化率：总体 0.70，独立 0.66
 
-## 应用数学·第1卷（Zenodo 记录 17685524）
-- 数据源：https://zenodo.org/api/records/17685524
-- 拉取时间：2025-11-23 13:19 北京时间
-- 下载量：8 次；独立下载 5 次（人均 1.60 次）
-- 浏览量：5 次；独立访客 4 次（人均 1.25 次）
-- 下载/浏览转化率：总体 1.60，独立 1.25
+## 应用数学·第1卷（Zenodo 记录 17686133）
+- 数据源：https://zenodo.org/api/records/17686133
+- 拉取时间：2025-11-23 14:53 北京时间
+- 下载量：20 次；独立下载 8 次（人均 2.50 次）
+- 浏览量：15 次；独立访客 6 次（人均 2.50 次）
+- 下载/浏览转化率：总体 1.33，独立 1.33
 <!-- ZENODO_STATS_END -->
 
 ---

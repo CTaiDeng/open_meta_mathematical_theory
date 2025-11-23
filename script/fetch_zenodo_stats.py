@@ -75,8 +75,8 @@ RECORDS = [
     ),
     RecordSpec(
         name="应用数学·第1卷",
-        record_id="17685524",
-        doi="10.5281/zenodo.17685524",
+        record_id="17686133",
+        doi="10.5281/zenodo.17686133",
     ),
 ]
 
@@ -191,6 +191,7 @@ def inject_into_readme(core_sections: list[str]) -> None:
         new_text = pattern.sub(block, readme_text)
     else:
         anchors = [
+            "Zenodo. https://doi.org/10.5281/zenodo.17686133",
             "Zenodo. https://doi.org/10.5281/zenodo.17685524",
             "Zenodo. https://doi.org/10.5281/zenodo.17651584",
         ]
