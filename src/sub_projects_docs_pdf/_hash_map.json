@@ -812,8 +812,8 @@
   "src\\sub_projects_docs_pdf\\README.pdf": {
     "md_path": "src\\sub_projects_docs\\README.md",
     "pdf_path": "src\\sub_projects_docs_pdf\\README.pdf",
-    "md_hash": "1ee7c6fe2d5082537a5bad41f623554356500375dee1c281c8e48f076d6b7757",
-    "pdf_hash": "52dadc3f8f8b26deb41b590223512b8e4c4d07008feb940babd6ae4cf5a2c49d"
+    "md_hash": "da5e451e2207505a78501bd47dc1240049a5cb65b0e8321c2459aaa018ff31fd",
+    "pdf_hash": "ac53d7ff4cb9cf191fc54532fd9bec2a340eabf80399099de9ee7e1ad29b4834"
   },
   "src\\sub_projects_docs_pdf\\LICENSE.pdf": {
     "md_path": "src\\sub_projects_docs\\LICENSE.md",
@@ -1162,5 +1162,11 @@
     "pdf_path": "src\\sub_projects_docs_pdf\\haca_pdf\\1762876801_🚩🚩character_rl_sac_pacer_haca_v2 项目的著作权设计策略：“渊源”锁定与“双轨制”架构.pdf",
     "md_hash": "d1c57b3a61d75050493bea981dbfd260bf702614d7b5bb0c72620111ce4bceaa",
     "pdf_hash": "39480c1e8302d78656931ebeaadff23e4554d261df1cfc197a6f317334d88c58"
+  },
+  "src\\sub_projects_docs_pdf\\lbopb_pdf\\1764000000_GaoZheng G-Framework 的连续性根基、离散化工程与GRL路径积分实现的综合理论分析.pdf": {
+    "md_path": "src\\sub_projects_docs\\lbopb\\1764000000_GaoZheng G-Framework 的连续性根基、离散化工程与GRL路径积分实现的综合理论分析.md",
+    "pdf_path": "src\\sub_projects_docs_pdf\\lbopb_pdf\\1764000000_GaoZheng G-Framework 的连续性根基、离散化工程与GRL路径积分实现的综合理论分析.pdf",
+    "md_hash": "6c4a5f7c2d837ac1ce416c51c4aa2d540e127ab950b5674d38edf58d1154bf41",
+    "pdf_hash": "0d2871f5bb47d81d18c73971784e5313b089b9f86b536a4ae2cf50661322780a"
   }
 }

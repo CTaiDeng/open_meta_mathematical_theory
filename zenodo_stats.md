@@ -2,7 +2,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-25 12:31 北京时间
+- 拉取时间：2025-11-26 02:06 北京时间
 - 下载量：52 次；独立下载 31 次（人均 1.68 次）
 - 浏览量：81 次；独立访客 54 次（人均 1.50 次）
 - 下载/浏览转化率：总体 0.64，独立 0.57
@@ -26,7 +26,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2025-11-25 12:31 北京时间
+- 拉取时间：2025-11-26 02:06 北京时间
 - 下载量：38 次；独立下载 16 次（人均 2.38 次）
 - 浏览量：39 次；独立访客 19 次（人均 2.05 次）
 - 下载/浏览转化率：总体 0.97，独立 0.84
@@ -50,10 +50,10 @@
 
 - 仓库：CTaiDeng/open_meta_mathematical_theory
 - 仓库主页：https://github.com/CTaiDeng/open_meta_mathematical_theory
-- 拉取时间：2025-11-25 12:31 北京时间
+- 拉取时间：2025-11-26 02:06 北京时间
 - 粒度：day
-- Clones in last 14 days: 137
-- Unique cloners in last 14 days: 55
+- Clones in last 14 days: 127
+- Unique cloners in last 14 days: 54
 - Total views in last 14 days: 56
 - Unique visitors in last 14 days: 1
 
@@ -95,7 +95,7 @@
 | 2025-11-23 | 7 | 7 |
 | 2025-11-24 | 0 | 0 |
 | 2025-11-25 | 1 | 1 |
-| 合计 | 137 | 55 |
+| 合计 | 127 | 54 |
 
 ---
 
@@ -103,10 +103,10 @@
 
 - 仓库：CTaiDeng/character_rl_sac_pacer_haca_v2
 - 仓库主页：https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2
-- 拉取时间：2025-11-25 12:31 北京时间
+- 拉取时间：2025-11-26 02:06 北京时间
 - 粒度：day
-- Clones in last 14 days: 53
-- Unique cloners in last 14 days: 17
+- Clones in last 14 days: 33
+- Unique cloners in last 14 days: 13
 - Total views in last 14 days: 11
 - Unique visitors in last 14 days: 2
 
@@ -135,7 +135,7 @@
 | 日期 | 克隆数 | 独立克隆者 |
 | --- | --- | --- |
 | 2025-11-10 | 0 | 0 |
-| 2025-11-11 | 27 | 8 |
+| 2025-11-11 | 7 | 3 |
 | 2025-11-12 | 5 | 3 |
 | 2025-11-13 | 12 | 4 |
 | 2025-11-14 | 0 | 0 |
@@ -148,7 +148,7 @@
 | 2025-11-21 | 5 | 3 |
 | 2025-11-22 | 0 | 0 |
 | 2025-11-23 | 1 | 1 |
-| 合计 | 53 | 17 |
+| 合计 | 33 | 13 |
 
 ---
 
@@ -156,10 +156,10 @@
 
 - 仓库：CTaiDeng/gromacs-2024.1_developer
 - 仓库主页：https://github.com/CTaiDeng/gromacs-2024.1_developer
-- 拉取时间：2025-11-25 12:31 北京时间
+- 拉取时间：2025-11-26 02:06 北京时间
 - 粒度：day
-- Clones in last 14 days: 58
-- Unique cloners in last 14 days: 32
+- Clones in last 14 days: 40
+- Unique cloners in last 14 days: 25
 - Total views in last 14 days: 8
 - Unique visitors in last 14 days: 1
 
@@ -188,7 +188,7 @@
 | 日期 | 克隆数 | 独立克隆者 |
 | --- | --- | --- |
 | 2025-11-10 | 0 | 0 |
-| 2025-11-11 | 26 | 13 |
+| 2025-11-11 | 8 | 4 |
 | 2025-11-12 | 4 | 3 |
 | 2025-11-13 | 5 | 3 |
 | 2025-11-14 | 4 | 2 |
@@ -201,4 +201,4 @@
 | 2025-11-21 | 5 | 5 |
 | 2025-11-22 | 1 | 1 |
 | 2025-11-23 | 1 | 1 |
-| 合计 | 58 | 32 |
+| 合计 | 40 | 25 |
