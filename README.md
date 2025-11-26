@@ -19,22 +19,35 @@
 ### Citation
 #### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume I — Law-Space Geometry, GRL, Quantum Computing, and Superconductivity (v1.2). Zenodo. https://doi.org/10.5281/zenodo.17686133
 
+# 应用数学·第2卷
+
+[![DOI](script/zenodo.17718263.svg)](https://doi.org/10.5281/zenodo.17718263)
+### Citation
+#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17718263
+
 ---
 
 <!-- ZENODO_STATS_START -->
 ## 纯粹数学（Zenodo 记录 17651584）
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-26 02:06 北京时间
-- 下载量：52 次；独立下载 31 次（人均 1.68 次）
-- 浏览量：81 次；独立访客 54 次（人均 1.50 次）
-- 下载/浏览转化率：总体 0.64，独立 0.57
+- 拉取时间：2025-11-26 23:31 北京时间
+- 下载量：54 次；独立下载 33 次（人均 1.64 次）
+- 浏览量：82 次；独立访客 55 次（人均 1.49 次）
+- 下载/浏览转化率：总体 0.66，独立 0.60
 
 ## 应用数学·第1卷（Zenodo 记录 17686133）
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2025-11-26 02:06 北京时间
-- 下载量：38 次；独立下载 16 次（人均 2.38 次）
-- 浏览量：39 次；独立访客 19 次（人均 2.05 次）
-- 下载/浏览转化率：总体 0.97，独立 0.84
+- 拉取时间：2025-11-26 23:31 北京时间
+- 下载量：41 次；独立下载 18 次（人均 2.28 次）
+- 浏览量：41 次；独立访客 21 次（人均 1.95 次）
+- 下载/浏览转化率：总体 1.00，独立 0.86
+
+## 应用数学·第2卷（Zenodo 记录 17718263）
+- 数据源：https://zenodo.org/api/records/17718263
+- 拉取时间：2025-11-26 23:31 北京时间
+- 下载量：4 次；独立下载 3 次（人均 1.33 次）
+- 浏览量：2 次；独立访客 2 次（人均 1.00 次）
+- 下载/浏览转化率：总体 2.00，独立 1.50
 <!-- ZENODO_STATS_END -->
 
 ---
