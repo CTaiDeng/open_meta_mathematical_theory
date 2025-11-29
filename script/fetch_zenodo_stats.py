@@ -84,6 +84,11 @@ RECORDS = [
         record_id="17744672",
         doi="10.5281/zenodo.17744672",
     ),
+    RecordSpec(
+        name="应用数学·第3卷",
+        record_id="17762295",
+        doi="10.5281/zenodo.17762295",
+    ),
 ]
 
 
