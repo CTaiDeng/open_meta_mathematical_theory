@@ -21,33 +21,33 @@
 
 # 应用数学·第2卷
 
-[![DOI](script/zenodo.17718263.svg)](https://doi.org/10.5281/zenodo.17718263)
+[![DOI](script/zenodo.17744672.svg)](https://doi.org/10.5281/zenodo.17744672)
 ### Citation
-#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine (v1.0). Zenodo. https://doi.org/10.5281/zenodo.17718263
+#### Gao, Z. (2025). GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine. In GaoZheng G-Framework and GaoZheng G-Algebra: Applied Mathematics Volume II – LBOPB, Life-Science Monoids, and Generative Precision Medicine (v1.1). Zenodo. https://doi.org/10.5281/zenodo.17744672
 
 ---
 
 <!-- ZENODO_STATS_START -->
 ## 纯粹数学（Zenodo 记录 17651584）
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-28 03:31 北京时间
+- 拉取时间：2025-11-29 22:07 北京时间
 - 下载量：56 次；独立下载 35 次（人均 1.60 次）
-- 浏览量：82 次；独立访客 55 次（人均 1.49 次）
-- 下载/浏览转化率：总体 0.68，独立 0.64
+- 浏览量：83 次；独立访客 56 次（人均 1.48 次）
+- 下载/浏览转化率：总体 0.67，独立 0.62
 
 ## 应用数学·第1卷（Zenodo 记录 17686133）
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2025-11-28 03:31 北京时间
-- 下载量：41 次；独立下载 18 次（人均 2.28 次）
-- 浏览量：45 次；独立访客 25 次（人均 1.80 次）
-- 下载/浏览转化率：总体 0.91，独立 0.72
+- 拉取时间：2025-11-29 22:07 北京时间
+- 下载量：45 次；独立下载 19 次（人均 2.37 次）
+- 浏览量：49 次；独立访客 26 次（人均 1.88 次）
+- 下载/浏览转化率：总体 0.92，独立 0.73
 
-## 应用数学·第2卷（Zenodo 记录 17718263）
-- 数据源：https://zenodo.org/api/records/17718263
-- 拉取时间：2025-11-28 03:31 北京时间
-- 下载量：5 次；独立下载 4 次（人均 1.25 次）
-- 浏览量：3 次；独立访客 3 次（人均 1.00 次）
-- 下载/浏览转化率：总体 1.67，独立 1.33
+## 应用数学·第2卷（Zenodo 记录 17744672）
+- 数据源：https://zenodo.org/api/records/17744672
+- 拉取时间：2025-11-29 22:07 北京时间
+- 下载量：13 次；独立下载 7 次（人均 1.86 次）
+- 浏览量：14 次；独立访客 9 次（人均 1.56 次）
+- 下载/浏览转化率：总体 0.93，独立 0.78
 <!-- ZENODO_STATS_END -->
 
 ---
