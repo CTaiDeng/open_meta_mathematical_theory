@@ -2,7 +2,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 下载量：56 次；独立下载 35 次（人均 1.60 次）
 - 浏览量：83 次；独立访客 56 次（人均 1.48 次）
 - 下载/浏览转化率：总体 0.67，独立 0.62
@@ -26,7 +26,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 下载量：45 次；独立下载 19 次（人均 2.37 次）
 - 浏览量：49 次；独立访客 26 次（人均 1.88 次）
 - 下载/浏览转化率：总体 0.92，独立 0.73
@@ -50,7 +50,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17744672
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 下载量：16 次；独立下载 9 次（人均 1.78 次）
 - 浏览量：18 次；独立访客 11 次（人均 1.64 次）
 - 下载/浏览转化率：总体 0.89，独立 0.82
@@ -74,7 +74,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17762295
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 下载量：6 次；独立下载 2 次（人均 3.00 次）
 - 浏览量：5 次；独立访客 2 次（人均 2.50 次）
 - 下载/浏览转化率：总体 1.20，独立 1.00
@@ -98,7 +98,7 @@
 
 - 仓库：CTaiDeng/open_meta_mathematical_theory
 - 仓库主页：https://github.com/CTaiDeng/open_meta_mathematical_theory
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 粒度：day
 - Clones in last 14 days: 82
 - Unique cloners in last 14 days: 40
@@ -151,7 +151,7 @@
 
 - 仓库：CTaiDeng/character_rl_sac_pacer_haca_v2
 - 仓库主页：https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 粒度：day
 - Clones in last 14 days: 9
 - Unique cloners in last 14 days: 6
@@ -204,7 +204,7 @@
 
 - 仓库：CTaiDeng/gromacs-2024.1_developer
 - 仓库主页：https://github.com/CTaiDeng/gromacs-2024.1_developer
-- 拉取时间：2025-11-30 23:14 北京时间
+- 拉取时间：2025-11-30 23:37 北京时间
 - 粒度：day
 - Clones in last 14 days: 16
 - Unique cloners in last 14 days: 15
