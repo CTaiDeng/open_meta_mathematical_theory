@@ -2,7 +2,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2025-11-29 22:54 北京时间
+- 拉取时间：2025-11-30 18:33 北京时间
 - 下载量：56 次；独立下载 35 次（人均 1.60 次）
 - 浏览量：83 次；独立访客 56 次（人均 1.48 次）
 - 下载/浏览转化率：总体 0.67，独立 0.62
@@ -26,7 +26,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2025-11-29 22:54 北京时间
+- 拉取时间：2025-11-30 18:33 北京时间
 - 下载量：45 次；独立下载 19 次（人均 2.37 次）
 - 浏览量：49 次；独立访客 26 次（人均 1.88 次）
 - 下载/浏览转化率：总体 0.92，独立 0.73
@@ -50,22 +50,22 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17744672
-- 拉取时间：2025-11-29 22:54 北京时间
-- 下载量：13 次；独立下载 7 次（人均 1.86 次）
-- 浏览量：16 次；独立访客 10 次（人均 1.60 次）
-- 下载/浏览转化率：总体 0.81，独立 0.70
+- 拉取时间：2025-11-30 18:33 北京时间
+- 下载量：14 次；独立下载 8 次（人均 1.75 次）
+- 浏览量：17 次；独立访客 10 次（人均 1.70 次）
+- 下载/浏览转化率：总体 0.82，独立 0.80
 
 ## 版本层级
 - 版本字段与总体不一致，需进一步核对。
 
 ## 原始数值
-- downloads：13
-- unique_downloads：7
-- views：16
+- downloads：14
+- unique_downloads：8
+- views：17
 - unique_views：10
-- version_downloads：6
-- version_unique_downloads：2
-- version_views：9
+- version_downloads：7
+- version_unique_downloads：3
+- version_views：10
 - version_unique_views：4
 
 ---
@@ -74,23 +74,23 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17762295
-- 拉取时间：2025-11-29 22:54 北京时间
-- 下载量：0 次；独立下载 0 次（人均 N/A 次）
-- 浏览量：0 次；独立访客 0 次（人均 N/A 次）
-- 下载/浏览转化率：总体 N/A，独立 N/A
+- 拉取时间：2025-11-30 18:33 北京时间
+- 下载量：6 次；独立下载 2 次（人均 3.00 次）
+- 浏览量：5 次；独立访客 2 次（人均 2.50 次）
+- 下载/浏览转化率：总体 1.20，独立 1.00
 
 ## 版本层级
 - 版本统计与总计一致，当前仅看到一个版本的数据。
 
 ## 原始数值
-- downloads：0
-- unique_downloads：0
-- views：0
-- unique_views：0
-- version_downloads：0
-- version_unique_downloads：0
-- version_views：0
-- version_unique_views：0
+- downloads：6
+- unique_downloads：2
+- views：5
+- unique_views：2
+- version_downloads：6
+- version_unique_downloads：2
+- version_views：5
+- version_unique_views：2
 
 ---
 
@@ -98,10 +98,10 @@
 
 - 仓库：CTaiDeng/open_meta_mathematical_theory
 - 仓库主页：https://github.com/CTaiDeng/open_meta_mathematical_theory
-- 拉取时间：2025-11-29 22:54 北京时间
+- 拉取时间：2025-11-30 18:33 北京时间
 - 粒度：day
-- Clones in last 14 days: 73
-- Unique cloners in last 14 days: 36
+- Clones in last 14 days: 77
+- Unique cloners in last 14 days: 39
 - Total views in last 14 days: 51
 - Unique visitors in last 14 days: 1
 
@@ -109,7 +109,6 @@
 
 | 日期 | 浏览量 | 独立访客 |
 | --- | --- | --- |
-| 2025-11-15 | 0 | 0 |
 | 2025-11-16 | 0 | 0 |
 | 2025-11-17 | 0 | 0 |
 | 2025-11-18 | 4 | 1 |
@@ -123,14 +122,14 @@
 | 2025-11-26 | 0 | 0 |
 | 2025-11-27 | 0 | 0 |
 | 2025-11-28 | 0 | 0 |
+| 2025-11-29 | 0 | 0 |
 | 合计 | 51 | 1 |
 
 ## Clones 时序明细
 
 | 日期 | 克隆数 | 独立克隆者 |
 | --- | --- | --- |
-| 2025-11-15 | 2 | 1 |
-| 2025-11-16 | 2 | 2 |
+| 2025-11-16 | 0 | 0 |
 | 2025-11-17 | 0 | 0 |
 | 2025-11-18 | 7 | 4 |
 | 2025-11-19 | 8 | 6 |
@@ -143,7 +142,8 @@
 | 2025-11-26 | 3 | 2 |
 | 2025-11-27 | 6 | 4 |
 | 2025-11-28 | 1 | 1 |
-| 合计 | 73 | 36 |
+| 2025-11-29 | 8 | 6 |
+| 合计 | 77 | 39 |
 
 ---
 
@@ -151,7 +151,7 @@
 
 - 仓库：CTaiDeng/character_rl_sac_pacer_haca_v2
 - 仓库主页：https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2
-- 拉取时间：2025-11-29 22:54 北京时间
+- 拉取时间：2025-11-30 18:33 北京时间
 - 粒度：day
 - Clones in last 14 days: 9
 - Unique cloners in last 14 days: 6
@@ -204,10 +204,10 @@
 
 - 仓库：CTaiDeng/gromacs-2024.1_developer
 - 仓库主页：https://github.com/CTaiDeng/gromacs-2024.1_developer
-- 拉取时间：2025-11-29 22:54 北京时间
+- 拉取时间：2025-11-30 18:33 北京时间
 - 粒度：day
-- Clones in last 14 days: 19
-- Unique cloners in last 14 days: 17
+- Clones in last 14 days: 17
+- Unique cloners in last 14 days: 16
 - Total views in last 14 days: 8
 - Unique visitors in last 14 days: 1
 
@@ -236,7 +236,7 @@
 | 日期 | 克隆数 | 独立克隆者 |
 | --- | --- | --- |
 | 2025-11-14 | 0 | 0 |
-| 2025-11-15 | 2 | 2 |
+| 2025-11-15 | 0 | 0 |
 | 2025-11-16 | 1 | 1 |
 | 2025-11-17 | 0 | 0 |
 | 2025-11-18 | 2 | 2 |
@@ -249,4 +249,4 @@
 | 2025-11-25 | 0 | 0 |
 | 2025-11-26 | 0 | 0 |
 | 2025-11-27 | 2 | 1 |
-| 合计 | 19 | 17 |
+| 合计 | 17 | 16 |
