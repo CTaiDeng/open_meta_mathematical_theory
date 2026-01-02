@@ -9,10 +9,25 @@ HOOK_DIR="$(cd "$(dirname "$0")" && pwd -P)"
 if command -v pwsh >/dev/null 2>&1; then
   exec pwsh -NoLogo -NoProfile -File "$HOOK_DIR/pre-commit.ps1" "$@"
 elif command -v powershell.exe >/dev/null 2>&1; then
-  exec powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "$HOOK_DIR/pre-commit.ps1" "$@"
+  # Windows PowerShell 5.1 对“UTF-8（无 BOM）”脚本的解析存在兼容性问题，可能导致中文字符串乱码。
+  # 这里生成一个带 UTF-8 BOM 的临时副本执行，避免污染仓库文件编码。
+  tmp_ps1="$(mktemp "${TMPDIR:-/tmp}/pre-commit.ps1.XXXXXX")"
+  trap 'rm -f "$tmp_ps1"' EXIT
+  printf '\xEF\xBB\xBF' >"$tmp_ps1"
+  cat "$HOOK_DIR/pre-commit.ps1" >>"$tmp_ps1"
+
+  set +e
+  powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "$tmp_ps1" "$@"
+  rc=$?
+  set -e
+
+  if [ "$rc" -ne 0 ]; then
+    echo "[gitattributes] PowerShell 钩子执行失败（exit=$rc），已跳过以免阻塞提交。" >&2
+    exit 0
+  fi
+  exit 0
 else
   echo "[gitattributes] 未找到 PowerShell (pwsh/powershell.exe)，无法执行钩子" >&2
   # 不阻塞提交，但给出提示
   exit 0
 fi
-

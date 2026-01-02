@@ -65,7 +65,7 @@ if (Test-Path -LiteralPath $fetchScript) {
     try {
       & $pythonCmd $fetchScript | Out-Null
       $generated = @(
-        'zenodo_17651584_stats.md',
+        'zenodo_stats.md',
         'README.md',
         'out/zenodo_17651584_stats.csv',
         'out/zenodo_17651584_stats.svg'
@@ -77,7 +77,7 @@ if (Test-Path -LiteralPath $fetchScript) {
       }
       if ($toAdd.Count -gt 0) {
         Write-Info "自动添加统计输出到暂存区：$($toAdd -join ', ')"
-        Invoke-Git add -- $toAdd
+        Invoke-Git add -- @toAdd
       }
     } catch {
       Write-Warn "执行失败：$($_.Exception.Message)，跳过自动刷新（不阻塞提交）。"
