@@ -9,9 +9,34 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-function Write-Info($msg) { Write-Host "[gitattributes] $msg" -ForegroundColor Cyan }
-function Write-Warn($msg) { Write-Host "[gitattributes] $msg" -ForegroundColor Yellow }
-function Write-Err($msg) { Write-Host "[gitattributes] $msg" -ForegroundColor Red }
+$script:Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$script:StdoutUtf8Writer = $null
+
+function Write-StdoutUtf8([string]$Line) {
+  if ($null -eq $Line) { return }
+  if ($null -eq $script:StdoutUtf8Writer) {
+    $script:StdoutUtf8Writer = New-Object System.IO.StreamWriter([Console]::OpenStandardOutput(), $script:Utf8NoBom)
+    $script:StdoutUtf8Writer.AutoFlush = $true
+  }
+  $script:StdoutUtf8Writer.WriteLine($Line)
+}
+
+function Get-IsStdoutRedirected {
+  try { return [Console]::IsOutputRedirected } catch { return $false }
+}
+
+function Write-Info($msg) {
+  $line = "[gitattributes] $msg"
+  if (Get-IsStdoutRedirected) { Write-StdoutUtf8 $line } else { Write-Host $line -ForegroundColor Cyan }
+}
+function Write-Warn($msg) {
+  $line = "[gitattributes] $msg"
+  if (Get-IsStdoutRedirected) { Write-StdoutUtf8 $line } else { Write-Host $line -ForegroundColor Yellow }
+}
+function Write-Err($msg) {
+  $line = "[gitattributes] $msg"
+  if (Get-IsStdoutRedirected) { Write-StdoutUtf8 $line } else { Write-Host $line -ForegroundColor Red }
+}
 
 function Invoke-Git {
   param([Parameter(ValueFromRemainingArguments=$true)] [string[]]$Args)
