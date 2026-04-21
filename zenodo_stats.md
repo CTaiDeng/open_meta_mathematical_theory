@@ -2,7 +2,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 下载量：60 次；独立下载 39 次（人均 1.54 次）
 - 浏览量：88 次；独立访客 61 次（人均 1.44 次）
 - 下载/浏览转化率：总体 0.68，独立 0.64
@@ -26,7 +26,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 下载量：60 次；独立下载 34 次（人均 1.76 次）
 - 浏览量：60 次；独立访客 37 次（人均 1.62 次）
 - 下载/浏览转化率：总体 1.00，独立 0.92
@@ -50,7 +50,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17744672
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 下载量：29 次；独立下载 22 次（人均 1.32 次）
 - 浏览量：30 次；独立访客 23 次（人均 1.30 次）
 - 下载/浏览转化率：总体 0.97，独立 0.96
@@ -74,7 +74,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17762295
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 下载量：13 次；独立下载 8 次（人均 1.62 次）
 - 浏览量：17 次；独立访客 13 次（人均 1.31 次）
 - 下载/浏览转化率：总体 0.76，独立 0.62
@@ -98,10 +98,10 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/19677399
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 下载量：0 次；独立下载 0 次（人均 N/A 次）
-- 浏览量：0 次；独立访客 0 次（人均 N/A 次）
-- 下载/浏览转化率：总体 N/A，独立 N/A
+- 浏览量：5 次；独立访客 2 次（人均 2.50 次）
+- 下载/浏览转化率：总体 0.00，独立 0.00
 
 ## 版本层级
 - 版本统计与总计一致，当前仅看到一个版本的数据。
@@ -109,12 +109,12 @@
 ## 原始数值
 - downloads：0
 - unique_downloads：0
-- views：0
-- unique_views：0
+- views：5
+- unique_views：2
 - version_downloads：0
 - version_unique_downloads：0
-- version_views：0
-- version_unique_views：0
+- version_views：5
+- version_unique_views：2
 
 ---
 
@@ -122,7 +122,7 @@
 
 - 仓库：CTaiDeng/open_meta_mathematical_theory
 - 仓库主页：https://github.com/CTaiDeng/open_meta_mathematical_theory
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 粒度：day
 - Clones in last 14 days: 75
 - Unique cloners in last 14 days: 42
@@ -175,7 +175,7 @@
 
 - 仓库：CTaiDeng/character_rl_sac_pacer_haca_v2
 - 仓库主页：https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 粒度：day
 - Clones in last 14 days: 28
 - Unique cloners in last 14 days: 19
@@ -228,7 +228,7 @@
 
 - 仓库：CTaiDeng/gromacs-2024.1_developer
 - 仓库主页：https://github.com/CTaiDeng/gromacs-2024.1_developer
-- 拉取时间：2026-04-21 18:07 北京时间
+- 拉取时间：2026-04-21 22:00 北京时间
 - 粒度：day
 - Clones in last 14 days: 44
 - Unique cloners in last 14 days: 27
