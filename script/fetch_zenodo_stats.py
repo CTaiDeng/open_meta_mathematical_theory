@@ -89,6 +89,11 @@ RECORDS = [
         record_id="17762295",
         doi="10.5281/zenodo.17762295",
     ),
+    RecordSpec(
+        name="中文工作笔记",
+        record_id="19677399",
+        doi="10.5281/zenodo.19677399",
+    ),
 ]
 
 
