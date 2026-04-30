@@ -33,44 +33,44 @@
 
 # 中文工作笔记
 
-[![DOI](script/zenodo.19677399.svg)](https://doi.org/10.5281/zenodo.19677399)
+[![DOI](script\zenodo.19910580.svg)](https://doi.org/10.5281/zenodo.19910580)
 # Citation
-#### Gao, Z. (2026). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra) 中文工作笔记 (v1.0). Zenodo. https://doi.org/10.5281/zenodo.19677399
+#### Gao, Z. (2026). Meta-Mathematical Theory based on Pan-Logic Analysis and Pan-Iterative Analysis (GaoZheng G-Framework) and the Principal-Bundle-Based Generalized Noncommutative Lie Algebra (GaoZheng G-Algebra) 中文工作笔记 (v2.0). Zenodo. https://doi.org/10.5281/zenodo.19910580
 
 ---
 
 <!-- ZENODO_STATS_START -->
 ## 纯粹数学（Zenodo 记录 17651584）
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2026-04-30 12:09 北京时间
-- 下载量：62 次；独立下载 41 次（人均 1.51 次）
+- 拉取时间：2026-04-30 15:54 北京时间
+- 下载量：64 次；独立下载 42 次（人均 1.52 次）
 - 浏览量：94 次；独立访客 65 次（人均 1.45 次）
-- 下载/浏览转化率：总体 0.66，独立 0.63
+- 下载/浏览转化率：总体 0.68，独立 0.65
 
 ## 应用数学·第1卷（Zenodo 记录 17686133）
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：60 次；独立下载 34 次（人均 1.76 次）
 - 浏览量：61 次；独立访客 38 次（人均 1.61 次）
 - 下载/浏览转化率：总体 0.98，独立 0.89
 
 ## 应用数学·第2卷（Zenodo 记录 17744672）
 - 数据源：https://zenodo.org/api/records/17744672
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：29 次；独立下载 22 次（人均 1.32 次）
 - 浏览量：31 次；独立访客 24 次（人均 1.29 次）
 - 下载/浏览转化率：总体 0.94，独立 0.92
 
 ## 应用数学·第3卷（Zenodo 记录 17762295）
 - 数据源：https://zenodo.org/api/records/17762295
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：13 次；独立下载 8 次（人均 1.62 次）
 - 浏览量：19 次；独立访客 14 次（人均 1.36 次）
 - 下载/浏览转化率：总体 0.68，独立 0.57
 
-## 中文工作笔记（Zenodo 记录 19677399）
-- 数据源：https://zenodo.org/api/records/19677399
-- 拉取时间：2026-04-30 12:09 北京时间
+## 中文工作笔记（Zenodo 记录 19910580）
+- 数据源：https://zenodo.org/api/records/19910580
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：87 次；独立下载 41 次（人均 2.12 次）
 - 浏览量：21 次；独立访客 14 次（人均 1.50 次）
 - 下载/浏览转化率：总体 4.14，独立 2.93

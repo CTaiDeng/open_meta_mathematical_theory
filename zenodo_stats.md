@@ -2,21 +2,21 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17651584
-- 拉取时间：2026-04-30 12:09 北京时间
-- 下载量：62 次；独立下载 41 次（人均 1.51 次）
+- 拉取时间：2026-04-30 15:54 北京时间
+- 下载量：64 次；独立下载 42 次（人均 1.52 次）
 - 浏览量：94 次；独立访客 65 次（人均 1.45 次）
-- 下载/浏览转化率：总体 0.66，独立 0.63
+- 下载/浏览转化率：总体 0.68，独立 0.65
 
 ## 版本层级
 - 版本统计与总计一致，当前仅看到一个版本的数据。
 
 ## 原始数值
-- downloads：62
-- unique_downloads：41
+- downloads：64
+- unique_downloads：42
 - views：94
 - unique_views：65
-- version_downloads：62
-- version_unique_downloads：41
+- version_downloads：64
+- version_unique_downloads：42
 - version_views：94
 - version_unique_views：65
 
@@ -26,7 +26,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17686133
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：60 次；独立下载 34 次（人均 1.76 次）
 - 浏览量：61 次；独立访客 38 次（人均 1.61 次）
 - 下载/浏览转化率：总体 0.98，独立 0.89
@@ -50,7 +50,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17744672
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：29 次；独立下载 22 次（人均 1.32 次）
 - 浏览量：31 次；独立访客 24 次（人均 1.29 次）
 - 下载/浏览转化率：总体 0.94，独立 0.92
@@ -74,7 +74,7 @@
 
 ## 核心指标
 - 数据源：https://zenodo.org/api/records/17762295
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：13 次；独立下载 8 次（人均 1.62 次）
 - 浏览量：19 次；独立访客 14 次（人均 1.36 次）
 - 下载/浏览转化率：总体 0.68，独立 0.57
@@ -94,27 +94,27 @@
 
 ---
 
-# 中文工作笔记（Zenodo 记录 19677399）访问统计解读
+# 中文工作笔记（Zenodo 记录 19910580）访问统计解读
 
 ## 核心指标
-- 数据源：https://zenodo.org/api/records/19677399
-- 拉取时间：2026-04-30 12:09 北京时间
+- 数据源：https://zenodo.org/api/records/19910580
+- 拉取时间：2026-04-30 15:54 北京时间
 - 下载量：87 次；独立下载 41 次（人均 2.12 次）
 - 浏览量：21 次；独立访客 14 次（人均 1.50 次）
 - 下载/浏览转化率：总体 4.14，独立 2.93
 
 ## 版本层级
-- 版本统计与总计一致，当前仅看到一个版本的数据。
+- 版本字段与总体不一致，需进一步核对。
 
 ## 原始数值
 - downloads：87
 - unique_downloads：41
 - views：21
 - unique_views：14
-- version_downloads：87
-- version_unique_downloads：41
-- version_views：21
-- version_unique_views：14
+- version_downloads：0
+- version_unique_downloads：0
+- version_views：0
+- version_unique_views：0
 
 ---
 
@@ -122,7 +122,7 @@
 
 - 仓库：CTaiDeng/open_meta_mathematical_theory
 - 仓库主页：https://github.com/CTaiDeng/open_meta_mathematical_theory
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 粒度：day
 - Clones in last 14 days: 140
 - Unique cloners in last 14 days: 76
@@ -175,7 +175,7 @@
 
 - 仓库：CTaiDeng/character_rl_sac_pacer_haca_v2
 - 仓库主页：https://github.com/CTaiDeng/character_rl_sac_pacer_haca_v2
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 粒度：day
 - Clones in last 14 days: 29
 - Unique cloners in last 14 days: 18
@@ -228,7 +228,7 @@
 
 - 仓库：CTaiDeng/gromacs-2024.1_developer
 - 仓库主页：https://github.com/CTaiDeng/gromacs-2024.1_developer
-- 拉取时间：2026-04-30 12:09 北京时间
+- 拉取时间：2026-04-30 15:54 北京时间
 - 粒度：day
 - Clones in last 14 days: 54
 - Unique cloners in last 14 days: 31
