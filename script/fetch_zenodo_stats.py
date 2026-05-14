@@ -91,8 +91,8 @@ RECORDS = [
     ),
     RecordSpec(
         name="中文工作笔记",
-        record_id="20032283",
-        doi="10.5281/zenodo.20032283",
+        record_id="20172851",
+        doi="10.5281/zenodo.20172851",
     ),
 ]
 
